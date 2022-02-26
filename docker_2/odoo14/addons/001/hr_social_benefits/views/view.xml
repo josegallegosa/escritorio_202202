@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+        <menuitem name="Beneficios Sociales"
+            id="menu_plame_generate" parent="hr_work_entry_contract.menu_hr_payroll_root" sequence="45"/>
+        
+        <record id="view_hr_plame_filter" model="ir.ui.view">
+            <field name="name">view_hr_plame_filter</field>
+            <field name="model">hr.plame</field>
+            <field name="arch" type="xml">
+                <search string="Plame Search">
+                    <field name="name" string="Week Novedades"/>
+                    <field name="period_id"/>
+                    <group expand="0" string="Group By...">
+                        <filter name='period' string="Period" domain="[]" context="{'group_by':'period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+
+       <record id="view_hr_plame_tree" model="ir.ui.view">
+            <field name="name">hr.plame.tree</field>
+            <field name="model">hr.plame</field>
+            <field name="arch" type="xml">
+                <tree string="Beneficios Sociales">
+                    <field name="name"/>
+                    <field name="period_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_pdt_form" model="ir.ui.view">
+            <field name="name">hr.plame.form</field>
+            <field name="model">hr.plame</field>
+            <field name="arch" type="xml">
+                <form string="Beneficios Sociales">
+	            	<header>
+                    	<button name="action_save_file" string="Descargar Archivos"  type="object"/>
+                    </header>
+	            	<sheet>
+	                    <group>
+		                    <field name="name"/>
+		                    <field name="period_id"/>
+		                    <field name="payslip_run_id" widget="many2many"/>
+	                    </group>
+	            	</sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_plame_view" model="ir.actions.act_window">
+            <field name="name">Beneficios Sociales</field>
+            <field name="res_model">hr.plame</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_plame_filter"/>
+        </record>
+        
+        <!-- FILE SAVE -->
+
+        <record id="save_file_form_view" model="ir.ui.view">
+            <field name="name">Plame Export data view</field>
+            <field name="model">plame.file.save</field>
+            <field name="arch" type="xml">
+                <form string="Archivos Beneficios Sociales">
+                    <field name="output_name_14" invisible="1"/>
+                    <div >
+                        <h2>Txt Beneficios Sociales</h2>
+                        <p><field name="output_file_14" readonly="1" filename="output_name_14"/></p> 
+                    </div>
+                </form>
+            </field>
+        </record>
+        
+        <!-- PDT submenu -->
+        <menuitem name="Exportar Beneficios Sociales"
+            id="menu_plame_sunat" parent="menu_plame_generate" sequence="10" action="open_plame_view"/>
+            
+	</data>
+</openerp>

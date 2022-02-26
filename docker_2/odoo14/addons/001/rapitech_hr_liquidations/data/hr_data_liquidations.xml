@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<!-- Inherited Views -->		
+        
+		<record id="view_hr_payroll_form_liq" model="ir.ui.view">
+	        <field name="name">view.hr.payroll.form.liq</field>
+	        <field name="model">hr.payroll.structure</field>
+	        <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+	        <field name="arch" type="xml">
+	            <field name="schedule_pay" position="after">
+	                    <field name="bool_liquidation" />
+	            </field>
+	        </field>
+	    </record>
+
+    
+        <!-- Categories-->
+        <record id="lprim_category" model="hr.salary.rule.category">
+            <field name="name">LPRIM</field>
+            <field name="code">LPRIM</field>
+        </record>
+
+        <record id="lcesa_category" model="hr.salary.rule.category">
+            <field name="name">LCESA</field>
+            <field name="code">LCESA</field>
+        </record>
+
+        <record id="licesa_category" model="hr.salary.rule.category">
+            <field name="name">LICESA</field>
+            <field name="code">LICESA</field>
+        </record>
+
+
+        <record id="lva_category" model="hr.salary.rule.category">
+            <field name="name">LVA</field>
+            <field name="code">LVA</field>
+        </record>
+
+
+        <record id="liqu_category" model="hr.salary.rule.category">
+            <field name="name">LIQU</field>
+            <field name="code">LIQU</field>
+        </record>
+		
+
+        <!-- Structure Type -->
+
+        <record id="structure_type_liq_co" model="hr.payroll.structure.type">
+            <field name="name">LIQUIDACIÓN</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="wage_type">monthly</field>
+        </record>
+
+        <record id="structure_liq_co" model="hr.payroll.structure">
+            <field name="name">LIQUIDACIÓN</field>
+            <field name="type_id" ref="structure_type_liq_co"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <!-- Salary rules -->
+
+        <record id="hr_salary_rule_sb_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SB</field>
+            <field name="category_id" ref="hr_payroll_rg_co.sue_category"/>
+            <field name="name">SUELDO BASICO</field>
+            <field name="sequence" eval="1"/>
+            <field name="amount_python_compute">result = worked_days.DIAT.number_of_days*contract.wage/30</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ige_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IGE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">INCAPACIDAD ENFERMEDAD GENERAL</field>
+            <field name="sequence" eval="2"/>
+            <field name="amount_python_compute">result = employee.GetIBCSLastMonth(payslip.date_from,contract)*(2/3)/30*worked_days.IGE.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+
+         <record id="hr_salary_rule_irl_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IRL</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">INCAPACIDAD ACCIDENTE LABORAL</field>
+            <field name="sequence" eval="3"/>
+            <field name="amount_python_compute">result = employee.GetIBCSLastMonth(payslip.date_from,contract)/30*worked_days.IRL.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lma_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LMA</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">LICENCIA DE MATERNIDAD</field>
+            <field name="sequence" eval="4"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LMA.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lpa_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LPA</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">LICENCIA DE PATERNIDAD</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LPA.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_anr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ANR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aun_category"/>
+            <field name="name">AUSENTISMO NO REMUNERADO</field>
+            <field name="sequence" eval="6"/>
+            <field name="amount_python_compute">result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_sln_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aun_category"/>
+            <field name="name">SANCION// SUSPENSIÓN</field>
+            <field name="sequence" eval="7"/>
+            <field name="amount_python_compute">result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">LICENCIA REMUNERADA</field>
+            <field name="sequence" eval="8"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LR.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lt_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LT</field>
+            <field name="category_id" ref="hr_payroll_rg_co.aus_category"/>
+            <field name="name">LICENCIA DE LUTO</field>
+            <field name="sequence" eval="9"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LT.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hed_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HED</field>
+            <field name="category_id" ref="hr_payroll_rg_co.he_category"/>
+            <field name="name">HORA EXTRA DIURNA</field>
+            <field name="sequence" eval="10"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.25)*worked_days.HED.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hen_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HEN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.he_category"/>
+            <field name="name">HORA EXTRA NOCTURNA</field>
+            <field name="sequence" eval="11"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.75)*worked_days.HEN.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hfd_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HFD</field>
+            <field name="category_id" ref="hr_payroll_rg_co.he_category"/>
+            <field name="name">HORA EXTRA FESTIVA DIURNA</field>
+            <field name="sequence" eval="12"/>
+            <field name="amount_python_compute">result = (contract.wage/240*2)*worked_days.HEFD.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hfn_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HFN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.he_category"/>
+            <field name="name">HORA EXTRA FESTIVA NOCTURNA</field>
+            <field name="sequence" eval="13"/>
+            <field name="amount_python_compute">result = (contract.wage/240*2.5)*worked_days.HEFN.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rf_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RF</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rc_category"/>
+            <field name="name">RECARGO FESTIVO</field>
+            <field name="sequence" eval="14"/>
+            <field name="amount_python_compute">result = (contract.wage/240*0.75)*worked_days.REFE.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rn_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rc_category"/>
+            <field name="name">RECARGO NOCTURNO</field>
+            <field name="sequence" eval="15"/>
+            <field name="amount_python_compute">result = (contract.wage/240*0.35)*worked_days.RENO.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rnf_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RNF</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rc_category"/>
+            <field name="name">RECARGO NOCTURNO FESTIVO</field>
+            <field name="sequence" eval="16"/>
+            <field name="amount_python_compute">result = (contract.wage/240*2.1)*worked_days.RENF.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_fsc_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FSC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rc_category"/>
+            <field name="name">FESTIVO SIN COMPENSATORIO</field>
+            <field name="sequence" eval="17"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.75)*worked_days.FESC.number_of_hours</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_com_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">COM</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ext_category"/>
+            <field name="name">COMISIONES</field>
+            <field name="sequence" eval="18"/>
+            <field name="amount_python_compute">if inputs.COM:
+    result=inputs.COM.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bns_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BNS</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ext_category"/>
+            <field name="name">BONIFICACION SALARIAL</field>
+            <field name="sequence" eval="19"/>
+            <field name="amount_python_compute">if inputs.BNS:
+    result=inputs.BNS.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bno_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BNO</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">BONIFICACION POR MERA LIBERALIDAD</field>
+            <field name="sequence" eval="20"/>
+            <field name="amount_python_compute">if inputs.BNO:
+    result=inputs.BNO.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bor_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BOR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">BONIFICACION POR RETIRO</field>
+            <field name="sequence" eval="21"/>
+            <field name="amount_python_compute">if inputs.BOR:
+    result=inputs.BOR.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aua_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUA</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">AUXILIO DE ALIMENTACION</field>
+            <field name="sequence" eval="22"/>
+            <field name="amount_python_compute">if inputs.AUA:
+    result=inputs.AUA.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_atx_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ATX</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">AUXILIO DE TRANSPORTE EXTRA LEGAL</field>
+            <field name="sequence" eval="23"/>
+            <field name="amount_python_compute">if inputs.ATX:
+    result=inputs.ATX.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aue_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">AUXILIO EDUCATIVO</field>
+            <field name="sequence" eval="24"/>
+            <field name="amount_python_compute">if inputs.AUE:
+    result=inputs.AUE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aum_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUM</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">AUXILIO MOVILIZACION</field>
+            <field name="sequence" eval="25"/>
+            <field name="amount_python_compute">if inputs.AUM:
+    result=inputs.AUM.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_auv_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUV</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ins_category"/>
+            <field name="name">AUXILIO VIVIENDA</field>
+            <field name="sequence" eval="26"/>
+            <field name="amount_python_compute">if inputs.AUV:
+    result=inputs.AUV.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+        <!--
+         <record id="hr_salary_rule_inc_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">INC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.inc_category"/>
+            <field name="name">INDEMNIZACION</field>
+            <field name="sequence" eval="27"/>
+            <field name="amount_python_compute">result =  SI ( Tipo de contrato es igual a "Termino indefinido" ; si ( sueldo contrato > SMMLV *10, </field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+        -->
+
+         
+         <record id="hr_salary_rule_rer_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RER</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rer_category"/>
+            <field name="name">REINTREGROS</field>
+            <field name="sequence" eval="28"/>
+            <field name="amount_python_compute">if inputs.RER:
+    result=inputs.RER.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_res_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RES</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ext_category"/>
+            <field name="name">RETROACTIVO SALARIAL</field>
+            <field name="sequence" eval="29"/>
+            <field name="amount_python_compute">if inputs.RES:
+    result=inputs.RES.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_slt_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLT</field>
+            <field name="category_id" ref="hr_payroll_rg_co.sub_category"/>
+            <field name="name">SUBSIDIO DE TRANSPORTE</field>
+            <field name="sequence" eval="30"/>
+            <field name="amount_python_compute">if categories.SUE + categories.EXT &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)*2:
+                result = (parameter_obj.get_amount('SUBSIDIO DE TRANSPORTE',payslip.date_from)/30)*(worked_days.DIAT.number_of_days)
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcc_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.vac_category"/>
+            <field name="name">VACACIONES COMPENSADAS</field>
+            <field name="sequence" eval="31"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacCompensadas(payslip.date_from,contract)+contract.wage)/30*worked_days.VCO.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcd_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCD</field>
+            <field name="category_id" ref="hr_payroll_rg_co.vac_category"/>
+            <field name="name">VACACIONES DISFRUTADAS</field>
+            <field name="sequence" eval="32"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacDisfrutadas(payslip.date_from,contract)+contract.wage)/30*worked_days.VDI.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.vac_category"/>
+            <field name="name">VACACIONES POR RETIRO</field>
+            <field name="sequence" eval="33"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacPorRetiro(payslip.date_from,contract)+contract.wage)/30*worked_days.VRE.number_of_days</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_idce_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IDCE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.idce_category"/>
+            <field name="name">INTERESES DE CESANTIAS</field>
+            <field name="sequence" eval="34"/>
+            <field name="amount_python_compute">result = employee.GetInterestOfBaskets(payslip.date_from,contract)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_dss_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DSS</field>
+            <field name="category_id" ref="hr_payroll_rg_co.dss_category"/>
+            <field name="name">DEVENGOS SEG SOC</field>
+            <field name="sequence" eval="35"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.INS + categories.SUB</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibcs_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCS</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bss_category"/>
+            <field name="name">IBC SEG SOC</field>
+            <field name="sequence" eval="36"/>
+            <field name="amount_python_compute">XIBCS=0
+if (categories.EXT + categories.SUB) > (categories.DSS*0.4): 
+    XIBCS = categories.DSS*0.6
+else: 
+    XIBCS = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT)
+
+if XIBCS &lt; parameter_obj.get_amount('IBC MINIMO SEG SOC',payslip.date_from):
+    result = parameter_obj.get_amount('IBC MINIMO SEG SOC',payslip.date_from)
+elif XIBCS > parameter_obj.get_amount('IBC MAXIMO SEG SOC',payslip.date_from):
+    result = parameter_obj.get_amount('IBC MAXIMO SEG SOC',payslip.date_from)
+else:
+    result = XIBCS</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibca_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCA</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bss_category"/>
+            <field name="name">IBC ARL</field>
+            <field name="sequence" eval="37"/>
+            <field name="amount_python_compute">if (categories.EXT + categories.SUB) >(categories.DSS*0.4): 
+            result = categories.DSS*0.6
+else: 
+            result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibcp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bss_category"/>
+            <field name="name">IBC PARAFISCALES</field>
+            <field name="sequence" eval="38"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.HE + categories.RC + categories.EXT + categories.VAC)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pen_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PEN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ass_category"/>
+            <field name="name">PENSION</field>
+            <field name="sequence" eval="39"/>
+            <field name="amount_python_compute">result = IBCS*0.04</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_fsp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FSP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ass_category"/>
+            <field name="name">FONDO DE SOLIDARIDAD</field>
+            <field name="sequence" eval="40"/>
+            <field name="amount_python_compute">if IBCS > parameter_obj.get_amount('SMMLV',payslip.date_from)*4:
+                result = IBCS*0.5/100
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_fst_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FST</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ass_category"/>
+            <field name="name">FONDO DE SUBSISTENCIA</field>
+            <field name="sequence" eval="41"/>
+            <field name="amount_python_compute">SMMLV = parameter_obj.get_amount('SMMLV',payslip.date_from)
+if IBCS > SMMLV*4 and IBCS &lt; SMMLV*15.99:
+    result = IBCS*0.5/100 
+elif IBCS > SMMLV*16 and IBCS &lt; SMMLV*16.99: 
+    result = IBCS*0.7/100
+elif IBCS > SMMLV*17 and IBCS &lt; SMMLV*17.99:
+    result = IBCS*0.9/100
+elif IBCS > SMMLV*18 and IBCS &lt; SMMLV*18.99:
+    result = IBCS*1.1/100
+elif IBCS > SMMLV*19 and IBCS &lt; SMMLV*19.99: 
+    result = IBCS*1.3/100
+elif IBCS > SMMLV*20: 
+    result = IBCS*1.5/100
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_sal_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SAL</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ass_category"/>
+            <field name="name">SALUD</field>
+            <field name="sequence" eval="42"/>
+            <field name="amount_python_compute">result = IBCS*0.04</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+
+         <record id="hr_salary_rule_afc_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AFC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rte_category"/>
+            <field name="name">APORTES CUENTAS AFC</field>
+            <field name="sequence" eval="43"/>
+            <field name="amount_python_compute">if inputs.AFC:
+    result=inputs.AFC.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_apv_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">APV</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rte_category"/>
+            <field name="name">APORTES PENSIÓN VOLUNTARIA</field>
+            <field name="sequence" eval="44"/>
+            <field name="amount_python_compute">if inputs.APV:
+    result=inputs.APV.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_den_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DEN</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">DESCUENTO ANTICIPO</field>
+            <field name="sequence" eval="45"/>
+            <field name="amount_python_compute">if inputs.DEN:
+    result=inputs.DEN.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_dec_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DEC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">DESCUENTO CELULAR</field>
+            <field name="sequence" eval="46"/>
+            <field name="amount_python_compute">if inputs.DEC:
+    result=inputs.DEC.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_foe_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FOE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">FONDO DE EMPLEADOS</field>
+            <field name="sequence" eval="47"/>
+            <field name="amount_python_compute">if inputs.FOE:
+    result=inputs.FOE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lil_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LIL</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">LIBRANZA</field>
+            <field name="sequence" eval="48"/>
+            <field name="amount_python_compute">if inputs.LIL:
+    result=inputs.LIL.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_poe_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">POE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">POLIZA EXCEQUIAL</field>
+            <field name="sequence" eval="49"/>
+            <field name="amount_python_compute">if inputs.POE:
+    result=inputs.POE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_prd_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PRP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.des_category"/>
+            <field name="name">PRESTAMOS</field>
+            <field name="sequence" eval="50"/>
+            <field name="amount_python_compute">if inputs.PRP:
+    result=inputs.PRP.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+<!-- DEPURACION CALCULO RETENCION EN LA FUENTE-->
+
+         <record id="hr_salary_rule_ixr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IXR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ixr_category"/>
+            <field name="name">INGRESOS PARA RENTA</field>
+            <field name="sequence" eval="51"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.INS + categories.SUB + categories.VAC - categories.ASS </field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bcm_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BCM</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bcm_category"/>
+            <field name="name">BENEFICIO CORRECCION MONETARIA</field>
+            <field name="sequence" eval="52"/>
+            <field name="amount_python_compute">if employee.monetary_correction_relief > 100*parameter_obj.get_amount('UVT',payslip.date_from):
+            result = 100*parameter_obj.get_amount('UVT',payslip.date_from)
+else:
+            result = employee.monetary_correction_relief</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bmp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BMP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bmp_category"/>
+            <field name="name">BENEFICIO MEDICINA PREPAGADA</field>
+            <field name="sequence" eval="53"/>
+            <field name="amount_python_compute">if employee.prepaid_medicine_relief:
+    if employee.prepaid_medicine_relief &lt;= 16*parameter_obj.get_amount('UVT',payslip.date_from):
+        result=employee.prepaid_medicine_relief
+    else:
+        result=16*parameter_obj.get_amount('UVT',payslip.date_from)
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bdd_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BDD</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bdd_category"/>
+            <field name="name">BENEFICIO DEDUCCION DEPENDIENTES</field>
+            <field name="sequence" eval="54"/>
+            <field name="amount_python_compute">if employee.income_declarant:
+    if (categories.IXR + categories.ASS)*0.1 >32*parameter_obj.get_amount('UVT',payslip.date_from):
+        result = 32*parameter_obj.get_amount('UVT',payslip.date_from)
+    else:
+        result = (categories.IXR + categories.ASS)*0.1
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bre_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BRE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.bre_category"/>
+            <field name="name">BENEFICIO RENTAS EXENTAS</field>
+            <field name="sequence" eval="55"/>
+            <field name="amount_python_compute">if categories.RTE > (categories.IXR + categories.ASS)*0.3:
+            result = (categories.IXR + categories.ASS)*0.3
+else:
+            result = categories.RTE</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_brl_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BRL</field>
+            <field name="category_id" ref="hr_payroll_rg_co.brl_category"/>
+            <field name="name">BENEFICIO RENTAS EXENTAS LABORALES</field>
+            <field name="sequence" eval="56"/>
+            <field name="amount_python_compute">result = (categories.IXR-categories.BCM-categories.BMP-categories.BDD-categories.BRE)*0.25</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ctp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CTP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ctp_category"/>
+            <field name="name">CONTROL TOPE RENTAS Y DEDUCCIONES 40%</field>
+            <field name="sequence" eval="57"/>
+            <field name="amount_python_compute">if (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL) > parameter_obj.get_amount('UVT',payslip.date_from)*420:
+    result = parameter_obj.get_amount('UVT',payslip.date_from)*420
+elif (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL) > categories.IXR*0.4:
+    result = categories.IXR*0.4
+else:
+    result = (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ilmr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ILMR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ilmr_category"/>
+            <field name="name">INGRESO LABORAL MENSUAL BASE DE RETENCION</field>
+            <field name="sequence" eval="58"/>
+            <field name="amount_python_compute">result = categories.IXR-categories.CTP</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ilmu_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ILMU</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ilmu_category"/>
+            <field name="name">INGRESO LABORAL MENSUAL EN UVT</field>
+            <field name="sequence" eval="59"/>
+            <field name="amount_python_compute">result = categories.ILMR/parameter_obj.get_amount('UVT',payslip.date_from)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_reft_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">REFT</field>
+            <field name="category_id" ref="hr_payroll_rg_co.reft_category"/>
+            <field name="name">RETENCION EN LA FUENTE</field>
+            <field name="sequence" eval="60"/>
+            <field name="amount_python_compute">XIMP = employee.GetRetentionAtTheSource(payslip.date_from,ILMU)
+if employee.withholding_procedure.name == 'PR1':
+    result = round(XIMP, -3)
+else:
+    result = round(categories.ILMR*employee.porcent_retention_pr2/100, -3)</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+         
+
+
+         <record id="hr_salary_rule_penp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PENP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">PENSION</field>
+            <field name="sequence" eval="61"/>
+            <field name="amount_python_compute">result = PEN*3 - (contract.wage/30)*categories.AUN*0.12</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_salp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SALP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">SALUD</field>
+            <field name="sequence" eval="62"/>
+            <field name="amount_python_compute">if categories.DSS >parameter_obj.get_amount('SMMLV',payslip.date_from)*10: 
+                result = SAL*2.125
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_arlp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ARLP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">ARL</field>
+            <field name="sequence" eval="63"/>
+            <field name="amount_python_compute">result = IBCA*contract.type_risk_arl_id.name/100</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ccfp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CCFP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">CCF</field>
+            <field name="sequence" eval="64"/>
+            <field name="amount_python_compute">result = IBCP*0.04</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_senp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SENP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">SENA</field>
+            <field name="sequence" eval="65"/>
+            <field name="amount_python_compute">if (categories.DSS > parameter_obj.get_amount('SMMLV',payslip.date_from)*10):
+            result = IBCP*0.02
+else:
+            result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_icbp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ICBP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.css_category"/>
+            <field name="name">ICBF</field>
+            <field name="sequence" eval="66"/>
+            <field name="amount_python_compute">if (categories.DSS > parameter_obj.get_amount('SMMLV',payslip.date_from)*10):
+            result = IBCP*0.03
+else:
+            result = 0</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmp_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.prv_category"/>
+            <field name="name">PRIMA LEGAL DE SERVICIOS</field>
+            <field name="sequence" eval="67"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.25/3</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmc_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.prv_category"/>
+            <field name="name">CESANTÍAS</field>
+            <field name="sequence" eval="68"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.25/3</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmi_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMI</field>
+            <field name="category_id" ref="hr_payroll_rg_co.prv_category"/>
+            <field name="name">INTERESES</field>
+            <field name="sequence" eval="69"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.01</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmv_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMV</field>
+            <field name="category_id" ref="hr_payroll_rg_co.prv_category"/>
+            <field name="name">VACACIONES</field>
+            <field name="sequence" eval="70"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SLI )*4.17/100</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ing_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ING</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ing_category"/>
+            <field name="name">INGRESOS</field>
+            <field name="sequence" eval="71"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.AUN + categories.HE + categories.RC + categories.EXT + categories.INS + categories.CSA + categories.SUB + categories.VAC</field>
+
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_egr_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EGR</field>
+            <field name="category_id" ref="hr_payroll_rg_co.egr_category"/>
+            <field name="name">EGRESOS</field>
+            <field name="sequence" eval="72"/>
+            <field name="amount_python_compute">result = categories.RTE + categories.DES + categories.ASS</field>
+
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+         <record id="hr_salary_rule_nap_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">NAP</field>
+            <field name="category_id" ref="hr_payroll_rg_co.nap_category"/>
+            <field name="name">NETO A PAGAR</field>
+            <field name="sequence" eval="73"/>
+            <field name="amount_python_compute">result = ING-EGR</field>
+
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+        <record id="hr_salary_rule_lprim_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LPRIM</field>
+            <field name="category_id" ref="lprim_category"/>
+            <field name="name">LIQUIDACIÓN PRIMA LEGAL</field>
+            <field name="sequence" eval="74"/>
+            <field name="amount_python_compute">
+if categories.SUE + categories.EXT + categories.HE + categories.RC  &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)*2:
+    BASE  = SLT + contract.wage + employee.get_prima_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[0]
+    DAYS = employee.get_prima_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[1]
+    result = BASE*DAYS/360
+else:
+    BASE = contract.wage + employee.get_prima_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[0]
+    DAYS = employee.get_prima_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[1]
+    result = BASE*DAYS/360
+            </field>
+            <field name="struct_id" ref="structure_liq_co"/>
+        </record>
+
+        <record id="hr_salary_rule_lcesa_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LCESA</field>
+            <field name="category_id" ref="lcesa_category"/>
+            <field name="name">LIQUIDACIÓN CESANTÍA</field>
+            <field name="sequence" eval="75"/>
+            <field name="amount_python_compute">
+if categories.SUE + categories.EXT + categories.HE + categories.RC  &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)*2:
+    BASE = SLT + contract.wage + employee.get_cesantia_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[0]
+    DAYS = employee.get_cesantia_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[1]
+    result = BASE*DAYS/360
+else:
+    BASE = contract.wage + employee.get_cesantia_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[0]
+    DAYS = employee.get_cesantia_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[1]
+    result = BASE*DAYS/360
+            </field>
+            <field name="struct_id" ref="structure_liq_co"/>
+        </record>
+
+        <record id="hr_salary_rule_licesa_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LICESA</field>
+            <field name="category_id" ref="licesa_category"/>
+            <field name="name">LIQUIDACIÓN INT CESANTÍA</field>
+            <field name="sequence" eval="76"/>
+            <field name="amount_python_compute">
+BASE = LCESA
+DAYS = employee.get_cesantia_liq(contract.date_end,['COM','BNS','RES','HED','HEN','HFD','HFN','RF','RN','RNF','FSC'],contract)[1]
+result = BASE*DAYS/360
+            </field>
+            <field name="struct_id" ref="structure_liq_co"/>
+        </record>
+
+        <record id="hr_salary_rule_lva_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LVA</field>
+            <field name="category_id" ref="lva_category"/>
+            <field name="name">LIQUIDACIÓN VACACIONES</field>
+            <field name="sequence" eval="77"/>
+            <field name="amount_python_compute">
+PAEX = employee.MethodAverageAnnual(payslip.date_to,['COM','BNS','RES'],contract)
+PAHE = employee.MethodAverageAnnual(payslip.date_to,['HED','HEN','HFD','HFN'],contract)
+PARE = employee.MethodAverageAnnual(payslip.date_to,['RF','RN','RNF','FSC'],contract)
+
+DAYS = employee._get_vacations_liq(contract.date_start,contract.date_end,contract)[0]
+BASE = (contract.wage+PAEX+PAHE+PARE)
+result = DAYS*BASE/30</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+         </record>
+
+        <record id="hr_salary_rule_liqu_liq" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LIQU</field>
+            <field name="category_id" ref="liqu_category"/>
+            <field name="name">LIQUIDACIÓN TOTAL</field>
+            <field name="sequence" eval="82"/>
+            <field name="amount_python_compute">
+result = LPRIM + LCESA + LICESA + LVA + SB + SLT - SAL - PEN</field>
+            <field name="struct_id" ref="structure_liq_co"/>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+<record id="hr_type_contributor_co_1" model="hr.type.contributor">
+    <field name="code">1</field>
+    <field name="name">Dependiente</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_12" model="hr.type.contributor">
+    <field name="code">12</field>
+    <field name="name">Aprendiz SENA Etapa Lectiva</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_18" model="hr.type.contributor">
+    <field name="code">18</field>
+    <field name="name">Funcionarios publicos sin tope maximo de IBC</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_19" model="hr.type.contributor">
+    <field name="code">19</field>
+    <field name="name">Aprendiz SENA Etapa Productiva</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_20" model="hr.type.contributor">
+    <field name="code">20</field>
+    <field name="name">Estudiantes (Regimen Especial - Ley 789/2002)</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_21" model="hr.type.contributor">
+    <field name="code">21</field>
+    <field name="name">Estudiantes en postgrado en salud (Decreto 2376 de 2010).</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_22" model="hr.type.contributor">
+    <field name="code">22</field>
+    <field name="name">Profesor de establecimiento particular</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_30" model="hr.type.contributor">
+    <field name="code">30</field>
+    <field name="name">Dependiente Entidades o Universidades Publicas con regimen especial de Salud</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_31" model="hr.type.contributor">
+    <field name="code">31</field>
+    <field name="name">Cooperados o Precooperativas de Trabajo Asociado</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_32" model="hr.type.contributor">
+    <field name="code">32</field>
+    <field name="name">Cotizante miembro de la carrera diplomatica o consular de un pais extranjero o funcionario de organismo multilateral no sometido a la legislacion colombiana.</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_40" model="hr.type.contributor">
+    <field name="code">40</field>
+    <field name="name">Beneficio UPC adicional</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_44" model="hr.type.contributor">
+    <field name="code">44</field>
+    <field name="name">Cotizante dependiente de empleo de emergencia con duracion mayor o igual a un mes.</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_45" model="hr.type.contributor">
+    <field name="code">45</field>
+    <field name="name">Cotizante dependiente de empleo de emergencia con duracion menor a un mes.</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+<record id="hr_type_contributor_co_51" model="hr.type.contributor">
+    <field name="code">51</field>
+    <field name="name">Trabajador de tiempo parcial Decreto 2616 de 2013 afiliado al regimen subsidiado de salud.</field>
+    <field name="country_id" ref="base.co"/>
+</record>
+
+
+    </data>
+</odoo>

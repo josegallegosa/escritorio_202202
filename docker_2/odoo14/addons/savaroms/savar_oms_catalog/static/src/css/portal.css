@@ -1,0 +1,259 @@
+.hide-required
+{
+  display: none!important;
+}
+#new_sale_order input[name='order_name']
+{
+    font-size: 20px;
+    background: transparent;
+    border: 0px;
+    padding: 0px;
+}
+.tr_action_add_line
+{
+  margin-left: 3px;
+}
+.table_order_total_01 label, .table_order_total_02 label
+{
+  font-size: 15px;
+}
+.table_order_total_01
+{
+  text-align: right;
+  padding-right: 10px;
+}
+.table_order_total_02
+{
+  text-align: left;
+  padding-left: 10px;
+}
+input.line_quantity, input.line_price
+{
+  /* width: 150px!important; */
+}
+#new_sale_order .select2-container
+{
+  max-width: 250px;
+}
+.table_order_lines td .select2-container, td .line_product, td .line_description, td .line_tax, .select2-drop-mask
+{
+  max-width: 250px!important;
+}
+.table_order_lines td.line_quantity, .table_order_lines td .line_price
+{
+  width: 90px!important;
+}
+.row_top
+{
+  display: block;
+  margin-bottom: 5px;
+}
+.row_top input
+{
+  max-width: 250px;
+}
+.table_order_lines 
+{
+  margin-top: 20px;
+  width: 100%;
+  table-layout: fixed;
+}
+.table_order_lines_001 
+{
+  margin-top: 0px;
+  width: 100%;
+  table-layout: fixed;
+}
+.table_order_lines .table_order_lines_heading
+{
+  
+}
+.table_order_lines .table_order_lines_heading th
+{
+  
+}
+.table_order_lines td
+{
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+.default_order_line
+{
+  display: none;
+}
+.action_remove_line
+{
+  font-size: x-large;
+    cursor: pointer;
+    margin-left: 6px;
+}
+.merchant_self_categories .dropdown-menu 
+{
+  position: initial;
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+}
+.form-input
+{
+  padding: 2px;
+  font-size: medium;
+  border-radius: 10px;
+  width: 100%;
+}
+#product_name
+{
+  font-size: 20px;
+}
+#product_list_price
+{
+  width: 90px;
+  font-size: medium;
+  display: inline;
+}
+#product_template_taxes_edition_nice
+{
+  display: none;
+}
+.select2-container.select2-container-disabled .select2-choice {
+  background-color: #ddd;
+  border-color: #a8a8a8;
+}
+.input-as-label
+{
+  border: 0px!important;
+  background: transparent!important;
+  box-shadow: none!important;
+  transition: none !important;
+}
+.input-as-label:hover
+{
+  border: 0px!important;
+  background: transparent!important;
+  box-shadow: none!important;
+  transition: none !important;
+}
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: -6px;
+  margin-left: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.o_portal_details .switch {
+  margin-top: 0px;
+}
+nav.merchant_navigation_nav 
+{
+  display: none;
+}
+nav.merchant_navigation_nav  ul.o_menu_systray
+{
+  background: inherit;
+  border-radius: 5px;
+  height: 47px;
+}
+nav.merchant_navigation_nav  #o_new_content_menu_choices
+{
+  z-index: 99999;
+}
+nav.merchant_navigation_nav #save-page-menu
+{
+  display: none;
+}
+.o_technical_modal
+{
+  z-index: 9999999999999;
+}
+
+nav.merchant_navigation_nav > ul > li {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+#product_detail .dropdown-menu
+{
+  width: 63%;
+  position: relative!important;
+}
+
+.tax_label
+{
+  border: 1px solid;
+  font-size: 15px;
+}
+#select2-drop
+{
+  width: 179px!important;
+}
+.table_product_template_extra_fields tr td
+{
+  padding-top: 4px;
+}
+.table_product_template_extra_fields tr td input
+{
+  margin-left: 3px;
+}
+.product_template_taxes_edition_nice
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.o_homepage_editor_welcome_message{padding-top: 128px; padding-bottom: 128px; font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";}.o_switch{display: -webkit-box; display: -webkit-flex; display: flex; align-items: center; font-weight: normal; cursor: pointer;}.o_switch > input{display: none;}.o_switch > input + span{background-color: #F7F7F7; box-shadow: inset 0 0 0px 1px #dedddd; border-radius: 100rem; height: 2ex; width: 3.6ex; margin-right: 0.5em; display: inline-block; transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);}.o_switch > input + span:after{content: ""; background: white; display: block; width: 1.8ex; height: 1.8ex; margin-top: 0.1ex; margin-left: 0.1ex; border-radius: 100rem; transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1); box-shadow: 0 1px 1px #9e9e9e, inset 0 0 0 1px white;}.o_switch > input:checked + span{box-shadow: none; background: #40ad67;}
+

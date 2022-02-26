@@ -1,0 +1,760 @@
+2022-02-19 13:47:05,437 79 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:47:05,437 79 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:47:05,437 79 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:47:05,437 79 INFO ? odoo: database: odoo@postgres:default 
+2022-02-19 13:47:05,591 79 INFO ? odoo.sql_db: Connection to the database failed 
+2022-02-19 13:48:09,576 81 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:48:09,576 81 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:48:09,576 81 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:48:09,576 81 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:48:09,581 81 INFO ? odoo.sql_db: Connection to the database failed 
+2022-02-19 13:48:23,874 83 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:48:23,874 83 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:48:23,874 83 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:48:23,874 83 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:48:24,325 83 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2022-02-19 13:48:24,428 83 INFO ? odoo.modules.loading: init db 
+2022-02-19 13:48:25,100 83 INFO savar1802 odoo.modules.loading: loading 1 modules... 
+2022-02-19 13:48:25,100 83 INFO savar1802 odoo.modules.loading: Loading module base (1/1) 
+2022-02-19 13:48:25,164 83 INFO savar1802 odoo.modules.registry: module base: creating or updating database tables 
+2022-02-19 13:48:26,251 83 INFO savar1802 odoo.models: Storing computed values of ir.module.module.menus_by_module 
+2022-02-19 13:48:26,251 83 INFO savar1802 odoo.models: Storing computed values of ir.module.module.reports_by_module 
+2022-02-19 13:48:26,251 83 INFO savar1802 odoo.models: Storing computed values of ir.module.module.views_by_module 
+2022-02-19 13:48:26,253 83 INFO savar1802 odoo.models: Storing computed values of res.partner.display_name 
+2022-02-19 13:48:26,253 83 INFO savar1802 odoo.models: Storing computed values of res.partner.partner_share 
+2022-02-19 13:48:26,253 83 INFO savar1802 odoo.models: Storing computed values of res.partner.commercial_partner_id 
+2022-02-19 13:48:26,253 83 INFO savar1802 odoo.models: Storing computed values of res.partner.commercial_company_name 
+2022-02-19 13:48:26,253 83 INFO savar1802 odoo.models: Storing computed values of res.currency.decimal_places 
+2022-02-19 13:48:26,254 83 INFO savar1802 odoo.models: Storing computed values of res.company.logo_web 
+2022-02-19 13:48:26,256 83 INFO savar1802 odoo.models: Storing computed values of res.users.share 
+2022-02-19 13:48:27,157 83 INFO savar1802 odoo.modules.loading: loading base/data/res.lang.csv 
+2022-02-19 13:48:27,202 83 INFO savar1802 odoo.modules.loading: loading base/data/res_lang_data.xml 
+2022-02-19 13:48:27,218 83 INFO savar1802 odoo.modules.loading: loading base/data/res_partner_data.xml 
+2022-02-19 13:48:27,257 83 INFO savar1802 odoo.modules.loading: loading base/data/res_company_data.xml 
+2022-02-19 13:48:27,264 83 INFO savar1802 odoo.modules.loading: loading base/data/res_users_data.xml 
+2022-02-19 13:48:27,332 83 INFO savar1802 odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2022-02-19 13:48:27,338 83 INFO savar1802 odoo.modules.loading: loading base/data/res_currency_data.xml 
+2022-02-19 13:48:27,495 83 INFO savar1802 odoo.modules.loading: loading base/data/res_country_data.xml 
+2022-02-19 13:48:27,759 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2022-02-19 13:48:27,852 83 INFO savar1802 odoo.modules.loading: loading base/security/base_groups.xml 
+2022-02-19 13:48:27,929 83 INFO savar1802 odoo.modules.loading: loading base/security/base_security.xml 
+2022-02-19 13:48:28,012 83 INFO savar1802 odoo.modules.loading: loading base/views/base_menus.xml 
+2022-02-19 13:48:28,059 83 INFO savar1802 odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2022-02-19 13:48:28,075 83 INFO savar1802 odoo.modules.loading: loading base/views/res_config_views.xml 
+2022-02-19 13:48:28,085 83 INFO savar1802 odoo.modules.loading: loading base/data/res.country.state.csv 
+2022-02-19 13:48:28,790 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2022-02-19 13:48:28,943 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2022-02-19 13:48:28,965 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2022-02-19 13:48:29,012 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2022-02-19 13:48:29,047 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2022-02-19 13:48:29,069 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_model_views.xml 
+2022-02-19 13:48:29,252 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2022-02-19 13:48:29,280 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2022-02-19 13:48:29,305 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2022-02-19 13:48:29,330 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_translation_views.xml 
+2022-02-19 13:48:29,368 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2022-02-19 13:48:29,391 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2022-02-19 13:48:29,446 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_default_views.xml 
+2022-02-19 13:48:29,481 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2022-02-19 13:48:29,490 83 INFO savar1802 odoo.modules.loading: loading base/report/ir_model_report.xml 
+2022-02-19 13:48:29,495 83 INFO savar1802 odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2022-02-19 13:48:29,506 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2022-02-19 13:48:29,528 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2022-02-19 13:48:29,540 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_module_views.xml 
+2022-02-19 13:48:29,612 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2022-02-19 13:48:29,656 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_module_module.xml 
+2022-02-19 13:48:29,697 83 INFO savar1802 odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2022-02-19 13:48:29,700 83 INFO savar1802 odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2022-02-19 13:48:29,713 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2022-02-19 13:48:29,726 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2022-02-19 13:48:29,741 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2022-02-19 13:48:29,752 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2022-02-19 13:48:29,770 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2022-02-19 13:48:29,781 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2022-02-19 13:48:29,794 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_update_translations_views.xml 
+2022-02-19 13:48:29,806 83 INFO savar1802 odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2022-02-19 13:48:29,823 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_actions_data.xml 
+2022-02-19 13:48:29,826 83 INFO savar1802 odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2022-02-19 13:48:29,837 83 INFO savar1802 odoo.modules.loading: loading base/views/res_company_views.xml 
+2022-02-19 13:48:29,866 83 INFO savar1802 odoo.modules.loading: loading base/views/res_lang_views.xml 
+2022-02-19 13:48:29,891 83 INFO savar1802 odoo.modules.loading: loading base/views/res_partner_views.xml 
+2022-02-19 13:48:30,042 83 INFO savar1802 odoo.modules.loading: loading base/views/res_bank_views.xml 
+2022-02-19 13:48:30,088 83 INFO savar1802 odoo.modules.loading: loading base/views/res_country_views.xml 
+2022-02-19 13:48:30,140 83 INFO savar1802 odoo.modules.loading: loading base/views/res_currency_views.xml 
+2022-02-19 13:48:30,190 83 INFO savar1802 odoo.modules.loading: loading base/views/res_users_views.xml 
+2022-02-19 13:48:30,335 83 INFO savar1802 odoo.modules.loading: loading base/views/ir_property_views.xml 
+2022-02-19 13:48:30,358 83 INFO savar1802 odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2022-02-19 13:48:30,366 83 INFO savar1802 odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2022-02-19 13:48:30,388 83 INFO savar1802 odoo.modules.loading: loading base/views/onboarding_views.xml 
+2022-02-19 13:48:30,420 83 INFO savar1802 odoo.modules.loading: loading base/security/ir.model.access.csv 
+2022-02-19 13:48:30,614 83 INFO savar1802 odoo.modules.loading: Module base: loading demo 
+2022-02-19 13:48:30,614 83 INFO savar1802 odoo.modules.loading: loading base/data/res_company_demo.xml 
+2022-02-19 13:48:30,621 83 INFO savar1802 odoo.modules.loading: loading base/data/res_users_demo.xml 
+2022-02-19 13:48:30,712 83 INFO savar1802 odoo.modules.loading: loading base/data/res_partner_bank_demo.xml 
+2022-02-19 13:48:30,716 83 INFO savar1802 odoo.modules.loading: loading base/data/res_currency_rate_demo.xml 
+2022-02-19 13:48:30,868 83 INFO savar1802 odoo.modules.loading: loading base/data/res_bank_demo.xml 
+2022-02-19 13:48:30,873 83 INFO savar1802 odoo.modules.loading: loading base/data/res_partner_demo.xml 
+2022-02-19 13:48:31,035 83 INFO savar1802 odoo.modules.loading: loading base/data/res_partner_image_demo.xml 
+2022-02-19 13:48:31,432 83 INFO savar1802 odoo.modules.loading: Module base loaded in 6.33s, 11035 queries 
+2022-02-19 13:48:31,432 83 INFO savar1802 odoo.modules.loading: 1 modules loaded in 6.33s, 11035 queries (+0 extra) 
+2022-02-19 13:48:31,441 83 INFO savar1802 odoo.modules.loading: updating modules list 
+2022-02-19 13:48:31,442 83 INFO savar1802 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2022-02-19 13:48:31,808 83 INFO savar1802 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['\n\t    Savar TMS Field Service\n    '] to user __system__ #1 via n/a 
+2022-02-19 13:48:31,908 83 INFO savar1802 odoo.modules.loading: loading 42 modules... 
+2022-02-19 13:48:31,908 83 INFO savar1802 odoo.modules.loading: Loading module base_territory (2/42) 
+2022-02-19 13:48:31,932 83 INFO savar1802 odoo.modules.registry: module base_territory: creating or updating database tables 
+2022-02-19 13:48:32,043 83 INFO savar1802 odoo.modules.loading: loading base_territory/security/ir.model.access.csv 
+2022-02-19 13:48:32,059 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/res_territory.xml 
+2022-02-19 13:48:32,077 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/res_branch.xml 
+2022-02-19 13:48:32,091 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/res_district.xml 
+2022-02-19 13:48:32,106 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/res_region.xml 
+2022-02-19 13:48:32,120 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/res_country.xml 
+2022-02-19 13:48:32,132 83 INFO savar1802 odoo.modules.loading: loading base_territory/views/menu.xml 
+2022-02-19 13:48:32,142 83 INFO savar1802 odoo.modules.loading: Module base_territory: loading demo 
+2022-02-19 13:48:32,142 83 INFO savar1802 odoo.modules.loading: loading base_territory/demo/base_territory_demo.xml 
+2022-02-19 13:48:32,160 83 INFO savar1802 odoo.modules.loading: Module base_territory loaded in 0.25s, 356 queries 
+2022-02-19 13:48:32,160 83 INFO savar1802 odoo.modules.loading: Loading module uom (3/42) 
+2022-02-19 13:48:32,181 83 INFO savar1802 odoo.modules.registry: module uom: creating or updating database tables 
+2022-02-19 13:48:32,234 83 INFO savar1802 odoo.modules.loading: loading uom/data/uom_data.xml 
+2022-02-19 13:48:32,273 83 INFO savar1802 odoo.modules.loading: loading uom/security/uom_security.xml 
+2022-02-19 13:48:32,297 83 INFO savar1802 odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2022-02-19 13:48:32,310 83 INFO savar1802 odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2022-02-19 13:48:32,342 83 INFO savar1802 odoo.modules.loading: Module uom: loading demo 
+2022-02-19 13:48:32,350 83 INFO savar1802 odoo.modules.loading: Module uom loaded in 0.19s, 347 queries 
+2022-02-19 13:48:32,350 83 INFO savar1802 odoo.modules.loading: Loading module web (4/42) 
+2022-02-19 13:48:32,450 83 INFO savar1802 odoo.modules.registry: module web: creating or updating database tables 
+2022-02-19 13:48:32,783 83 INFO savar1802 odoo.modules.loading: loading web/security/ir.model.access.csv 
+2022-02-19 13:48:32,792 83 INFO savar1802 odoo.modules.loading: loading web/views/webclient_templates.xml 
+2022-02-19 13:48:32,954 83 INFO savar1802 odoo.modules.loading: loading web/views/report_templates.xml 
+2022-02-19 13:48:33,054 83 INFO savar1802 odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2022-02-19 13:48:33,068 83 INFO savar1802 odoo.modules.loading: loading web/data/report_layout.xml 
+2022-02-19 13:48:33,101 83 INFO savar1802 odoo.modules.loading: Module web: loading demo 
+2022-02-19 13:48:33,116 83 INFO savar1802 odoo.modules.loading: Module web loaded in 0.77s, 1332 queries 
+2022-02-19 13:48:33,116 83 INFO savar1802 odoo.modules.loading: Loading module auth_totp (5/42) 
+2022-02-19 13:48:33,145 83 INFO savar1802 odoo.modules.registry: module auth_totp: creating or updating database tables 
+2022-02-19 13:48:33,193 83 INFO savar1802 odoo.modules.loading: loading auth_totp/security/security.xml 
+2022-02-19 13:48:33,201 83 INFO savar1802 odoo.modules.loading: loading auth_totp/views/user_preferences.xml 
+2022-02-19 13:48:33,254 83 INFO savar1802 odoo.modules.loading: loading auth_totp/views/templates.xml 
+2022-02-19 13:48:33,268 83 INFO savar1802 odoo.modules.loading: Module auth_totp: loading demo 
+2022-02-19 13:48:33,276 83 INFO savar1802 odoo.modules.loading: Module auth_totp loaded in 0.16s, 204 queries 
+2022-02-19 13:48:33,276 83 INFO savar1802 odoo.modules.loading: Loading module base_import (6/42) 
+2022-02-19 13:48:33,376 83 INFO savar1802 odoo.modules.registry: module base_import: creating or updating database tables 
+2022-02-19 13:48:33,935 83 INFO savar1802 odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2022-02-19 13:48:33,970 83 INFO savar1802 odoo.modules.loading: loading base_import/views/base_import_templates.xml 
+2022-02-19 13:48:33,985 83 INFO savar1802 odoo.modules.loading: Module base_import: loading demo 
+2022-02-19 13:48:33,994 83 INFO savar1802 odoo.modules.loading: Module base_import loaded in 0.72s, 899 queries 
+2022-02-19 13:48:33,994 83 INFO savar1802 odoo.modules.loading: Loading module base_setup (7/42) 
+2022-02-19 13:48:34,026 83 INFO savar1802 odoo.modules.registry: module base_setup: creating or updating database tables 
+2022-02-19 13:48:34,066 83 INFO savar1802 odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2022-02-19 13:48:34,070 83 INFO savar1802 odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2022-02-19 13:48:34,105 83 INFO savar1802 odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2022-02-19 13:48:34,115 83 INFO savar1802 odoo.modules.loading: loading base_setup/views/assets.xml 
+2022-02-19 13:48:34,123 83 INFO savar1802 odoo.modules.loading: Module base_setup: loading demo 
+2022-02-19 13:48:34,132 83 INFO savar1802 odoo.modules.loading: Module base_setup loaded in 0.14s, 198 queries 
+2022-02-19 13:48:34,132 83 INFO savar1802 odoo.modules.loading: Loading module bus (8/42) 
+2022-02-19 13:48:34,162 83 INFO savar1802 odoo.modules.registry: module bus: creating or updating database tables 
+2022-02-19 13:48:34,236 83 INFO savar1802 odoo.modules.loading: loading bus/views/bus.xml 
+2022-02-19 13:48:34,272 83 INFO savar1802 odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2022-02-19 13:48:34,286 83 INFO savar1802 odoo.modules.loading: Module bus: loading demo 
+2022-02-19 13:48:34,294 83 INFO savar1802 odoo.modules.loading: Module bus loaded in 0.16s, 197 queries 
+2022-02-19 13:48:34,294 83 INFO savar1802 odoo.modules.loading: Loading module http_routing (9/42) 
+2022-02-19 13:48:34,326 83 INFO savar1802 odoo.modules.registry: module http_routing: creating or updating database tables 
+2022-02-19 13:48:34,342 83 INFO savar1802 odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2022-02-19 13:48:34,387 83 INFO savar1802 odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2022-02-19 13:48:34,404 83 INFO savar1802 odoo.modules.loading: Module http_routing: loading demo 
+2022-02-19 13:48:34,412 83 INFO savar1802 odoo.modules.loading: Module http_routing loaded in 0.12s, 163 queries 
+2022-02-19 13:48:34,412 83 INFO savar1802 odoo.modules.loading: Loading module resource (10/42) 
+2022-02-19 13:48:34,445 83 INFO savar1802 odoo.modules.registry: module resource: creating or updating database tables 
+2022-02-19 13:48:34,612 83 INFO savar1802 odoo.modules.loading: loading resource/data/resource_data.xml 
+2022-02-19 13:48:34,637 83 INFO savar1802 odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2022-02-19 13:48:34,658 83 INFO savar1802 odoo.modules.loading: loading resource/security/resource_security.xml 
+2022-02-19 13:48:34,672 83 INFO savar1802 odoo.modules.loading: loading resource/views/resource_views.xml 
+2022-02-19 13:48:34,776 83 INFO savar1802 odoo.modules.loading: loading resource/views/resource.xml 
+2022-02-19 13:48:34,785 83 INFO savar1802 odoo.modules.loading: Module resource: loading demo 
+2022-02-19 13:48:34,795 83 INFO savar1802 odoo.modules.loading: Module resource loaded in 0.38s, 604 queries 
+2022-02-19 13:48:34,795 83 INFO savar1802 odoo.modules.loading: Loading module web_editor (11/42) 
+2022-02-19 13:48:34,841 83 INFO savar1802 odoo.modules.registry: module web_editor: creating or updating database tables 
+2022-02-19 13:48:34,935 83 INFO savar1802 odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2022-02-19 13:48:34,948 83 INFO savar1802 odoo.modules.loading: loading web_editor/views/editor.xml 
+2022-02-19 13:48:35,047 83 INFO savar1802 odoo.modules.loading: loading web_editor/views/snippets.xml 
+2022-02-19 13:48:35,085 83 INFO savar1802 odoo.modules.loading: Module web_editor: loading demo 
+2022-02-19 13:48:35,094 83 INFO savar1802 odoo.modules.loading: Module web_editor loaded in 0.30s, 488 queries 
+2022-02-19 13:48:35,094 83 INFO savar1802 odoo.modules.loading: Loading module web_kanban_gauge (12/42) 
+2022-02-19 13:48:35,124 83 INFO savar1802 odoo.modules.loading: loading web_kanban_gauge/views/web_kanban_gauge_templates.xml 
+2022-02-19 13:48:35,151 83 INFO savar1802 odoo.modules.loading: Module web_kanban_gauge: loading demo 
+2022-02-19 13:48:35,159 83 INFO savar1802 odoo.modules.loading: Module web_kanban_gauge loaded in 0.06s, 63 queries 
+2022-02-19 13:48:35,159 83 INFO savar1802 odoo.modules.loading: Loading module web_tour (13/42) 
+2022-02-19 13:48:35,187 83 INFO savar1802 odoo.modules.registry: module web_tour: creating or updating database tables 
+2022-02-19 13:48:35,244 83 INFO savar1802 odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2022-02-19 13:48:35,255 83 INFO savar1802 odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2022-02-19 13:48:35,264 83 INFO savar1802 odoo.modules.loading: loading web_tour/views/tour_templates.xml 
+2022-02-19 13:48:35,295 83 INFO savar1802 odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2022-02-19 13:48:35,311 83 INFO savar1802 odoo.modules.loading: Module web_tour: loading demo 
+2022-02-19 13:48:35,311 83 INFO savar1802 odoo.modules.loading: loading web_tour/data/web_tour_demo.xml 
+2022-02-19 13:48:35,327 83 INFO savar1802 odoo.modules.loading: Module web_tour loaded in 0.17s, 232 queries 
+2022-02-19 13:48:35,327 83 INFO savar1802 odoo.modules.loading: Loading module base_geolocalize (14/42) 
+2022-02-19 13:48:35,358 83 INFO savar1802 odoo.modules.registry: module base_geolocalize: creating or updating database tables 
+2022-02-19 13:48:35,421 83 INFO savar1802 odoo.modules.loading: loading base_geolocalize/security/ir.model.access.csv 
+2022-02-19 13:48:35,430 83 INFO savar1802 odoo.modules.loading: loading base_geolocalize/views/res_partner_views.xml 
+2022-02-19 13:48:35,453 83 INFO savar1802 odoo.modules.loading: loading base_geolocalize/views/res_config_settings_views.xml 
+2022-02-19 13:48:35,477 83 INFO savar1802 odoo.modules.loading: loading base_geolocalize/data/data.xml 
+2022-02-19 13:48:35,481 83 INFO savar1802 odoo.modules.loading: Module base_geolocalize: loading demo 
+2022-02-19 13:48:35,490 83 INFO savar1802 odoo.modules.loading: Module base_geolocalize loaded in 0.16s, 174 queries 
+2022-02-19 13:48:35,490 83 INFO savar1802 odoo.modules.loading: Loading module iap (15/42) 
+2022-02-19 13:48:35,518 83 INFO savar1802 odoo.modules.registry: module iap: creating or updating database tables 
+2022-02-19 13:48:35,569 83 INFO savar1802 odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2022-02-19 13:48:35,580 83 INFO savar1802 odoo.modules.loading: loading iap/security/ir_rule.xml 
+2022-02-19 13:48:35,586 83 INFO savar1802 odoo.modules.loading: loading iap/views/assets.xml 
+2022-02-19 13:48:35,601 83 INFO savar1802 odoo.modules.loading: loading iap/views/iap_views.xml 
+2022-02-19 13:48:35,621 83 INFO savar1802 odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2022-02-19 13:48:35,648 83 INFO savar1802 odoo.modules.loading: Module iap: loading demo 
+2022-02-19 13:48:35,657 83 INFO savar1802 odoo.modules.loading: Module iap loaded in 0.17s, 231 queries 
+2022-02-19 13:48:35,658 83 INFO savar1802 odoo.modules.loading: Loading module mail (16/42) 
+2022-02-19 13:48:35,676 83 WARNING savar1802 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2022-02-19 13:48:35,842 83 INFO savar1802 odoo.modules.registry: module mail: creating or updating database tables 
+2022-02-19 13:48:36,667 83 INFO savar1802 odoo.models: Storing computed values of res.partner.email_normalized 
+2022-02-19 13:48:37,149 83 INFO savar1802 odoo.modules.loading: loading mail/views/assets.xml 
+2022-02-19 13:48:37,224 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_menus.xml 
+2022-02-19 13:48:37,229 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/invite_view.xml 
+2022-02-19 13:48:37,238 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_view.xml 
+2022-02-19 13:48:37,245 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/mail_compose_message_view.xml 
+2022-02-19 13:48:37,262 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/mail_resend_cancel_views.xml 
+2022-02-19 13:48:37,272 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2022-02-19 13:48:37,285 83 INFO savar1802 odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2022-02-19 13:48:37,300 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2022-02-19 13:48:37,318 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_tracking_views.xml 
+2022-02-19 13:48:37,336 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2022-02-19 13:48:37,354 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2022-02-19 13:48:37,394 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2022-02-19 13:48:37,423 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2022-02-19 13:48:37,439 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_moderation_views.xml 
+2022-02-19 13:48:37,454 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_channel_views.xml 
+2022-02-19 13:48:37,516 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2022-02-19 13:48:37,529 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2022-02-19 13:48:37,584 83 INFO savar1802 odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2022-02-19 13:48:37,607 83 INFO savar1802 odoo.modules.loading: loading mail/data/mail_data.xml 
+2022-02-19 13:48:37,701 83 INFO savar1802 odoo.modules.loading: loading mail/data/mail_channel_data.xml 
+2022-02-19 13:48:37,737 83 INFO savar1802 odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2022-02-19 13:48:37,746 83 INFO savar1802 odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2022-02-19 13:48:37,763 83 INFO savar1802 odoo.modules.loading: loading mail/security/mail_security.xml 
+2022-02-19 13:48:37,789 83 INFO savar1802 odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2022-02-19 13:48:37,877 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2022-02-19 13:48:37,902 83 INFO savar1802 odoo.modules.loading: loading mail/views/res_users_views.xml 
+2022-02-19 13:48:37,941 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2022-02-19 13:48:37,971 83 INFO savar1802 odoo.modules.loading: loading mail/views/ir_actions_views.xml 
+2022-02-19 13:48:37,988 83 INFO savar1802 odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2022-02-19 13:48:38,032 83 INFO savar1802 odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2022-02-19 13:48:38,112 83 INFO savar1802 odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2022-02-19 13:48:38,137 83 INFO savar1802 odoo.modules.loading: Module mail: loading demo 
+2022-02-19 13:48:38,137 83 INFO savar1802 odoo.modules.loading: loading mail/data/mail_channel_demo.xml 
+2022-02-19 13:48:38,219 83 INFO savar1802 odoo.modules.loading: Module mail loaded in 2.56s, 3728 queries 
+2022-02-19 13:48:38,219 83 INFO savar1802 odoo.modules.loading: Loading module web_unsplash (17/42) 
+2022-02-19 13:48:38,267 83 INFO savar1802 odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2022-02-19 13:48:38,342 83 INFO savar1802 odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2022-02-19 13:48:38,371 83 INFO savar1802 odoo.modules.loading: loading web_unsplash/views/web_unsplash_templates.xml 
+2022-02-19 13:48:38,386 83 INFO savar1802 odoo.modules.loading: Module web_unsplash: loading demo 
+2022-02-19 13:48:38,393 83 INFO savar1802 odoo.modules.loading: Module web_unsplash loaded in 0.17s, 137 queries 
+2022-02-19 13:48:38,393 83 INFO savar1802 odoo.modules.loading: Loading module analytic (18/42) 
+2022-02-19 13:48:38,436 83 INFO savar1802 odoo.modules.registry: module analytic: creating or updating database tables 
+2022-02-19 13:48:38,624 83 INFO savar1802 odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2022-02-19 13:48:38,648 83 INFO savar1802 odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2022-02-19 13:48:38,667 83 INFO savar1802 odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2022-02-19 13:48:38,791 83 INFO savar1802 odoo.modules.loading: Module analytic: loading demo 
+2022-02-19 13:48:38,792 83 INFO savar1802 odoo.modules.loading: loading analytic/data/analytic_demo.xml 
+2022-02-19 13:48:38,795 83 INFO savar1802 odoo.modules.loading: loading analytic/data/analytic_account_demo.xml 
+2022-02-19 13:48:38,903 83 INFO savar1802 odoo.modules.loading: Module analytic loaded in 0.51s, 658 queries 
+2022-02-19 13:48:38,903 83 INFO savar1802 odoo.modules.loading: Loading module auth_signup (19/42) 
+2022-02-19 13:48:38,952 83 INFO savar1802 odoo.modules.registry: module auth_signup: creating or updating database tables 
+2022-02-19 13:48:39,011 83 INFO savar1802 odoo.modules.loading: loading auth_signup/data/auth_signup_data.xml 
+2022-02-19 13:48:39,024 83 INFO savar1802 odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2022-02-19 13:48:39,032 83 INFO savar1802 odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2022-02-19 13:48:39,067 83 INFO savar1802 odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2022-02-19 13:48:39,104 83 INFO savar1802 odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2022-02-19 13:48:39,126 83 INFO savar1802 odoo.modules.loading: loading auth_signup/views/auth_signup_assets.xml 
+2022-02-19 13:48:39,135 83 INFO savar1802 odoo.modules.loading: Module auth_signup: loading demo 
+2022-02-19 13:48:39,143 83 INFO savar1802 odoo.modules.loading: Module auth_signup loaded in 0.24s, 297 queries 
+2022-02-19 13:48:39,143 83 INFO savar1802 odoo.modules.loading: Loading module contacts (20/42) 
+2022-02-19 13:48:39,184 83 INFO savar1802 odoo.modules.registry: module contacts: creating or updating database tables 
+2022-02-19 13:48:39,207 83 INFO savar1802 odoo.modules.loading: loading contacts/views/contact_views.xml 
+2022-02-19 13:48:39,262 83 INFO savar1802 odoo.modules.loading: Module contacts: loading demo 
+2022-02-19 13:48:39,270 83 INFO savar1802 odoo.modules.loading: Module contacts loaded in 0.13s, 224 queries 
+2022-02-19 13:48:39,270 83 INFO savar1802 odoo.modules.loading: Loading module fetchmail (21/42) 
+2022-02-19 13:48:39,324 83 INFO savar1802 odoo.modules.registry: module fetchmail: creating or updating database tables 
+2022-02-19 13:48:39,393 83 INFO savar1802 odoo.modules.loading: loading fetchmail/data/fetchmail_data.xml 
+2022-02-19 13:48:39,402 83 INFO savar1802 odoo.modules.loading: loading fetchmail/security/ir.model.access.csv 
+2022-02-19 13:48:39,413 83 INFO savar1802 odoo.modules.loading: loading fetchmail/views/fetchmail_views.xml 
+2022-02-19 13:48:39,444 83 INFO savar1802 odoo.modules.loading: loading fetchmail/views/mail_mail_views.xml 
+2022-02-19 13:48:39,458 83 INFO savar1802 odoo.modules.loading: loading fetchmail/views/res_config_settings_views.xml 
+2022-02-19 13:48:39,486 83 INFO savar1802 odoo.modules.loading: Module fetchmail: loading demo 
+2022-02-19 13:48:39,497 83 INFO savar1802 odoo.modules.loading: Module fetchmail loaded in 0.23s, 248 queries 
+2022-02-19 13:48:39,497 83 INFO savar1802 odoo.modules.loading: Loading module iap_mail (22/42) 
+2022-02-19 13:48:39,541 83 INFO savar1802 odoo.modules.loading: loading iap_mail/views/mail_templates.xml 
+2022-02-19 13:48:39,565 83 INFO savar1802 odoo.modules.loading: Module iap_mail: loading demo 
+2022-02-19 13:48:39,572 83 INFO savar1802 odoo.modules.loading: Module iap_mail loaded in 0.07s, 34 queries 
+2022-02-19 13:48:39,572 83 INFO savar1802 odoo.modules.loading: Loading module mail_bot (23/42) 
+2022-02-19 13:48:39,626 83 INFO savar1802 odoo.modules.registry: module mail_bot: creating or updating database tables 
+2022-02-19 13:48:39,689 83 INFO savar1802 odoo.modules.loading: loading mail_bot/views/assets.xml 
+2022-02-19 13:48:39,721 83 INFO savar1802 odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2022-02-19 13:48:39,760 83 INFO savar1802 odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2022-02-19 13:48:39,765 83 INFO savar1802 odoo.modules.loading: Module mail_bot: loading demo 
+2022-02-19 13:48:39,765 83 INFO savar1802 odoo.modules.loading: loading mail_bot/data/mailbot_demo.xml 
+2022-02-19 13:48:39,776 83 INFO savar1802 odoo.modules.loading: Module mail_bot loaded in 0.20s, 247 queries 
+2022-02-19 13:48:39,776 83 INFO savar1802 odoo.modules.loading: Loading module phone_validation (24/42) 
+2022-02-19 13:48:39,847 83 INFO savar1802 odoo.modules.registry: module phone_validation: creating or updating database tables 
+2022-02-19 13:48:39,940 83 INFO savar1802 odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2022-02-19 13:48:39,952 83 INFO savar1802 odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2022-02-19 13:48:39,979 83 INFO savar1802 odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2022-02-19 13:48:39,986 83 INFO savar1802 odoo.modules.loading: Module phone_validation: loading demo 
+2022-02-19 13:48:39,996 83 INFO savar1802 odoo.modules.loading: Module phone_validation loaded in 0.22s, 212 queries 
+2022-02-19 13:48:39,996 83 INFO savar1802 odoo.modules.loading: Loading module product (25/42) 
+2022-02-19 13:48:40,107 83 INFO savar1802 odoo.modules.registry: module product: creating or updating database tables 
+2022-02-19 13:48:40,596 83 INFO savar1802 odoo.modules.loading: loading product/data/product_data.xml 
+2022-02-19 13:48:40,614 83 INFO savar1802 odoo.modules.loading: loading product/security/product_security.xml 
+2022-02-19 13:48:40,645 83 INFO savar1802 odoo.modules.loading: loading product/security/ir.model.access.csv 
+2022-02-19 13:48:40,696 83 INFO savar1802 odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2022-02-19 13:48:40,728 83 INFO savar1802 odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2022-02-19 13:48:40,782 83 INFO savar1802 odoo.modules.loading: loading product/views/product_views.xml 
+2022-02-19 13:48:40,979 83 INFO savar1802 odoo.modules.loading: loading product/views/product_template_views.xml 
+2022-02-19 13:48:41,030 83 INFO savar1802 odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2022-02-19 13:48:41,128 83 INFO savar1802 odoo.modules.loading: loading product/views/product_templates.xml 
+2022-02-19 13:48:41,150 83 INFO savar1802 odoo.modules.loading: loading product/views/res_partner_views.xml 
+2022-02-19 13:48:41,176 83 INFO savar1802 odoo.modules.loading: loading product/report/product_reports.xml 
+2022-02-19 13:48:41,186 83 INFO savar1802 odoo.modules.loading: loading product/report/product_product_templates.xml 
+2022-02-19 13:48:41,207 83 INFO savar1802 odoo.modules.loading: loading product/report/product_template_templates.xml 
+2022-02-19 13:48:41,219 83 INFO savar1802 odoo.modules.loading: loading product/report/product_packaging.xml 
+2022-02-19 13:48:41,226 83 INFO savar1802 odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2022-02-19 13:48:41,237 83 INFO savar1802 odoo.modules.loading: Module product: loading demo 
+2022-02-19 13:48:41,237 83 INFO savar1802 odoo.modules.loading: loading product/data/product_demo.xml 
+2022-02-19 13:48:41,545 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.message records with IDs: [46] 
+2022-02-19 13:48:41,553 83 INFO savar1802 odoo.models.unlink: User #1 deleted ir.property records with IDs: [9] 
+2022-02-19 13:48:41,555 83 INFO savar1802 odoo.models.unlink: User #1 deleted product.product records with IDs: [9] 
+2022-02-19 13:48:41,559 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.followers records with IDs: [40] 
+2022-02-19 13:48:41,614 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.message records with IDs: [48, 47] 
+2022-02-19 13:48:41,623 83 INFO savar1802 odoo.models.unlink: User #1 deleted product.product records with IDs: [11, 10] 
+2022-02-19 13:48:41,626 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.followers records with IDs: [41, 42] 
+2022-02-19 13:48:42,061 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.message records with IDs: [66] 
+2022-02-19 13:48:42,069 83 INFO savar1802 odoo.models.unlink: User #1 deleted ir.property records with IDs: [20] 
+2022-02-19 13:48:42,070 83 INFO savar1802 odoo.models.unlink: User #1 deleted product.product records with IDs: [22] 
+2022-02-19 13:48:42,073 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.followers records with IDs: [60] 
+2022-02-19 13:48:42,551 83 INFO savar1802 odoo.modules.loading: Module product loaded in 2.55s, 3853 queries 
+2022-02-19 13:48:42,551 83 INFO savar1802 odoo.modules.loading: Loading module fieldservice (26/42) 
+2022-02-19 13:48:42,646 83 INFO savar1802 odoo.modules.registry: module fieldservice: creating or updating database tables 
+2022-02-19 13:48:43,301 83 INFO savar1802 odoo.modules.loading: loading fieldservice/data/ir_sequence.xml 
+2022-02-19 13:48:43,306 83 INFO savar1802 odoo.modules.loading: loading fieldservice/data/mail_message_subtype.xml 
+2022-02-19 13:48:43,319 83 INFO savar1802 odoo.modules.loading: loading fieldservice/data/module_category.xml 
+2022-02-19 13:48:43,323 83 INFO savar1802 odoo.modules.loading: loading fieldservice/data/fsm_stage.xml 
+2022-02-19 13:48:43,329 83 INFO savar1802 odoo.modules.loading: loading fieldservice/data/fsm_team.xml 
+2022-02-19 13:48:43,345 83 INFO savar1802 odoo.modules.loading: loading fieldservice/security/res_groups.xml 
+2022-02-19 13:48:43,380 83 INFO savar1802 odoo.modules.loading: loading fieldservice/security/ir.model.access.csv 
+2022-02-19 13:48:43,435 83 INFO savar1802 odoo.modules.loading: loading fieldservice/security/ir_rule.xml 
+2022-02-19 13:48:43,457 83 INFO savar1802 odoo.modules.loading: loading fieldservice/report/fsm_order_report_template.xml 
+2022-02-19 13:48:43,470 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/res_config_settings.xml 
+2022-02-19 13:48:43,512 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/res_territory.xml 
+2022-02-19 13:48:43,524 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_stage.xml 
+2022-02-19 13:48:43,549 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_tag.xml 
+2022-02-19 13:48:43,565 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/res_partner.xml 
+2022-02-19 13:48:43,604 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_location.xml 
+2022-02-19 13:48:43,658 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_location_person.xml 
+2022-02-19 13:48:43,688 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_person.xml 
+2022-02-19 13:48:43,745 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_order.xml 
+2022-02-19 13:48:43,836 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_order_type.xml 
+2022-02-19 13:48:43,849 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_category.xml 
+2022-02-19 13:48:43,866 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_equipment.xml 
+2022-02-19 13:48:43,916 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_template.xml 
+2022-02-19 13:48:43,934 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_team.xml 
+2022-02-19 13:48:43,982 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/fsm_order_type.xml 
+2022-02-19 13:48:43,992 83 INFO savar1802 odoo.modules.loading: loading fieldservice/views/menu.xml 
+2022-02-19 13:48:44,055 83 INFO savar1802 odoo.modules.loading: loading fieldservice/wizard/fsm_wizard.xml 
+2022-02-19 13:48:44,065 83 INFO savar1802 odoo.modules.loading: Module fieldservice: loading demo 
+2022-02-19 13:48:44,066 83 INFO savar1802 odoo.modules.loading: loading fieldservice/demo/fsm_demo.xml 
+2022-02-19 13:48:44,183 83 INFO savar1802 odoo.modules.loading: loading fieldservice/demo/fsm_equipment.xml 
+2022-02-19 13:48:44,191 83 INFO savar1802 odoo.modules.loading: loading fieldservice/demo/fsm_location.xml 
+2022-02-19 13:48:44,237 83 INFO savar1802 odoo.modules.loading: loading fieldservice/demo/fsm_person.xml 
+2022-02-19 13:48:44,303 83 INFO savar1802 odoo.modules.loading: Module fieldservice loaded in 1.75s, 2541 queries 
+2022-02-19 13:48:44,303 83 INFO savar1802 odoo.modules.loading: Loading module partner_autocomplete (27/42) 
+2022-02-19 13:48:44,382 83 INFO savar1802 odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2022-02-19 13:48:44,478 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2022-02-19 13:48:44,494 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/views/partner_autocomplete_assets.xml 
+2022-02-19 13:48:44,522 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2022-02-19 13:48:44,561 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2022-02-19 13:48:44,573 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2022-02-19 13:48:44,608 83 INFO savar1802 odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2022-02-19 13:48:44,614 83 INFO savar1802 odoo.modules.loading: Module partner_autocomplete: loading demo 
+2022-02-19 13:48:44,625 83 INFO savar1802 odoo.modules.loading: Module partner_autocomplete loaded in 0.32s, 332 queries 
+2022-02-19 13:48:44,625 83 INFO savar1802 odoo.modules.loading: Loading module portal (28/42) 
+2022-02-19 13:48:44,762 83 INFO savar1802 odoo.modules.registry: module portal: creating or updating database tables 
+2022-02-19 13:48:44,973 83 INFO savar1802 odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2022-02-19 13:48:44,988 83 INFO savar1802 odoo.modules.loading: loading portal/data/portal_data.xml 
+2022-02-19 13:48:45,003 83 INFO savar1802 odoo.modules.loading: loading portal/views/assets.xml 
+2022-02-19 13:48:45,034 83 INFO savar1802 odoo.modules.loading: loading portal/views/portal_templates.xml 
+2022-02-19 13:48:45,165 83 INFO savar1802 odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2022-02-19 13:48:45,178 83 INFO savar1802 odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2022-02-19 13:48:45,189 83 INFO savar1802 odoo.modules.loading: Module portal: loading demo 
+2022-02-19 13:48:45,199 83 INFO savar1802 odoo.modules.loading: Module portal loaded in 0.57s, 709 queries 
+2022-02-19 13:48:45,199 83 INFO savar1802 odoo.modules.loading: Loading module sms (29/42) 
+2022-02-19 13:48:45,313 83 INFO savar1802 odoo.modules.registry: module sms: creating or updating database tables 
+2022-02-19 13:48:45,495 83 INFO savar1802 odoo.models: Storing computed values of res.partner.phone_sanitized 
+2022-02-19 13:48:45,647 83 INFO savar1802 odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2022-02-19 13:48:45,654 83 INFO savar1802 odoo.modules.loading: loading sms/wizard/sms_cancel_views.xml 
+2022-02-19 13:48:45,668 83 INFO savar1802 odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2022-02-19 13:48:45,681 83 INFO savar1802 odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2022-02-19 13:48:45,695 83 INFO savar1802 odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2022-02-19 13:48:45,708 83 INFO savar1802 odoo.modules.loading: loading sms/views/ir_actions_views.xml 
+2022-02-19 13:48:45,727 83 INFO savar1802 odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2022-02-19 13:48:45,743 83 INFO savar1802 odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2022-02-19 13:48:45,778 83 INFO savar1802 odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2022-02-19 13:48:45,815 83 INFO savar1802 odoo.modules.loading: loading sms/views/assets.xml 
+2022-02-19 13:48:45,835 83 INFO savar1802 odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2022-02-19 13:48:45,859 83 INFO savar1802 odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2022-02-19 13:48:45,884 83 INFO savar1802 odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2022-02-19 13:48:45,909 83 INFO savar1802 odoo.modules.loading: loading sms/security/sms_security.xml 
+2022-02-19 13:48:45,916 83 INFO savar1802 odoo.modules.loading: Module sms: loading demo 
+2022-02-19 13:48:45,917 83 INFO savar1802 odoo.modules.loading: loading sms/data/sms_demo.xml 
+2022-02-19 13:48:45,920 83 INFO savar1802 odoo.modules.loading: loading sms/data/mail_demo.xml 
+2022-02-19 13:48:45,964 83 INFO savar1802 odoo.modules.loading: Module sms loaded in 0.77s, 887 queries 
+2022-02-19 13:48:45,964 83 INFO savar1802 odoo.modules.loading: Loading module snailmail (30/42) 
+2022-02-19 13:48:46,056 83 INFO savar1802 odoo.modules.registry: module snailmail: creating or updating database tables 
+2022-02-19 13:48:46,256 83 INFO savar1802 odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2022-02-19 13:48:46,264 83 INFO savar1802 odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2022-02-19 13:48:46,286 83 INFO savar1802 odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2022-02-19 13:48:46,312 83 INFO savar1802 odoo.modules.loading: loading snailmail/views/assets.xml 
+2022-02-19 13:48:46,343 83 INFO savar1802 odoo.modules.loading: loading snailmail/wizard/snailmail_confirm_views.xml 
+2022-02-19 13:48:46,351 83 INFO savar1802 odoo.modules.loading: loading snailmail/wizard/snailmail_letter_cancel_views.xml 
+2022-02-19 13:48:46,361 83 INFO savar1802 odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2022-02-19 13:48:46,372 83 INFO savar1802 odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2022-02-19 13:48:46,383 83 INFO savar1802 odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2022-02-19 13:48:46,402 83 INFO savar1802 odoo.modules.loading: Module snailmail: loading demo 
+2022-02-19 13:48:46,414 83 INFO savar1802 odoo.modules.loading: Module snailmail loaded in 0.45s, 513 queries 
+2022-02-19 13:48:46,414 83 INFO savar1802 odoo.modules.loading: Loading module auth_totp_portal (31/42) 
+2022-02-19 13:48:46,489 83 INFO savar1802 odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2022-02-19 13:48:46,558 83 INFO savar1802 odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2022-02-19 13:48:46,585 83 INFO savar1802 odoo.modules.loading: Module auth_totp_portal: loading demo 
+2022-02-19 13:48:46,595 83 INFO savar1802 odoo.modules.loading: Module auth_totp_portal loaded in 0.18s, 102 queries 
+2022-02-19 13:48:46,595 83 INFO savar1802 odoo.modules.loading: Loading module digest (32/42) 
+2022-02-19 13:48:46,673 83 INFO savar1802 odoo.modules.registry: module digest: creating or updating database tables 
+2022-02-19 13:48:46,791 83 INFO savar1802 odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2022-02-19 13:48:46,806 83 INFO savar1802 odoo.modules.loading: loading digest/data/digest_data.xml 
+2022-02-19 13:48:46,831 83 INFO savar1802 odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2022-02-19 13:48:46,851 83 INFO savar1802 odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2022-02-19 13:48:46,858 83 INFO savar1802 odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2022-02-19 13:48:46,863 83 INFO savar1802 odoo.modules.loading: loading digest/views/digest_views.xml 
+2022-02-19 13:48:46,927 83 INFO savar1802 odoo.modules.loading: loading digest/views/digest_templates.xml 
+2022-02-19 13:48:46,933 83 INFO savar1802 odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2022-02-19 13:48:46,968 83 INFO savar1802 odoo.modules.loading: Module digest: loading demo 
+2022-02-19 13:48:46,979 83 INFO savar1802 odoo.modules.loading: Module digest loaded in 0.38s, 427 queries 
+2022-02-19 13:48:46,979 83 INFO savar1802 odoo.modules.loading: Loading module account (33/42) 
+2022-02-19 13:48:47,197 83 INFO savar1802 odoo.modules.registry: module account: creating or updating database tables 
+2022-02-19 13:48:48,542 83 INFO savar1802 odoo.models: Storing computed values of res.company.account_tax_fiscal_country_id 
+2022-02-19 13:48:49,866 83 INFO savar1802 odoo.modules.loading: loading account/security/account_security.xml 
+2022-02-19 13:48:50,055 83 INFO savar1802 odoo.modules.loading: loading account/security/ir.model.access.csv 
+2022-02-19 13:48:50,269 83 INFO savar1802 odoo.modules.loading: loading account/data/data_account_type.xml 
+2022-02-19 13:48:50,290 83 INFO savar1802 odoo.modules.loading: loading account/data/account_data.xml 
+2022-02-19 13:48:50,341 83 INFO savar1802 odoo.modules.loading: loading account/data/digest_data.xml 
+2022-02-19 13:48:50,347 83 INFO savar1802 odoo.modules.loading: loading account/views/account_payment_view.xml 
+2022-02-19 13:48:50,425 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2022-02-19 13:48:50,439 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2022-02-19 13:48:50,449 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2022-02-19 13:48:50,461 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2022-02-19 13:48:50,472 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2022-02-19 13:48:50,488 83 INFO savar1802 odoo.modules.loading: loading account/views/account_move_views.xml 
+2022-02-19 13:48:50,889 83 INFO savar1802 odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2022-02-19 13:48:50,916 83 INFO savar1802 odoo.modules.loading: loading account/wizard/pos_box.xml 
+2022-02-19 13:48:50,925 83 INFO savar1802 odoo.modules.loading: loading account/views/partner_view.xml 
+2022-02-19 13:48:51,041 83 INFO savar1802 odoo.modules.loading: loading account/views/account_account_type_views.xml 
+2022-02-19 13:48:51,062 83 INFO savar1802 odoo.modules.loading: loading account/views/account_account_views.xml 
+2022-02-19 13:48:51,102 83 INFO savar1802 odoo.modules.loading: loading account/views/account_group_views.xml 
+2022-02-19 13:48:51,122 83 INFO savar1802 odoo.modules.loading: loading account/views/account_journal_views.xml 
+2022-02-19 13:48:51,192 83 INFO savar1802 odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2022-02-19 13:48:51,212 83 INFO savar1802 odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2022-02-19 13:48:51,324 83 INFO savar1802 odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2022-02-19 13:48:51,372 83 INFO savar1802 odoo.modules.loading: loading account/views/account_tax_views.xml 
+2022-02-19 13:48:51,435 83 INFO savar1802 odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2022-02-19 13:48:51,443 83 INFO savar1802 odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2022-02-19 13:48:51,487 83 INFO savar1802 odoo.modules.loading: loading account/views/account_chart_template_views.xml 
+2022-02-19 13:48:51,576 83 INFO savar1802 odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2022-02-19 13:48:51,590 83 INFO savar1802 odoo.modules.loading: loading account/views/report_statement.xml 
+2022-02-19 13:48:51,599 83 INFO savar1802 odoo.modules.loading: loading account/views/account_report.xml 
+2022-02-19 13:48:51,613 83 INFO savar1802 odoo.modules.loading: loading account/data/mail_template_data.xml 
+2022-02-19 13:48:51,617 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2022-02-19 13:48:51,626 83 INFO savar1802 odoo.modules.loading: loading account/views/res_company_views.xml 
+2022-02-19 13:48:51,640 83 INFO savar1802 odoo.modules.loading: loading account/views/product_view.xml 
+2022-02-19 13:48:51,681 83 INFO savar1802 odoo.modules.loading: loading account/views/account_analytic_view.xml 
+2022-02-19 13:48:51,715 83 INFO savar1802 odoo.modules.loading: loading account/views/account.xml 
+2022-02-19 13:48:51,764 83 INFO savar1802 odoo.modules.loading: loading account/views/report_invoice.xml 
+2022-02-19 13:48:51,793 83 INFO savar1802 odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2022-02-19 13:48:51,839 83 INFO savar1802 odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2022-02-19 13:48:51,865 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_report_common_view.xml 
+2022-02-19 13:48:51,874 83 INFO savar1802 odoo.modules.loading: loading account/views/report_journal.xml 
+2022-02-19 13:48:51,882 83 INFO savar1802 odoo.modules.loading: loading account/views/tax_adjustments.xml 
+2022-02-19 13:48:51,885 83 INFO savar1802 odoo.modules.loading: loading account/wizard/wizard_tax_adjustments_view.xml 
+2022-02-19 13:48:51,898 83 INFO savar1802 odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2022-02-19 13:48:51,964 83 INFO savar1802 odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2022-02-19 13:48:51,995 83 INFO savar1802 odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2022-02-19 13:48:52,031 83 INFO savar1802 odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2022-02-19 13:48:52,044 83 INFO savar1802 odoo.modules.loading: loading account/data/payment_receipt_data.xml 
+2022-02-19 13:48:52,052 83 INFO savar1802 odoo.modules.loading: loading account/views/account_onboarding_templates.xml 
+2022-02-19 13:48:52,108 83 INFO savar1802 odoo.modules.loading: loading account/data/service_cron.xml 
+2022-02-19 13:48:52,114 83 INFO savar1802 odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2022-02-19 13:48:52,138 83 INFO savar1802 odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2022-02-19 13:48:52,159 83 INFO savar1802 odoo.modules.loading: loading account/views/digest_views.xml 
+2022-02-19 13:48:52,190 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_invoice_send_views.xml 
+2022-02-19 13:48:52,206 83 INFO savar1802 odoo.modules.loading: loading account/views/account_tax_report_views.xml 
+2022-02-19 13:48:52,239 83 INFO savar1802 odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2022-02-19 13:48:52,248 83 INFO savar1802 odoo.modules.loading: loading account/views/res_currency.xml 
+2022-02-19 13:48:52,258 83 INFO savar1802 odoo.modules.loading: loading account/views/account_menuitem.xml 
+2022-02-19 13:48:52,386 83 INFO savar1802 odoo.modules.loading: loading account/views/account_analytic_default_view.xml 
+2022-02-19 13:48:52,425 83 INFO savar1802 odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2022-02-19 13:48:52,446 83 INFO savar1802 odoo.modules.loading: Module account: loading demo 
+2022-02-19 13:48:52,447 83 INFO savar1802 odoo.modules.loading: loading account/demo/account_demo.xml 
+2022-02-19 13:48:52,655 83 INFO savar1802 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Check Printing Base', 'United States - Accounting'] to user __system__ #1 via n/a 
+2022-02-19 13:48:52,722 83 INFO savar1802 odoo.modules.loading: Module account loaded in 5.74s, 8156 queries 
+2022-02-19 13:48:52,722 83 INFO savar1802 odoo.modules.loading: Loading module account_edi (34/42) 
+2022-02-19 13:48:52,851 83 INFO savar1802 odoo.modules.registry: module account_edi: creating or updating database tables 
+2022-02-19 13:48:53,059 83 INFO savar1802 odoo.modules.loading: loading account_edi/security/ir.model.access.csv 
+2022-02-19 13:48:53,076 83 INFO savar1802 odoo.modules.loading: loading account_edi/wizard/account_invoice_send_views.xml 
+2022-02-19 13:48:53,092 83 INFO savar1802 odoo.modules.loading: loading account_edi/views/account_edi_document_views.xml 
+2022-02-19 13:48:53,099 83 INFO savar1802 odoo.modules.loading: loading account_edi/views/account_move_views.xml 
+2022-02-19 13:48:53,199 83 INFO savar1802 odoo.modules.loading: loading account_edi/views/account_payment_views.xml 
+2022-02-19 13:48:53,231 83 INFO savar1802 odoo.modules.loading: loading account_edi/views/account_journal_views.xml 
+2022-02-19 13:48:53,256 83 INFO savar1802 odoo.modules.loading: loading account_edi/data/cron.xml 
+2022-02-19 13:48:53,262 83 INFO savar1802 odoo.modules.loading: Module account_edi: loading demo 
+2022-02-19 13:48:53,273 83 INFO savar1802 odoo.modules.loading: Module account_edi loaded in 0.55s, 392 queries 
+2022-02-19 13:48:53,273 83 INFO savar1802 odoo.modules.loading: Loading module odoope_toponyms (35/42) 
+2022-02-19 13:48:53,387 83 INFO savar1802 odoo.modules.registry: module odoope_toponyms: creating or updating database tables 
+2022-02-19 13:48:53,525 83 INFO savar1802 odoo.modules.loading: loading odoope_toponyms/views/res_partner_view.xml 
+2022-02-19 13:48:53,532 83 WARNING savar1802 odoo.addons.base.models.ir_ui_view: Error-prone use of @class in view toponyms.res.partner.inherit (): use the hasclass(*classes) function to filter elements by their classes 
+2022-02-19 13:48:53,568 83 INFO savar1802 odoo.modules.loading: loading odoope_toponyms/views/res_company_view.xml 
+2022-02-19 13:48:53,585 83 INFO savar1802 odoo.modules.loading: loading odoope_toponyms/views/res_country_view.xml 
+2022-02-19 13:48:53,600 83 INFO savar1802 odoo.modules.loading: loading odoope_toponyms/views/res_country_data.xml 
+2022-02-19 13:48:53,639 83 ERROR savar1802 odoo.osv.expression: Non-stored field res.company.country_id cannot be searched. 
+2022-02-19 13:48:55,376 83 INFO savar1802 odoo.modules.loading: Module odoope_toponyms: loading demo 
+2022-02-19 13:48:55,390 83 INFO savar1802 odoo.modules.loading: Module odoope_toponyms loaded in 2.12s, 6498 queries 
+2022-02-19 13:48:55,390 83 INFO savar1802 odoo.modules.loading: Loading module payment (36/42) 
+2022-02-19 13:48:55,568 83 INFO savar1802 odoo.modules.registry: module payment: creating or updating database tables 
+2022-02-19 13:48:55,895 83 INFO savar1802 odoo.modules.loading: loading payment/data/account_data.xml 
+2022-02-19 13:48:55,900 83 INFO savar1802 odoo.modules.loading: loading payment/data/payment_icon_data.xml 
+2022-02-19 13:48:56,047 83 INFO savar1802 odoo.modules.loading: loading payment/data/payment_acquirer_data.xml 
+2022-02-19 13:48:56,170 83 INFO savar1802 odoo.modules.loading: loading payment/data/payment_cron.xml 
+2022-02-19 13:48:56,177 83 INFO savar1802 odoo.modules.loading: loading payment/views/payment_views.xml 
+2022-02-19 13:48:56,298 83 INFO savar1802 odoo.modules.loading: loading payment/views/account_payment_views.xml 
+2022-02-19 13:48:56,322 83 INFO savar1802 odoo.modules.loading: loading payment/views/account_invoice_views.xml 
+2022-02-19 13:48:56,381 83 INFO savar1802 odoo.modules.loading: loading payment/views/payment_acquirer_onboarding_templates.xml 
+2022-02-19 13:48:56,398 83 INFO savar1802 odoo.modules.loading: loading payment/views/payment_templates.xml 
+2022-02-19 13:48:56,423 83 INFO savar1802 odoo.modules.loading: loading payment/views/payment_portal_templates.xml 
+2022-02-19 13:48:56,453 83 INFO savar1802 odoo.modules.loading: loading payment/views/assets.xml 
+2022-02-19 13:48:56,462 83 INFO savar1802 odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2022-02-19 13:48:56,504 83 INFO savar1802 odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2022-02-19 13:48:56,531 83 INFO savar1802 odoo.modules.loading: loading payment/security/payment_security.xml 
+2022-02-19 13:48:56,556 83 INFO savar1802 odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2022-02-19 13:48:56,569 83 INFO savar1802 odoo.modules.loading: Module payment: loading demo 
+2022-02-19 13:48:56,586 83 INFO savar1802 odoo.modules.loading: Module payment loaded in 1.20s, 1155 queries 
+2022-02-19 13:48:56,587 83 INFO savar1802 odoo.modules.loading: Loading module snailmail_account (37/42) 
+2022-02-19 13:48:56,709 83 INFO savar1802 odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2022-02-19 13:48:56,823 83 INFO savar1802 odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2022-02-19 13:48:56,883 83 INFO savar1802 odoo.modules.loading: loading snailmail_account/views/assets.xml 
+2022-02-19 13:48:56,896 83 INFO savar1802 odoo.modules.loading: loading snailmail_account/wizard/account_invoice_send_views.xml 
+2022-02-19 13:48:56,916 83 INFO savar1802 odoo.modules.loading: loading snailmail_account/security/ir.model.access.csv 
+2022-02-19 13:48:56,926 83 INFO savar1802 odoo.modules.loading: Module snailmail_account: loading demo 
+2022-02-19 13:48:56,935 83 INFO savar1802 odoo.modules.loading: Module snailmail_account loaded in 0.35s, 207 queries 
+2022-02-19 13:48:56,935 83 INFO savar1802 odoo.modules.loading: Loading module account_edi_facturx (38/42) 
+2022-02-19 13:48:57,044 83 INFO savar1802 odoo.modules.registry: module account_edi_facturx: creating or updating database tables 
+2022-02-19 13:48:57,062 83 INFO savar1802 odoo.modules.loading: loading account_edi_facturx/data/account_edi_data.xml 
+2022-02-19 13:48:57,156 83 INFO savar1802 odoo.modules.loading: loading account_edi_facturx/data/facturx_templates.xml 
+2022-02-19 13:48:57,184 83 INFO savar1802 odoo.modules.loading: Module account_edi_facturx: loading demo 
+2022-02-19 13:48:57,193 83 INFO savar1802 odoo.modules.loading: Module account_edi_facturx loaded in 0.26s, 88 queries 
+2022-02-19 13:48:57,193 83 INFO savar1802 odoo.modules.loading: Loading module account_edi_ubl (39/42) 
+2022-02-19 13:48:57,310 83 INFO savar1802 odoo.modules.registry: module account_edi_ubl: creating or updating database tables 
+2022-02-19 13:48:57,351 83 INFO savar1802 odoo.modules.loading: loading account_edi_ubl/data/ubl_templates.xml 
+2022-02-19 13:48:57,420 83 INFO savar1802 odoo.modules.loading: Module account_edi_ubl: loading demo 
+2022-02-19 13:48:57,428 83 INFO savar1802 odoo.modules.loading: Module account_edi_ubl loaded in 0.24s, 96 queries 
+2022-02-19 13:48:57,428 83 INFO savar1802 odoo.modules.loading: Loading module payment_fix_register_token (40/42) 
+2022-02-19 13:48:57,538 83 INFO savar1802 odoo.modules.registry: module payment_fix_register_token: creating or updating database tables 
+2022-02-19 13:48:57,612 83 INFO savar1802 odoo.modules.loading: loading payment_fix_register_token/views/account_payment_register_views.xml 
+2022-02-19 13:48:57,630 83 INFO savar1802 odoo.modules.loading: Module payment_fix_register_token: loading demo 
+2022-02-19 13:48:57,638 83 INFO savar1802 odoo.modules.loading: Module payment_fix_register_token loaded in 0.21s, 74 queries 
+2022-02-19 13:48:57,638 83 INFO savar1802 odoo.modules.loading: Loading module payment_transfer (41/42) 
+2022-02-19 13:48:57,804 83 INFO savar1802 odoo.modules.registry: module payment_transfer: creating or updating database tables 
+2022-02-19 13:48:57,888 83 INFO savar1802 odoo.modules.loading: loading payment_transfer/views/payment_views.xml 
+2022-02-19 13:48:57,907 83 INFO savar1802 odoo.modules.loading: loading payment_transfer/views/payment_transfer_templates.xml 
+2022-02-19 13:48:57,914 83 INFO savar1802 odoo.modules.loading: loading payment_transfer/data/payment_acquirer_data.xml 
+2022-02-19 13:48:57,926 83 INFO savar1802 odoo.modules.loading: Module payment_transfer: loading demo 
+2022-02-19 13:48:57,939 83 INFO savar1802 odoo.modules.loading: Module payment_transfer loaded in 0.30s, 118 queries 
+2022-02-19 13:48:57,939 83 INFO savar1802 odoo.modules.loading: Loading module savar_fieldservice (42/42) 
+2022-02-19 13:48:58,023 83 WARNING savar1802 odoo.models: Field definition for _inherits reference "partner_id" in "fsm.location" must be marked as "required" with ondelete="cascade" or "restrict", forcing it to required + cascade. 
+2022-02-19 13:48:58,059 83 INFO savar1802 odoo.modules.registry: module savar_fieldservice: creating or updating database tables 
+2022-02-19 13:48:58,141 83 INFO savar1802 odoo.modules.loading: loading savar_fieldservice/views/fsm_location.xml 
+2022-02-19 13:48:58,171 83 INFO savar1802 odoo.modules.loading: loading savar_fieldservice/views/res_partner.xml 
+2022-02-19 13:48:58,187 83 INFO savar1802 odoo.modules.loading: loading savar_fieldservice/data/res_partner.xml 
+2022-02-19 13:48:58,213 83 INFO savar1802 odoo.modules.loading: loading savar_fieldservice/data/ubigeo.xml 
+2022-02-19 13:49:56,524 83 INFO savar1802 odoo.modules.loading: Module savar_fieldservice: loading demo 
+2022-02-19 13:50:00,142 83 INFO savar1802 odoo.modules.loading: Module savar_fieldservice loaded in 62.20s, 39701 queries 
+2022-02-19 13:50:00,142 83 INFO savar1802 odoo.modules.loading: 42 modules loaded in 88.23s, 77122 queries (+0 extra) 
+2022-02-19 13:50:00,145 83 INFO savar1802 odoo.modules.loading: loading 45 modules... 
+2022-02-19 13:50:00,145 83 INFO savar1802 odoo.modules.loading: Loading module account_check_printing (34/45) 
+2022-02-19 13:50:00,394 83 INFO savar1802 odoo.modules.registry: module account_check_printing: creating or updating database tables 
+2022-02-19 13:50:00,720 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/security/ir.model.access.csv 
+2022-02-19 13:50:00,735 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/data/account_check_printing_data.xml 
+2022-02-19 13:50:00,746 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/views/account_journal_views.xml 
+2022-02-19 13:50:00,819 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/views/account_move_views.xml 
+2022-02-19 13:50:00,838 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/views/account_payment_views.xml 
+2022-02-19 13:50:00,894 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/views/res_config_settings_views.xml 
+2022-02-19 13:50:00,966 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/views/res_partner_views.xml 
+2022-02-19 13:50:01,018 83 INFO savar1802 odoo.modules.loading: loading account_check_printing/wizard/print_prenumbered_checks_views.xml 
+2022-02-19 13:50:01,028 83 INFO savar1802 odoo.modules.loading: Module account_check_printing: loading demo 
+2022-02-19 13:50:01,040 83 INFO savar1802 odoo.modules.loading: Module account_check_printing loaded in 0.90s, 520 queries 
+2022-02-19 13:50:01,040 83 INFO savar1802 odoo.modules.loading: Loading module l10n_generic_coa (36/45) 
+2022-02-19 13:50:01,173 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/data/l10n_generic_coa.xml 
+2022-02-19 13:50:01,238 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/data/account.account.template.csv 
+2022-02-19 13:50:01,291 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/data/l10n_generic_coa_post.xml 
+2022-02-19 13:50:01,533 83 INFO savar1802 odoo.modules.loading: Module l10n_generic_coa: loading demo 
+2022-02-19 13:50:01,533 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/demo/account_bank_statement_demo.xml 
+2022-02-19 13:50:01,983 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/demo/account_invoice_demo.xml 
+2022-02-19 13:50:03,404 83 INFO savar1802 odoo.tests: skip sending email in test mode 
+2022-02-19 13:50:03,405 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Mail with ID 1 and Message-Id '<590217101839178.1645278603.365142107009888-openerp-message-notify@b62bfabcbe8a>' successfully sent 
+2022-02-19 13:50:03,414 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.mail records with IDs: [1] 
+2022-02-19 13:50:03,414 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2022-02-19 13:50:03,452 83 INFO savar1802 odoo.tests: skip sending email in test mode 
+2022-02-19 13:50:03,453 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Mail with ID 2 and Message-Id '<742585116624364.1645278603.434026956558228-openerp-message-notify@b62bfabcbe8a>' successfully sent 
+2022-02-19 13:50:03,463 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.mail records with IDs: [2] 
+2022-02-19 13:50:03,463 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2022-02-19 13:50:03,507 83 INFO savar1802 odoo.tests: skip sending email in test mode 
+2022-02-19 13:50:03,507 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Mail with ID 3 and Message-Id '<236476535778467.1645278603.484620809555054-openerp-message-notify@b62bfabcbe8a>' successfully sent 
+2022-02-19 13:50:03,518 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.mail records with IDs: [3] 
+2022-02-19 13:50:03,518 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2022-02-19 13:50:03,559 83 INFO savar1802 odoo.tests: skip sending email in test mode 
+2022-02-19 13:50:03,560 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Mail with ID 4 and Message-Id '<525877485907450.1645278603.539731740951538-openerp-message-notify@b62bfabcbe8a>' successfully sent 
+2022-02-19 13:50:03,566 83 INFO savar1802 odoo.models.unlink: User #1 deleted mail.mail records with IDs: [4] 
+2022-02-19 13:50:03,566 83 INFO savar1802 odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2022-02-19 13:50:03,572 83 INFO savar1802 odoo.modules.loading: loading l10n_generic_coa/demo/account_reconcile_model.xml 
+2022-02-19 13:50:03,606 83 INFO savar1802 odoo.modules.loading: Module l10n_generic_coa loaded in 2.57s, 2484 queries (+1 other) 
+2022-02-19 13:50:03,606 83 INFO savar1802 odoo.modules.loading: Loading module l10n_us (42/45) 
+2022-02-19 13:50:03,749 83 INFO savar1802 odoo.modules.registry: module l10n_us: creating or updating database tables 
+2022-02-19 13:50:03,847 83 INFO savar1802 odoo.modules.loading: loading l10n_us/data/res_company_data.xml 
+2022-02-19 13:50:03,853 83 INFO savar1802 odoo.modules.loading: loading l10n_us/views/res_partner_bank_views.xml 
+2022-02-19 13:50:03,875 83 INFO savar1802 odoo.modules.loading: Module l10n_us: loading demo 
+2022-02-19 13:50:03,885 83 INFO savar1802 odoo.modules.loading: Module l10n_us loaded in 0.28s, 84 queries 
+2022-02-19 13:50:03,885 83 INFO savar1802 odoo.modules.loading: 45 modules loaded in 3.74s, 3088 queries (+1 extra) 
+2022-02-19 13:50:04,389 83 INFO savar1802 odoo.modules.loading: Modules loaded. 
+2022-02-19 13:50:04,395 83 INFO savar1802 odoo.service.server: Initiating shutdown 
+2022-02-19 13:50:04,396 83 INFO savar1802 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-02-19 13:55:03,527 148 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:55:03,527 148 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:55:03,527 148 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:55:03,527 148 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:55:03,640 148 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2022-02-19 13:55:03,704 148 INFO ANDRES001 odoo.modules.loading: loading 1 modules... 
+2022-02-19 13:55:03,715 148 INFO ANDRES001 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-02-19 13:55:03,778 148 INFO ANDRES001 odoo.modules.loading: updating modules list 
+2022-02-19 13:55:03,779 148 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2022-02-19 13:55:04,231 148 INFO ANDRES001 odoo.modules.loading: loading 36 modules... 
+2022-02-19 13:55:04,275 148 WARNING ANDRES001 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2022-02-19 13:55:04,309 148 INFO ANDRES001 odoo.modules.loading: Loading module muk_web_theme (15/36) 
+2022-02-19 13:55:04,460 148 INFO ANDRES001 odoo.modules.registry: module muk_web_theme: creating or updating database tables 
+2022-02-19 13:55:04,543 148 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/assets.xml 
+2022-02-19 13:55:04,590 148 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/web.xml 
+2022-02-19 13:55:04,599 148 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_users.xml 
+2022-02-19 13:55:04,626 148 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_config_settings_view.xml 
+2022-02-19 13:55:04,651 148 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/data/res_company.xml 
+2022-02-19 13:55:04,670 148 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme: loading demo 
+2022-02-19 13:55:04,672 148 INFO ANDRES001 odoo.addons.base.models.ir_translation: module muk_web_theme: no translation for language es_PE 
+2022-02-19 13:55:04,680 148 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme loaded in 0.37s, 301 queries 
+2022-02-19 13:55:04,763 148 INFO ANDRES001 odoo.modules.loading: 36 modules loaded in 0.53s, 301 queries (+0 extra) 
+2022-02-19 13:55:05,005 148 INFO ANDRES001 odoo.modules.registry: verifying fields for every extended model 
+2022-02-19 13:55:05,164 148 INFO ANDRES001 odoo.modules.loading: Modules loaded. 
+2022-02-19 13:55:05,169 148 INFO ANDRES001 odoo.service.server: Initiating shutdown 
+2022-02-19 13:55:05,169 148 INFO ANDRES001 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-02-19 13:55:28,796 206 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:55:28,796 206 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:55:28,796 206 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:55:28,796 206 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:55:28,910 206 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2022-02-19 13:55:28,976 206 INFO ANDRES001 odoo.modules.loading: loading 1 modules... 
+2022-02-19 13:55:28,988 206 INFO ANDRES001 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-02-19 13:55:29,048 206 INFO ANDRES001 odoo.modules.loading: updating modules list 
+2022-02-19 13:55:29,049 206 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2022-02-19 13:55:29,472 206 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['MuK Backend Theme'] to user __system__ #1 via n/a 
+2022-02-19 13:55:29,507 206 INFO ANDRES001 odoo.modules.loading: loading 35 modules... 
+2022-02-19 13:55:29,549 206 WARNING ANDRES001 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2022-02-19 13:55:29,665 206 INFO ANDRES001 odoo.modules.loading: 35 modules loaded in 0.16s, 0 queries (+0 extra) 
+2022-02-19 13:55:29,667 206 INFO ANDRES001 odoo.modules.loading: loading 36 modules... 
+2022-02-19 13:55:29,667 206 INFO ANDRES001 odoo.modules.loading: Loading module muk_web_theme (15/36) 
+2022-02-19 13:55:29,890 206 INFO ANDRES001 odoo.modules.registry: module muk_web_theme: creating or updating database tables 
+2022-02-19 13:55:29,977 206 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/assets.xml 
+2022-02-19 13:55:30,028 206 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/web.xml 
+2022-02-19 13:55:30,036 206 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_users.xml 
+2022-02-19 13:55:30,071 206 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_config_settings_view.xml 
+2022-02-19 13:55:30,109 206 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/data/res_company.xml 
+2022-02-19 13:55:30,124 206 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme: loading demo 
+2022-02-19 13:55:30,126 206 INFO ANDRES001 odoo.addons.base.models.ir_translation: module muk_web_theme: no translation for language es_PE 
+2022-02-19 13:55:30,134 206 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme loaded in 0.47s, 331 queries 
+2022-02-19 13:55:30,134 206 INFO ANDRES001 odoo.modules.loading: 36 modules loaded in 0.47s, 331 queries (+0 extra) 
+2022-02-19 13:55:30,315 206 INFO ANDRES001 odoo.modules.loading: Modules loaded. 
+2022-02-19 13:55:30,318 206 INFO ANDRES001 odoo.service.server: Initiating shutdown 
+2022-02-19 13:55:30,318 206 INFO ANDRES001 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-02-19 13:58:21,421 91 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:58:21,422 91 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:58:21,422 91 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:58:21,422 91 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:58:21,527 91 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2022-02-19 13:58:21,595 91 INFO ANDRES001 odoo.modules.loading: loading 1 modules... 
+2022-02-19 13:58:21,606 91 INFO ANDRES001 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-02-19 13:58:21,664 91 INFO ANDRES001 odoo.modules.loading: updating modules list 
+2022-02-19 13:58:21,666 91 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2022-02-19 13:58:22,080 91 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['MuK Backend Theme'] to user __system__ #1 via n/a 
+2022-02-19 13:58:22,114 91 INFO ANDRES001 odoo.modules.loading: loading 35 modules... 
+2022-02-19 13:58:22,157 91 WARNING ANDRES001 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2022-02-19 13:58:22,275 91 INFO ANDRES001 odoo.modules.loading: 35 modules loaded in 0.16s, 0 queries (+0 extra) 
+2022-02-19 13:58:22,277 91 INFO ANDRES001 odoo.modules.loading: loading 36 modules... 
+2022-02-19 13:58:22,277 91 INFO ANDRES001 odoo.modules.loading: Loading module muk_web_theme (15/36) 
+2022-02-19 13:58:22,501 91 INFO ANDRES001 odoo.modules.registry: module muk_web_theme: creating or updating database tables 
+2022-02-19 13:58:22,586 91 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/assets.xml 
+2022-02-19 13:58:22,631 91 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/web.xml 
+2022-02-19 13:58:22,639 91 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_users.xml 
+2022-02-19 13:58:22,671 91 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_config_settings_view.xml 
+2022-02-19 13:58:22,709 91 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/data/res_company.xml 
+2022-02-19 13:58:22,723 91 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme: loading demo 
+2022-02-19 13:58:22,725 91 INFO ANDRES001 odoo.addons.base.models.ir_translation: module muk_web_theme: no translation for language es_PE 
+2022-02-19 13:58:22,732 91 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme loaded in 0.46s, 331 queries 
+2022-02-19 13:58:22,732 91 INFO ANDRES001 odoo.modules.loading: 36 modules loaded in 0.46s, 331 queries (+0 extra) 
+2022-02-19 13:58:22,927 91 INFO ANDRES001 odoo.modules.loading: Modules loaded. 
+2022-02-19 13:58:22,931 91 INFO ANDRES001 odoo.service.server: Initiating shutdown 
+2022-02-19 13:58:22,931 91 INFO ANDRES001 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2022-02-19 13:59:31,009 46 INFO ? odoo: Odoo version 14.0-20220110 
+2022-02-19 13:59:31,010 46 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2022-02-19 13:59:31,010 46 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/14.0', '/mnt/extra-addons', '/mnt/extra-addons/JEG/OMS', '/mnt/extra-addons/oca/field-service', '/mnt/extra-addons/ANDRES'] 
+2022-02-19 13:59:31,010 46 INFO ? odoo: database: odoo@db:default 
+2022-02-19 13:59:31,117 46 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2022-02-19 13:59:31,188 46 INFO ANDRES001 odoo.modules.loading: loading 1 modules... 
+2022-02-19 13:59:31,201 46 INFO ANDRES001 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2022-02-19 13:59:31,260 46 INFO ANDRES001 odoo.modules.loading: updating modules list 
+2022-02-19 13:59:31,263 46 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2022-02-19 13:59:31,660 46 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['MuK Backend Theme'] to user __system__ #1 via n/a 
+2022-02-19 13:59:31,660 46 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['MuK Backend Theme'] to user __system__ #1 via n/a 
+2022-02-19 13:59:32,054 46 INFO ANDRES001 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2022-02-19 13:59:32,073 46 INFO ANDRES001 odoo.modules.loading: loading 36 modules... 
+2022-02-19 13:59:32,115 46 WARNING ANDRES001 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+  from collections import MutableSet, MutableMapping, MutableSequence
+ 
+2022-02-19 13:59:32,147 46 INFO ANDRES001 odoo.modules.loading: Loading module muk_web_theme (15/36) 
+2022-02-19 13:59:32,291 46 INFO ANDRES001 odoo.modules.registry: module muk_web_theme: creating or updating database tables 
+2022-02-19 13:59:32,347 46 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/assets.xml 
+2022-02-19 13:59:32,390 46 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/template/web.xml 
+2022-02-19 13:59:32,399 46 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_users.xml 
+2022-02-19 13:59:32,423 46 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/views/res_config_settings_view.xml 
+2022-02-19 13:59:32,447 46 INFO ANDRES001 odoo.modules.loading: loading muk_web_theme/data/res_company.xml 
+2022-02-19 13:59:32,448 46 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme: loading demo 
+2022-02-19 13:59:32,451 46 INFO ANDRES001 odoo.addons.base.models.ir_translation: module muk_web_theme: no translation for language es_PE 
+2022-02-19 13:59:32,458 46 INFO ANDRES001 odoo.modules.loading: Module muk_web_theme loaded in 0.31s, 292 queries 
+2022-02-19 13:59:32,543 46 INFO ANDRES001 odoo.modules.loading: 36 modules loaded in 0.47s, 292 queries (+0 extra) 
+2022-02-19 13:59:32,788 46 INFO ANDRES001 odoo.modules.registry: verifying fields for every extended model 
+2022-02-19 13:59:32,943 46 INFO ANDRES001 odoo.modules.loading: Modules loaded. 
+2022-02-19 13:59:32,948 46 INFO ANDRES001 odoo.service.server: Initiating shutdown 
+2022-02-19 13:59:32,948 46 INFO ANDRES001 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_project_project_inherit_form" model="ir.ui.view">
+        <field name="name">project.project.inherit.view.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="department_id"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="active" string="Activo?"/>
+            </xpath> 
+            <xpath expr="/form/sheet/notebook/page[@name='settings']/group"  position="after">
+                <group id="date_project" colspan="2" col="2">
+                    <separator string="Duración Proyecto" colspan="2"/>
+                    <div>
+                        <span class="oe_inline"><b>( Fecha Inicio : </b></span>
+                        <field name="date_start" nolabel="1" class="oe_inline"/>
+                        <span class="oe_inline"><b> - Fecha Límite :  </b></span>
+                        <field name="date_end" nolabel="1" class="oe_inline"/>
+                        <span><b> ) </b></span>
+                    </div>
+                </group>
+            </xpath> 
+
+        </field>
+    </record>
+</odoo>

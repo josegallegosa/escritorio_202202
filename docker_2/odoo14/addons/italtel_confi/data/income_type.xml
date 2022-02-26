@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Income Type-->
+        <record forcecreate="True" id="income_type_1" model="income.type">
+            <field name="name">Sales</field>
+        </record>
+        <record forcecreate="True" id="income_type_2" model="income.type">
+            <field name="name">Ebitda</field>
+        </record>
+        <record forcecreate="True" id="income_type_3" model="income.type">
+            <field name="name">Net Income</field>
+        </record>
+    </data>
+</odoo>

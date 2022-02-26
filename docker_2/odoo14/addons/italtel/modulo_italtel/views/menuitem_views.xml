@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_cliente_principal" name="Menu" />
+        <menuitem id="settings_menu" parent="menu_cliente_principal" name="Configuración" sequence="10"/>
+        <menuitem id="income_types_menu" parent="settings_menu" name="Tipo de Ingreso" action="income_type_action" sequence="10"/>
+        <menuitem id="income_menu" parent="settings_menu" name="Ingresos" action="income_action" sequence="20"/>  
+</odoo>
+

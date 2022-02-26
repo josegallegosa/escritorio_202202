@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_bond_family_father" model="hr.bond.family">
+        <field name="name">Padre</field>
+    </record>
+    <record id="hr_bond_family_mother" model="hr.bond.family">
+        <field name="name">Madre</field>
+    </record>
+        <record id="hr_bond_family_son" model="hr.bond.family">
+        <field name="name">Hijo</field>
+    </record>
+
+
+	<record id="hr_special_situation_1" model="hr.special.situation">
+        <field name="name">Trabajador Dirección-Presencial</field>
+    </record>
+	<record id="hr_special_situation_2" model="hr.special.situation">
+        <field name="name">Trabajador Confianza-Presencial</field>
+    </record>
+    <record id="hr_special_situation_3" model="hr.special.situation">
+        <field name="name">Teletrabajo Mixto</field>
+    </record>
+	<record id="hr_special_situation_4" model="hr.special.situation">
+        <field name="name">Teletrabajo Completo</field>
+    </record>
+
+    
+</odoo>

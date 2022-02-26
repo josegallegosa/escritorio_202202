@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+
+		<record id="hr_tareo_company_rule" model="ir.rule">
+	        <field name="name">Novedades Rule</field>
+	        <field name="model_id" ref="model_hr_tareo"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	    </record>
+		<record id="hr_tareo_detail_company_rule" model="ir.rule">
+	        <field name="name">Novedades Details Rule</field>
+	        <field name="model_id" ref="model_hr_tareo_detail"/>
+	        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+	    </record>
+
+	</data>
+</odoo>

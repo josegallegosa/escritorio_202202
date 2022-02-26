@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="0">
+
+        <record id="website.menu_home" model="website.menu">
+            <field name="name">Home</field>
+            <field name="url">/home</field>
+
+        </record>
+        <record id="website.menu_contactus" model="website.menu">
+            <field name="is_visible">False</field>
+        </record>
+		<record id="menu_projects" model="website.menu">
+            <field name="name">Projects</field>
+            <field name="url">/projects</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">30</field>
+        </record>
+        <record id="menu_reliant_service" model="website.menu">
+            <field name="name">Services</field>
+            <field name="url">/services</field>  
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>
+        <record id="menu_reliant_about" model="website.menu">
+            <field name="name">About</field>
+            <field name="url">/about</field>    
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+        <record id="menu_reliant_sustainability" model="website.menu">
+            <field name="name">Sustainability</field>
+            <field name="url">/sustainability</field>  
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">60</field>
+        </record>
+        <record id="menu_reliant_contact" model="website.menu">
+            <field name="name">Contacts</field>
+            <field name="url">/contacts</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">80</field>
+        </record>
+    
+	</data>
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_table_22_user,access_hr_table_22,model_hr_table_22,base.group_user,1,0,0,0
+access_hr_table_22_manager,access_hr_table_22,model_hr_table_22,hr.group_hr_manager,1,1,1,1
+access_hr_table_22_category_user,access_hr_table_22_category,model_hr_table_22_category,base.group_user,1,0,0,0
+access_hr_table_22_category_manager,access_hr_table_22_category,model_hr_table_22_category,hr.group_hr_manager,1,1,1,1

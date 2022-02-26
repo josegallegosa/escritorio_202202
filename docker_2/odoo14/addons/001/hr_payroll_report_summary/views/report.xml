@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+    <template id="body_rpayrol">
+        <div class="header"></div>
+        <div class="page ">
+            <container>
+                <div class="row">
+                    <div class="col-9"></div>
+                    <div class="col-3">
+                        <h1>
+                            <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 80px;"/>
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <span t-field="o.company_id.partner_id.name"/><br/>
+                            <span t-field="o.company_id.partner_id.street"/><br/>
+                            <span t-field="o.company_id.partner_id.vat"/>
+                        </p>
+                    </div>
+                </div>
+            </container>
+            <container >
+                <p class="text-center"> <span class="f11pr">BOLETA DE REMUNERACION</span><br/>
+                    <span class="f10pr">MES DE </span><br/>
+                    <span class="f9pr">PREIODO DEL <span t-field="o.date_from"/> AL <span t-field="o.date_to"/></span>
+                </p>
+            </container>
+
+            <div class="fpayrol tabla_payrol ">
+                <container>      
+                    <div class="row">
+                        <div class="col-2 noder">
+                            <span>CODIGO: <span t-field="o.employee_id.code"/></span>
+                        </div>
+                        <div class="col-4 noder">
+                            <span>AREA: <span t-field="o.employee_id.department_id"/></span>
+                        </div>
+                        <div class="col-4 noder">
+                            <span>PUESTO: <span t-field="o.employee_id.job_id"/></span>
+                        </div>
+                        <div class="col-2 ">
+                            <span>SUELDO: <span t-field="o.contract_id.wage"/></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 noder nosup">
+                            <span><b>APELLIDOS Y NOMBRES:</b><br/></span><span t-field="o.employee_id"/>
+                        </div>
+                        <div class="col-2 noder nosup">
+                            <span><b>CUSPP</b><br/></span><span t-field="o.employee_id.code_cussp"/>
+                        </div>
+                        <div class="col-2 noder nosup">
+                            <span><b>REGIMEN PENSIONARIO</b><br/></span><span t-field="o.employee_id.pension_fund"/>
+                        </div>
+                        <div class="col-2 noder nosup">
+                            <span><b>TIPO DE TRABAJADOR</b><br/>EMPLEADO</span>
+                        </div>
+                        <div class="col-2 nosup">
+                            <span><b>CATEG. TRABAJADOR</b><br/>EMPLEADO</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="interpayrol col-4">
+                            <div class="row intdat">
+                                <div class="col-4 nosuin noder">
+                                    <span><b>DOC. IDENT.</b><br/></span>DNI <span t-field="o.employee_id.address_home_id.vat"/>
+                                </div>
+                                <div class="col-4 nosuin noder">
+                                    <span><b>FECHA DE ING.</b><br/><span t-field="o.contract_id.date_start"/></span>
+                                </div>
+                                <div class="col-4 nosuin noder">
+                                    <span><b>FECHA DE CESE</b><br/> .</span>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-2 nosuin noder">
+                            <span><b>DIAS TRABAJADOS</b><br/><span t-field="o.worked_days_line_ids[0].number_of_days"/></span>
+                        </div>
+                        <div class="col-2 nosuin noder">
+                            <span><b>HORAS TRABAJADAS</b><br/><span t-field="o.worked_days_line_ids[0].number_of_hours"/></span>
+                        </div>
+                        <div class="col-2 nosuin noder">
+                            <span><b>DIAS EFECT. LAB.</b><br/><span t-field="o.worked_days_line_ids[0].number_of_days"/></span>
+                        </div>
+                        <div class="col-2 nosuin">
+                            <span><b>HORAS ORDINARIAS</b><br/><span t-field="o.worked_days_line_ids[0].number_of_hours"/></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 noder">
+                            <span><b>PERIODO VACACIONAL</b><br/>-</span>
+                        </div>
+                        <div class="col-2 noder">
+                            <span><b>INICIO VACACIONES</b><br/>-</span>
+                        </div>
+                        <div class="col-2 noder">
+                            <span><b>FIN VACACIONES</b><br/>-</span>
+                        </div>
+                        <div class="col-2 noder">
+                            <span><b>DIAS SUBSIDIADOS</b><br/>-</span>
+                        </div>
+                        <div class="col-2 ">
+                            <span><b>DIAS NO LAB. Y NO SUB.</b><br/><span t-field="o.worked_days_line_ids[4].number_of_days"/></span>
+                        </div>
+                    </div>
+                </container>
+                <br/>
+
+                <container>  
+                    <div class="row fondopayraol">
+                        <div class="col-4 noder">
+                            <p class="text-center">REMUNERACIONES</p>
+                        </div>
+                        <div class="col-4 noder">
+                            <p class="text-center">DESCUENTOS</p>
+                        </div>
+                        <div class="col-4 ">
+                            <p class="text-center">APORTES DEL EMPLEADOR</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 nosuin noder hitab">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><b>CONCEPTO</b></th>
+                                        <th><b>MONTO</b></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.line_ids" t-as="linea">
+                                        <t t-if="linea.total!=0">
+                                            <tr t-if="linea.appears_on_payslip==True and linea.category_id.code in ['BASIC','ALW']">
+                                                <td><span t-field="linea.name"/></td>
+                                                <td><span t-field="linea.total"/></td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <div class="col-4 nosuin noder hitab">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>CONCEPTO</th>
+                                        <th>MONTO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.line_ids" t-as="linea">
+                                        <t t-if="linea.total!=0">
+                                            <tr t-if="linea.appears_on_payslip==True and linea.category_id.code in ['DED']">
+                                                <td><span t-field="linea.name"/></td>
+                                                <td><span t-field="linea.total"/></td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <div class="col-4 nosuin hitab">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>CONCEPTO</th>
+                                        <th>MONTO</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.line_ids" t-as="linea">
+                                        <t t-if="linea.total!=0">
+                                            <tr t-if="linea.appears_on_payslip==True and linea.category_id.code in ['COMP']">
+                                                <td><span t-field="linea.name"/></td>
+                                                <td><span t-field="linea.total"/></td>
+                                            </tr>
+                                        </t>
+                                    </t>                   
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                    <div class="row fondopayraol">
+                        <div class="col-2 noder">
+                            <p>T. INGRESOS: </p>
+                        </div>
+                        <div class="col-2  noder">
+                            <t t-set="t_ing" t-value="0"/>
+                            <t t-foreach="o.line_ids" t-as="linea">
+                                <t t-if="linea.appears_on_payslip==True and linea.category_id.code in ['BASIC','ALW']">
+                                    <t t-set="t_ing" t-value="t_ing+linea.total"/>
+                                </t>
+                            </t>
+                            <p>S/ <span t-esc="t_ing"/> </p>
+
+                        </div>
+                        <div class="col-2  noder">
+                            <p>T. DESCUENTOS:</p>
+                        </div>
+                        <div class="col-2  noder">
+                            <t t-set="t_ded" t-value="0"/>
+                            <t t-foreach="o.line_ids" t-as="linea">
+                                <t t-if="linea.appears_on_payslip==True and linea.category_id.code in ['DED']">
+                                    <t t-set="t_ded" t-value="t_ded+linea.total"/>
+                                </t>
+                            </t>
+                            <p>S/ <span t-esc="t_ded"/> </p>
+
+                        </div>
+                        <div class="col-2  noder">
+                            <p>NETO A PAGAR:</p>
+                        </div>
+                        <div class="col-2">
+                            <t t-foreach="o.line_ids" t-as="linea">
+                                <t t-if="linea.appears_on_payslip==True and linea.category_id.code in ['NET']">
+                                    <p> <span t-field="linea.total"/> </p>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </container>
+            </div>
+        </div>
+    </template>
+
+    <template id="rep_payrol">
+        <t t-call="web.html_container" >
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.basic_layout">
+                    <style>
+                        .fpayrol{
+                            font-size: 12px;
+                        }
+                        .fpayrol b{
+                            font-size: 11px;
+                        }
+
+                        .fpayrol table{
+                            width: 99%;
+                        }
+
+                        .tabla_payrol .row>.col, .tabla_payrol .row>[class^=col-] {
+                            padding-top: .1rem;
+                            padding-bottom: .1rem;
+                            padding-right: 1px !important;
+                            padding-left: 1px !important;
+                            border: 1px solid;
+                        }
+
+                        .tabla_payrol .row>.col, .tabla_payrol .row>[class^=interpayrol] {
+                            padding-right: 0px !important;
+                            padding-left: 0px !important;
+                        }
+
+                        .intdat {
+                            margin-left: 0px !important;
+                            margin-right: 0px !important;
+                        }
+
+                        .nosuin {
+                            border-top: 0!important;
+                            border-bottom: 0!important;
+                        }
+                        .nosup {
+                            border-top: 0!important;
+                        }
+
+                        .noder{
+                           border-right: 0!important; 
+                        }
+
+                        .hitab{
+                            min-height: 230px;
+                        }
+
+                        .fondopayraol{
+                        background: #b5b5b5;
+                        }
+                        .f11pr{
+                            font-size: 24px;
+                            font-weight: bold;
+                        }
+                        .f10pr{
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                        .f9pr{
+                            font-size: 18px;
+                        }
+                    </style>
+                    <page>
+                        <t t-call="hr_payroll_report_summary.body_rpayrol"/>
+                    </page>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="paperformat_payroll" model="report.paperformat">
+        <field name="name">PAYROL A4</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">25</field>
+        <field name="margin_bottom">12</field>
+        <field name="margin_left">4</field>
+        <field name="margin_right">4</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">17</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report 
+       id="report_rep_payrol"
+        model="hr.payslip"
+        string="Boleta de Remuneración"
+        report_type="qweb-pdf"
+        name="hr_payroll_report_summary.rep_payrol"
+        file="hr_payroll_report_summary.rep_payrol"
+        attachment_use="True"
+    />
+   <!--
+    <record id="report_rep_payrol" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="hr_payroll_report_summary.paperformat_corpro"/>
+    </record>
+-->
+
+    </data>
+</odoo>

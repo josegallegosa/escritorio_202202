@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_nit_800229739-0" model="hr.nit">
+            <field name="name">800229739</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_800224808-8" model="hr.nit">
+            <field name="name">800224808</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_800253055-2" model="hr.nit">
+            <field name="name">800253055</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_830125132-2" model="hr.nit">
+            <field name="name">830125132</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_800227940-6" model="hr.nit">
+            <field name="name">800227940</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_860007379-8" model="hr.nit">
+            <field name="name">860007379</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_899999734-7" model="hr.nit">
+            <field name="name">899999734</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_800216278-0" model="hr.nit">
+            <field name="name">800216278</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_900336004-7" model="hr.nit">
+            <field name="name">900336004</field>
+            <field name="code">7</field>
+        </record>
+
+        <record id="hr_pension_fund_230201" model="hr.pension.fund">
+            <field name="name">Protección</field>
+            <field name="code">230201</field>
+            <field name="nit" ref="hr_nit_800229739-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_230301" model="hr.pension.fund">
+            <field name="name">Porvenir</field>
+            <field name="code">230301</field>
+            <field name="nit" ref="hr_nit_800224808-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_230901" model="hr.pension.fund">
+            <field name="name">Skandia Fondo de Pensiones Obligatorias</field>
+            <field name="code">230901</field>
+            <field name="nit" ref="hr_nit_800253055-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_230904" model="hr.pension.fund">
+            <field name="name">Skandia Fondo Alternativo de Pensiones</field>
+            <field name="code">230904</field>
+            <field name="nit" ref="hr_nit_830125132-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_231001" model="hr.pension.fund">
+            <field name="name">Colfondos</field>
+            <field name="code">231001</field>
+            <field name="nit" ref="hr_nit_800227940-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_25-2" model="hr.pension.fund">
+            <field name="name">Caja de Auxilios y de Prestaciones de ACDAC</field>
+            <field name="code">25-2</field>
+            <field name="nit" ref="hr_nit_860007379-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_25-3" model="hr.pension.fund">
+            <field name="name">Fondo de Previsión Social del Congreso</field>
+            <field name="code">25-3</field>
+            <field name="nit" ref="hr_nit_899999734-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_25-7" model="hr.pension.fund">
+            <field name="name">Pensiones de Antioquia</field>
+            <field name="code">25-7</field>
+            <field name="nit" ref="hr_nit_800216278-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_pension_fund_25-14" model="hr.pension.fund">
+            <field name="name">Administradora Colombiana de Pensiones Colpensiones</field>
+            <field name="code">25-14</field>
+            <field name="nit" ref="hr_nit_900336004-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+
+        <record id="hr_pension_fund_prima" model="hr.pension.fund">
+            <field name="name">Prima</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_pension_fund_integra" model="hr.pension.fund">
+            <field name="name">Integra</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_pension_fund_profuturo" model="hr.pension.fund">
+            <field name="name">Profuturo</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_pension_fund_habitat" model="hr.pension.fund">
+            <field name="name">Habitat</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_pension_fund_onp" model="hr.pension.fund">
+            <field name="name">ONP</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_pension_fund_no_fund" model="hr.pension.fund">
+            <field name="name">Sin Regimen pensionario</field>
+        </record>
+
+
+    </data>
+</odoo>

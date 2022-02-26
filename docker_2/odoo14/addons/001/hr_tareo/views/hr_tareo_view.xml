@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+      
+        <!-- Top-level Menu -->
+        <menuitem name="Novedades de empleados"
+            id="menu_tareo_attendance" parent="hr_work_entry_contract.menu_hr_payroll_root" groups="hr.group_hr_user" sequence="1"/>
+        
+        
+        <!-- Novedades submenu -->
+        <menuitem name="Novedades"
+            id="menu_hr_root_tareo" parent="menu_tareo_attendance" groups="hr.group_hr_user" sequence="20"/>
+        
+        
+        <!-- Novedades views -->
+
+        <record id="view_hr_tareo_filter" model="ir.ui.view">
+            <field name="name">view_hr_tareo_filter</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <search string="Work Week Novedades Search">
+                    <field name="name" string="Week Novedades"/>
+                    <field name="period_id"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="period" string="Period" icon="terp-go-today" domain="[]" context="{'group_by':'period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+        <record id="view_hr_tareo_tree" model="ir.ui.view">
+            <field name="name">hr.tareo.tree</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <tree string="Novedades">
+                    <field name="name"/>
+                    <field name="period_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_tareo_form" model="ir.ui.view">
+            <field name="name">hr.tareo.form</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <form string="Novedades">
+                    <sheet>
+                        <header>
+                            <!--<button name="action_validate" class="oe_highlight" string="Validar"/>
+                            <button name="create_details" class="oe_highlight" string="Recargar"/>-->
+                            <field name="state" widget="statusbar"/>
+                        </header>
+                        <group col="4">
+                            <field name="period_id"/> 
+                            <field name="date_start"/>  
+                            <field name="date_end"/>                       
+                            <field name="name"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="country_id" invisible="1"/>
+                            <field name="code_country" invisible="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Working Hours" attrs="{'invisible':[('code_country','!=','PE')]}">
+                                <field name="detail_ids">
+                                    <tree string="Novedades Detail" editable="top" >
+                                        <field name="employee_id" invisible="0"/>
+                                        <field name="doc_number"/>
+                                        <field name="planned_days" string="DIAP"/>
+                                        <field name="worked_days" string="DIAT"/>
+                                        <!--PERU-->
+                                            <field name="ot25" widget="float_time" string="HE25"/>
+                                            <field name="ot35" widget="float_time" string="HE35"/>
+                                            <field name="ot100" widget="float_time" string="HE10"/>
+                                            <field name="number_leave"  string="FALT"/>
+                                            <field name="hours_of_delay"  string="TARD"/>
+                                            <field name="holidays" string="VACA"/>
+                                            <field name="holiday_sale" string="VVAC"/>
+                                            <field name="medical_breaks" string="DMED"/>
+                                            <field name="maternity_allowance" string="SUBM"/>
+                                            <field name="sickness_allowance" string="SUBE"/>
+                                            <field name="license_with_enjoy" string="LCGO"/>
+                                            <field name="leave_without_enjoyment" string="CSGO"/>
+                                        <!--*********-->
+                                        
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Working Hours" attrs="{'invisible':[('code_country','!=','CO')]}">
+                                <field name="detail_co_ids">
+                                    <tree string="Novedades Detail" editable="top">
+                                        <field name="sequence"/>
+                                        <field name="employee_id" invisible="0"/>
+                                        <field name="doc_number"/>
+                                        <field name="planned_days" string="DIAP"/>
+                                        <field name="worked_days" string="DIAT"/>
+                                        <!--COLOMBIA-->
+                                            <field name="hed_co" widget="float_time" string="HED" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="hen_co" widget="float_time" string="HEN" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="hefd_co" widget="float_time" string="HEFD" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="hefn_co" widget="float_time" string="HEFN" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="refe_co" string="REFE" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="reno_co" string="RENO" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="renf_co" string="RENF" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="fesc_co" string="FESC" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="ige_co" string="IGE" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="irl_co" string="IRL" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="lma_co" string="LMA" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="lpa_co" string="LPA" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="vco_co" string="VCO" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="vdi_co" string="VDI" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="vre_co" string="VRE" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="lnr_co" string="LNR" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="sln_co" string="SLN" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="lr_co" string="LR" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                            <field name="lt_co" string="LT" attrs="{'invisible':[('parent.code_country','!=','CO')]}"/>
+                                        <!--*********-->
+                                        <field name="state"/>
+                                    </tree>
+
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_tareo_view" model="ir.actions.act_window">
+            <field name="name">Novedades</field>
+            <field name="res_model">hr.tareo</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_tareo_filter" />
+        </record>
+        <menuitem action="open_tareo_view"
+                  id="menu_tareo_view"
+                  parent="menu_hr_root_tareo"
+                  sequence="10"/>
+        
+        <!-- Tareo Detail -->
+
+        <record id="view_hr_tareo_detail_filter" model="ir.ui.view">
+            <field name="name">view_hr_tareo_detail_filter</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <search string="Work Novedades Detail Search">
+                    <field name="tareo_id"/>
+                    <filter name="my_tareo" icon="terp-stock_align_left_24" string="Mi Novedad" domain="[('employee_id.user_id', '=', uid)]" />
+                    <field name="employee_id"/>                  
+                    <group expand="0" string="Group By...">
+                        <filter name="employee" string="Empleado" icon="terp-personal" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter name="tareo" string="Novedades" icon="terp-go-today" domain="[]" context="{'group_by':'tareo_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_tareo_detail_tree" model="ir.ui.view">
+            <field name="name">hr.tareo.detail.tree</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <tree string="Detalle Novedades">
+                    <field name="employee_id"/>
+                    <field name="country_id" invisible="1"/>
+                    <field name="code_country" invisible="1"/>
+
+                    <field name="tareo_id"/>
+                    <field name="doc_number"/>
+                    <field name="planned_days" string="DIAP"/>
+                    <field name="worked_days" string="DIAT"/>
+                    <!--
+                    <field name="ot25" widget="float_time" string="HE25" attrs="{'column_invisible':[('code_country','=','PE')]}"/>
+                    <field name="ot35" widget="float_time" string="HE35" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="ot100" widget="float_time" string="HE10" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="number_leave"  string="FALT" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="hours_of_delay" string="TARD" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="holidays" string="VACA" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="holiday_sale" string="VVAC" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="medical_breaks" string="DMED" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="maternity_allowance" string="SUBM" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="sickness_allowance" string="SUBE" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="license_with_enjoy" string="LCGO" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+                    <field name="leave_without_enjoyment" string="CSGO" attrs="{'column_invisible':[('code_country','!=','PE')]}"/>
+
+                    <field name="ige_co" string="IGE" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="irl_co" string="IRL" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="lma_co" string="LMA" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="lpa_co" string="LPA" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="vac_co" string="VAC" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="lnr_co" string="LNR" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="sln_co" string="SLN" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="lr_co" string="LR" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    <field name="lt_co" string="LT" attrs="{'column_invisible':[('code_country','!=','CO')]}"/>
+                    -->
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_tareo_detail_form" model="ir.ui.view">
+            <field name="name">hr.tareo.detail.form</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <form string="Novedades Detail">
+                    <sheet>
+
+                        <group>
+                        	<field name="employee_id"/>
+                            <field name="doc_number"/>
+                            <field name="planned_days"/>
+                            <field name="worked_days"/>
+                            <field name="country_id" invisible="1"/>
+                            <field name="code_country" invisible="1"/>
+                            <field name="ot25" widget="float_time" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="ot35" widget="float_time" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="ot100" widget="float_time" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="number_leave" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="hours_of_delay" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="holidays" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="holiday_sale" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="medical_breaks" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="maternity_allowance" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="sickness_allowance" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="license_with_enjoy" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+                            <field name="leave_without_enjoyment" attrs="{'invisible':[('code_country','!=','PE')]}"/>
+
+
+                            <field name="hed_co" widget="float_time" string="HED" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="hen_co" widget="float_time" string="HEN" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="hefd_co" widget="float_time" string="HEFD" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="hefn_co" widget="float_time" string="HEFN" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="refe_co" string="REFE" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="reno_co" string="RENO" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="renf_co" string="RENF" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="fesc_co" string="FESC" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="ige_co" string="IGE" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="irl_co" string="IRL" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="lma_co" string="LMA" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="lpa_co" string="LPA" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="vco_co" string="VCO" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="vdi_co" string="VDI" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="vre_co" string="VRE" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="lnr_co" string="LNR" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="sln_co" string="SLN" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="lr_co" string="LR" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+                            <field name="lt_co" string="LT" attrs="{'invisible':[('code_country','!=','CO')]}"/>
+
+                            <field name="state"/>
+                        </group>  
+                    </sheet> 
+                </form>
+            </field>
+        </record>
+        
+       
+        <record id="open_tareo_detail_view" model="ir.actions.act_window">
+            <field name="name">Detalle novedad de empleado</field>
+            <field name="res_model">hr.tareo.detail</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_tareo_detail_filter" />
+        </record>
+
+        <menuitem action="open_tareo_detail_view"
+                  id="menu_tareo_detail_view"
+                  parent="menu_hr_root_tareo"
+                  sequence="15"/>  
+    
+    <!-- Inherit payslip run -->
+    <record id="hr_payslip_run_inherit_form" model="ir.ui.view">
+        <field name="name">hr.payslip.run.inherit.fom</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref='hr_payroll.hr_payslip_run_form'/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/header/field[@name='state']"  position="before">
+                <button name="recalculate_slips" type="object"  string="Actualizar nóminas"/>
+                <button name="action_draft_slips" type="object"  string="Establecer a borrador"/>
+                <button name="cancel_slips" type="object"  string="Cancelar Nóminas"/>
+            </xpath>
+            <xpath expr="/form/sheet/div"  position="inside">
+                <button name="action_open_account_move" class="oe_stat_button" icon="fa-bars" type="object" help="Asientos Contables" attrs="{'invisible': [('move_count', '=', 0)]}">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="move_count"/></span>
+                        <span class="o_stat_text">Asientos Contables</span>
+                     </div>
+                </button>
+            </xpath>
+            <xpath expr="/form/sheet/h1"  position="after">
+                <group col="4">
+                    <label for="period_id" string="Periodo"/>
+                     <div>
+                           <field name="period_id"/>
+                     </div>
+                     <field name="salary_type"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit payslip -->
+    <record id="hr_payslip_inherit_form" model="ir.ui.view">
+        <field name="name">hr.payslip.inherit.fom</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref='hr_payroll.view_hr_payslip_form'/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="period_id"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_hr_tareo_form_button_recharge" model="ir.ui.view">
+        <field name="name">hr.tareo.form.button.recharge</field>
+        <field name="model">hr.tareo</field>
+        <field name="inherit_id" ref="hr_tareo.view_hr_tareo_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="recharge_tareo" type="object"
+                            string="Recargar Novedades"
+                            />
+                </header>
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

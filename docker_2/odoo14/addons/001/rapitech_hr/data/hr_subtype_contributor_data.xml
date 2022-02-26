@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+    	<record id="hr_subtype_contributor_co_1" model="hr.subtype.contributor">
+            <field name="name">Dependiente pensionado por vejez activo</field>
+            <field name="code">1</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_2" model="hr.subtype.contributor">
+            <field name="name">Independiente pensionado por vejez</field>
+            <field name="code">2</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_3" model="hr.subtype.contributor">
+            <field name="name">Cotizante no obligado a cotización a pensiones por edad</field>
+            <field name="code">3</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_4" model="hr.subtype.contributor">
+            <field name="name">Cotizante con requisitos cumplidos para pensión</field>
+            <field name="code">4</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_5" model="hr.subtype.contributor">
+            <field name="name">Cotizante a quien se le ha reconocido indemnización sustitutiva o devolución de saldos</field>
+            <field name="code">5</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_6" model="hr.subtype.contributor">
+            <field name="name">Cotizante perteneciente a un régimen exceptuado de pensiones o a entidades autorizadas para recibir aportes exclusivamente de un grupo de sus propios trabajadores</field>
+            <field name="code">6</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_9" model="hr.subtype.contributor">
+            <field name="name">Cotizante pensionado con mesada superior a 25 SMLMV</field>
+            <field name="code">9</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_10" model="hr.subtype.contributor">
+            <field name="name">Residente en el exterior afiliado voluntario al Sistema General de Pensiones y/o afiliado facultativo al sistema de Subsidio Familiar</field>
+            <field name="code">10</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_11" model="hr.subtype.contributor">
+            <field name="name">Conductores del servicio público de transporte terrestre automotor individual de pasajeros en vehículos taxi</field>
+            <field name="code">11</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_subtype_contributor_co_12" model="hr.subtype.contributor">
+            <field name="name">Conductores del servicio público de transporte terrestre automotor individual de pasajeros en vehículos taxi. No obligado a cotizar a pensión.</field>
+            <field name="code">12</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+	
+	</data>
+</odoo>

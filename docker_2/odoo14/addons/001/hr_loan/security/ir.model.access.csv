@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_loan_employee_manager,access.hr.loan.employee.manager,model_hr_loan_employee,hr.group_hr_manager,1,1,1,1
+access_hr_loan_employee_line_manager,access.hr.loan.employee.line.manager,model_hr_loan_employee_line,hr.group_hr_manager,1,1,1,1

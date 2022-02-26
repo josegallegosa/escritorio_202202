@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="settings_menuitem"
+                name="Áreas" 
+                parent="project.menu_project_config" 
+                action="area_action"
+                sequence="10"/>
+   
+</odoo>
+

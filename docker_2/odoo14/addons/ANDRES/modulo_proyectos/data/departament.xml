@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- DEPARTAMENTOS O ÁREAS -->
+
+<odoo>
+    <data noupdate="1">
+        
+        <record forcecreate="True" id="hr_department_1" model="hr.department">    
+            <field name="name">Growth</field>
+        </record>
+        <record forcecreate="True" id="hr_department_2" model="hr.department">    
+            <field name="name">General Management</field>
+        </record>
+        <record forcecreate="True" id="hr_department_3" model="hr.department">    
+            <field name="name">Finance</field>
+        </record>
+        <record forcecreate="True" id="hr_department_4" model="hr.department">    
+            <field name="name">Technology</field>
+        </record>
+        <record forcecreate="True" id="hr_department_5" model="hr.department">    
+            <field name="name">LVS</field>
+        </record>
+        <record forcecreate="True" id="hr_department_6" model="hr.department">    
+            <field name="name">Outsourcing</field>
+        </record>
+        <record forcecreate="True" id="hr_department_7" model="hr.department">    
+            <field name="name">OI</field>
+        </record>
+        <record forcecreate="True" id="hr_department_8" model="hr.department">    
+            <field name="name">UX Writing</field>
+        </record>
+        <record forcecreate="True" id="hr_department_9" model="hr.department">    
+            <field name="name">Service and Product Design</field>
+        </record>
+        <record forcecreate="True" id="hr_department_10" model="hr.department">    
+            <field name="name">Marketing</field>
+        </record>
+        <record forcecreate="True" id="hr_department_11" model="hr.department">    
+            <field name="name">HR</field>
+        </record>
+        <record forcecreate="True" id="hr_department_12" model="hr.department">    
+            <field name="name">LIBRE</field>
+        </record>
+
+    </data>
+</odoo>

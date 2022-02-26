@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_type_contract_1" model="hr.type.contract">
+            <field name="name">Termino Fijo</field>
+            <field name="code">1</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_type_contract_2" model="hr.type.contract">
+            <field name="name">Termino Indefinido</field>
+            <field name="code">2</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="hr_type_contract_3" model="hr.type.contract">
+            <field name="name">Obra o Labor</field>
+            <field name="code">3</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="hr_type_contract_4" model="hr.type.contract">
+            <field name="name">Aprendizaje</field>
+            <field name="code">4</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="hr_type_contract_5" model="hr.type.contract">
+            <field name="name">Prácticas o Pasantías</field>
+            <field name="code">5</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 	</data>
+</odoo>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Employee EPS views-->
+    <record id="view_employee_eps_filter" model="ir.ui.view">
+            <field name="name">view_employee_eps_filter</field>
+            <field name="model">hr.employee.eps</field>
+            <field name="arch" type="xml">
+                <search string="Buscar EPS">             
+                    <group expand="0" string="Agrupar por...">
+                    	<filter name='employee' string="Empleado" domain="[]" context="{'group_by':'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+    <record model="ir.ui.view" id="view_employee_eps_tree">
+        <field name="name">hr.employee.eps.tree</field>
+        <field name="model">hr.employee.eps</field>
+        <field name="arch" type="xml">
+            <tree string="Información EPS">
+                <field name="employee_id"/>
+                <field name="ensure_company_id"/>
+                <field name="ensure_plan_id"/>
+                <field name="amount"/>
+                <field name="amount_assumed_company"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_employee_eps_form">
+        <field name="name">hr.employee.eps.form</field>
+        <field name="model">hr.employee.eps</field>
+        <field name="arch" type="xml">
+            <form string="EPS">
+                <sheet>
+                    <group name="main" col="4">
+                        <field name="employee_id"/>
+                        <field name="ensure_company_id"/>
+                        <field name="ensure_plan_id" domain="[('ensure_company_id','=',ensure_company_id)]"/>
+                        <field name="amount"/>
+                        <field name="amount_assumed_company"/>
+                    </group>
+                </sheet>
+            </form>
+      </field>
+    </record>
+    <!-- Menu -->
+    <record model="ir.actions.act_window" id="open_view_employee_eps_form">
+        <field name="name">EPS x empleado</field>
+        <field name="res_model">hr.employee.eps</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_employee_eps_filter"/>
+    </record>
+    <menuitem name="EPS x empleado"
+              parent="hr_work_entry_contract.menu_hr_payroll_root"
+              id="menu_open_view_employee_eps_form"
+              action="open_view_employee_eps_form"
+              sequence="80"/>
+
+    <!-- Ensure company views -->
+    <record id="view_ensure_company_tree" model="ir.ui.view">
+            <field name="name">ensure_company_tree</field>
+            <field name="model">hr.ensure.company</field>
+            <field name="arch" type="xml">
+                <tree string="Compañías de Seguros">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ensure_company_form" model="ir.ui.view">
+            <field name="name">ensure_company_form</field>
+            <field name="model">hr.ensure.company</field>
+            <field name="arch" type="xml">
+                <form string="Compañía de Seguro">
+                    <sheet>
+                        <group>
+                            <field name="name"/>                         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_ensure_company_view" model="ir.actions.act_window">
+            <field name="name">Compañías de Seguros</field>
+            <field name="res_model">hr.ensure.company</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hr_ensure_company" action="open_ensure_company_view" parent="hr_work_entry_contract.menu_hr_payroll_configuration" name="Compañías de Seguros" groups="hr.group_hr_manager" sequence="70"/>
+                  
+        <!-- Ensure plan views -->
+        <record id="view_ensure_plan_tree" model="ir.ui.view">
+            <field name="name">ensure_plan_tree</field>
+            <field name="model">hr.ensure.plan</field>
+            <field name="arch" type="xml">
+                <tree string="Planes de Seguro EPS">
+                    <field name="name"/>
+                    <field name="ensure_company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ensure_plan_form" model="ir.ui.view">
+            <field name="name">ensure_plan_form</field>
+            <field name="model">hr.ensure.plan</field>
+            <field name="arch" type="xml">
+                <form string="Plan de Seguro EPS">
+                    <sheet>
+                        <group col="4">
+                            <field name="name"/>
+                            <field name="ensure_company_id"/>                         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_ensure_plan_view" model="ir.actions.act_window">
+            <field name="name">Planes de Seguro EPS</field>
+            <field name="res_model">hr.ensure.plan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hr_ensure_plan" action="open_ensure_plan_view" parent="hr_work_entry_contract.menu_hr_payroll_configuration" name="Planes de Seguro EPS" groups="hr.group_hr_manager" sequence="71"/>
+
+</odoo>

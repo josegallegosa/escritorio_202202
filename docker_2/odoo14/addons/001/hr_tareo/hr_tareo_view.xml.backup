@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+      
+        <!-- Top-level Menu -->
+        <menuitem name="Novedades and Attendance"
+            id="menu_tareo_attendance" parent="hr.menu_hr_root" groups="base.group_hr_user" sequence="1"/>
+        
+        
+        <!-- Tareo submenu -->
+        <menuitem name="Novedades by department"
+            id="menu_hr_root_tareo" parent="menu_tareo_attendance" groups="base.group_hr_user" sequence="20"/>
+        
+        
+        <!-- Schedules -->
+
+        <record id="view_hr_tareo_filter" model="ir.ui.view">
+            <field name="name">view_hr_tareo_filter</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <search string="Work Week Novedades Search">
+                    <field name="name" string="Week Novedades"/>
+                    <field name="period_id"/>
+                    <field name="department_id"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="department" string="Department" icon="terp-personal" domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter string="Period" icon="terp-go-today" domain="[]" context="{'group_by':'period_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+        <record id="view_hr_tareo_tree" model="ir.ui.view">
+            <field name="name">hr.tareo.tree</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <tree string="Novedades">
+                    <field name="name"/>
+                    <field name="period_id"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="department_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_tareo_form" model="ir.ui.view">
+            <field name="name">hr.tareo.form</field>
+            <field name="model">hr.tareo</field>
+            <field name="arch" type="xml">
+                <form string="Department Novedades" version="7.0">
+                    <sheet>
+                        <header>
+                            <button name="signal_validate" type="workflow" states="draft" class="oe_highlight" string="Validate"/>
+                            <button name="create_details" type="workflow" states="draft" class="oe_highlight" string="upload"/>
+                            <field name="state" widget="statusbar"/>
+                        </header>
+                        <group col="4">
+                            <field name="department_id"/>
+                            <field name="period_id"/> 
+                            <field name="date_start"/>  
+                            <field name="date_end"/>                       
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Working Hours">
+                                <field name="detail_ids">
+                                    <tree string="Novedades Detail" editable="top">
+                                        <field name="employee_id"/>
+                                        <field name="work_hours"/>
+                                        <!--<field name="ot60" widget="float_time"/>-->
+                                        <!--<field name="ot100" widget="float_time"/>-->
+                                        <field name="wdmtof"/>
+                                        <field name="wds"/>
+                                        <field name="hdmtof"/>
+                                        <field name="hds"/>
+                                        <field name="phdmtof"/>
+                                        <field name="phds"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_tareo_view" model="ir.actions.act_window">
+            <field name="name">Department Tareo</field>
+            <field name="res_model">hr.tareo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_tareo_filter" />
+        </record>
+        <menuitem action="open_tareo_view"
+                  id="menu_tareo_view"
+                  parent="menu_hr_root_tareo"
+                  sequence="10"/>
+        
+        <!-- Tareo Detail -->
+
+        <record id="view_hr_tareo_detail_filter" model="ir.ui.view">
+            <field name="name">view_hr_tareo_detail_filter</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <search string="Work Novedades Detail Search">
+                    <field name="tareo_id"/>
+                    <filter icon="terp-stock_align_left_24" string="My Novedad" domain="[('employee_id.user_id.id', '=', uid)]" />
+                    <field name="employee_id"/>                  
+                    <group expand="0" string="Group By...">
+                        <filter name="department" string="Department" icon="terp-personal" domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter name="employee" string="Employee" icon="terp-personal" domain="[]" context="{'group_by':'employee_id'}"/>
+                        <filter string="Novedad" icon="terp-go-today" domain="[]" context="{'group_by':'tareo_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_tareo_detail_tree" model="ir.ui.view">
+            <field name="name">hr.tareo.detail.tree</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <tree string="Novedades Detail" editable="top">
+                    <field name="tareo_id"/>
+                    <field name="employee_id"/>
+                    <field name="wdmtof"/>
+                    <field name="wds"/>
+                    <field name="ot60"/>
+                    <field name="ot100"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_tareo_detail_form" model="ir.ui.view">
+            <field name="name">hr.tareo.detail.form</field>
+            <field name="model">hr.tareo.detail</field>
+            <field name="arch" type="xml">
+                <form string="Novedades Detail" version="7.0">
+                    <header>
+                        <button name="signal_validate" type="workflow" states="draft" class="oe_highlight" string="Validate"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <group>
+                    	<field name="tareo_id"/>
+                    	<field name="employee_id"/>
+                    	<field name="wdmtof"/>
+                        <field name="wds"/>
+                        <field name="hdmtof"/>
+                        <field name="hds"/>
+                        <field name="phdmtof"/>
+                        <field name="phds"/>
+                    	<field name="ot60"/>
+                    	<field name="ot100"/>
+                    	<field name="state"/>
+                    </group>                   
+                </form>
+            </field>
+        </record>
+        
+       
+        <record id="open_tareo_detail_view" model="ir.actions.act_window">
+            <field name="name">Employee Tareo Details</field>
+            <field name="res_model">hr.tareo.detail</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_tareo_detail_filter" />
+        </record>
+        <menuitem action="open_tareo_detail_view"
+                  id="menu_tareo_detail_view"
+                  parent="menu_hr_root_tareo"
+                  sequence="15"/>  
+        
+    </data>
+</openerp>

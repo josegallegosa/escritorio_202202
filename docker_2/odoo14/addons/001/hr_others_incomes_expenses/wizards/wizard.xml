@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_others_incomes_expense_wizard_form_view" model="ir.ui.view">
+            <field name="name">hr.others.incomes.expense.wizard.form</field>
+            <field name="model">hr.others.incomes.expense.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                           
+                            <field name="import_file" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Importar" name="import_files" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_others_incomes_expense_wizard_action" model="ir.actions.act_window">
+            <field name="name">Importador</field>
+            <field name="res_model">hr.others.incomes.expense.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="rapitech_wizard_upload_images_menu" name="Importador"
+                  parent="hr_others_incomes_expenses.menu_others_income_expense_view_main"
+                  sequence="100" action="hr_others_incomes_expense_wizard_action" 
+                  />
+    </data>
+</odoo>

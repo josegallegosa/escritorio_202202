@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="fsm_location_tree_view" model="ir.ui.view">
+        <field name="name">fsm.location.inherit.view.tree</field>
+        <field name="model">fsm.location</field>
+        <field name="inherit_id" ref="fieldservice.fsm_location_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state_id']" position="before">
+                <field name="l10n_pe_district"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="fsm_location_form_view" model="ir.ui.view">
+        <field name="name">fsm.location.inherit.view.form</field>
+        <field name="model">fsm.location</field>
+        <field name="inherit_id" ref="fieldservice.fsm_location_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state_id']" position="before">
+                <field name="l10n_pe_district"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

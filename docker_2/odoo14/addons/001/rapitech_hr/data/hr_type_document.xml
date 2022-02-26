@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="hr_document_type_cc" model="hr.document.type">
+            <field name="name">CEDULA DE CIUDADANIA</field>
+            <field name="code">CC</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_document_type_ce" model="hr.document.type">
+            <field name="name">CEDULA DE EXTRANJERIA</field>
+            <field name="code">CE</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_document_type_ti" model="hr.document.type">
+            <field name="name">TARJETA DE IDENTIDAD</field>
+            <field name="code">TI</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_document_type_pa" model="hr.document.type">
+            <field name="name">PASAPORTE</field>
+            <field name="code">PA</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_document_type_rc" model="hr.document.type">
+            <field name="name">REGISTRO CIVIL</field>
+            <field name="code">RC</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 	</data>
+</odoo>

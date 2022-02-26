@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- EXPORT TXT BANCOS -->
+        <record id="txt_wizard_export_form_view" model="ir.ui.view">
+            <field name="name">txt.wizard.export.form</field>
+            <field name="model">txt.wizard.export</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="company_id" invisible="1" />
+                            <field name="partner_id" invisible="1" />
+                            <field name="acount_bank_company_id" domain="[('partner_id','=',partner_id)]" />
+                        </group>
+                        <group>
+                            <field name="current_date"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Exportar" name="method_exporter_txt" type="object" class="oe_highlight"/>
+                        <button string="Cancel"  class="btn btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="txt_wizard_export_wizard_action" model="ir.actions.act_window">
+            <field name="name">Exportar txt Bancos</field>
+            <field name="res_model">txt.wizard.export</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_hr_nomina_2_form" model="ir.ui.view">
+            <field name="name">hr.payslip.run.form</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="before">
+                   
+                   <button name="%(txt_wizard_export_wizard_action)d" string="Exportar txt banco" type="action"/>
+                </xpath>
+            </field>
+        </record>
+   
+       
+    </data>
+</odoo>

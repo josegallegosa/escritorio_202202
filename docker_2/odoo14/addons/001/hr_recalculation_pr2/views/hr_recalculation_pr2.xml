@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Recalculation PR2 views-->
+    <record id="view_hr_recalculation_pr2_filter" model="ir.ui.view">
+            <field name="name">hr.recalculation.pr2.filter</field>
+            <field name="model">hr.recalculation.pr2</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Recálculo PR2">             
+                    <group expand="0" string="Agrupar por...">
+                    	<filter name='name' string="Recálculo PR2"/>
+                        <filter name='base_period' string="Base Periodo"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+    <record model="ir.ui.view" id="view_hr_recalculation_pr2_tree">
+        <field name="name">hr.recalculation.pr2.tree</field>
+        <field name="model">hr.recalculation.pr2</field>
+        <field name="arch" type="xml">
+            <tree string="Información Recálculo PR2">
+                <field name="name"/>
+                <field name="base_period"/>
+                <field name="company_id"/>
+                <field name="recalculation_pr2_ids"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_hr_recalculation_pr2_form">
+        <field name="name">hr.recalculation.pr2.form</field>
+        <field name="model">hr.recalculation.pr2</field>
+        <field name="arch" type="xml">
+            <form string="Recálculo PR2">
+                <sheet>
+                    <group name="main" col="4">
+                        <field name="name"/>
+                        <field name="base_period"/>
+                        <field name="company_id"/>
+                        <field name="current_date"/>
+                    </group>
+                    <field name="recalculation_pr2_ids">
+                        <tree editable="bottom">
+                            <field name="employee_id"/>
+                            <field name="monthly_labor_income"/>
+                            <field name="monthly_average"/>
+                            <field name="monthly_average_uvt"/>
+                            <field name="value_according_to_table"/>
+                            <field name="percentage_process_two"/>      
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+      </field>
+    </record>
+    <!-- Menu -->
+    <record model="ir.actions.act_window" id="open_view_hr_recalculation_pr2_form">
+        <field name="name">Recálculo PR2</field>
+        <field name="res_model">hr.recalculation.pr2</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_hr_recalculation_pr2_filter"/>
+    </record>
+    <menuitem name="Recálculo PR2"
+              parent="hr_work_entry_contract.menu_hr_payroll_root"
+              id="menu_open_view_employee_eps_form"
+              action="open_view_hr_recalculation_pr2_form"
+              sequence="81"/>
+
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- UBIGEO -->
+
+<odoo>
+    <data noupdate="1">
+        
+        <record forcecreate="True" id="area_1" model="area">    
+            <field name="name">Finanzas</field>
+        </record>
+        <record forcecreate="True" id="area_2" model="area">    
+            <field name="name">RRHH</field>
+        </record>
+        <record forcecreate="True" id="area_3" model="area">    
+            <field name="name">Inteligencia Comercial</field>
+        </record>
+        <record forcecreate="True" id="area_4" model="area">    
+            <field name="name">BI</field>
+        </record>
+        <record forcecreate="True" id="area_5" model="area">    
+            <field name="name">Planeamiento Comercial</field>
+        </record>
+        <record forcecreate="True" id="area_6" model="area">    
+            <field name="name">Contabilidad</field>
+        </record>
+        <record forcecreate="True" id="area_7" model="area">    
+            <field name="name">Desarrollo</field>
+        </record>
+
+    </data>
+</odoo>

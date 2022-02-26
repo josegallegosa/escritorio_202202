@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="payslip_input_type_bcar" model="hr.payslip.input.type">
+            <field name="name">Bono al cargo</field>
+            <field name="code">BCAR</field>
+        </record>
+        <record id="payslip_input_type_cnav" model="hr.payslip.input.type">
+            <field name="name">Canasta Navidad</field>
+            <field name="code">CNAV</field>
+        </record>
+        <record id="payslip_input_type_sube" model="hr.payslip.input.type">
+            <field name="name">Subsidio por Enfermedad</field>
+            <field name="code">SUBE</field>
+        </record>
+        <record id="payslip_input_type_subm" model="hr.payslip.input.type">
+            <field name="name">Subsidio por Maternidad</field>
+            <field name="code">SUBM</field>
+        </record>
+    	<record id="payslip_input_type_adel" model="hr.payslip.input.type">
+            <field name="name">Adelanto</field>
+            <field name="code">ADEL</field>
+        </record>
+        <record id="payslip_input_type_pres" model="hr.payslip.input.type">
+            <field name="name">Prestamo</field>
+            <field name="code">PRES</field>
+        </record>
+        <record id="payslip_input_type_riaf" model="hr.payslip.input.type">
+            <field name="name">Reintegros Afectos</field>
+            <field name="code">RIAF</field>
+        </record>
+        <record id="payslip_input_type_rina" model="hr.payslip.input.type">
+            <field name="name">Reintegros no Afectos</field>
+            <field name="code">RINA</field>
+        </record>
+        <record id="payslip_input_type_adgr" model="hr.payslip.input.type">
+            <field name="name">Adelanto de Gratificación</field>
+            <field name="code">ADGR</field>
+        </record>
+        <record id="payslip_input_type_desj" model="hr.payslip.input.type">
+            <field name="name">Descuento Judicial</field>
+            <field name="code">DESJ</field>
+        </record>
+        <record id="payslip_input_type_oiaf" model="hr.payslip.input.type">
+            <field name="name">Otros Ingresos Afectos</field>
+            <field name="code">OIAF</field>
+        </record>
+        <record id="payslip_input_type_oina" model="hr.payslip.input.type">
+            <field name="name">Otros Ingresos No Afectos</field>
+            <field name="code">OINA</field>
+        </record>
+        <record id="payslip_input_type_otrd" model="hr.payslip.input.type">
+            <field name="name">Otros Descuentos</field>
+            <field name="code">OTRD</field>
+        </record>
+    </data>
+</odoo>

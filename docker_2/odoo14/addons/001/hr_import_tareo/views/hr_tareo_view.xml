@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<record id="view_hr_tareo_form_import" model="ir.ui.view">
+        <field name="name">hr.tareo.form.import</field>
+        <field name="model">hr.tareo</field>
+        <field name="inherit_id" ref="hr_tareo.view_hr_tareo_form"/>
+        <field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="after">
+				<field name="import_file" invisible="0"/>
+	            <field name="tareo_load" invisible="1"/>
+	        </xpath>
+	        <xpath expr="//sheet" position="before">
+				<header>
+                    <button name="import_tareo" type="object"
+                            string="Importar Novedades"
+                            class="oe_highlight" attrs="{'invisible':[('tareo_load','=',True)]}"/>
+                    <button name="download_template" type="object"
+                            string="Descargar Plantilla"
+                            />
+                </header>
+	        </xpath>
+        </field>
+    </record>
+</odoo>

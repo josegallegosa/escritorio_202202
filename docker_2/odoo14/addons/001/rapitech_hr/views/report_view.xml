@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>   
+        <data>
+
+            <template id="report_employee_file_document" >
+                     
+                    <div class="page">     
+                        <style>
+                            table, td, th {
+                                border: 1px solid black;
+                            }
+                            table {
+                                border-collapse: collapse;
+                                table-layout: fixed;
+                            }
+                            td{
+                                padding: 0 0 0 3px;
+                            }
+                            #t1_left{
+                                width: 160px;
+                                font-weight: bold;
+                            }
+                            #t1_right{
+                                width: 450px;
+                            }
+                            #t2_left{
+                                width: 105px;
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
+                            #t2_right{
+                                width: 275px;
+                                font-size: 12px;
+                            }
+                            #t3_left{
+                                width: 160px;
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
+                            #t3_right{
+                                width: 275px;
+                                font-size: 12px;
+                            }
+                            #t4_left{
+                                width: 160px;
+                                font-weight: bold;
+                                font-size: 12px;
+                            }
+                            #t4_right{
+                                width: 275px;
+                                font-size: 12px;
+                            }
+                         </style>
+                        <h3><t t-esc="doc.company_id.name"/></h3>
+                        <table style="border: 1px solid black; border-collapse: collapse;margin: 15px 0 0 0;">
+                            <tr>
+                            <td id="t1_left">Trabajador</td>
+
+                            <td id="t1_right"><t t-esc="doc.code"/></td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Apellidos</td>
+
+                            <td id="t1_right"><t t-esc="doc.last_name"/> <t t-esc="doc.mother_last_name"/></td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Nombres</td>
+
+                            <td id="t1_right"><t t-esc="doc.name"/></td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Doc. Identidad</td>
+
+                            <td id="t1_right"><t t-if="doc.type_document_id"><t t-esc="doc.type_document_id.name"/> - <t t-esc="doc.address_home_id.vat"/></t></td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Unidad</td>
+
+                            <td id="t1_right">?ESPECIFICAR?</td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Planilla</td>
+
+                            <td id="t1_right">?ESPECIFICAR?</td>
+                            </tr>
+                            <tr>
+                            <td id="t1_left">Puesto Trabajo</td>
+
+                            <td id="t1_right"><t t-esc="doc.job_id.name"/></td>
+                            </tr>
+                        </table>
+                        
+                        <hr size="1px" color="black" style="margin: 25px 0 0 0;" />
+                        <h3>Posición Empresa</h3>
+                        
+                        <div>   
+                            <table style="display: inline-block;float: left;border: 1px solid black; border-collapse: collapse; margin: 0 15px 0 0;border:none;">
+                                <tr>
+                                <td id="t2_left">Sede</td>
+
+                                <td id="t2_right"><t t-esc="doc.sede_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Departamento</td>
+
+                                <td id="t2_right"><t t-esc="doc.department_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Área</td>
+
+                                <td id="t2_right"><t t-esc="doc.area_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Sección</td>
+
+                                <td id="t2_right"><t t-esc="doc.seccion_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Turno</td>
+
+                                <td id="t2_right"><t t-esc="doc.turn_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Tipo Contrato</td>
+
+                                <td id="t2_right">?ESPECIFICAR?</td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Situación</td>
+
+                                <td id="t2_right"><t t-esc="doc.special_situation.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Teléfono</td>
+
+                                <td id="t2_right"><t t-esc="doc.mobile_phone"/></td>
+                                </tr>
+                                
+                            </table>
+                        
+                            <table style="display: inline-block;float: rigth;border: 1px solid black; border-collapse: collapse;border:none;">
+                                <tr>
+                                <td id="t3_left">Cat. Remunerativa</td>
+
+                                <td id="t3_right"><t t-esc="doc.cat_rem_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t3_left">Grupo Ocupacional</td>
+
+                                <td id="t3_right"><t t-esc="doc.occupational_group_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t3_left">Cat. Trabajador</td>
+
+                                <td id="t3_right"><t t-esc="doc.cat_employee_id.name"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t3_left">Forma de Ingreso</td>
+
+                                <td id="t3_right"><t t-esc="doc.forma_de_ingreso"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t3_left">Nº Sueldos por Año</td>
+
+                                <td id="t3_right"><t t-esc="doc.salaries_per_year"/></td>
+                                </tr>
+                               
+                                <tr>
+                                <td id="t3_left">Anexo</td>
+
+                                <td id="t3_right"><t t-esc="doc.anexo"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t3_left">Sindicato</td>
+
+                                <td id="t3_right"><t t-esc="doc.sindicato"/></td>
+                                </tr>
+                                <tr>
+                                <td id="t2_left">Cooperativa</td>
+
+                                <td id="t2_right"><t t-esc="doc.cooperative_id.name"/></td>
+                                </tr>
+                                
+                            </table> 
+                        </div>
+                        <div style="margin: 25px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td style="border:none;"></td>
+                                  <th style="border:none;font-size: 12px;">Corporación</th>
+                                  <th style="border:none;font-size: 12px;">Empresa</th>
+                                  <th style="border:none;font-size: 12px;">Planilla</th>
+                                  <th style="border:none;font-size: 12px;">Adicional</th>
+                                  <th style="border:none;font-size: 12px;">Cooperativa</th>
+                                </tr>
+                                <tr>
+                                  <th style="border:none;font-weight: bold;font-size: 12px;">Fechas</th>
+                                  <td style="border:none;text-align:center;font-size: 12px;">?ESPECIFICAR?</td>
+                                  <td style="border:none;text-align:center;font-size: 12px;">?ESPECIFICAR?</td>
+                                  <td style="border:none;text-align:center;font-size: 12px;">?ESPECIFICAR?</td>
+                                  <td style="border:none;text-align:center;font-size: 12px;">?ESPECIFICAR?</td>
+                                  <td style="border:none;text-align:center;font-size: 12px;">?ESPECIFICAR?</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td style="border:none;font-size: 12px;text-align:center;"><b>Días Derecho Vacacional: </b><t t-esc="doc.dias_derecho_vacacional"/></td>
+                                  <td style="border:none;font-size: 12px;text-align:center;"><b>Días Derecho Físicas: </b><t t-esc="doc.dias_derecho_fisicas"/></td>
+                                  <td style="border:none;font-size: 12px;text-align:center;"><b>Tope Compra de Vacaciones: </b><t t-esc="doc.tope_compra_vacaciones"/></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td style="border:none;font-size: 12px;text-align:left;"><b>Moneda Sueldo Registrado: </b><t t-esc="doc.moneda_sueldo.name"/></td>
+                                  <td style="border:none;font-size: 12px;text-align:left;"><b>Importe Sueldo Registrado: </b><t t-esc="doc.sueldo"/></td>
+                                </tr>
+                                <tr>
+                                  <td style="border:none;font-size: 12px;text-align:left;"><b>Nº Hijos Dep.: </b><t t-esc="doc.children"/></td>
+                                  <td style="border:none;font-size: 12px;text-align:left;"><b>Nº Hijos No Dep.: </b><t t-esc="doc.n_hijos_no_dep"/></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td style="border:none;"></td>
+                                  <th style="border:none;font-size: 12px;">Banco</th>
+                                  <th style="border:none;font-size: 12px;">Moneda</th>
+                                  <th style="border:none;font-size: 12px;">Tipo Cuenta</th>
+                                  <th style="border:none;font-size: 12px;">N° Cuenta</th>
+                                </tr>
+                                <tr>
+                                  <th style="border:none;font-weight: bold;font-size: 12px;">Depósito:</th>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_principal.bank_id.name"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_principal.currency_id.name"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_principal.acc_type_bank"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_principal.acc_number"/></td>
+                                </tr>
+                                <tr>
+                                  <th style="border:none;font-weight: bold;font-size: 12px;">CTS:</th>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_cts.bank_id.name"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_cts.currency_id.name"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_cts.acc_type_bank"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><t t-esc="doc.account_bank_cts.acc_number"/></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <th style="border:none;font-size:12px;text-align:left;">Distribución Abono Empresa: </th>
+                                </tr>
+                                <tr>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><b>Banco: </b>?ESPECIFICAR?</td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><b>Nº Cuenta Empresa: </b>?ESPECIFICAR?</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div style="margin: 10px 0 0 0;">
+                            <table style="border-collapse: separate;width:100%;">
+                              <tbody>
+                                <tr>
+                                  <th style="border:none;font-size:12px;text-align:left;">Cese: </th>
+                                </tr>
+                                <tr>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><b>Motivo Separación: </b><t t-esc="doc.reason_termination.name"/></td>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><b>Observación: </b><t t-esc="obsv_termination"/></td>
+                                </tr>
+                                <tr>
+                                  <td style="border:none;text-align:center;font-size: 12px;"><b>Fecha Cese: </b><t t-esc="doc.date_termination"/></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                        <hr size="1px" color="black" style="margin: 25px 0 0 0;" />
+                        <h3>Datos Personales</h3>
+                        <table style="table-layout: auto; width: 100%;margin: 15px 0 0 0;">
+                            <tr>
+                                <td style="width:150px;font-weight: bold;font-size:12px;text-align:left;">Sexo Trabajador</td>
+                                <td style="width:300px;font-size:12px;"><t t-esc="doc.gender =='male' and 'M' or 'F'"/></td>
+                                <td style="width:170px;font-weight: bold;font-size:12px;text-align:left;">Fecha Nacimiento</td>
+                                <td style="width:80px;font-size:12px;"><t t-esc="doc.birthday"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Edad trabajador</td>
+                                <td style="width:110px;font-size:12px;"><t t-esc="doc.get_age()"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:150px;font-weight: bold;font-size:12px;text-align:left;">Estado Civil</td>
+                                <td style="width:300px;font-size:12px;"><t t-esc="doc.get_string_marital()"/></td>
+                                <td style="width:170px;font-weight: bold;font-size:12px;text-align:left;">Fecha Matrimonio</td>
+                                <td style="width:80px;font-size:12px;"><t t-esc="doc.spouse_date_marital"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Grupo Sanguíneo</td>
+                                <td style="width:110px;font-size:12px;"><t t-esc="doc.group_blood"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:150px;font-weight: bold;font-size:12px;text-align:left;">AFP</td>
+                                <td style="width:300px;font-size:12px;"><t t-esc="doc.pension_fund.name"/></td>
+                                <td style="width:170px;font-weight: bold;font-size:12px;text-align:left;">Fecha Afiliación</td>
+                                <td style="width:80px;font-size:12px;"><t t-esc="doc.date_enrollment_afp"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">CUSSP</td>
+                                <td style="width:110px;font-size:12px;"><t t-esc="doc.code_cussp"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Tipo Instrucción</td>
+                                <td style="font-size:12px;"><t t-esc="doc.type_instruction_grade_id.name"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Brevete</td>
+                                <td colspan="3" style="font-size:12px;">?ESPECIFICAR?</td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">País Nacimiento</td>
+                                <td style="font-size:12px;"><t t-esc="doc.country_of_birth.name"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">País Nacionalidad</td>
+                                <td colspan="3" style="font-size:12px;"><t t-esc="doc.country_id.name"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Lugar Nacimiento</td>
+                                <td style="font-size:12px;"><t t-esc="doc.place_of_birth"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">País Residencia</td>
+                                <td colspan="3" style="font-size:12px;"><t t-esc="doc.country_of_resd.name"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Teléfono 1</td>
+                                <td style="font-size:12px;"><t t-esc="doc.phone"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Correo Electrónico 1</td>
+                                <td colspan="3" style="font-size:12px;"><t t-esc="doc.private_email"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Teléfono 2</td>
+                                <td style="font-size:12px;"><t t-esc="doc.phone2"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Correo Electrónico 2</td>
+                                <td colspan="3" style="font-size:12px;"><t t-esc="doc.private_email2"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Teléfono 3</td>
+                                <td style="font-size:12px;"><t t-esc="doc.phone3"/></td>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Tipo Casa</td>
+                                <td colspan="3" style="font-size:12px;"><t t-esc="doc.type_house"/></td>
+                            </tr>
+                            <tr>
+                                <td style="width:130px;font-weight: bold;font-size:12px;text-align:left;">Observación</td>
+                                <td colspan="5" style="font-size:12px;"><t t-esc="doc.obs_gral"/></td>
+                            </tr>
+                        </table>  
+                        <table style="table-layout: auto; width: 100%;margin: 15px 0 0 0;">
+                            
+                            <tr>
+                                <td colspan="3" style=";font-weight: bold;font-size:12px;text-align:left;">Dirección</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Casa</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Interior</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">Zona</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style=";font-size:12px;text-align:left;"></td>
+                                <td style=";font-size:12px;text-align:left;"></td>
+                                <td style=";font-size:12px;text-align:left;"></td>
+                                <td style=";font-size:12px;text-align:left;"></td>
+                            </tr>
+                            <tr>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Dpto</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Manzana</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">Nº Lote</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">Nº Kilometro</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Block</td>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">N° Etapa</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td style="font-size:12px;text-align:left;"></td>
+                            </tr>
+                            <tr>
+                                <td style=";font-weight: bold;font-size:12px;text-align:left;">Ubigeo</td>
+                                <td colspan="5" style=";font-weight: bold;font-size:12px;text-align:left;">Referencia</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:12px;text-align:left;"></td>
+                                <td colspan="5" style="font-size:12px;text-align:left;"></td>
+                            </tr>
+                        </table>          
+                    </div>
+            </template>
+
+            <template id="report_employee_file">
+                <t t-call="web.html_container">
+                    <t t-foreach="docs" t-as="doc">
+                        <t t-call="rapitech_hr.report_employee_file_document"/>                    
+                    </t>
+                </t>
+            </template>
+
+            <report
+                id="hr_employee_file"
+                model="hr.employee"
+                string="Ficha del trabajador"
+                report_type="qweb-pdf"
+                name="rapitech_hr.report_employee_file"
+                file="rapitech_hr.report_employee_file"
+
+            />
+        </data>
+    </odoo>

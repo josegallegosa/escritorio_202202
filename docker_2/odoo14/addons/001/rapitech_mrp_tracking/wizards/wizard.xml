@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<odoo>
+
+        <record id="view_mrp_product_produce_all_wizard" model="ir.ui.view">
+            <field name="name">MRP Product Produce All</field>
+            <field name="model">mrp.product.produce.all</field>
+            <field name="arch" type="xml">
+                <form string="Produce">
+                   
+                   <group>
+                        <group>
+                            <field name="production_id" invisible="1"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="qty_producing" readonly="1"/>
+                            <field name="qty_producing_total"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="do_produce" type="object" string="Producir" class="btn-primary" />
+                        <button string="Cancelar" class="btn-default btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_mrp_product_produce_all" model="ir.actions.act_window">
+            <field name="name">Producción Masiva</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.product.produce.all</field>
+            <field name="view_mode">form</field>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+</odoo>

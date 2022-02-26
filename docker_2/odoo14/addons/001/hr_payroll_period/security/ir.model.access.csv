@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payroll_period_user,access_hr_payroll_period,model_hr_payroll_period,base.group_user,1,0,0,0
+access_hr_payroll_period_manager,access_hr_payroll_period,model_hr_payroll_period,hr.group_hr_manager,1,1,1,1
+
+access_txt_wizard_generate_period_user,access_txt_wizard_generate_period,model_txt_wizard_generate_period,base.group_user,1,0,0,0
+access_txt_wizard_generate_period_manager,access_txt_wizard_generate_period,model_txt_wizard_generate_period,hr.group_hr_manager,1,1,1,1

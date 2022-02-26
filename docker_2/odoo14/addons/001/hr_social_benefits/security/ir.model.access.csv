@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_plame_manager,access.hr.plame,model_hr_plame,hr.group_hr_manager,1,1,1,1
+access_plame_file_save,access.plame.file.save,model_plame_file_save,,1,1,1,1
+

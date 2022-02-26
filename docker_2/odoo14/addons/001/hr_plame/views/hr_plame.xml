@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Table 22 category-->
+
+    <record id="view_hr_table_22_category_tree" model="ir.ui.view">
+            <field name="name">hr.table_22_category.tree</field>
+            <field name="model">hr.table.22.category</field>
+            <field name="arch" type="xml">
+                <tree string="Categoría Ingresos,tributos y descuentos">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_table_22_category_form" model="ir.ui.view">
+            <field name="name">hr.table.22.category.form</field>
+            <field name="model">hr.table.22.category</field>
+            <field name="arch" type="xml">
+                <form string="Categoría Ingresos,tributos y descuentos" version="7.0">
+                    <sheet>
+                        <group col="4">
+                            <field name="code"/>
+                            <field name="name"/>                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_table_22_category_view" model="ir.actions.act_window">
+            <field name="name">Categoría Ingresos, tributos y Descuentos - Tabla 22 PLAME</field>
+            <field name="res_model">hr.table.22.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	<!-- Table 22 -->
+
+        <record id="view_hr_table_22_filter" model="ir.ui.view">
+            <field name="name">view_hr_table_22_filter</field>
+            <field name="model">hr.table.22</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Ingresos,tributos y descuentos">
+                    <field name="code" string="Código"/>
+                    <field name="name" string="Descripción"/>                    
+                    <group expand="0" string="Agrupar por...">
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+        <record id="view_hr_table_22_tree" model="ir.ui.view">
+            <field name="name">hr.table_22.tree</field>
+            <field name="model">hr.table.22</field>
+            <field name="arch" type="xml">
+                <tree string="Ingresos,tributos y descuentos">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_table_22_form" model="ir.ui.view">
+            <field name="name">hr.table.22.form</field>
+            <field name="model">hr.table.22</field>
+            <field name="arch" type="xml">
+                <form string="Ingresos,tributos y descuentos" version="7.0">
+                    <sheet>
+                        <group col="4">
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="category_id"/>                            
+                        </group>
+                        <group>
+                        	<div>
+                        		<group string="Empleador">
+                                    <field name="essalud_assured_employee"/>
+                                    <field name="essalud_assured_fishing"/>
+                                    <field name="essalud_assured_agrarian"/>
+                                    <field name="essalud_sctr"/>
+                                    <field name="extraordinary_solidarity_tax"/>
+                                    <field name="fund_artist"/>
+                                    <field name="senati"/>
+                        		</group>
+                        	</div>
+                        	<div>
+                        		<group string="Trabajador">
+                                <field name="fund_19990"/>
+                                <field name="fund_spp"/>
+                                <field name="fund_min"/>
+                                <field name="fund_fishing"/>
+                                <field name="income_tax_5ta"/>
+                        		</group>
+                        	</div>
+                        	<div>
+                        		<group string="Pensionista">
+                                <field name="essalud_regular"/>
+                                <field name="solidarity_contribution"/>
+                            	</group>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_table_22_view" model="ir.actions.act_window">
+            <field name="name">Ingresos, tributos y Descuentos - Tabla 22 PLAME</field>
+            <field name="res_model">hr.table.22</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_table_22_filter" />
+        </record>
+        <menuitem action="open_table_22_view"
+        		  name="Tabla 22 PLAME - Ingresos, Tributos y Descuentos"
+                  id="menu_table_22_view"
+                  parent="hr_work_entry_contract.menu_hr_payroll_configuration"
+                  groups="hr.group_hr_manager"
+                  sequence="2200"/>
+
+        <!-- Inherit Rule view -->
+    	<record id="view_hr_salary_rule_plame_form" model="ir.ui.view">
+            <field name="name">hr.salary.rule.plame.form</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="before">
+                    	<field name="table_22_id"/>                                   
+            	</xpath>
+            </field>
+        </record>
+
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record forcecreate="True" id="scale_1" model="hr.retencion.line">
+            <field name="sequence">1</field>
+            <field name="init_value">0</field>
+            <field name="final_value">95</field>
+            <field name="marginal_rate">0</field>
+            <field name="additional_value">0</field>
+        </record>
+        <record forcecreate="True" id="scale_2" model="hr.retencion.line">
+            <field name="sequence">2</field>
+            <field name="init_value">95</field>
+            <field name="final_value">150</field>
+            <field name="marginal_rate">19</field>
+            <field name="additional_value">0</field>
+        </record>
+        <record forcecreate="True" id="scale_3" model="hr.retencion.line">
+            <field name="sequence">3</field>
+            <field name="init_value">150</field>
+            <field name="final_value">360</field>
+            <field name="marginal_rate">28</field>
+            <field name="additional_value">10</field>
+        </record>
+        <record forcecreate="True" id="scale_4" model="hr.retencion.line">
+            <field name="sequence">4</field>
+            <field name="init_value">360</field>
+            <field name="final_value">640</field>
+            <field name="marginal_rate">33</field>
+            <field name="additional_value">69</field>
+        </record>
+        <record forcecreate="True" id="scale_5" model="hr.retencion.line">
+            <field name="sequence">5</field>
+            <field name="init_value">640</field>
+            <field name="final_value">945</field>
+            <field name="marginal_rate">35</field>
+            <field name="additional_value">162</field>
+        </record>
+        <record forcecreate="True" id="scale_6" model="hr.retencion.line">
+            <field name="sequence">6</field>
+            <field name="init_value">945</field>
+            <field name="final_value">2300</field>
+            <field name="marginal_rate">37</field>
+            <field name="additional_value">268</field>
+        </record>
+        <record forcecreate="True" id="scale_7" model="hr.retencion.line">
+            <field name="sequence">7</field>
+            <field name="init_value">2300</field>
+            <field name="final_value">0</field>
+            <field name="marginal_rate">39</field>
+            <field name="additional_value">770</field>
+        </record>
+    </data>
+</odoo>

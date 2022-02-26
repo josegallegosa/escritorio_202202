@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="account_type_1" model="account.type">
+            <field name="name">CTA AHORROS</field>
+            <field name="code">1</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+        
+        <record id="account_type_2" model="account.type">
+            <field name="name">CUPO ROTATIVO</field>
+            <field name="code">2</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+
+        <record id="account_type_3" model="account.type">
+            <field name="name">CRÉDITO</field>
+            <field name="code">4</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+
+        <record id="account_type_4" model="account.type">
+            <field name="name">CTA CORRIENTE</field>
+            <field name="code">6</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+
+        <record id="account_type_5" model="account.type">
+            <field name="name">CTA AFC</field>
+            <field name="code">7</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+
+        <record id="account_type_6" model="account.type">
+            <field name="name">TARJETA PLUS</field>
+            <field name="code">27</field>
+            <field name="bank_id" ref="res_bank_co_52"/>
+        </record>
+
+        <record id="account_type_7" model="account.type">
+            <field name="name">CTA AHORROS</field>
+            <field name="code">37</field>
+            <field name="bank_id" ref="res_bank_co_7_1"/>
+        </record>
+
+        <record id="account_type_8" model="account.type">
+            <field name="name">CTA CORRIENTE</field>
+            <field name="code">27</field>
+            <field name="bank_id" ref="res_bank_co_7_1"/>
+        </record>
+
+        <record id="account_type_9" model="account.type">
+            <field name="name">CTA AHORROS</field>
+            <field name="code">37</field>
+            <field name="bank_id" ref="res_bank_co_7_2"/>
+        </record>
+
+        <record id="account_type_10" model="account.type">
+            <field name="name">CTA CORRIENTE</field>
+            <field name="code">27</field>
+            <field name="bank_id" ref="res_bank_co_7_2"/>
+        </record>
+
+        <record id="account_type_11" model="account.type">
+            <field name="name">CTA AHORROS</field>
+            <field name="code">37</field>
+            <field name="bank_id" ref="res_bank_co_19"/>
+        </record>
+
+        <record id="account_type_12" model="account.type">
+            <field name="name">CTA CORRIENTE</field>
+            <field name="code">27</field>
+            <field name="bank_id" ref="res_bank_co_19"/>
+        </record>
+
+
+    </data>
+</odoo>

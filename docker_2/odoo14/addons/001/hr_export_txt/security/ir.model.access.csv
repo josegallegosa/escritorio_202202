@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_txt_wizard_export_user,access_txt_wizard_export_user,model_txt_wizard_export,base.group_user,1,0,0,0
+access_txt_wizard_export_manager,access_txt_wizard_export_manager,model_txt_wizard_export,hr.group_hr_manager,1,1,1,1
+
+

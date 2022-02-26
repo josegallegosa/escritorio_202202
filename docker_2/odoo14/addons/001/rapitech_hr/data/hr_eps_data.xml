@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_nit_890904996-1" model="hr.nit">
+            <field name="name">890904996</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_800112806-2" model="hr.nit">
+            <field name="name">800112806</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_830113831-0" model="hr.nit">
+            <field name="name">830113831</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_800130907-4" model="hr.nit">
+            <field name="name">800130907</field>
+            <field name="code">4</field>
+        </record>
+ 
+        <record id="hr_nit_800251440-6" model="hr.nit">
+            <field name="name">800251440</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_860066942-7" model="hr.nit">
+            <field name="name">860066942</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_800088702-2" model="hr.nit">
+            <field name="name">800088702</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_890303093-5" model="hr.nit">
+            <field name="name">890303093</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_805000427-1" model="hr.nit">
+            <field name="name">805000427</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_830003564-7" model="hr.nit">
+            <field name="name">830003564</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_805001157-2" model="hr.nit">
+            <field name="name">805001157</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_900156264-2" model="hr.nit">
+            <field name="name">900156264</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_900226715-3" model="hr.nit">
+            <field name="name">900226715</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_901097473-5" model="hr.nit">
+            <field name="name">901097473</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_900914254-1" model="hr.nit">
+            <field name="name">900914254</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_806008394-7" model="hr.nit">
+            <field name="name">806008394</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_901037916-1" model="hr.nit">
+            <field name="name">901037916</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_901037916-1" model="hr.nit">
+            <field name="name">901037916</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_901037916-1" model="hr.nit">
+            <field name="name">901037916</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890102257-3" model="hr.nit">
+            <field name="name">890102257</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_890203183-0" model="hr.nit">
+            <field name="name">890203183</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_890399010-6" model="hr.nit">
+            <field name="name">890399010</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_899999063-3" model="hr.nit">
+            <field name="name">899999063</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_891500319-2" model="hr.nit">
+            <field name="name">891500319</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_890480123-5" model="hr.nit">
+            <field name="name">890480123</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_890980040-8" model="hr.nit">
+            <field name="name">890980040</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_891080031-3" model="hr.nit">
+            <field name="name">891080031</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_800118954-1" model="hr.nit">
+            <field name="name">800118954</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_891800330-1" model="hr.nit">
+            <field name="name">891800330</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_899999107" model="hr.nit">
+            <field name="name">899999107</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_891856000" model="hr.nit">
+            <field name="name">891856000</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900298372" model="hr.nit">
+            <field name="name">900298372</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_824001398" model="hr.nit">
+            <field name="name">824001398</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_812002376" model="hr.nit">
+            <field name="name">812002376</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_817001773" model="hr.nit">
+            <field name="name">817001773</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_839000495" model="hr.nit">
+            <field name="name">839000495</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_837000084" model="hr.nit">
+            <field name="name">837000084</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_809008362" model="hr.nit">
+            <field name="name">809008362</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_806008394" model="hr.nit">
+            <field name="name">806008394</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_901021565" model="hr.nit">
+            <field name="name">901021565</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900226715" model="hr.nit">
+            <field name="name">900226715</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_804002105" model="hr.nit">
+            <field name="name">804002105</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900935126" model="hr.nit">
+            <field name="name">900935126</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_818000140" model="hr.nit">
+            <field name="name">818000140</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_901093846" model="hr.nit">
+            <field name="name">901093846</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900604350" model="hr.nit">
+            <field name="name">900604350</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900156264" model="hr.nit">
+            <field name="name">900156264</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_901097473" model="hr.nit">
+            <field name="name">901097473</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_900914254-1" model="hr.nit">
+            <field name="name">900914254</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_891600091" model="hr.nit">
+            <field name="name">891600091</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_892115006" model="hr.nit">
+            <field name="name">892115006</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_891180008" model="hr.nit">
+            <field name="name">891180008</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_891280008" model="hr.nit">
+            <field name="name">891280008</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_892200015" model="hr.nit">
+            <field name="name">892200015</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_890500675" model="hr.nit">
+            <field name="name">890500675</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_860045904" model="hr.nit">
+            <field name="name">860045904</field>
+            <field name="code"></field>
+        </record>
+ 
+        <record id="hr_nit_890102044" model="hr.nit">
+            <field name="name">890102044</field>
+            <field name="code"></field>
+        </record>
+         <record id="hr_eps_co_EAS016" model="hr.eps">
+            <field name="name">Empresas Públicas de Medellín Departamento Médico</field>
+            <field name="code">EAS016</field>
+            <field name="nit" ref="hr_nit_890904996-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EAS027" model="hr.eps">
+            <field name="name">Fondo de Pasivo Social de Ferrocarriles</field>
+            <field name="code">EAS027</field>
+            <field name="nit" ref="hr_nit_800112806-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS001" model="hr.eps">
+            <field name="name">Aliansalud EPS</field>
+            <field name="code">EPS001</field>
+            <field name="nit" ref="hr_nit_830113831-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS002" model="hr.eps">
+            <field name="name">Salud Total S.A.</field>
+            <field name="code">EPS002</field>
+            <field name="nit" ref="hr_nit_800130907-4"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS005" model="hr.eps">
+            <field name="name">E.P.S Sanitas</field>
+            <field name="code">EPS005</field>
+            <field name="nit" ref="hr_nit_800251440-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS008" model="hr.eps">
+            <field name="name">Compensar Entidad Promotora de Salud</field>
+            <field name="code">EPS008</field>
+            <field name="nit" ref="hr_nit_860066942-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS010" model="hr.eps">
+            <field name="name">EPS Sura</field>
+            <field name="code">EPS010</field>
+            <field name="nit" ref="hr_nit_800088702-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS012" model="hr.eps">
+            <field name="name">Comfenalco Valle EPS</field>
+            <field name="code">EPS012</field>
+            <field name="nit" ref="hr_nit_890303093-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS016" model="hr.eps">
+            <field name="name">Coomeva EPS</field>
+            <field name="code">EPS016</field>
+            <field name="nit" ref="hr_nit_805000427-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS017" model="hr.eps">
+            <field name="name">Famisanar</field>
+            <field name="code">EPS017</field>
+            <field name="nit" ref="hr_nit_830003564-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS018" model="hr.eps">
+            <field name="name">Servicio Occidental de Salud S.O.S. S.A.</field>
+            <field name="code">EPS018</field>
+            <field name="nit" ref="hr_nit_805001157-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS037" model="hr.eps">
+            <field name="name">Nueva EPS</field>
+            <field name="code">EPS037</field>
+            <field name="nit" ref="hr_nit_900156264-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS042" model="hr.eps">
+            <field name="name">Coosalud E.S.S.</field>
+            <field name="code">EPS042</field>
+            <field name="nit" ref="hr_nit_900226715-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS044" model="hr.eps">
+            <field name="name">Medimás EPS S.A.S.</field>
+            <field name="code">EPS044</field>
+            <field name="nit" ref="hr_nit_901097473-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS046" model="hr.eps">
+            <field name="name">Fundación Salud MIA EPS</field>
+            <field name="code">EPS046</field>
+            <field name="nit" ref="hr_nit_900914254-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS048" model="hr.eps">
+            <field name="name">Mutual Ser Eps-S</field>
+            <field name="code">EPS048</field>
+            <field name="nit" ref="hr_nit_806008394-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_MIN001" model="hr.eps">
+            <field name="name">Fondo de Solidaridad y Garantía Fosyga</field>
+            <field name="code">MIN001</field>
+            <field name="nit" ref="hr_nit_901037916-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_MIN002" model="hr.eps">
+            <field name="name">Fondo de Solidaridad y Garantía Fosyga</field>
+            <field name="code">MIN002</field>
+            <field name="nit" ref="hr_nit_901037916-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_MIN003" model="hr.eps">
+            <field name="name">Fondo de Solidaridad y Garantía Fosyga</field>
+            <field name="code">MIN003</field>
+            <field name="nit" ref="hr_nit_901037916-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES005" model="hr.eps">
+            <field name="name">Universidad del Atlántico</field>
+            <field name="code">RES005</field>
+            <field name="nit" ref="hr_nit_890102257-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES006" model="hr.eps">
+            <field name="name">Universidad Industrial de Santander</field>
+            <field name="code">RES006</field>
+            <field name="nit" ref="hr_nit_890203183-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES007" model="hr.eps">
+            <field name="name">Universidad del Valle</field>
+            <field name="code">RES007</field>
+            <field name="nit" ref="hr_nit_890399010-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES008" model="hr.eps">
+            <field name="name">Universidad Nacional de Colombia</field>
+            <field name="code">RES008</field>
+            <field name="nit" ref="hr_nit_899999063-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES009" model="hr.eps">
+            <field name="name">Universidad del Cauca</field>
+            <field name="code">RES009</field>
+            <field name="nit" ref="hr_nit_891500319-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES010" model="hr.eps">
+            <field name="name">Universidad de Cartagena</field>
+            <field name="code">RES010</field>
+            <field name="nit" ref="hr_nit_890480123-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES011" model="hr.eps">
+            <field name="name">Universidad de Antioquia</field>
+            <field name="code">RES011</field>
+            <field name="nit" ref="hr_nit_890980040-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES012" model="hr.eps">
+            <field name="name">Universidad de Córdoba</field>
+            <field name="code">RES012</field>
+            <field name="nit" ref="hr_nit_891080031-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES013" model="hr.eps">
+            <field name="name">Universidad de Nariño</field>
+            <field name="code">RES013</field>
+            <field name="nit" ref="hr_nit_800118954-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_RES014" model="hr.eps">
+            <field name="name">Universidad Pedagógica y Tecnológica de Colombia - UPTC</field>
+            <field name="code">RES014</field>
+            <field name="nit" ref="hr_nit_891800330-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSC22" model="hr.eps">
+            <field name="name">Entidad Administradora de Régimen Subsidiado Convida</field>
+            <field name="code">EPSC22</field>
+            <field name="nit" ref="hr_nit_899999107"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSC25" model="hr.eps">
+            <field name="name">Capresoca EPS</field>
+            <field name="code">EPSC25</field>
+            <field name="nit" ref="hr_nit_891856000"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSC34" model="hr.eps">
+            <field name="name">Capital Salud EPSS S.A.S.</field>
+            <field name="code">EPSC34</field>
+            <field name="nit" ref="hr_nit_900298372"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC1" model="hr.eps">
+            <field name="name">Dusakawi</field>
+            <field name="code">EPSIC1</field>
+            <field name="nit" ref="hr_nit_824001398"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC2" model="hr.eps">
+            <field name="name">Manexka</field>
+            <field name="code">EPSIC2</field>
+            <field name="nit" ref="hr_nit_812002376"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC3" model="hr.eps">
+            <field name="name">Asociación Indígena del Cauca - A.I.C.</field>
+            <field name="code">EPSIC3</field>
+            <field name="nit" ref="hr_nit_817001773"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC4" model="hr.eps">
+            <field name="name">Entidad Promotora de Salud Anas Wayuu EPSI</field>
+            <field name="code">EPSIC4</field>
+            <field name="nit" ref="hr_nit_839000495"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC5" model="hr.eps">
+            <field name="name">Entidad Promotora de Salud Mallamas EPSI</field>
+            <field name="code">EPSIC5</field>
+            <field name="nit" ref="hr_nit_837000084"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSIC6" model="hr.eps">
+            <field name="name">Entidad Promotora de Salud Pijaosalud EPSI</field>
+            <field name="code">EPSIC6</field>
+            <field name="nit" ref="hr_nit_809008362"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC07" model="hr.eps">
+            <field name="name">Asociación Mutual Ser Empresa Solidaría de Salud ESS</field>
+            <field name="code">ESSC07</field>
+            <field name="nit" ref="hr_nit_806008394"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC18" model="hr.eps">
+            <field name="name">Sociedad Simplificada por Acciones Emssanar S.A.S.</field>
+            <field name="code">ESSC18</field>
+            <field name="nit" ref="hr_nit_901021565"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC24" model="hr.eps">
+            <field name="name">Coosalud E.S.S.</field>
+            <field name="code">ESSC24</field>
+            <field name="nit" ref="hr_nit_900226715"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC33" model="hr.eps">
+            <field name="name">Comparta</field>
+            <field name="code">ESSC33</field>
+            <field name="nit" ref="hr_nit_804002105"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC62" model="hr.eps">
+            <field name="name">Asmet Salud</field>
+            <field name="code">ESSC62</field>
+            <field name="nit" ref="hr_nit_900935126"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC76" model="hr.eps">
+            <field name="name">AMBUQ E.S.S.</field>
+            <field name="code">ESSC76</field>
+            <field name="nit" ref="hr_nit_818000140"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_ESSC91" model="hr.eps">
+            <field name="name">Ecoopsos</field>
+            <field name="code">ESSC91</field>
+            <field name="nit" ref="hr_nit_901093846"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS040" model="hr.eps">
+            <field name="name">Savia Salud EPS</field>
+            <field name="code">EPS040</field>
+            <field name="nit" ref="hr_nit_900604350"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS041" model="hr.eps">
+            <field name="name">Nueva EPS S.A. Movilidad</field>
+            <field name="code">EPS041</field>
+            <field name="nit" ref="hr_nit_900156264"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPS045" model="hr.eps">
+            <field name="name">Medimás EPS S.A.S</field>
+            <field name="code">EPS045</field>
+            <field name="nit" ref="hr_nit_901097473"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_EPSS46" model="hr.eps">
+            <field name="name">Fundación Salud MIA EPS</field>
+            <field name="code">EPSS46</field>
+            <field name="nit" ref="hr_nit_900914254-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC20" model="hr.eps">
+            <field name="name">Comfachoco – CCF del Chocó</field>
+            <field name="code">CCFC20</field>
+            <field name="nit" ref="hr_nit_891600091"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC23" model="hr.eps">
+            <field name="name">Caja de Compensación Familiar de La Guajira</field>
+            <field name="code">CCFC23</field>
+            <field name="nit" ref="hr_nit_892115006"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC24" model="hr.eps">
+            <field name="name">Comfamiliar Huila EPS – CCF</field>
+            <field name="code">CCFC24</field>
+            <field name="nit" ref="hr_nit_891180008"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC27" model="hr.eps">
+            <field name="name">Comfamiliar de Nariño EPS – CCF</field>
+            <field name="code">CCFC27</field>
+            <field name="nit" ref="hr_nit_891280008"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC33" model="hr.eps">
+            <field name="name">Comfasucre EPS-CCF de Sucre</field>
+            <field name="code">CCFC33</field>
+            <field name="nit" ref="hr_nit_892200015"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC50" model="hr.eps">
+            <field name="name">EPS-S Comfaoriente</field>
+            <field name="code">CCFC50</field>
+            <field name="nit" ref="hr_nit_890500675"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC53" model="hr.eps">
+            <field name="name">Comfacundi - CCF de Cundinamarca</field>
+            <field name="code">CCFC53</field>
+            <field name="nit" ref="hr_nit_860045904"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_eps_co_CCFC55" model="hr.eps">
+            <field name="name">Cajacopi Atlántico  - CCF</field>
+            <field name="code">CCFC55</field>
+            <field name="nit" ref="hr_nit_890102044"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+    </data>
+</odoo>

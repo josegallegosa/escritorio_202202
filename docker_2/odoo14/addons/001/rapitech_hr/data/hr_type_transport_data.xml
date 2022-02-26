@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_type_transport_porvenir" model="hr.type.transport">
+            <field name="name">SERVICIO PUBLICO</field>
+        </record>
+        
+        <record id="hr_type_transport_proteccion" model="hr.type.transport">
+            <field name="name">AUTOMOVIL</field>
+        </record>
+
+        <record id="hr_type_transport_colfondos" model="hr.type.transport">
+            <field name="name">MOTOCICLETA</field>
+        </record>
+
+        <record id="hr_type_transport_skandia" model="hr.type.transport">
+            <field name="name">BICICLETA</field>
+        </record>
+
+        <record id="hr_type_transport_skandia" model="hr.type.transport">
+            <field name="name">PEATONAL</field>
+        </record>
+    </data>
+</odoo>

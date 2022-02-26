@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--SUBSERVICIO-->
+        <record id="fsm_order_service_form_view" model="ir.ui.view">
+            <field name="name">fsm.order.service.form</field>
+            <field name="model">fsm.order.service</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="parent_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="fsm_order_service_view" model="ir.ui.view">
+            <field name="name">fsm.order.service.tree</field>
+            <field name="model">fsm.order.service</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description"/>
+                    <field name="parent_id" />
+                </tree>
+            </field>
+        </record>
+        <record id="fsm_order_service_action" model="ir.actions.act_window">
+            <field name="name">Subservicios</field>
+            <field name="res_model">fsm.order.service</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--UBIGEO-->
+        <record id="ubigeo_form_view" model="ir.ui.view">
+            <field name="name">ubigeo.form</field>
+            <field name="model">ubigeo</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="ubigeo_tree_view" model="ir.ui.view">
+            <field name="name">ubigeo.tree</field>
+            <field name="model">ubigeo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="ubigeo_action" model="ir.actions.act_window">
+            <field name="name">Ubigeo</field>
+            <field name="res_model">ubigeo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--ALMACENAJE-->
+        <record id="storage_form_view" model="ir.ui.view">
+            <field name="name">storage.form</field>
+            <field name="model">storage</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="storage_tree_view" model="ir.ui.view">
+            <field name="name">storage.tree</field>
+            <field name="model">storage</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="storage_action" model="ir.actions.act_window">
+            <field name="name">Almacenaje</field>
+            <field name="res_model">storage</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--ETIQUETADO PRODUCTOS-->
+        <record id="labeling_product_form_view" model="ir.ui.view">
+            <field name="name">labeling.product.form</field>
+            <field name="model">labeling.product</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="labeling_product_tree_view" model="ir.ui.view">
+            <field name="name">labeling.product.tree</field>
+            <field name="model">labeling.product</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="labeling_product_action" model="ir.actions.act_window">
+            <field name="name">Etiquetado Productos</field>
+            <field name="res_model">labeling.product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--ETIQUETADO PAQUETES-->
+        <record id="labeling_package_form_view" model="ir.ui.view">
+            <field name="name">labeling.package.form</field>
+            <field name="model">labeling.package</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="labeling_package_tree_view" model="ir.ui.view">
+            <field name="name">labeling.package.tree</field>
+            <field name="model">labeling.package</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="labeling_package_action" model="ir.actions.act_window">
+            <field name="name">Etiquetado Paquetes</field>
+            <field name="res_model">labeling.package</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--POR PESO-->
+        <record id="by_weight_form_view" model="ir.ui.view">
+            <field name="name">by.weight.form</field>
+            <field name="model">by.weight</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="by_weight_tree_view" model="ir.ui.view">
+            <field name="name">by.weight.tree</field>
+            <field name="model">by.weight</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="by_weight_action" model="ir.actions.act_window">
+            <field name="name">Peso</field>
+            <field name="res_model">by.weight</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!--TALLAS-->
+        <record id="product_size_form_view" model="ir.ui.view">
+            <field name="name">product.size.form</field>
+            <field name="model">product.size</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="product_size_tree_view" model="ir.ui.view">
+            <field name="name">product.size.tree</field>
+            <field name="model">product.size</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="product_size_action" model="ir.actions.act_window">
+            <field name="name">Tallas</field>
+            <field name="res_model">product.size</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--POR BULTOS-->
+        <record id="by_package_form_view" model="ir.ui.view">
+            <field name="name">by.package.form</field>
+            <field name="model">by.package</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="by_package_tree_view" model="ir.ui.view">
+            <field name="name">by.package.tree</field>
+            <field name="model">by.package</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="by_package_action" model="ir.actions.act_window">
+            <field name="name">Bulto</field>
+            <field name="res_model">by.package</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--TIPO DE PAGO-->
+        <record id="payment_type_form_view" model="ir.ui.view">
+            <field name="name">payment.type.form</field>
+            <field name="model">payment.type</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="payment_type_tree_view" model="ir.ui.view">
+            <field name="name">payment.type.tree</field>
+            <field name="model">payment.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="payment_type_action" model="ir.actions.act_window">
+            <field name="name">Tipo de Pago</field>
+            <field name="res_model">payment.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--PICKING-->
+        <record id="picking_form_view" model="ir.ui.view">
+            <field name="name">picking.form</field>
+            <field name="model">picking</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="picking_tree_view" model="ir.ui.view">
+            <field name="name">picking.tree</field>
+            <field name="model">picking</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="picking_action" model="ir.actions.act_window">
+            <field name="name">Picking</field>
+            <field name="res_model">picking</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--PACKING-->
+        <record id="pAcking_form_view" model="ir.ui.view">
+            <field name="name">packing.form</field>
+            <field name="model">packing</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="packing_tree_view" model="ir.ui.view">
+            <field name="name">packing.tree</field>
+            <field name="model">packing</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="packing_action" model="ir.actions.act_window">
+            <field name="name">Packing</field>
+            <field name="res_model">packing</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--POR RECOJO-->
+        <record id="by_pick_up_form_view" model="ir.ui.view">
+            <field name="name">by.pick.up.form</field>
+            <field name="model">by.pick.up</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="by_pick_up_tree_view" model="ir.ui.view">
+            <field name="name">by.pick.up.tree</field>
+            <field name="model">by.pick.up</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="by_pick_up_action" model="ir.actions.act_window">
+            <field name="name">Recojo</field>
+            <field name="res_model">by.pick.up</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--POR SEGURO-->
+        <record id="by_sure_form_view" model="ir.ui.view">
+            <field name="name">by.sure.form</field>
+            <field name="model">by.sure</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="by_sure_tree_view" model="ir.ui.view">
+            <field name="name">by.sure.tree</field>
+            <field name="model">by.sure</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="by_sure_action" model="ir.actions.act_window">
+            <field name="name">Seguro</field>
+            <field name="res_model">by.sure</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--BACK OFFICE-->
+        <record id="back_office_form_view" model="ir.ui.view">
+            <field name="name">back.office.form</field>
+            <field name="model">back.office</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="back_office_tree_view" model="ir.ui.view">
+            <field name="name">back.office.tree</field>
+            <field name="model">back.office</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="back_office_action" model="ir.actions.act_window">
+            <field name="name">Back Office</field>
+            <field name="res_model">back.office</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--IMPRESIONES-->
+        <record id="prints_form_view" model="ir.ui.view">
+            <field name="name">prints.form</field>
+            <field name="model">prints</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="prints_tree_view" model="ir.ui.view">
+            <field name="name">prints.tree</field>
+            <field name="model">prints</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="prints_action" model="ir.actions.act_window">
+            <field name="name">Impresiones</field>
+            <field name="res_model">prints</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!-- Author -->
+
+      <record id="subscription_form" model="ir.ui.view">
+        <field name="name">subscription.form</field>
+        <field name="model">book.subscription</field>
+        <field name="arch" type="xml">
+            <form string="Subscripción">
+                <group>
+                    
+                        <field name="supplier_id"/>
+                        <field name="partner_ids"/>
+                        <field name="parameter_shop"/>        
+                    
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="subscription_tree" model="ir.ui.view">
+        <field name="name">subscription.tree</field>
+        <field name="model">book.subscription</field>
+        <field name="arch" type="xml">
+            <tree string="Subscripción">
+                <field name="supplier_id"/>
+                <field name="parameter_shop"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="subscription_action">
+        <field name="name">Subscripciones</field>
+        <field name="res_model">book.subscription</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Crear la primera subscripción
+            </p>
+        </field>
+    </record>
+
+        <menuitem id="subscription_menu" name="Subscripción"
+                  parent="sale.sale_menu_root"
+                  sequence="10" action="subscription_action" 
+                  />
+
+
+
+</odoo>

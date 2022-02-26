@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record id="stock_location_form_inherit" model="ir.ui.view">
+            <field name="name">stock.location.form.inherit</field>
+            <field name="model">stock.location</field>
+            <field name="inherit_id" ref="stock.view_location_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="admin_id"/>
+                    <field name="check_list"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_common_form_inherit" model="ir.ui.view">
+            <field name="name">product.template.common.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="priority">50</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='tracking']" position="after">
+                    <field name="tracking_product"/>
+                </xpath>
+            </field>
+        </record>
+<!--        <record id="mrp_product_produce_form_inherit" model="ir.ui.view">-->
+<!--            <field name="name">mrp.product.produce.form.inherit</field>-->
+<!--            <field name="model">mrp.product.produce</field>-->
+<!--            <field name="inherit_id" ref="mrp.view_mrp_product_produce_wizard"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//form/group/group/label[@for='finished_lot_id']" position="attributes">-->
+<!--                    <attribute name="attrs">{}</attribute>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//field[@name='finished_lot_id']" position="attributes">-->
+<!--                    <attribute name="attrs">{'required': [('product_tracking', '!=', 'none'), ('finished_lot_id', '!=', False)]}</attribute>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+    </data>
+</odoo>

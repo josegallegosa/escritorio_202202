@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--
+    <record model="ir.ui.view" id="view_employee_kanban_inherit">
+        <field name="name">hr.employee.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="last_name"/>
+                <field name="mother_last_name"/>
+            </xpath>
+        </field>
+    </record>
+    -->
+    
+
+
+    <record model="ir.ui.view" id="view_employee_form_inherit">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                 <page name="address_idicional" string="Adicional" >
+                    <group attrs="{'invisible':[('code_country_company','!=','PE')]}">
+                        <group>
+                            <field name="not_consider_calculation"  /> 
+                            <field name="no_declarar_al_pdt"  />
+                            <field name="no_affection_fifth"  />
+                            
+                        </group>
+                        <group>
+                            
+                        </group>  
+                    </group> 
+                    <group attrs="{'invisible':[('code_country_company','!=','CO')]}">
+                        <group>
+                            <field name="income_declarant" />
+                            <field name="beneficiaries" />
+                        </group>
+                        <group>
+                            <field name="monetary_correction_relief"/>
+                            <field name="prepaid_medicine_relief"/>
+                            <field name="withholding_procedure" options="{'no_create_edit': True, 'no_create': True}"/>
+                            <field name="porcent_retention_pr2"/>
+                        </group>
+                    </group>
+                </page>
+                <page name="datos_laborales" string="Datos Laborales" >
+                    <group attrs="{'invisible':[('code_country_company','!=','PE')]}">
+                        <group>
+                            <field name="date_entry" />
+                            <field name="type_employee" options="{'no_create_edit': True, 'no_create': True}"/>
+                            <field name="reason_work_suspension_id" options="{'no_create_edit': True, 'no_create': True}" />
+                            <field name="date_termination" />
+                            <field name="reason_termination" options="{'no_create_edit': True, 'no_create': True}" attrs="{'invisible':[('date_termination','!=',False)]}"/>
+                            <field name="obsv_termination" attrs="{'invisible':[('date_termination','!=',False)]}"/>
+
+                        </group>
+                        <group>
+                            <field name="assignment_family"  />
+                            <field name="account_bank_principal" />
+                            <field name="account_bank_cts" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+
+                        </group>
+
+                        <group>
+                            <field name="pension_fund" options="{'no_create_edit': True, 'no_create': True}" />
+                            <field name="affiliate_eps" />
+                            <field name="code_cussp" />
+                            <field name="commission_scheme"  />
+
+                        </group>
+                        <group>
+                            <field name="date_enrollment_afp" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                            <field name="detailed_address" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+
+                            <field name="moneda_sueldo" />
+                            <field name="sueldo" />
+                        </group>
+                        <group>
+                            <field name="dias_derecho_vacacional" />
+                            <field name="dias_derecho_fisicas" />
+                            <field name="tope_compra_vacaciones" />
+                        </group>
+                    </group>
+                    <group attrs="{'invisible':[('code_country_company','!=','CO')]}">
+                        <group>
+                            <field name="account_bank_principal" />
+                        </group>
+                        <group>
+                            <field name="pension_fund" options="{'no_create_edit': True, 'no_create': True}" />
+                            <field name="eps_id" options="{'no_create_edit': True, 'no_create': True}" />
+                        </group>
+                        <group>
+                            <field name="ccf_id" options="{'no_create_edit': True, 'no_create': True}" />
+                            <field name="arl_id" options="{'no_create_edit': True, 'no_create': True}" />
+                            <field name="layoffs_id" options="{'no_create_edit': True, 'no_create': True}" />
+                        </group>
+                        
+                    </group>
+                </page>
+                <page name="datos_complementarios" string="Datos Complementarios" attrs="{'invisible':[('code_country_company','!=','PE')]}">
+                    <group>
+                        <group>
+                            <field name="special_situation" options="{'no_create_edit': True, 'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="type_payment" options="{'no_create_edit': True, 'no_create': True}" />
+                        </group>
+                    </group>
+                </page>
+                <page name="datos_familiares" string="Datos Familiares" >
+                    <field name="family_ids" >
+                        <tree editable="bottom"> 
+                            <field name="names_surnames_family" />
+                            <field name="bond_family" options="{'no_create_edit': True, 'no_create': True}"/>
+                            <field name="birthdate_family" />
+                            <field name="type_document_id" options="{'no_create_edit': True, 'no_create': True}" domain="[('code','!=',False)]"/>
+                            <field name="doc_number" />
+                        </tree>
+                    </field>
+                </page>
+                <page name="otros_ingresos_de_quinta_categoria" string="Otros ingresos de Quinta Categoria" attrs="{'invisible':[('code_country_company','!=','PE')]}">
+                    <field name="other_income_ids" >
+                        <tree editable="bottom">
+                            <field name="period_id" />
+                            <field name="total_received" sum="Total Received"/>
+                            <field name="total_withheld" sum="Total Withheld"/>      
+                        </tree>
+                    </field>              
+                </page>
+            </notebook>
+            
+            <xpath expr="//h1" position="after">
+                <!--
+                <h2>
+                    <group>
+                        <field name="name" string="Nombres" required="True"/>
+                        <field name="last_name" required="True"/>
+                    </group>
+                    <group>
+                        <field name="mother_last_name" required="True"/>
+                    </group>
+                </h2>
+                -->
+                <h3>
+                    <group>
+                        <field name="code"/>
+                <field name="code_country_company" invisible="1"/>
+                <field name="country_company" invisible="1"/>
+
+                    </group>
+                </h3>
+            </xpath> 
+
+
+            <xpath expr="//field[@name='spouse_birthdate']" position="after">
+                <field name="spouse_date_marital" attrs="{'invisible': [('marital', 'not in', ['married'])]}" groups="hr.group_hr_user"/>
+            </xpath>
+
+            <xpath expr="//field[@name='emergency_phone']" position="after">
+                <field name="group_blood"/>
+            </xpath>
+
+            <xpath expr="//field[@name='identification_id']" position="before">
+                <field name="type_document_id" options="{'no_create_edit': True, 'no_create': True}" domain="[('country_id','=',country_company),('code','!=',False)]"/>
+                <field name="document_issue_date"/>
+            </xpath>
+
+            <xpath expr="//field[@name='department_id']" position="before">
+                <field name="sede_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='country_of_birth']" position="after">
+                <field name="country_of_resd"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="phone2"/>
+                <field name="phone3"/>
+                <field name="type_house"/>
+
+            </xpath>
+
+            <xpath expr="//field[@name='private_email']" position="after">
+                <field name="private_email2"/>
+            </xpath>
+            <xpath expr="//field[@name='bank_account_id']" position="attributes">
+                <attribute name="invisible">
+                    1
+                </attribute>
+            </xpath>
+            <xpath expr="//field[@name='private_email']" position="attributes">
+                <attribute name="readonly">
+                    0
+                </attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='address_id']" position="after">
+                <field name="area_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="seccion_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="turn_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="cooperative_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="salaries_per_year" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="occupational_group_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <!--<field name="mobile_work"/>-->
+
+                <field name="forma_de_ingreso" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="anexo" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="sindicato" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="cat_rem_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="cat_employee_id" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+                <field name="obs_gral" attrs="{'invisible':[('code_country_company','!=','PE')]}"/>
+
+
+            </xpath>
+
+            <xpath expr="//field[@name='children']" position="after">
+                <field name="n_hijos_no_dep"/>
+            </xpath>
+
+            <xpath expr="//field[@name='km_home_work']/.." position="after">
+                <field name="type_transport_id"/>
+            </xpath>
+            
+
+            <xpath expr="//field[@name='address_home_id']" position="attributes">
+                <attribute name="context">
+                   {'show_address': 1,'default_type': 'private','form_view_ref': 'base.view_partner_form'}
+                </attribute>
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+</odoo>

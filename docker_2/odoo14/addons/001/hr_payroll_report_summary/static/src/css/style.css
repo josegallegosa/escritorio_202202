@@ -1,0 +1,61 @@
+
+.fpayrol{
+	font-size: 12px;
+}
+.fpayrol b{
+	font-size: 11px;
+}
+
+.fpayrol table{
+	width: 99%;
+}
+
+.tabla_payrol .row>.col, .tabla_payrol .row>[class^=col-] {
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    padding-right: 1px !important;
+    padding-left: 1px !important;
+    border: 1px solid;
+}
+
+.tabla_payrol .row>.col, .tabla_payrol .row>[class^=interpayrol] {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.intdat {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.nosuin {
+    border-top: 0!important;
+    border-bottom: 0!important;
+}
+.nosup {
+    border-top: 0!important;
+}
+
+.noder{
+   border-right: 0!important; 
+}
+
+.hitab{
+    min-height: 230px;
+}
+
+.fondopayraol{
+background: #b5b5b5;
+}
+.f11pr{
+    font-size: 24px;
+    font-weight: bold;
+}
+.f10pr{
+    font-size: 20px;
+    font-weight: bold;
+}
+.f9pr{
+    font-size: 18px;
+}
+

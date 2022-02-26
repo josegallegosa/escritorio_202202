@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- Unidad de Medida -->
+
+<odoo>
+    <data noupdate="1">
+        
+        <record forcecreate="True" id="unit_measurement_1" model="unit.measurement">    
+            <field name="name">UN</field>
+        </record>
+
+    </data>
+</odoo>

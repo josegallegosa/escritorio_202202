@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>   
+        <data>
+           
+            <record id="view_hr_payslip_form2" model="ir.ui.view">
+                <field name="name">hr.payslip.form</field>
+                <field name="model">hr.payslip</field>
+                <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+                <field name="arch" type="xml">
+                    <button name="action_print_payslip" position="after">
+                        <button string="Imprimir DOCX" name="print_docx" type="object"/>
+                    </button>
+                </field>
+            </record>
+
+            <template id="report_header_custom_lbs" >
+                <t t-call="web.basic_layout">
+                    <div class="page" style="margin-top:0px;">
+                        <style>
+                            .titulo1 {
+                                text-align:center;
+                                font-size:13px
+                            }
+                            .titulo2{
+                                text-align:center;
+                                font-size:12px
+                            }
+                            .titulo3{
+                                text-align:center;
+                                font-weight: bold;
+                                font-size:12px;
+                                text-decoration: underline;
+                                margin-top:5px;
+                            }
+                            .contenedor1{
+                                width:100%;
+                                text-align:center;
+                            }
+                            .contenedor2{
+                                width:100%;
+                            }
+                            .contenedor3{
+                                width:100%;
+                            }
+                            .contenedor4{
+                                width:100%;
+                                padding-top:15px;
+                            }
+                            .table1 {
+                                margin: 0 auto;
+                                width:40%;
+                            }
+                            .table2 {
+                                width:100%;
+                            }
+                            .table3 {
+                                width:100%;
+                                margin-top:10px;
+                            }
+                            .table4 {
+                                width:100%;
+                                margin-top:10px;
+                            }
+                            .table1_row_l {
+                                width:40%;
+                                font-weight: bold;
+                                text-align:left;
+                                font-size:10px;
+                            }
+                            .table1_row_r {
+                                width:60%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table2_row_l {
+                                width:34%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table2_row_c {
+                                width:6%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table2_row_r {
+                                width:20%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table3_row_l {
+                                width:60%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table3_row_l1 {
+                                width:30%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table3_row_l2 {
+                                width:30%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table3_row_lneto {
+                                width:78%;
+                                text-align:center;   
+                                font-size:11px;
+                            }
+                            .table3_row_cl {
+                                width:4%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table3_row_cr {
+                                width:4%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table3_row_r {
+                                width:10%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table3_row_r2 {
+                                width:18%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table4_row_1 {
+                                width:6%;   
+                            }
+                            .table4_row_2 {
+                                width:19%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table4_row_3 {
+                                width:19%;
+                                text-align:left;   
+                                font-size:10px;
+                            }
+                            .table4_row_4 {
+                                width:12%;   
+                            }
+                            .table4_row_5 {
+                                width:19%;
+                                text-align:right;   
+                                font-size:10px;
+                            }
+                            .table4_row_6 {
+                                width:19%;
+                                text-align:left;   
+                                font-size:10px; 
+                            }
+                            .table4_row_7 {
+                                width:6%;   
+                            }
+                        </style>
+                        <div class="titulo1"><b>LIQUIDACIÓN DE BENEFICIOS SOCIALES</b></div>
+                        <div class="titulo2">D.L. N° 650, D. L. N° 857 y D.S. N° 001-97-TR</div>
+                        <div class="contenedor1">
+                            <table class="table1">
+                              <tr>
+                                <td class="table1_row_l">Código</td>
+                                <td class="table1_row_r">:  87654321</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">DNI</td>
+                                <td class="table1_row_r">:  87654321</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Apellidos y Nombres</td>
+                                <td class="table1_row_r">:  NOMBER DEL TRABAJADOR</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Cargo</td>
+                                <td class="table1_row_r">:  Jefe de Recursos Humanos</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Básico</td>
+                                <td class="table1_row_r">:  S/7,500.00</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Condición</td>
+                                <td class="table1_row_r">:  Empleado</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Pensión</td>
+                                <td class="table1_row_r">:  Prima</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Fecha de Ingreso</td>
+                                <td class="table1_row_r">:  20/11/2020</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Fecha de Cese</td>
+                                <td class="table1_row_r">:  31/01/2021</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Tiempo de Servicios</td>
+                                <td class="table1_row_r">:  2 Meses; 12 Días</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Motivo de Cese</td>
+                                <td class="table1_row_r">:  NO PASO PERIODO DE PRUEBA</td>
+                              </tr>
+                              <tr>
+                                <td class="table1_row_l">Régimen Laboral</td>
+                                <td class="table1_row_r">:  PRIVADO GENERAL - D. LEG. N.° 728</td>
+                              </tr>
+                            </table>
+                        </div>
+                        <div class="titulo3">Conceptos Remunerativos</div>
+                        <div class="contenedor2">
+                            <table class="table2">
+                              <tr>
+                                <td class="table2_row_l"></td>
+                                <td class="table2_row_c"></td>
+                                <td class="table2_row_r" style="border-bottom: black 1px solid;"><b>C.T.S</b></td>
+                                <td class="table2_row_r" style="border-bottom: black 1px solid;"><b>GRATIFICACIÓN</b></td>
+                                <td class="table2_row_r" style="border-bottom: black 1px solid;"><b>VACACIONES</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table2_row_l">1/6 de Gratificación</td>
+                                <td class="table2_row_c">:</td>
+                                <td class="table2_row_r">210.92</td>
+                                <td class="table2_row_r">0.00</td>
+                                <td class="table2_row_r">0.00</td>
+                              </tr>
+                              <tr>
+                                <td class="table2_row_l">Asignación Familiar</td>
+                                <td class="table2_row_c">:</td>
+                                <td class="table2_row_r">93.00</td>
+                                <td class="table2_row_r">93.00</td>
+                                <td class="table2_row_r">93.00</td>
+                              </tr>
+                              <tr>
+                                <td class="table2_row_l">Básico</td>
+                                <td class="table2_row_c">:</td>
+                                <td class="table2_row_r">7,500.00</td>
+                                <td class="table2_row_r">7,500.00</td>
+                                <td class="table2_row_r">7,500.00</td>
+                              </tr>
+                            </table>
+                            <div style="border-bottom: black 1px solid;width100%"></div>
+                            <table class="table2">
+                              <tr>
+                                <td class="table2_row_l"><b>TOTAL REMUNERACION COMPUTABLE</b></td>
+                                <td class="table2_row_c"></td>
+                                <td class="table2_row_r"><b>7,803.92</b></td>
+                                <td class="table2_row_r"><b>7,593.00</b></td>
+                                <td class="table2_row_r"><b>7,593.00</b></td>
+                              </tr>
+                            </table>
+                        </div>
+                        <div class="contenedor3">
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l"><b>1. COMPENSACIÓN POR TIEMPO DE SERVICIO</b></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>1,560.78</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Periodo por Liquidar: 0 Años 2 Meses 12 Días</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Del 20 de Noviembre del 2020 al  31 de Enero del 2021</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7803.92 / 12 * 2 meses laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">1,300.65</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7803.92 / 12 / 30 * 12 días laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">260.13</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l"><b>2. GRATIFICACIÓN TRUNCA</b></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>1,350.92</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Periodo por Liquidar: 0 Años 1 Meses 0 Días</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Del 01 de Enero del 2021 al  31 de Enero del 2021</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7593.00 / 6 * 1 meses laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">1,265.50</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-Bonificación Ext. 6.75%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">85.42</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l"><b>3. VACACIONES TRUNCAS</b></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>1,518.60 </b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Periodo por Liquidar: 0 Años 2 Meses 12 Días</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Del 20 de Noviembre del 2020 al  31 de Enero del 2021</td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7593.00 / 12 * 2 meses laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">1,265.50</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7593.00 / 12 / 30 * 12 días laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">253.10</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l"><b>4. REMUNERACIONES</b></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>7,593.00</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">Asignación Familiar</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">93.00</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l">-7593.00 / 12 / 30 * 12 días laborados</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">7,500.00</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l1"><b>5. DEDUCCIONES</b></td>
+                                <td class="table3_row_l2"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>(1,215.49)</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">AFP. Aportación Obligator</td>
+                                <td class="table3_row_l2">10.00%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">911.16</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">AFP. Seguro de Vida</td>
+                                <td class="table3_row_l2">1.74%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">158.54</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">AFP. Comisión sobre la RA</td>
+                                <td class="table3_row_l2">1.60%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">145.79</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l1"><b>6. OTROS DESCUENTOS</b></td>
+                                <td class="table3_row_l2"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>(3,003.13)</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">EPS</td>
+                                <td class="table3_row_l2"></td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">346.13</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">&lt;Adelanto de Quincena&gt;</td>
+                                <td class="table3_row_l2"></td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">2,657.00</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_l1"><b>7. CONTRIBUCIONES</b></td>
+                                <td class="table3_row_l2"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_cl"></td>
+                                <td class="table3_row_r"></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>(820.04)</b></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">EPS APORT</td>
+                                <td class="table3_row_l2">2.25%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">205.01</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                              <tr>
+                                <td class="table3_row_l1">EsSalud</td>
+                                <td class="table3_row_l2">6.75%</td>
+                                <td class="table3_row_cl">=</td>
+                                <td class="table3_row_cl">S/</td>
+                                <td class="table3_row_r">615.03</td>
+                                <td class="table3_row_cr"></td>
+                                <td class="table3_row_r2"></td>
+                              </tr>
+                            </table>
+                            <table class="table3">
+                              <tr>
+                                <td class="table3_row_lneto"><b>NETO A PAGAR SOLES</b></td>
+                                <td class="table3_row_cr"><b>S/</b></td>
+                                <td class="table3_row_r2" style="border-bottom: black 1px solid;"><b>7,804.68</b></td>
+                              </tr>
+                            </table>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <p style="text-align:justify;font-size:10px">Recibí de la empresa COOP. DE SERV. EDUC. ABRAHAM LINCOLN LTDA, la suma de <b>S/ 7,804.68</b> (Siete Mil Ochocientos Cuatro con 68/100 Soles), correspondiente a mis beneficios sociales conforme a ley, firmo en señal de conformidad.</p>
+                            <p style="font-size:10px;margin-top:5px;">LIMA, 21 de Enero de 2021</p>
+                        </div>
+                        <div class="contenedor4">
+                            <table class="table4">
+                              <tr>
+                                <td class="table4_row_1"></td>
+                                <td class="table4_row_2" style="border-top: black 1px solid;">NOMBRE: </td>
+                                <td class="table4_row_3" style="border-top: black 1px solid;padding: 0 0 0 5px">APODERADO</td>
+                                <td class="table4_row_4"></td>
+                                <td class="table4_row_5" style="border-top: black 1px solid;">NOMBRE: </td>
+                                <td class="table4_row_6" style="border-top: black 1px solid;padding: 0 0 0 5px">TRABAJADOR</td>
+                                <td class="table4_row_7"></td>
+                              </tr>
+                              <tr>
+                                <td class="table4_row_1"></td>
+                                <td class="table4_row_2">DNI: </td>
+                                <td class="table4_row_3" style="padding: 0 0 0 5px">12345678</td>
+                                <td class="table4_row_4"></td>
+                                <td class="table4_row_5"><b>DNI Nro: </b></td>
+                                <td class="table4_row_6" style="padding: 0 0 0 5px">87654321</td>
+                                <td class="table4_row_7"></td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+             </template>
+
+                <template id="report_lbs">
+                    <t t-call="web.html_container">
+                        <t t-foreach="docs" t-as="o">
+                            <t t-call="rapitech_hr_report_quanam.report_header_custom_lbs"/>                    
+                        </t>
+                    </t>
+                </template>
+                  
+                <report
+                    id="hr_account_file_lbs"
+                    model="hr.payslip"
+                    string="Reporte LIQUIDACIÓN DE BENEFICIOS SOCIALES"
+                    report_type="qweb-pdf"
+                    name="rapitech_hr_report_quanam.report_lbs"
+                    file="rapitech_hr_report_quanam.report_lbs"
+                />
+        </data>
+    </odoo>

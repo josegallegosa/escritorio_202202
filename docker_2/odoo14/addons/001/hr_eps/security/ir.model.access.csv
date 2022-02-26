@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_eps_user,access_hr_employee_eps_user,model_hr_employee_eps,base.group_user,1,0,0,0
+access_hr_employee_eps_manager,access_hr_employee_eps_manager,model_hr_employee_eps,hr.group_hr_manager,1,1,1,1
+access_hr_ensure_company_user,access_hr_ensure_company_user,model_hr_ensure_company,base.group_user,1,0,0,0
+access_hr_ensure_company_manager,access_hr_ensure_company_manager,model_hr_ensure_company,hr.group_hr_manager,1,1,1,1
+access_hr_ensure_plan_user,access_hr_ensure_plan_user,model_hr_ensure_plan,base.group_user,1,0,0,0
+access_hr_ensure_plan_manager,access_hr_ensure_plan_manager,model_hr_ensure_plan,hr.group_hr_manager,1,1,1,1
+
+

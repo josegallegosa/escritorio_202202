@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="savar_demo_data.list">
+      <field name="name">savar_demo_data list</field>
+      <field name="model">savar_demo_data.savar_demo_data</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="savar_demo_data.action_window">
+      <field name="name">savar_demo_data window</field>
+      <field name="res_model">savar_demo_data.savar_demo_data</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="savar_demo_data.action_server">
+      <field name="name">savar_demo_data server</field>
+      <field name="model_id" ref="model_savar_demo_data_savar_demo_data"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="savar_demo_data" id="savar_demo_data.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="savar_demo_data.menu_1" parent="savar_demo_data.menu_root"/>
+    <menuitem name="Menu 2" id="savar_demo_data.menu_2" parent="savar_demo_data.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="savar_demo_data.menu_1_list" parent="savar_demo_data.menu_1"
+              action="savar_demo_data.action_window"/>
+    <menuitem name="Server to list" id="savar_demo_data" parent="savar_demo_data.menu_2"
+              action="savar_demo_data.action_server"/>
+-->
+  </data>
+</odoo>

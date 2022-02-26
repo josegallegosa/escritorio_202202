@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<templates>
+		<t t-name="PeriodsListView.buttons">
+		  <t t-jquery="button.o_list_button_add" t-operation="after">
+		    <button class = "btn btn-primary generate_period" type ="button" >Generar Periodos</button>
+		  </t>
+		</t>
+	</templates>

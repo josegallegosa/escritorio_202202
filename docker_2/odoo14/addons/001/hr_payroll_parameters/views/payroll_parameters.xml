@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+        
+        <!-- Parametros -->
+
+        <record id="view_hr_payroll_parameters_filter" model="ir.ui.view">
+            <field name="name">view_hr_payroll_parameters_filter</field>
+            <field name="model">hr.payroll.parameters</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Parámetros">
+                    <field name="code" string="Parámetros"/>                    
+                    <group expand="0" string="Agrupar por...">
+                    </group>
+                </search>
+            </field>
+        </record>
+    
+        <record id="view_hr_payroll_parameters_tree" model="ir.ui.view">
+            <field name="name">hr_payroll_parameters_tree</field>
+            <field name="model">hr.payroll.parameters</field>
+            <field name="arch" type="xml">
+                <tree string="Parámetros">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_payroll_parameters_form" model="ir.ui.view">
+            <field name="name">hr_payroll_parameters_form</field>
+            <field name="model">hr.payroll.parameters</field>
+            <field name="arch" type="xml">
+                <form string="Parámetro">
+                    <sheet>
+                        <group col="4">
+                            <field name="code"/>
+                            <field name="name"/>                         
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <notebook>
+                            <page string="Valores">
+                                <field name="line_ids">
+                                    <tree string="Detalle" editable="top">                                        
+                                        <field name="date_start"/>
+                                        <field name="amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_payroll_parameters_view" model="ir.actions.act_window">
+            <field name="name">Parámetros</field>
+            <field name="res_model">hr.payroll.parameters</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_hr_payroll_parameters_filter" />
+        </record>
+
+        <!-- HR Parameters Menu -->
+        <menuitem id="menu_hr_configure_parameters" action="open_payroll_parameters_view" parent="hr_work_entry_contract.menu_hr_payroll_configuration" name="Parámetros" groups="hr.group_hr_manager" sequence="50"/>
+                  
+	</data>
+</odoo>

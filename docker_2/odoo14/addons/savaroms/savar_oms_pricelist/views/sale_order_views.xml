@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.inherit.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="oms_pricelist_id"/>
+            </xpath>
+            <xpath expr="//field[@name='validity_date']" position="after">
+                <field name="seller_id"/>
+                <field name="type_order_id"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='discount']" position="after">
+                <field name="product_service_subservices" invisible='1'/>
+                <field name="subservice_id" domain="[('id','in',product_service_subservices)]"/>
+                <field name="warehouse_id"/>
+                <field name="district_id"/>
+                <field name="size_id"/>
+                <field name="size_quant"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.inherit.view.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="type_order_id"/>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

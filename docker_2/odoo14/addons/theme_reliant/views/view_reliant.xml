@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!-- PROJECTS -->
+      <record id="project_form" model="ir.ui.view">
+        <field name="name">project.form</field>
+        <field name="model">reliant.project</field>
+        <field name="arch" type="xml">
+            <form string="Form Project">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="location_country"/>
+                        <field name="location_city"/>
+                        <field name="client_id"/>
+                        <field name="commodity"/>
+                        <field name="description"/>
+                        <field name="image"/>
+                        <field name="image_detail_1"/>
+                        <field name="image_detail_2"/> 
+                        <field name="image_detail_3"/>         
+                        <field name="services_ids" widget="many2many_tags" options="{'no_create_edit': True,'no_quick_create': True}"/>        
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="project_tree" model="ir.ui.view">
+        <field name="name">project.tree</field>
+        <field name="model">reliant.project</field>
+        <field name="arch" type="xml">
+            <tree string="Project">
+                <field name="name"/>
+                <field name="location_country"/>
+                <field name="location_city"/>
+                <field name="client_id"/>
+                <field name="commodity"/>
+                <field name="description"/>
+                <field name="image"/>
+                <field name="image_detail_1"/>
+                <field name="image_detail_2"/> 
+                <field name="image_detail_3"/>  
+            </tree>
+        </field>
+    </record>
+    
+<!-- -->
+<!-- SERVICES -->
+
+    <record id="service_form" model="ir.ui.view">
+        <field name="name">service.form</field>
+        <field name="model">reliant.service</field>
+        <field name="arch" type="xml">
+            <form string="Form Service">
+                <group>
+                    <group>
+                        <field name="name_service"/>
+                        <field name="description_service"/>        
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+     <record id="service_tree" model="ir.ui.view">
+        <field name="name">service.tree</field>
+        <field name="model">reliant.service</field>
+        <field name="arch" type="xml">
+            <tree string="Service">
+                <field name="sequence" widget="handle"/>  
+                <field name="name_service"/>
+                <field name="description_service"/> 
+            </tree>
+        </field>
+    </record>
+
+<!-- -->
+
+<!-- JOB Opportunities -->
+
+    <record id="job_opportunity_form" model="ir.ui.view">
+        <field name="name">job.opportunity.form</field>
+        <field name="model">reliant.job.opportunity</field>
+        <field name="arch" type="xml">
+            <form name="Form Job Opportunity">
+                <sheet>
+                    <div class="oe_title">
+                        <group name="group_coll" string="Customer Data" col="1" >
+                            <label for="client_id" class="oe_edit_only" />
+                            <h3><field name="client_id"/></h3>
+                        </group>                       
+                    </div>
+                    <group name="group_top">
+                        <group name="group_coll" string="General Data" col="4" colspan="2">
+                            <field name="country"/>
+                            <field name="department"/>
+                            <field name="site"/>
+                            <field name="language"/>
+                            <field name="position"/>                               
+                            <field name="img_job"/>
+                            <field name="location"/>
+                            <field name="closing_date"/>
+                            <field name="description_job_opportunity"/>        
+                            <field name="category_job_opportunity"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="job_opportunity_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.tree</field>
+        <field name="model">reliant.job.opportunity</field>
+        <field name="arch" type="xml">
+            <tree string="Job opportunity">
+                <field name="country"/>
+                <field name="department"/>
+                <field name="site"/>
+                <field name="language"/>
+                <field name="position"/>
+                <field name="location"/>
+                <field name="closing_date"/>
+                <field name="description_job_opportunity"/>        
+                <field name="category_job_opportunity"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+<!-- -->
+
+<!-- PDF -->
+
+    <record id="pdf_form" model="ir.ui.view">
+        <field name="name">pdf.form</field>
+        <field name="model">reliant.pdf.value</field>
+        <field name="arch" type="xml">
+            <form string="Form Pdf Values">
+                <group>
+                    <group>
+                        <field name="policy_standard_principle"/>
+                        <field name="attachment_id"/>        
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+     <record id="pdf_tree" model="ir.ui.view">
+        <field name="name">pdf.tree</field>
+        <field name="model">reliant.pdf.value</field>
+        <field name="arch" type="xml">
+            <tree string="Form Pdf Values"> 
+                <field name="policy_standard_principle"/>
+                <field name="attachment_id"/>
+            </tree>
+        </field>
+    </record>
+
+<!-- -->
+
+<!-- TREE VISTAS -->
+    
+    <record id="job_opportunity_department_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.department.tree</field>
+        <field name="model">reliant.job.department</field>
+        <field name="arch" type="xml">
+            <tree  string="Department">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="job_opportunity_site_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.site.tree</field>
+        <field name="model">reliant.job.site</field>
+        <field name="arch" type="xml">
+            <tree  string="Site">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="job_opportunity_language_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.language.tree</field>
+        <field name="model">reliant.job.language</field>
+        <field name="arch" type="xml">
+            <tree  string="Language">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="job_opportunity_position_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.position.tree</field>
+        <field name="model">reliant.job.position</field>
+        <field name="arch" type="xml">
+            <tree  string="Position">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="job_opportunity_location_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.location.tree</field>
+        <field name="model">reliant.job.location</field>
+        <field name="arch" type="xml">
+            <tree  string="Location">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="job_opportunity_category_job_opportunity_tree" model="ir.ui.view">
+        <field name="name">job.opportunity.category_job_opportunity.tree</field>
+        <field name="model">reliant.job.category</field>
+        <field name="arch" type="xml">
+            <tree  string="Category">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="reliant_policy_standard_principle_tree" model="ir.ui.view">
+        <field name="name">reliant.policy.standard.principle.tree</field>
+        <field name="model">reliant.policy.standard.principle</field>
+        <field name="arch" type="xml">
+            <tree  string="Policy, Standard or Principle">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="reliant_client_tree" model="ir.ui.view">
+        <field name="name">reliant.client.tree</field>
+        <field name="model">reliant.client</field>
+        <field name="arch" type="xml">
+            <tree  string="Client">
+                <field name="name"/>
+                <field name="image_1920"/>
+                <field name="to_show_home"/>      
+            </tree>
+        </field>
+    </record>
+
+<!-- FORM VISTAS -->
+    <record id="job_opportunity_department_form" model="ir.ui.view">
+        <field name="name">job.opportunity.department.form</field>
+        <field name="model">reliant.job.department</field>
+        <field name="arch" type="xml">
+            <form string="Form Department">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="job_opportunity_site_form" model="ir.ui.view">
+        <field name="name">job.opportunity.site.form</field>
+        <field name="model">reliant.job.site</field>
+        <field name="arch" type="xml">
+            <form  string="Site">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="job_opportunity_language_form" model="ir.ui.view">
+        <field name="name">job.opportunity.language.form</field>
+        <field name="model">reliant.job.language</field>
+        <field name="arch" type="xml">
+            <form  string="Language">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="job_opportunity_position_form" model="ir.ui.view">
+        <field name="name">job.opportunity.position.form</field>
+        <field name="model">reliant.job.position</field>
+        <field name="arch" type="xml">
+            <form  string="Position">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="job_opportunity_location_form" model="ir.ui.view">
+        <field name="name">job.opportunity.location.form</field>
+        <field name="model">reliant.job.location</field>
+        <field name="arch" type="xml">
+            <form  string="Location">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="job_opportunity_category_job_opportunity_form" model="ir.ui.view">
+        <field name="name">job.opportunity.category_job_opportunity.form</field>
+        <field name="model">reliant.job.category</field>
+        <field name="arch" type="xml">
+            <form  string="Category">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="reliant_policy_standard_principle_form" model="ir.ui.view">
+        <field name="name">reliant.policy.standard.principle.form</field>
+        <field name="model">reliant.policy.standard.principle</field>
+        <field name="arch" type="xml">
+            <form  string="Policy, Standard or Principle">
+                <group>
+                    <field name="name"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="reliant_client_form" model="ir.ui.view">
+        <field name="name">reliant.client.form</field>
+        <field name="model">reliant.client</field>
+        <field name="arch" type="xml">
+            <form  string="Client">
+                <group>
+                    <field name="name"/>
+                    <field name="image_1920"/>
+                    <field name="to_show_home"/>      
+                </group>
+            </form>
+        </field>
+    </record>
+<!-- -->
+    
+<!-- Actions-->
+    
+
+    <record model="ir.actions.act_window" id="project_action">
+        <field name="name">Projects</field>
+        <field name="res_model">reliant.project</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Project
+            </p>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="service_action">
+        <field name="name">Services</field>
+        <field name="res_model">reliant.service</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create The First Service</p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="pdf_values_action">
+        <field name="name">Pdf Values</field>
+        <field name="res_model">reliant.pdf.value</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create The First PDF Values</p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="job_action">
+        <field name="name">Job Opportunities</field>
+        <field name="res_model">reliant.job.opportunity</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create Your First Job Opportunity
+            </p>
+        </field>
+    </record>
+
+
+
+    <record model="ir.actions.act_window" id="department_action">
+        <field name="name">Departments</field>
+        <field name="res_model">reliant.job.department</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create The First Department
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="site_action">
+        <field name="name">Sites</field>
+        <field name="res_model">reliant.job.site</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Site
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="language_action">
+        <field name="name">Languages</field>
+        <field name="res_model">reliant.job.language</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Language
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="position_action">
+        <field name="name">Positions</field>
+        <field name="res_model">reliant.job.position</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Position
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="location_action">
+        <field name="name">Locations</field>
+        <field name="res_model">reliant.job.location</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Location
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="category_action">
+        <field name="name">Categories</field>
+        <field name="res_model">reliant.job.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create First Categories
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="policy_standard_principle_action">
+        <field name="name">Policies, standards and principles</field>
+        <field name="res_model">reliant.policy.standard.principle</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the First Policy, Standard or Principle
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="customers_action">
+         <field name="name">Customers</field>
+         <field name="res_model">reliant.client</field> <!-- es el modelo que que hará la accion -->
+         <field name="view_mode">tree,form</field>
+         <field name="help" type="html"> <!-- Es como un comentario-->
+            <p class="oe_view_nocontent_create">Create the first customer
+            </p>
+         </field>   
+    </record>
+
+     <menuitem id="menu_reliant" name="Reliant" web_icon="theme_reliant,static/description/icon.png"/>
+     
+        <menuitem id="submenu_reliant_project" parent="menu_reliant" name="Project Registration" action="project_action" sequence="10"/>
+        <menuitem id="submenu_reliant_service" parent="menu_reliant" name="Service Registration" action="service_action" sequence="20"/>
+        <menuitem id="submenu_reliant_job" parent="menu_reliant" name="Job Opportunity Registration" action="job_action" sequence="30"/>
+        <menuitem id="submenu_reliant_pdf_value" parent="menu_reliant" name="Registry PDF Value" action="pdf_values_action" sequence="40"/>
+        <menuitem id="submenu_reliant_configuration" parent="menu_reliant"  name="Settings"  sequence="50"/>
+            <menuitem id="submenu_reliant_configuration_department"  name="Department" parent="submenu_reliant_configuration" action="department_action" sequence="20"/>
+            <menuitem id="submenu_reliant_configuration_site"  name="Site"  parent="submenu_reliant_configuration" action="site_action" sequence="30"/>
+            <menuitem id="submenu_reliant_configuration_language"  name="Language" parent="submenu_reliant_configuration" action="language_action" sequence="40"/>
+            <menuitem id="submenu_reliant_configuration_position"  name="Position" parent="submenu_reliant_configuration" action="position_action" sequence="50"/>
+            <menuitem id="submenu_reliant_configuration_location"  name="Location" parent="submenu_reliant_configuration" action="location_action" sequence="60"/>
+            <menuitem id="submenu_reliant_configuration_category_job_opportunity"  name="Category" parent="submenu_reliant_configuration" action="category_action" sequence="70"/>
+            <menuitem id="submenu_reliant_configuration_policy_standard_principle"  name="Policy, Standard or Principle" parent="submenu_reliant_configuration" action="policy_standard_principle_action" sequence="80"/>
+            <menuitem id="submenu_reliant_configuration_customer"  name="Customer" parent="submenu_reliant_configuration" action="customers_action" sequence="90"/>
+        
+
+<!-- -->
+</odoo>

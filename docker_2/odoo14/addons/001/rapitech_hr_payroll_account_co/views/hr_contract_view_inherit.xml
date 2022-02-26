@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+	<record model="ir.ui.view" id="view_hr_contract_inherit_journal">
+        <field name="name">hr.contract.inherit.journal</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='structure_type_id']" position="after">
+                <field name="journal_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

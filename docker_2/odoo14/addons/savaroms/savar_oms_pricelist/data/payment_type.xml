@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record forcecreate="True" id="pyment_type_1" model="payment.type">    
+            <field name="name">Prepago</field>
+        </record> 
+        <record forcecreate="True" id="pyment_type_2" model="payment.type">    
+            <field name="name">COD (cash on delivery)</field>
+        </record> 
+
+
+    </data>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- CIUDADES/PROVINCIAS-->
+        <record model="ir.ui.view" id="view_res_partner_form_inherit">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_view_form_private"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='street']" position="after">
+                    <field name="department_id" invisible="1"/>
+                    <field name="country_id" invisible="1"/>
+                    
+                </xpath>
+                <xpath expr="//field[@name='city']" position="replace">
+                    <field name="city_id" placeholder="Ciudad" domain="[('department_id','=',department_id)]"/>
+                    
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="replace">
+                    <field name="department_id" placeholder="Departamento" domain="[('country_id','=',country_id)]"/> 
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_partner_inherit_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                   <field name="check_digit"/>
+                   <field name="arl_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_partner_inherit_form3" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="l10n_latam_base.view_partner_latam_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='l10n_latam_identification_type_id']" position="replace">
+                    <field name="l10n_latam_identification_type_id" options="{'no_open': True, 'no_create': True}" placeholder="Type" attrs="{'readonly': [('parent_id','!=',False)]}" class="oe_inline" domain="country_id and [('code','!=',False),'|', ('country_id', '=', False), ('country_id', '=', country_id)] or []" required="True"/>
+                </xpath>
+            </field>
+        </record>
+
+
+    <!-- -->
+        <record model="ir.ui.view" id="view_res_partner_bank_form_inherit">
+            <field name="name">res.partner.bank.form</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='acc_type']" position="attributes">
+                    <attribute name="invisible">
+                        1
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='acc_type']" position="after">
+                    <field name="acc_type_bank" domain="[('bank_id','=',bank_id)]"/>
+                    <field name="currency_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

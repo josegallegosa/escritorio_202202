@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- structure type -->
+        <record id="structure_type_s_t_co" model="hr.payroll.structure.type">
+            <field name="name">SALARIO TRADICIONAL</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="wage_type">monthly</field>
+            <field name="default_struct_id" ref="structure_s_t_co"></field>
+        </record>
+
+        <!-- Salary Structure -->
+        <record id="structure_s_t_co" model="hr.payroll.structure">
+            <field name="name">SALARIO TRADICIONAL</field>
+            <field name="type_id" ref="structure_type_s_t_co"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <!-- Input Type-->
+        <record id="payslip_input_type_com" model="hr.payslip.input.type">
+            <field name="name">COMISIONES</field>
+            <field name="code">COM</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_bns" model="hr.payslip.input.type">
+            <field name="name">BONIFICACION SALARIAL</field>
+            <field name="code">BNS</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_bno" model="hr.payslip.input.type">
+            <field name="name">BONIFICACION POR MERA LIBERALIDAD</field>
+            <field name="code">BNO</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_bor" model="hr.payslip.input.type">
+            <field name="name">BONIFICACION POR RETIRO</field>
+            <field name="code">BOR</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_aua" model="hr.payslip.input.type">
+            <field name="name">AUXILIO DE ALIMENTACION</field>
+            <field name="code">AUA</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_atx" model="hr.payslip.input.type">
+            <field name="name">AUXILIO DE TRANSPORTE EXTRA LEGAL</field>
+            <field name="code">ATX</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_aue" model="hr.payslip.input.type">
+            <field name="name">AUXILIO EDUCATIVO</field>
+            <field name="code">AUE</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_aum" model="hr.payslip.input.type">
+            <field name="name">AUXILIO MOVILIZACION</field>
+            <field name="code">AUM</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_auv" model="hr.payslip.input.type">
+            <field name="name">AUXILIO VIVIENDA</field>
+            <field name="code">AUV</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_rer" model="hr.payslip.input.type">
+            <field name="name">REINTREGROS</field>
+            <field name="code">RER</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_res" model="hr.payslip.input.type">
+            <field name="name">RETROACTIVO SALARIAL</field>
+            <field name="code">RES</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_slt" model="hr.payslip.input.type">
+            <field name="name">SUBSIDIO DE TRANSPORTE</field>
+            <field name="code">SLT</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_afc" model="hr.payslip.input.type">
+            <field name="name">APORTES CUENTAS AFC</field>
+            <field name="code">AFC</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_apv" model="hr.payslip.input.type">
+            <field name="name">APORTES PENSIONE VOLUNTARIA</field>
+            <field name="code">APV</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_den" model="hr.payslip.input.type">
+            <field name="name">DESCUENTO ANTICIPO</field>
+            <field name="code">DEN</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_dec" model="hr.payslip.input.type">
+            <field name="name">DESCUENTO CELULAR</field>
+            <field name="code">DEC</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_foe" model="hr.payslip.input.type">
+            <field name="name">FONDO DE EMPLEADOS</field>
+            <field name="code">FOE</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_lil" model="hr.payslip.input.type">
+            <field name="name">LIBRANZA</field>
+            <field name="code">LIL</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_poe" model="hr.payslip.input.type">
+            <field name="name">POLIZA EXCEQUIAL</field>
+            <field name="code">POE</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <record id="payslip_input_type_prp" model="hr.payslip.input.type">
+            <field name="name">PRESTAMOS</field>
+            <field name="code">PRP</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+
+
+        <!-- Categories -->
+        <record id="sue_category" model="hr.salary.rule.category">
+            <field name="name">SUE</field>
+            <field name="code">SUE</field>
+        </record>
+
+        <record id="inc_category" model="hr.salary.rule.category">
+            <field name="name">INC</field>
+            <field name="code">INC</field>
+        </record>
+
+        <record id="rer_category" model="hr.salary.rule.category">
+            <field name="name">RER</field>
+            <field name="code">RER</field>
+        </record>
+        
+
+        <record id="aus_category" model="hr.salary.rule.category">
+            <field name="name">AUS</field>
+            <field name="code">AUS</field>
+        </record>
+
+        <record id="aun_category" model="hr.salary.rule.category">
+            <field name="name">AUN</field>
+            <field name="code">AUN</field>
+        </record>
+
+        <record id="he_category" model="hr.salary.rule.category">
+            <field name="name">HE</field>
+            <field name="code">HE</field>
+        </record>
+
+        <record id="rc_category" model="hr.salary.rule.category">
+            <field name="name">RC</field>
+            <field name="code">RC</field>
+        </record>
+
+        <record id="ext_category" model="hr.salary.rule.category">
+            <field name="name">EXT</field>
+            <field name="code">EXT</field>
+        </record>
+
+        <record id="ins_category" model="hr.salary.rule.category">
+            <field name="name">INS</field>
+            <field name="code">INS</field>
+        </record>
+
+        <record id="csa_category" model="hr.salary.rule.category">
+            <field name="name">CSA</field>
+            <field name="code">CSA</field>
+        </record>
+
+        <record id="sub_category" model="hr.salary.rule.category">
+            <field name="name">SUB</field>
+            <field name="code">SUB</field>
+        </record>
+
+        <record id="vac_category" model="hr.salary.rule.category">
+            <field name="name">VAC</field>
+            <field name="code">VAC</field>
+        </record>
+
+        <record id="rte_category" model="hr.salary.rule.category">
+            <field name="name">RTE</field>
+            <field name="code">RTE</field>
+        </record>
+
+        <record id="des_category" model="hr.salary.rule.category">
+            <field name="name">DES</field>
+            <field name="code">DES</field>
+        </record>
+
+        <record id="dss_category" model="hr.salary.rule.category">
+            <field name="name">DSS</field>
+            <field name="code">DSS</field>
+        </record>
+
+        <record id="bss_category" model="hr.salary.rule.category">
+            <field name="name">BSS</field>
+            <field name="code">BSS</field>
+        </record>
+
+        <record id="ass_category" model="hr.salary.rule.category">
+            <field name="name">ASS</field>
+            <field name="code">ASS</field>
+        </record>
+
+        <record id="css_category" model="hr.salary.rule.category">
+            <field name="name">CSS</field>
+            <field name="code">CSS</field>
+        </record>
+
+        <record id="prv_category" model="hr.salary.rule.category">
+            <field name="name">PRV</field>
+            <field name="code">PRV</field>
+        </record>
+
+        <record id="prv_category" model="hr.salary.rule.category">
+            <field name="name">PRV</field>
+            <field name="code">PRV</field>
+        </record>
+
+        <record id="ing_category" model="hr.salary.rule.category">
+            <field name="name">ING</field>
+            <field name="code">ING</field>
+        </record>
+
+        <record id="egr_category" model="hr.salary.rule.category">
+            <field name="name">EGR</field>
+            <field name="code">EGR</field>
+        </record>
+
+        <record id="nap_category" model="hr.salary.rule.category">
+            <field name="name">NAP</field>
+            <field name="code">NAP</field>
+        </record>
+
+    <!-- DEPURACION CALCULO RETENCION EN LA FUENTE-->
+        <record id="ixr_category" model="hr.salary.rule.category">
+            <field name="name">IXR</field>
+            <field name="code">IXR</field>
+        </record>
+
+        <record id="bcm_category" model="hr.salary.rule.category">
+            <field name="name">BCM</field>
+            <field name="code">BCM</field>
+        </record>
+
+        <record id="bmp_category" model="hr.salary.rule.category">
+            <field name="name">BMP</field>
+            <field name="code">BMP</field>
+        </record>
+
+        <record id="bdd_category" model="hr.salary.rule.category">
+            <field name="name">BDD</field>
+            <field name="code">BDD</field>
+        </record>
+
+        <record id="bre_category" model="hr.salary.rule.category">
+            <field name="name">BRE</field>
+            <field name="code">BRE</field>
+        </record>
+
+        <record id="brl_category" model="hr.salary.rule.category">
+            <field name="name">BRL</field>
+            <field name="code">BRL</field>
+        </record>
+
+        <record id="ctp_category" model="hr.salary.rule.category">
+            <field name="name">CTP</field>
+            <field name="code">CTP</field>
+        </record>
+
+        <record id="ilmr_category" model="hr.salary.rule.category">
+            <field name="name">ILMR</field>
+            <field name="code">ILMR</field>
+        </record>
+
+        <record id="ilmu_category" model="hr.salary.rule.category">
+            <field name="name">ILMU</field>
+            <field name="code">ILMU</field>
+        </record>
+
+        <record id="reft_category" model="hr.salary.rule.category">
+            <field name="name">REFT</field>
+            <field name="code">REFT</field>
+        </record>
+    <!-- INTERESES DE CESANTIAS-->
+        <record id="idce_category" model="hr.salary.rule.category">
+            <field name="name">IDCE</field>
+            <field name="code">IDCE</field>
+        </record>
+
+    <!-- BASE PRIMA LEGAL-->
+
+        <record id="sbsem_category" model="hr.salary.rule.category">
+            <field name="name">SBSEM</field>
+            <field name="code">SBSEM</field>
+        </record>
+
+        <record id="extsem_category" model="hr.salary.rule.category">
+            <field name="name">EXTSEM</field>
+            <field name="code">EXTSEM</field>
+        </record>
+
+        <record id="hesem_category" model="hr.salary.rule.category">
+            <field name="name">HESEM</field>
+            <field name="code">HESEM</field>
+        </record>
+
+        <record id="rcsem_category" model="hr.salary.rule.category">
+            <field name="name">RCSEM</field>
+            <field name="code">RCSEM</field>
+        </record>
+
+        <record id="sltsem_category" model="hr.salary.rule.category">
+            <field name="name">SLTSEM</field>
+            <field name="code">SLTSEM</field>
+        </record>
+
+        <record id="bapr_category" model="hr.salary.rule.category">
+            <field name="name">BAPR</field>
+            <field name="code">BAPR</field>
+        </record>
+
+        <record id="dise_category" model="hr.salary.rule.category">
+            <field name="name">DISE</field>
+            <field name="code">DISE</field>
+        </record>
+
+        <record id="prim_category" model="hr.salary.rule.category">
+            <field name="name">PRIM</field>
+            <field name="code">PRIM</field>
+        </record>
+
+
+
+
+        <!-- Salary rules -->
+
+        <record id="hr_salary_rule_sb_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SB</field>
+            <field name="category_id" ref="sue_category"/>
+            <field name="name">SUELDO BASICO</field>
+            <field name="sequence" eval="1"/>
+            <field name="amount_python_compute">result = worked_days.DIAT.number_of_days*contract.wage/30</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_inc_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">INC</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">INCAPACIDAD ENFERMEDAD GENERAL EMPRESA</field>
+            <field name="sequence" eval="2"/>
+            <field name="amount_python_compute">
+base = employee.GetIBCSLastMonth(payslip.date_to,contract)
+
+if worked_days.IGE.number_of_days > 2:
+    result = base/30*2
+else:
+    result = base/30*worked_days.IGE.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ige_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IGE</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">INCAPACIDAD ENFERMEDAD GENERAL POR COBRAR A EPS</field>
+            <field name="sequence" eval="3"/>
+            <field name="amount_python_compute">
+if worked_days.IGE.number_of_days > 2:
+    if employee.GetIBCSLastMonth(payslip.date_to,contract)*(2/3)/30 &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)/30:                 
+        result = (parameter_obj.get_amount('SMMLV',payslip.date_from)/30)*(worked_days.IGE.number_of_days-2)
+    else:
+        result = employee.GetIBCSLastMonth(payslip.date_to,contract)*(2/3)/30*(worked_days.IGE.number_of_days-2)
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+
+         <record id="hr_salary_rule_irl_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IRL</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">INCAPACIDAD ACCIDENTE LABORAL</field>
+            <field name="sequence" eval="4"/>
+            <field name="amount_python_compute">result = employee.GetIBCSLastMonth(payslip.date_to,contract)/30*worked_days.IRL.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lma_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LMA</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">LICENCIA DE MATERNIDAD</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LMA.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lpa_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LPA</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">LICENCIA DE PATERNIDAD</field>
+            <field name="sequence" eval="6"/>
+            <field name="amount_python_compute">result= contract.wage/30*worked_days.LPA.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LR</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">LICENCIA REMUNERADA</field>
+            <field name="sequence" eval="7"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LR.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lt_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LT</field>
+            <field name="category_id" ref="aus_category"/>
+            <field name="name">LICENCIA DE LUTO</field>
+            <field name="sequence" eval="8"/>
+            <field name="amount_python_compute">result = contract.wage/30*worked_days.LT.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_anr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LNR</field>
+            <field name="category_id" ref="aun_category"/>
+            <field name="name">LICENCIA NO REMUNERADA</field>
+            <field name="sequence" eval="9"/>
+            <field name="amount_python_compute">result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_sln_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLN</field>
+            <field name="category_id" ref="aun_category"/>
+            <field name="name">SANCION// SUSPENSIÓN</field>
+            <field name="sequence" eval="8"/>
+            <field name="amount_python_compute">result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         
+
+         
+
+         <record id="hr_salary_rule_hed_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HED</field>
+            <field name="category_id" ref="he_category"/>
+            <field name="name">HORA EXTRA DIURNA NORMAL</field>
+            <field name="sequence" eval="11"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.25)*worked_days.HED.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hen_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HEN</field>
+            <field name="category_id" ref="he_category"/>
+            <field name="name">HORA EXTRA NOCTURNA NORMAL</field>
+            <field name="sequence" eval="12"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.75)*worked_days.HEN.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hfd_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HFD</field>
+            <field name="category_id" ref="he_category"/>
+            <field name="name">HORA EXTRA DIURNA FESTIVA</field>
+            <field name="sequence" eval="13"/>
+            <field name="amount_python_compute">result = (contract.wage/240*2)*worked_days.HEFD.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_hfn_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HFN</field>
+            <field name="category_id" ref="he_category"/>
+            <field name="name">HORA EXTRA NOCTURNA FESTIVA</field>
+            <field name="sequence" eval="14"/>
+            <field name="amount_python_compute">result = (contract.wage/240*2.5)*worked_days.HEFN.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rf_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RF</field>
+            <field name="category_id" ref="rc_category"/>
+            <field name="name">RECARGO DIURNO FESTIVO</field>
+            <field name="sequence" eval="15"/>
+            <field name="amount_python_compute">result = (contract.wage/240*0.75)*worked_days.REFE.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rn_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RN</field>
+            <field name="category_id" ref="rc_category"/>
+            <field name="name">RECARGO NOCTURNO NORMAL</field>
+            <field name="sequence" eval="16"/>
+            <field name="amount_python_compute">result = (contract.wage/240*0.35)*worked_days.RENO.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_rnf_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RNF</field>
+            <field name="category_id" ref="rc_category"/>
+            <field name="name">RECARGO NOCTURNO FESTIVO</field>
+            <field name="sequence" eval="17"/>
+            <field name="amount_python_compute">result = (contract.wage/240*1.1)*worked_days.RENF.number_of_hours</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+        
+         <record id="hr_salary_rule_fsc_s_t" model="hr.salary.rule"><!-- QUITAR ESTA REGLAAAAAAAAAA-->
+            <field name="amount_select">code</field>
+            <field name="code">FSC</field>
+            <field name="category_id" ref="rc_category"/>
+            <field name="name">FESTIVO SIN COMPENSATORIO</field>
+            <field name="sequence" eval="18"/>
+            <field name="amount_python_compute">result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+        
+
+         <record id="hr_salary_rule_com_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">COM</field>
+            <field name="category_id" ref="ext_category"/>
+            <field name="name">COMISIONES</field>
+            <field name="sequence" eval="19"/>
+            <field name="amount_python_compute">if inputs.COM:
+    result=inputs.COM.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bns_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BNS</field>
+            <field name="category_id" ref="ext_category"/>
+            <field name="name">BONIFICACION SALARIAL</field>
+            <field name="sequence" eval="20"/>
+            <field name="amount_python_compute">if inputs.BNS:
+    result=inputs.BNS.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bno_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BNO</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">BONIFICACION POR MERA LIBERALIDAD</field>
+            <field name="sequence" eval="21"/>
+            <field name="amount_python_compute">if inputs.BNO:
+    result=inputs.BNO.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bor_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BOR</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">BONIFICACION POR RETIRO</field>
+            <field name="sequence" eval="22"/>
+            <field name="amount_python_compute">if inputs.BOR:
+    result=inputs.BOR.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aua_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUA</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">AUXILIO DE ALIMENTACION</field>
+            <field name="sequence" eval="23"/>
+            <field name="amount_python_compute">if inputs.AUA:
+    result=inputs.AUA.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_atx_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ATX</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">AUXILIO DE TRANSPORTE EXTRA LEGAL</field>
+            <field name="sequence" eval="24"/>
+            <field name="amount_python_compute">if inputs.ATX:
+    result=inputs.ATX.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aue_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUE</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">AUXILIO EDUCATIVO</field>
+            <field name="sequence" eval="25"/>
+            <field name="amount_python_compute">if inputs.AUE:
+    result=inputs.AUE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_aum_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUM</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">AUXILIO MOVILIZACION</field>
+            <field name="sequence" eval="26"/>
+            <field name="amount_python_compute">if inputs.AUM:
+    result=inputs.AUM.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_auv_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AUV</field>
+            <field name="category_id" ref="ins_category"/>
+            <field name="name">AUXILIO VIVIENDA</field>
+            <field name="sequence" eval="27"/>
+            <field name="amount_python_compute">if inputs.AUV:
+    result=inputs.AUV.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+
+         <record id="hr_salary_rule_rer_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RER</field>
+            <field name="category_id" ref="rer_category"/>
+            <field name="name">REINTREGROS</field>
+            <field name="sequence" eval="28"/>
+            <field name="amount_python_compute">if inputs.RER:
+    result=inputs.RER.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_res_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RES</field>
+            <field name="category_id" ref="ext_category"/>
+            <field name="name">RETROACTIVO SALARIAL</field>
+            <field name="sequence" eval="29"/>
+            <field name="amount_python_compute">if inputs.RES:
+    result=inputs.RES.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_slt_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLT</field>
+            <field name="category_id" ref="sub_category"/>
+            <field name="name">SUBSIDIO DE TRANSPORTE</field>
+            <field name="sequence" eval="30"/>
+            <field name="amount_python_compute">if categories.SUE + categories.EXT &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)*2:
+                result = (parameter_obj.get_amount('SUBSIDIO DE TRANSPORTE',payslip.date_from)/30)*(worked_days.DIAT.number_of_days)
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcc_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCC</field>
+            <field name="category_id" ref="vac_category"/>
+            <field name="name">VACACIONES COMPENSADAS</field>
+            <field name="sequence" eval="31"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacCompensadas(payslip.date_to,contract)+contract.wage)/30*worked_days.VCO.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcd_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCD</field>
+            <field name="category_id" ref="vac_category"/>
+            <field name="name">VACACIONES DISFRUTADAS</field>
+            <field name="sequence" eval="32"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacDisfrutadas(payslip.date_to,contract)+contract.wage)/30*worked_days.VDI.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_vcr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VCR</field>
+            <field name="category_id" ref="vac_category"/>
+            <field name="name">VACACIONES POR RETIRO</field>
+            <field name="sequence" eval="33"/>
+            <field name="amount_python_compute">result = (employee.GetBaseVacPorRetiro(payslip.date_to,contract)+contract.wage)/30*worked_days.VRE.number_of_days</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_idce_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IDCE</field>
+            <field name="category_id" ref="idce_category"/>
+            <field name="name">INTERESES DE CESANTIAS</field>
+            <field name="sequence" eval="34"/>
+            <field name="amount_python_compute">result = employee.GetInterestOfBaskets(payslip.date_to,contract)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_dss_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DSS</field>
+            <field name="category_id" ref="dss_category"/>
+            <field name="name">DEVENGOS SEG SOC</field>
+            <field name="sequence" eval="35"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.INS + categories.SUB</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibcs_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCS</field>
+            <field name="category_id" ref="bss_category"/>
+            <field name="name">IBC SEG SOC</field>
+            <field name="sequence" eval="36"/>
+            <field name="amount_python_compute">XIBCS=0
+if (categories.EXT + categories.SUB) > (categories.DSS*0.4): 
+    XIBCS = categories.DSS*0.6
+else: 
+    XIBCS = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT)
+
+if XIBCS &lt; parameter_obj.get_amount('IBC MINIMO SEG SOC',payslip.date_from):
+    result = parameter_obj.get_amount('IBC MINIMO SEG SOC',payslip.date_from)
+elif XIBCS > parameter_obj.get_amount('IBC MAXIMO SEG SOC',payslip.date_from):
+    result = parameter_obj.get_amount('IBC MAXIMO SEG SOC',payslip.date_from)
+else:
+    result = XIBCS</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibca_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCA</field>
+            <field name="category_id" ref="bss_category"/>
+            <field name="name">IBC ARL</field>
+            <field name="sequence" eval="37"/>
+            <field name="amount_python_compute">if (categories.EXT + categories.SUB) >(categories.DSS*0.4): 
+            result = categories.DSS*0.6
+else: 
+            result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ibcp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IBCP</field>
+            <field name="category_id" ref="bss_category"/>
+            <field name="name">IBC PARAFISCALES</field>
+            <field name="sequence" eval="38"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.HE + categories.RC + categories.EXT + categories.VAC)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pen_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PEN</field>
+            <field name="category_id" ref="ass_category"/>
+            <field name="name">PENSION</field>
+            <field name="sequence" eval="39"/>
+            <field name="amount_python_compute">result = IBCS*0.04</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_fsp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FSP</field>
+            <field name="category_id" ref="ass_category"/>
+            <field name="name">FONDO DE SOLIDARIDAD</field>
+            <field name="sequence" eval="40"/>
+            <field name="amount_python_compute">if IBCS > parameter_obj.get_amount('SMMLV',payslip.date_from)*4:
+                result = IBCS*0.5/100
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_fst_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FST</field>
+            <field name="category_id" ref="ass_category"/>
+            <field name="name">FONDO DE SUBSISTENCIA</field>
+            <field name="sequence" eval="41"/>
+            <field name="amount_python_compute">SMMLV = parameter_obj.get_amount('SMMLV',payslip.date_from)
+if IBCS > SMMLV*4 and IBCS &lt; SMMLV*15.99:
+    result = IBCS*0.5/100 
+elif IBCS > SMMLV*16 and IBCS &lt; SMMLV*16.99: 
+    result = IBCS*0.7/100
+elif IBCS > SMMLV*17 and IBCS &lt; SMMLV*17.99:
+    result = IBCS*0.9/100
+elif IBCS > SMMLV*18 and IBCS &lt; SMMLV*18.99:
+    result = IBCS*1.1/100
+elif IBCS > SMMLV*19 and IBCS &lt; SMMLV*19.99: 
+    result = IBCS*1.3/100
+elif IBCS > SMMLV*20: 
+    result = IBCS*1.5/100
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_sal_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SAL</field>
+            <field name="category_id" ref="ass_category"/>
+            <field name="name">SALUD</field>
+            <field name="sequence" eval="42"/>
+            <field name="amount_python_compute">result = IBCS*0.04</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+
+         <record id="hr_salary_rule_afc_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">AFC</field>
+            <field name="category_id" ref="rte_category"/>
+            <field name="name">APORTES CUENTAS AFC</field>
+            <field name="sequence" eval="43"/>
+            <field name="amount_python_compute">if inputs.AFC:
+    result=inputs.AFC.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_apv_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">APV</field>
+            <field name="category_id" ref="rte_category"/>
+            <field name="name">APORTES PENSIONE VOLUNTARIA</field>
+            <field name="sequence" eval="44"/>
+            <field name="amount_python_compute">if inputs.APV:
+    result=inputs.APV.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_den_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DEN</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">DESCUENTO ANTICIPO</field>
+            <field name="sequence" eval="45"/>
+            <field name="amount_python_compute">if inputs.DEN:
+    result=inputs.DEN.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_dec_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DEC</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">DESCUENTO CELULAR</field>
+            <field name="sequence" eval="46"/>
+            <field name="amount_python_compute">if inputs.DEC:
+    result=inputs.DEC.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_foe_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">FOE</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">FONDO DE EMPLEADOS</field>
+            <field name="sequence" eval="47"/>
+            <field name="amount_python_compute">if inputs.FOE:
+    result=inputs.FOE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_lil_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LIL</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">LIBRANZA</field>
+            <field name="sequence" eval="48"/>
+            <field name="amount_python_compute">if inputs.LIL:
+    result=inputs.LIL.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_poe_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">POE</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">POLIZA EXCEQUIAL</field>
+            <field name="sequence" eval="49"/>
+            <field name="amount_python_compute">if inputs.POE:
+    result=inputs.POE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_prd_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PRP</field>
+            <field name="category_id" ref="des_category"/>
+            <field name="name">PRESTAMOS</field>
+            <field name="sequence" eval="50"/>
+            <field name="amount_python_compute">if inputs.PRP:
+    result=inputs.PRP.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+<!-- DEPURACION CALCULO RETENCION EN LA FUENTE-->
+
+         <record id="hr_salary_rule_ixr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">IXR</field>
+            <field name="category_id" ref="ixr_category"/>
+            <field name="name">INGRESOS PARA RENTA</field>
+            <field name="sequence" eval="51"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.INS + categories.SUB + categories.VAC - categories.ASS </field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bcm_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BCM</field>
+            <field name="category_id" ref="bcm_category"/>
+            <field name="name">BENEFICIO CORRECCION MONETARIA</field>
+            <field name="sequence" eval="52"/>
+            <field name="amount_python_compute">if employee.monetary_correction_relief > 100*parameter_obj.get_amount('UVT',payslip.date_from):
+            result = 100*parameter_obj.get_amount('UVT',payslip.date_from)
+else:
+            result = employee.monetary_correction_relief</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bmp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BMP</field>
+            <field name="category_id" ref="bmp_category"/>
+            <field name="name">BENEFICIO MEDICINA PREPAGADA</field>
+            <field name="sequence" eval="53"/>
+            <field name="amount_python_compute">if employee.prepaid_medicine_relief:
+    if employee.prepaid_medicine_relief &lt;= 16*parameter_obj.get_amount('UVT',payslip.date_from):
+        result=employee.prepaid_medicine_relief
+    else:
+        result=16*parameter_obj.get_amount('UVT',payslip.date_from)
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bdd_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BDD</field>
+            <field name="category_id" ref="bdd_category"/>
+            <field name="name">BENEFICIO DEDUCCION DEPENDIENTES</field>
+            <field name="sequence" eval="54"/>
+            <field name="amount_python_compute">if employee.income_declarant:
+    if (categories.IXR + categories.ASS)*0.1 >32*parameter_obj.get_amount('UVT',payslip.date_from):
+        result = 32*parameter_obj.get_amount('UVT',payslip.date_from)
+    else:
+        result = (categories.IXR + categories.ASS)*0.1
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_bre_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BRE</field>
+            <field name="category_id" ref="bre_category"/>
+            <field name="name">BENEFICIO RENTAS EXENTAS</field>
+            <field name="sequence" eval="55"/>
+            <field name="amount_python_compute">if categories.RTE > (categories.IXR + categories.ASS)*0.3:
+            result = (categories.IXR + categories.ASS)*0.3
+else:
+            result = categories.RTE</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_brl_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BRL</field>
+            <field name="category_id" ref="brl_category"/>
+            <field name="name">BENEFICIO RENTAS EXENTAS LABORALES</field>
+            <field name="sequence" eval="56"/>
+            <field name="amount_python_compute">result = (categories.IXR-categories.BCM-categories.BMP-categories.BDD-categories.BRE)*0.25</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ctp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CTP</field>
+            <field name="category_id" ref="ctp_category"/>
+            <field name="name">CONTROL TOPE RENTAS Y DEDUCCIONES 40%</field>
+            <field name="sequence" eval="57"/>
+            <field name="amount_python_compute">if (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL) > parameter_obj.get_amount('UVT',payslip.date_from)*420:
+    result = parameter_obj.get_amount('UVT',payslip.date_from)*420
+elif (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL) > categories.IXR*0.4:
+    result = categories.IXR*0.4
+else:
+    result = (categories.BCM + categories.BMP + categories.BDD + categories.BRE + categories.BRL)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ilmr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ILMR</field>
+            <field name="category_id" ref="ilmr_category"/>
+            <field name="name">INGRESO LABORAL MENSUAL BASE DE RETENCION</field>
+            <field name="sequence" eval="58"/>
+            <field name="amount_python_compute">result = categories.IXR-categories.CTP</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ilmu_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ILMU</field>
+            <field name="category_id" ref="ilmu_category"/>
+            <field name="name">INGRESO LABORAL MENSUAL EN UVT</field>
+            <field name="sequence" eval="59"/>
+            <field name="amount_python_compute">result = categories.ILMR/parameter_obj.get_amount('UVT',payslip.date_from)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_reft_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">REFT</field>
+            <field name="category_id" ref="reft_category"/>
+            <field name="name">RETENCION EN LA FUENTE</field>
+            <field name="sequence" eval="60"/>
+            <field name="amount_python_compute">XIMP = employee.GetRetentionAtTheSource(payslip.date_from,ILMU)
+if employee.withholding_procedure.name == 'PR1':
+    result = round(XIMP, -3)
+else:
+    result = round(categories.ILMR*employee.porcent_retention_pr2/100, -3)</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+         
+
+
+         <record id="hr_salary_rule_penp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PENP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">PENSION</field>
+            <field name="sequence" eval="61"/>
+            <field name="amount_python_compute">result = PEN*3 - (contract.wage/30)*categories.AUN*0.12</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_salp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SALP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">SALUD</field>
+            <field name="sequence" eval="62"/>
+            <field name="amount_python_compute">if categories.DSS >parameter_obj.get_amount('SMMLV',payslip.date_from)*10: 
+                result = SAL*2.125
+else:
+                result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_arlp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ARLP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">ARL</field>
+            <field name="sequence" eval="63"/>
+            <field name="amount_python_compute">result = IBCA*contract.type_risk_arl_id.name/100</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ccfp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CCFP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">CCF</field>
+            <field name="sequence" eval="64"/>
+            <field name="amount_python_compute">result = IBCP*0.04</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_senp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SENP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">SENA</field>
+            <field name="sequence" eval="65"/>
+            <field name="amount_python_compute">if (categories.DSS > parameter_obj.get_amount('SMMLV',payslip.date_from)*10):
+            result = IBCP*0.02
+else:
+            result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_icbp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ICBP</field>
+            <field name="category_id" ref="css_category"/>
+            <field name="name">ICBF</field>
+            <field name="sequence" eval="66"/>
+            <field name="amount_python_compute">if (categories.DSS > parameter_obj.get_amount('SMMLV',payslip.date_from)*10):
+            result = IBCP*0.03
+else:
+            result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmp_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMP</field>
+            <field name="category_id" ref="prv_category"/>
+            <field name="name">PRIMA LEGAL DE SERVICIOS</field>
+            <field name="sequence" eval="67"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.25/3</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmc_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMC</field>
+            <field name="category_id" ref="prv_category"/>
+            <field name="name">CESANTÍAS</field>
+            <field name="sequence" eval="68"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.25/3</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmi_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMI</field>
+            <field name="category_id" ref="prv_category"/>
+            <field name="name">INTERESES</field>
+            <field name="sequence" eval="69"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SUB )*0.01</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_pmv_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PMV</field>
+            <field name="category_id" ref="prv_category"/>
+            <field name="name">VACACIONES</field>
+            <field name="sequence" eval="70"/>
+            <field name="amount_python_compute">result = (categories.SUE + categories.AUS + categories.HE + categories.RC + categories.EXT + categories.SLI )*4.17/100</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_ing_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ING</field>
+            <field name="category_id" ref="ing_category"/>
+            <field name="name">INGRESOS</field>
+            <field name="sequence" eval="71"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.SLI + categories.AUS + categories.AUN + categories.HE + categories.RC + categories.EXT + categories.INS + categories.CSA + categories.SUB + categories.VAC</field>
+
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_egr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EGR</field>
+            <field name="category_id" ref="egr_category"/>
+            <field name="name">EGRESOS</field>
+            <field name="sequence" eval="72"/>
+            <field name="amount_python_compute">result = categories.RTE + categories.DES + categories.ASS</field>
+
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+
+         <record id="hr_salary_rule_nap_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">NAP</field>
+            <field name="category_id" ref="nap_category"/>
+            <field name="name">NETO A PAGAR</field>
+            <field name="sequence" eval="73"/>
+            <field name="amount_python_compute">result = ING-EGR</field>
+
+            <field name="struct_id" ref="structure_s_t_co"/>
+         </record>
+         
+         <!-- BASE PRIMA LEGAL  -->
+
+         <record id="hr_salary_rule_sbsem_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SBSEM</field>
+            <field name="category_id" ref="sbsem_category"/>
+            <field name="name">PROMEDIO SEMESTRAL SUELDO BASICO</field>
+            <field name="sequence" eval="74"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.AverageWageBiannual(payslip.date_to,['SB','INC','IGE','IRL','LMA','LPA','LR','LT'],contract)
+else:
+    result= 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+
+        <record id="hr_salary_rule_extsem_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EXTSEM</field>
+            <field name="category_id" ref="extsem_category"/>
+            <field name="name">PROMEDIO SEMESTRAL EXTRAS</field>
+            <field name="sequence" eval="75"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.MethodAverageBiannual(payslip.date_to,['COM','BNS','RES'],contract,[COM,BNS,RES])
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+
+        <record id="hr_salary_rule_hesem_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HESEM</field>
+            <field name="category_id" ref="hesem_category"/>
+            <field name="name">PROMEDIO SEMESTRAL HE</field>
+            <field name="sequence" eval="76"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.MethodAverageBiannual(payslip.date_to,['HED','HEN','HFD','HFN'],contract,[HED,HEN,HFD,HFN])
+else:
+    result= 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+
+        <record id="hr_salary_rule_rcsem_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RCSEM</field>
+            <field name="category_id" ref="rcsem_category"/>
+            <field name="name">PROMEDIO SEMESTRAL RC</field>
+            <field name="sequence" eval="77"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.MethodAverageBiannual(payslip.date_to,['RF','RN','RNF'],contract,[RF,RN,RNF])
+else:
+    result = 0
+    </field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+         
+        <record id="hr_salary_rule_sltsem_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLTSEM</field>
+            <field name="category_id" ref="sltsem_category"/>
+            <field name="name">PROMEDIO SEMESTRAL SUBSIDIO DE TRANSPORTE</field>
+            <field name="sequence" eval="78"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.MethodAverageBiannual(payslip.date_to,['SLT'],contract,[SLT])
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+        
+        <record id="hr_salary_rule_bapr_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BAPR</field>
+            <field name="category_id" ref="bapr_category"/>
+            <field name="name">BASE PRIMA LEGAL DE SERVICIOS SEMESTRAL</field>
+            <field name="sequence" eval="79"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = SBSEM + EXTSEM + HESEM + RCSEM + SLTSEM
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+        
+        <record id="hr_salary_rule_dise_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DISE</field>
+            <field name="category_id" ref="dise_category"/>
+            <field name="name">DIAS SEMESTRE</field>
+            <field name="sequence" eval="80"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = employee.GetWorkedDays(payslip.date_to,contract)
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+
+        <record id="hr_salary_rule_prim_s_t" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PRIM</field>
+            <field name="category_id" ref="prim_category"/>
+            <field name="name">PRIMA LEGAL DE SERVICIOS SEMESTRAL</field>
+            <field name="sequence" eval="81"/>
+            <field name="amount_python_compute">
+if payslip.date_from.month in (6,12):
+    result = BAPR*DISE/360
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_s_t_co"/>
+        </record>
+
+    </data>
+</odoo>

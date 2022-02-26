@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_contract_form_analytic_inherit">
+        <field name="name">hr.contract.analytics.form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                 <page name="DistribucióndeCostos" string="Distribución de Costos" >
+                    <field name="payroll_analytic_ids">
+                        <tree editable="bottom"> 
+                            <field name="analytic_account_id"/>
+                            <field name="percent"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

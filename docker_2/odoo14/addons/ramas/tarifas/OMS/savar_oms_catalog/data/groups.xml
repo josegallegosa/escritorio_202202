@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_merchant" model="res.groups">
+            <field name="name">Cuenta Mercantil</field>
+        </record>
+
+    </data>
+</odoo>

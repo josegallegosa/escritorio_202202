@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record forcecreate="True" id="scale_1" model="hr.5ta.parameter.line">
+            <field name="sequence">1</field>
+            <field name="init_value">0</field>
+            <field name="final_value">5</field>
+            <field name="percentage">8</field>
+        </record>
+        <record forcecreate="True" id="scale_2" model="hr.5ta.parameter.line">
+            <field name="sequence">2</field>
+            <field name="init_value">5</field>
+            <field name="final_value">20</field>
+            <field name="percentage">14</field>
+        </record>
+        <record forcecreate="True" id="scale_3" model="hr.5ta.parameter.line">
+            <field name="sequence">3</field>
+            <field name="init_value">20</field>
+            <field name="final_value">35</field>
+            <field name="percentage">17</field>
+        </record>
+        <record forcecreate="True" id="scale_4" model="hr.5ta.parameter.line">
+            <field name="sequence">4</field>
+            <field name="init_value">35</field>
+            <field name="final_value">45</field>
+            <field name="percentage">20</field>
+        </record>
+        <record forcecreate="True" id="scale_5" model="hr.5ta.parameter.line">
+            <field name="sequence">5</field>
+            <field name="init_value">45</field>
+            <field name="final_value">0</field>
+            <field name="percentage">30</field>
+        </record>
+    </data>
+</odoo>

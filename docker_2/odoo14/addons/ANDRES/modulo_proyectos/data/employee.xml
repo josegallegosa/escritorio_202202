@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- DEPARTAMENTOS -->
+
+<odoo>
+    <data noupdate="1">
+
+
+        <record forcecreate="True" id="hr_employee_1" model="hr.employee">
+            <field name="name">BARDALEZ TRIGOSO GONZALO</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">LVS F&amp;B PROGRAM INTERN</field>
+            <field name="identification_id">72643234</field>
+            <field name="birthday">1993-12-15</field>
+            <field name="fecha_inicio_contrato">2021-5-6</field>
+            <field name="active">1</field>
+            <field name="work_email">bardalez@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_2" model="hr.employee">
+            <field name="name">CANALES FELICES GUSTAVO JAVIER</field>
+            <field name="department_id" ref="hr_department_2"/>
+            <field name="job_title">GENERAL MANAGER</field>
+            <field name="identification_id">10301782</field>
+            <field name="birthday">1973-6-11</field>
+            <field name="fecha_inicio_contrato">2020-3-1</field>
+            <field name="active">1</field>
+            <field name="work_email">canalesf@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_3" model="hr.employee">
+            <field name="name">CARDENAS RAMIREZ  MARIA VICTORIA</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">TECHNICAL PROJECT MANAGER</field>
+            <field name="identification_id">74672509</field>
+            <field name="birthday">1992-9-27</field>
+            <field name="fecha_inicio_contrato">2020-3-11</field>
+            <field name="active">1</field>
+            <field name="work_email">cardenas@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_4" model="hr.employee">
+            <field name="name">CARRERA SOPLIN EMERSON ANDRES</field>
+            <field name="department_id" ref="hr_department_3"/>
+            <field name="job_title">FINANCIAL LEAD</field>
+            <field name="identification_id">46760973</field>
+            <field name="birthday">1990-9-30</field>
+            <field name="fecha_inicio_contrato">2017-9-1</field>
+            <field name="active">1</field>
+            <field name="work_email">carreras@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_5" model="hr.employee">
+            <field name="name">CASTRO RIVERA VICTOR JAVIER</field>
+            <field name="department_id" ref="hr_department_4"/>
+            <field name="job_title">FULL STACK DEVELOPER SENIOR</field>
+            <field name="identification_id">46210911</field>
+            <field name="birthday">1989-5-31</field>
+            <field name="fecha_inicio_contrato">2020-12-17</field>
+            <field name="active">1</field>
+            <field name="work_email">castrori@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_6" model="hr.employee">
+            <field name="name">CHAVEZ MEJIA CARLOS ALBERTO</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">PERFORMANCE MARKETING CONSULTANT</field>
+            <field name="identification_id">44923597</field>
+            <field name="birthday">1988-3-3</field>
+            <field name="fecha_inicio_contrato">2021-4-14</field>
+            <field name="active">1</field>
+            <field name="work_email">chavezme@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_7" model="hr.employee">
+            <field name="name">CONTRERAS SULCA JOSUE CARLO</field>
+            <field name="department_id" ref="hr_department_5"/>
+            <field name="job_title">LVS F&amp;B PROGRAM INTERN</field>
+            <field name="identification_id">74742139</field>
+            <field name="birthday">1998-2-22</field>
+            <field name="fecha_inicio_contrato">2021-7-15</field>
+            <field name="active">1</field>
+            <field name="work_email">contrera@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_8" model="hr.employee">
+            <field name="name">CUESTAS RODRIGUEZ CARLOS RODOLFO</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">43481218</field>
+            <field name="birthday">1984-11-18</field>
+            <field name="fecha_inicio_contrato">2021-8-16</field>
+            <field name="active">1</field>
+            <field name="work_email">cuestasr@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_9" model="hr.employee">
+            <field name="name">DE LA PUENTE ANCCO VICTOR ANDRES</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">DATA &amp; BUSINESS ANALYTICS CONSULTANT</field>
+            <field name="identification_id">72019925</field>
+            <field name="birthday">1994-9-5</field>
+            <field name="fecha_inicio_contrato">2021-5-6</field>
+            <field name="active">1</field>
+            <field name="work_email">delapuen@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_10" model="hr.employee">
+            <field name="name">DONAYRE ALCALA CARLA GIULIANA</field>
+            <field name="department_id" ref="hr_department_7"/>
+            <field name="job_title">CV&amp;OI CONSULTANT</field>
+            <field name="identification_id">46316878</field>
+            <field name="birthday">1990-4-21</field>
+            <field name="fecha_inicio_contrato">2012-1-1</field>
+            <field name="active">1</field>
+            <field name="work_email">donayrea@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_11" model="hr.employee">
+            <field name="name">GARCIA CAVERO MARIANA</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">COMMUNITY MANAGER</field>
+            <field name="identification_id">76053253</field>
+            <field name="birthday">1995-9-12</field>
+            <field name="fecha_inicio_contrato">2021-9-13</field>
+            <field name="active">1</field>
+            <field name="work_email">garciaca@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_12" model="hr.employee">
+            <field name="name">GASTELU LEDESMA FLAVIA KARINA</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">70006084</field>
+            <field name="birthday">1996-10-6</field>
+            <field name="fecha_inicio_contrato">2021-6-7</field>
+            <field name="active">0</field>
+            <field name="work_email">gastelul@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_13" model="hr.employee">
+            <field name="name">GONZALES CALERO CESIA HEFZIBA RENATA</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">CONTENT WRITER JUNIOR</field>
+            <field name="identification_id">77431406</field>
+            <field name="birthday">1996-6-21</field>
+            <field name="fecha_inicio_contrato">2019-12-9</field>
+            <field name="active">0</field>
+            <field name="work_email">gonzales@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_14" model="hr.employee">
+            <field name="name">GUERRA HUAMAN DAVID ALFREDO</field>
+            <field name="department_id" ref="hr_department_4"/>
+            <field name="job_title">BACK-END DEVELOPER</field>
+            <field name="identification_id">40691282</field>
+            <field name="birthday">1980-9-30</field>
+            <field name="fecha_inicio_contrato">2021-5-3</field>
+            <field name="active">1</field>
+            <field name="work_email">guerrahu@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_15" model="hr.employee">
+            <field name="name">HUATUCO CHAVEZ DIEGO ARTURO</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">FRONT-END DEVELOPER</field>
+            <field name="identification_id">47504291</field>
+            <field name="birthday">1991-12-20</field>
+            <field name="fecha_inicio_contrato">2021-9-1</field>
+            <field name="active">1</field>
+            <field name="work_email">huatucoc@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_16" model="hr.employee">
+            <field name="name">JAIME LANDABURU JORGE ALBERTO</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">GROWTH LEAD</field>
+            <field name="identification_id">44195044</field>
+            <field name="birthday">1987-3-21</field>
+            <field name="fecha_inicio_contrato">2020-11-24</field>
+            <field name="active">1</field>
+            <field name="work_email">jaimelan@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_17" model="hr.employee">
+            <field name="name">JAUREGUI RIVAS BEATRIZ FELICITA</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">UX WRITER</field>
+            <field name="identification_id">48117776</field>
+            <field name="birthday">1993-8-23</field>
+            <field name="fecha_inicio_contrato">2019-10-30</field>
+            <field name="active">1</field>
+            <field name="work_email">jauregui@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_18" model="hr.employee">
+            <field name="name">LEON MORENO WALTER DANIEL</field>
+            <field name="department_id" ref="hr_department_8"/>
+            <field name="job_title">UX WRITING LEAD</field>
+            <field name="identification_id">40945789</field>
+            <field name="birthday">1981-3-7</field>
+            <field name="fecha_inicio_contrato">2016-6-27</field>
+            <field name="active">1</field>
+            <field name="work_email">leonmore@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_19" model="hr.employee">
+            <field name="name">MAMANI GUEVARA ANNY CRISTINA</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">40202094</field>
+            <field name="birthday">1979-4-9</field>
+            <field name="fecha_inicio_contrato">2019-11-1</field>
+            <field name="active">1</field>
+            <field name="work_email">mamanigu@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_20" model="hr.employee">
+            <field name="name">MANCO MARCA EMILY MILAGROS</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">46398385</field>
+            <field name="birthday">1990-7-14</field>
+            <field name="fecha_inicio_contrato">2021-3-15</field>
+            <field name="active">1</field>
+            <field name="work_email">mancomar@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_21" model="hr.employee">
+            <field name="name">MELENDEZ NEYRA EDGARD MARTIN</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">40967447</field>
+            <field name="birthday">1981-5-31</field>
+            <field name="fecha_inicio_contrato">2019-9-20</field>
+            <field name="active">1</field>
+            <field name="work_email">melendez@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_22" model="hr.employee">
+            <field name="name">MONTALVO VELAZCO YOMIRA CRISTAL</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">74131215</field>
+            <field name="birthday">1996-4-27</field>
+            <field name="fecha_inicio_contrato">2020-2-17</field>
+            <field name="active">1</field>
+            <field name="work_email">montalvo@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_23" model="hr.employee">
+            <field name="name">MORALES SILVESTRE VALERIA PAOLA</field>
+            <field name="department_id" ref="hr_department_10"/>
+            <field name="job_title">PRODUCT OWNER MARKETING</field>
+            <field name="identification_id">72194494</field>
+            <field name="birthday">1997-11-2</field>
+            <field name="fecha_inicio_contrato">2021-7-22</field>
+            <field name="active">1</field>
+            <field name="work_email">moraless@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_24" model="hr.employee">
+            <field name="name">NAVARRO SONCCO MOISES</field>
+            <field name="department_id" ref="hr_department_4"/>
+            <field name="job_title">BACK-END DEVELOPER SENIOR</field>
+            <field name="identification_id">40086263</field>
+            <field name="birthday">1978-8-6</field>
+            <field name="fecha_inicio_contrato">2016-3-14</field>
+            <field name="active">1</field>
+            <field name="work_email">navarros@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_25" model="hr.employee">
+            <field name="name">NECIOSUP CAJAS MARIA ALEJANDRA</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">46324043</field>
+            <field name="birthday">1990-1-6</field>
+            <field name="fecha_inicio_contrato">2021-7-1</field>
+            <field name="active">0</field>
+            <field name="work_email">neciosup@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_26" model="hr.employee">
+            <field name="name">PATIÑO SILES JUAN PABLO</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">CONTENT MARKETING ANALYST</field>
+            <field name="identification_id">45219572</field>
+            <field name="birthday">1988-4-7</field>
+            <field name="fecha_inicio_contrato">2021-4-12</field>
+            <field name="active">1</field>
+            <field name="work_email">patiñosi@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_27" model="hr.employee">
+            <field name="name">PELAEZ DELGADO JOSÉ CRISTHOFER</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">CONTENT DESIGNER SENIOR</field>
+            <field name="identification_id">43082902</field>
+            <field name="birthday">1985-7-25</field>
+            <field name="fecha_inicio_contrato">2020-3-23</field>
+            <field name="active">1</field>
+            <field name="work_email">pelaezde@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_28" model="hr.employee">
+            <field name="name">PEÑALOZA CALIXTO JIM RICHARD</field>
+            <field name="department_id" ref="hr_department_4"/>
+            <field name="job_title">TECHNOLOGY LEAD</field>
+            <field name="identification_id">40041232</field>
+            <field name="birthday">1977-3-10</field>
+            <field name="fecha_inicio_contrato">2012-3-1</field>
+            <field name="active">1</field>
+            <field name="work_email">peñaloza@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_29" model="hr.employee">
+            <field name="name">PINTO ROSALES GONZALO</field>
+            <field name="department_id" ref="hr_department_11"/>
+            <field name="job_title">CAPABILITY AND TALENT MANAGEMENT LEAD</field>
+            <field name="identification_id">42213757</field>
+            <field name="birthday">1983-10-9</field>
+            <field name="fecha_inicio_contrato">2021-2-15</field>
+            <field name="active">1</field>
+            <field name="work_email">pintoros@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_30" model="hr.employee">
+            <field name="name">RAMÍREZ CHANDUVÍ GABRIEL ALEXANDER</field>
+            <field name="department_id" ref="hr_department_3"/>
+            <field name="job_title">IT SUPPORT</field>
+            <field name="identification_id">42406081</field>
+            <field name="birthday">1984-5-29</field>
+            <field name="fecha_inicio_contrato">2015-3-3</field>
+            <field name="active">1</field>
+            <field name="work_email">ramírezc@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_31" model="hr.employee">
+            <field name="name">RAMIREZ CONDE PABLO JOSE ANGEL</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">46964265</field>
+            <field name="birthday">1992-2-24</field>
+            <field name="fecha_inicio_contrato">2021-9-1</field>
+            <field name="active">1</field>
+            <field name="work_email">ramirezc@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_32" model="hr.employee">
+            <field name="name">REYES ACOSTA OSCAR JAVIER</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">PRODUCT &amp; SERVICE DESIGN LEAD</field>
+            <field name="identification_id">1096698</field>
+            <field name="birthday">1980-8-12</field>
+            <field name="fecha_inicio_contrato">2020-12-1</field>
+            <field name="active">1</field>
+            <field name="work_email">reyesaco@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_33" model="hr.employee">
+            <field name="name">REYNOSO LEGOVIC JOSE CARLO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">OPERATIONS LEAD</field>
+            <field name="identification_id">10543738</field>
+            <field name="birthday">1977-7-12</field>
+            <field name="fecha_inicio_contrato">2012-1-1</field>
+            <field name="active">0</field>
+            <field name="work_email">reynosol@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_34" model="hr.employee">
+            <field name="name">RIVERA PANDO KAREN MARIA</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">LVS F&amp;B PROGRAM INTERN</field>
+            <field name="identification_id">77569109</field>
+            <field name="birthday">1998-6-15</field>
+            <field name="fecha_inicio_contrato">2021-7-1</field>
+            <field name="active">1</field>
+            <field name="work_email">riverapa@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_35" model="hr.employee">
+            <field name="name">SALCEDO CASTRO FRANCO MANUEL</field>
+            <field name="department_id" ref="hr_department_4"/>
+            <field name="job_title">FULLSTACK DEVELOPER</field>
+            <field name="identification_id">74065855</field>
+            <field name="birthday">1993-5-22</field>
+            <field name="fecha_inicio_contrato">2021-1-19</field>
+            <field name="active">1</field>
+            <field name="work_email">salcedoc@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_36" model="hr.employee">
+            <field name="name">SAMANEZ CORNEJO MARITA ANGELA</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">UX WRITER</field>
+            <field name="identification_id">44824874</field>
+            <field name="birthday">1988-2-5</field>
+            <field name="fecha_inicio_contrato">2017-12-1</field>
+            <field name="active">0</field>
+            <field name="work_email">samanezc@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_37" model="hr.employee">
+            <field name="name">SEGURA LEDESMA JOSE MANUEL</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">AUDIOVISUAL DESIGNER</field>
+            <field name="identification_id">76818323</field>
+            <field name="birthday">1988-2-5</field>
+            <field name="fecha_inicio_contrato">2021-5-10</field>
+            <field name="active">1</field>
+            <field name="work_email">segurale@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_38" model="hr.employee">
+            <field name="name">SERVAT BARRANTES MARIA PIA</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">VISUAL DESIGNER</field>
+            <field name="identification_id">73044654</field>
+            <field name="birthday">1995-9-8</field>
+            <field name="fecha_inicio_contrato">2021-5-3</field>
+            <field name="active">1</field>
+            <field name="work_email">servatba@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_39" model="hr.employee">
+            <field name="name">SOTIL LOZADA ANDREA ISABEL</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">74928495</field>
+            <field name="birthday">1995-9-16</field>
+            <field name="fecha_inicio_contrato">2020-12-10</field>
+            <field name="active">0</field>
+            <field name="work_email">sotilloz@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_40" model="hr.employee">
+            <field name="name">TAKAYAMA MUÑOZ KEMMA</field>
+            <field name="department_id" ref="hr_department_6"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">48876832</field>
+            <field name="birthday">1993-11-19</field>
+            <field name="fecha_inicio_contrato">2020-11-19</field>
+            <field name="active">0</field>
+            <field name="work_email">takayama@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_41" model="hr.employee">
+            <field name="name">TORREJON CARDOZA REINA MERCEDES</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">BACK-END DEVELOPER</field>
+            <field name="identification_id">72867116</field>
+            <field name="birthday">1996-2-11</field>
+            <field name="fecha_inicio_contrato">2021-8-1</field>
+            <field name="active">1</field>
+            <field name="work_email">torrejon@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_42" model="hr.employee">
+            <field name="name">VILLACORTA LOPEZ KATHERINE</field>
+            <field name="department_id" ref="hr_department_1"/>
+            <field name="job_title">PROJECT MANAGER</field>
+            <field name="identification_id">73180732</field>
+            <field name="birthday">1993-7-23</field>
+            <field name="fecha_inicio_contrato">2021-3-1</field>
+            <field name="active">0</field>
+            <field name="work_email">villacor@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_43" model="hr.employee">
+            <field name="name">ZORRILLA ANDRADE ELA MARIA DE LOS ANGELES</field>
+            <field name="department_id" ref="hr_department_9"/>
+            <field name="job_title">PROJECT MANAGER</field>
+            <field name="identification_id">72752717</field>
+            <field name="birthday">1996-10-6</field>
+            <field name="fecha_inicio_contrato">2019-9-16</field>
+            <field name="active">1</field>
+            <field name="work_email">zorrilla@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_44" model="hr.employee">
+            <field name="name">HUAMAN EURIBE EDUARDO JAVIER</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">70671885</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2019-7-17</field>
+            <field name="active">0</field>
+            <field name="work_email">huamaneu@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_45" model="hr.employee">
+            <field name="name">SAENZ PATRON CESAR MIGUEL</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI &amp; VISUAL DESIGN LEAD</field>
+            <field name="identification_id">70671885</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2014-10-1</field>
+            <field name="active">0</field>
+            <field name="work_email">saenzpat@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_46" model="hr.employee">
+            <field name="name">CASTAÑEDA HERRERA DIANA MELINA</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">STRATEGIC PARTNERSHIPS &amp; STAKEHOLDERS LEAD</field>
+            <field name="identification_id">7536166</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2017-12-11</field>
+            <field name="active">0</field>
+            <field name="work_email">castañed@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_47" model="hr.employee">
+            <field name="name">CASTAÑEDA BELLO ALEXANDRO ESTEFANO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">42574764</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-12-14</field>
+            <field name="active">0</field>
+            <field name="work_email">castañed@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_48" model="hr.employee">
+            <field name="name">LUNA FERIA ANDRES</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">PRODUCT OWNER</field>
+            <field name="identification_id">47700303</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2019-8-5</field>
+            <field name="active">0</field>
+            <field name="work_email">lunaferi@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_49" model="hr.employee">
+            <field name="name">BAZALAR NUÑEZ OSCAR RENATO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">70154961</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-3-2</field>
+            <field name="active">0</field>
+            <field name="work_email">bazalarn@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_50" model="hr.employee">
+            <field name="name">LA ROSA MELQUIADES PEDRO MARTIN</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">45236599</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-12-17</field>
+            <field name="active">0</field>
+            <field name="work_email">larosame@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_51" model="hr.employee">
+            <field name="name">VASQUEZ ALCALA ALFREDO HERNAN</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">43187750</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-2-3</field>
+            <field name="active">0</field>
+            <field name="work_email">vasqueza@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_52" model="hr.employee">
+            <field name="name">REYES FERRO LORENA CRISTHINE</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">45324937</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-2-22</field>
+            <field name="active">0</field>
+            <field name="work_email">reyesfer@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_53" model="hr.employee">
+            <field name="name">RUIZ LAU MARIA CLAUDIA JIMENA</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">PRODUCT OWNER MARKETING</field>
+            <field name="identification_id">71292204</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-8-4</field>
+            <field name="active">0</field>
+            <field name="work_email">ruizlaum@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_54" model="hr.employee">
+            <field name="name">MELGAR LEÓN DIEGO ALONSO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI LEAD</field>
+            <field name="identification_id">43643226</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2019-2-18</field>
+            <field name="active">0</field>
+            <field name="work_email">melgarle@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_55" model="hr.employee">
+            <field name="name">FERNANDEZ MENDIETA ARMANDO CARLOS</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">GROWTH CONSULTANT</field>
+            <field name="identification_id">46499620</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-3-22</field>
+            <field name="active">0</field>
+            <field name="work_email">fernande@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_56" model="hr.employee">
+            <field name="name">SAVERI TINTORER PIETRO ADRIANO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">CONTENT DESIGNER</field>
+            <field name="identification_id">76031481</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2020-3-23</field>
+            <field name="active">0</field>
+            <field name="work_email">saveriti@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_57" model="hr.employee">
+            <field name="name">ROMERO MUÑOZ SHARON YANELY</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">47216718</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-3-15</field>
+            <field name="active">0</field>
+            <field name="work_email">romeromu@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_58" model="hr.employee">
+            <field name="name">ANYOSA CORNELIO MICHELL ALFONSO</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">LVS F&amp;B PROGRAM INTERN</field>
+            <field name="identification_id">73223729</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-2-1</field>
+            <field name="active">0</field>
+            <field name="work_email">anyosaco@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_59" model="hr.employee">
+            <field name="name">MATICORENA TORRES DODA MARILÍ YANIVA</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">70109307</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-1-11</field>
+            <field name="active">0</field>
+            <field name="work_email">maticore@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_60" model="hr.employee">
+            <field name="name">ONCHI SUGUIMITZU MILENE ARISA</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UX DESIGNER</field>
+            <field name="identification_id">73656163</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-2-15</field>
+            <field name="active">0</field>
+            <field name="work_email">onchisug@gmail.com</field>
+        </record>
+        
+        <record forcecreate="True" id="hr_employee_61" model="hr.employee">
+            <field name="name">ARQUIÑIGO CERRALTA JOAN MANUEL</field>
+            <field name="department_id" ref="hr_department_12"/>
+            <field name="job_title">UI DESIGNER</field>
+            <field name="identification_id">76965673</field>
+            <field name="birthday">1899-12-30</field>
+            <field name="fecha_inicio_contrato">2021-2-15</field>
+            <field name="active">0</field>
+            <field name="work_email">arquiñig@gmail.com</field>
+        </record>
+
+    </data>
+</odoo>

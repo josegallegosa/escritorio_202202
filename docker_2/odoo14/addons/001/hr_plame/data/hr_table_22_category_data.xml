@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+<record id="hr_plame_22_category_0100" model="hr.table.22.category">
+    <field name="code">0100</field>
+    <field name="name">INGRESOS</field>
+</record>
+
+<record id="hr_plame_22_category_0200" model="hr.table.22.category">
+    <field name="code">0200</field>
+    <field name="name">INGRESOS: ASIGNACIONES</field>
+</record>
+
+<record id="hr_plame_22_category_0300" model="hr.table.22.category">
+    <field name="code">0300</field>
+    <field name="name">INGRESOS: BONIFICACIONES</field>
+</record>
+
+<record id="hr_plame_22_category_0400" model="hr.table.22.category">
+    <field name="code">0400</field>
+    <field name="name">INGRESOS: GRATIFICACIONES / AGUINALDOS</field>
+</record>
+
+<record id="hr_plame_22_category_0500" model="hr.table.22.category">
+    <field name="code">0500</field>
+    <field name="name">INGRESOS: INDEMNIZACIONES</field>
+</record>
+
+<record id="hr_plame_22_category_0900" model="hr.table.22.category">
+    <field name="code">0900</field>
+    <field name="name">CONCEPTOS VARIOS</field>
+</record>
+
+<record id="hr_plame_22_category_1000" model="hr.table.22.category">
+    <field name="code">1000</field>
+    <field name="name">OTROS CONCEPTOS</field>
+</record>
+
+<record id="hr_plame_22_category_2000" model="hr.table.22.category">
+    <field name="code">2000</field>
+    <field name="name">RÉGIMEN LABORAL PÚBLICO</field>
+</record>
+
+
+    </data>
+</odoo>

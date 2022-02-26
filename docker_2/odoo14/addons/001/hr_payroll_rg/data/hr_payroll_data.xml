@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- structure type -->
+        <record id="structure_type_r_g" model="hr.payroll.structure.type">
+            <field name="name">Régimen General</field>
+            <field name="country_id" ref="base.pe"/>
+            <field name="wage_type">monthly</field>
+        </record>
+
+        <!-- Salary Structure -->
+        <record id="structure_r_g" model="hr.payroll.structure">
+            <field name="name">Régimen General</field>
+            <field name="type_id" ref="structure_type_r_g"/>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <!-- Salary rules -->
+
+        <record id="hr_salary_rule_basc" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BASC</field>
+            <field name="category_id" ref="hr_payroll.BASIC"/>
+            <field name="name">Básico</field>
+            <field name="sequence" eval="1"/>
+            <field name="amount_python_compute">result = worked_days.DIAT.number_of_days*contract.wage/30</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_asif" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ASIF</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Asignación Familiar</field>
+            <field name="sequence" eval="2"/>
+            <field name="amount_python_compute">if employee.assignment_family:
+    result = 0.1*parameter_obj.get_amount('RMV',payslip.date_from)
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_bcar" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BCAR</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Bono al Cargo</field>
+            <field name="sequence" eval="3"/>
+            <field name="amount_python_compute">if inputs.BCAR:
+    result=inputs.BCAR.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_he25" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HE25</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Horas Extras 25%</field>
+            <field name="sequence" eval="4"/>
+            <field name="amount_python_compute">result=((contract.wage +ASIF + BCAR)/240)* worked_days.HE25.number_of_hours*1.25</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_he35" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HE35</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Horas Extras 35%</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">result=((contract.wage +ASIF + BCAR)/240)* worked_days.HE35.number_of_hours*1.35</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_he10" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HE10</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Trabajo en día Domingo o Feriado</field>
+            <field name="sequence" eval="6"/>
+            <field name="amount_python_compute">result=((contract.wage +ASIF + BCAR)/240)* worked_days.HE10.number_of_hours*2</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_grat" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">GRAT</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Gratificación</field>
+            <field name="sequence" eval="7"/>
+            <field name="amount_python_compute">if (quinta_obj.get_month(payslip.date_from)-13)*(-1) in [6,12]:
+    result=0
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_bgra" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BGRA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Bonif.Extraordinaria Ley 30334</field>
+            <field name="sequence" eval="8"/>
+            <field name="amount_python_compute">if employee.affiliate_eps:
+    result=0.0675*GRAT
+else:
+    result=0.09*GRAT</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+		
+        <record id="hr_salary_rule_cnav" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CNAV</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Canasta Navidad</field>
+            <field name="sequence" eval="9"/>
+            <field name="amount_python_compute">if inputs.CNAV:
+    result=inputs.CNAV.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+        <record id="hr_salary_rule_dmed" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DMED</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Descanso Médico</field>
+            <field name="sequence" eval="10"/>
+            <field name="amount_python_compute">result=contract.wage*worked_days.DMED.number_of_days/30</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_sube" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SUBE</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Subsidio por Enfermedad</field>
+            <field name="sequence" eval="11"/>
+            <field name="amount_python_compute">if inputs.SUBE:
+    result=inputs.SUBE.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_subm" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SUBM</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Subsidio por Maternidad</field>
+            <field name="sequence" eval="12"/>
+            <field name="amount_python_compute">if inputs.SUBM:
+    result=inputs.SUBM.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_licg" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">LICG</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Licencia con Goce</field>
+            <field name="sequence" eval="13"/>
+            <field name="amount_python_compute">result=contract.wage*worked_days.LCGO.number_of_days/30</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_oiaf" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">OIAF</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Otros Ingresos Afectos</field>
+            <field name="sequence" eval="14"/>
+            <field name="amount_python_compute">if inputs.OIAF:
+    result=inputs.OIAF.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_oina" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">OINA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Otros Ingresos No Afectos</field>
+            <field name="sequence" eval="15"/>
+            <field name="amount_python_compute">if inputs.OINA:
+    result=inputs.OINA.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_riaf" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RIAF</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Reintegro Afecto</field>
+            <field name="sequence" eval="16"/>
+            <field name="amount_python_compute">if inputs.RIAF:
+    result=inputs.RIAF.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_rina" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RINA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Reintegro No Afecto</field>
+            <field name="sequence" eval="17"/>
+            <field name="amount_python_compute">if inputs.RINA:
+    result=inputs.RINA.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_rvac" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RVAC</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Remuneración Vacacional</field>
+            <field name="sequence" eval="18"/>
+            <field name="amount_python_compute">result=(contract.wage+BCAR)*worked_days.VACA.number_of_days/30</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_cvac" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">CVAC</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Compensación Vacacional</field>
+            <field name="sequence" eval="19"/>
+            <field name="amount_python_compute">result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_vact" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">VACT</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Vacaciones Truncas</field>
+            <field name="sequence" eval="20"/>
+            <field name="amount_python_compute">result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_grtr" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">GRTR</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Gratificación Trunca</field>
+            <field name="sequence" eval="21"/>
+            <field name="amount_python_compute">result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_grpr" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">GRPR</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Propor. Bonif.Extraordinaria Ley 30334</field>
+            <field name="sequence" eval="22"/>
+            <field name="amount_python_compute">result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_total_incomes" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">TOTAL_INGRESOS</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="name">TOTAL INGRESOS</field>
+            <field name="sequence" eval="100"/>
+            <field name="amount_python_compute">result=categories.BASIC + categories.ALW</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_adsu" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ADSU</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Adelanto de Sueldo</field>
+            <field name="sequence" eval="101"/>
+            <field name="amount_python_compute">if inputs.ADEL:
+    result=inputs.ADEL.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_pres" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PRES</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Préstamo</field>
+            <field name="sequence" eval="102"/>
+            <field name="amount_python_compute">if inputs.PRES:
+    result=inputs.PRES.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_adgr" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ADGR</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Adelanto de Gratificación</field>
+            <field name="sequence" eval="103"/>
+            <field name="amount_python_compute">if inputs.ADGR:
+    result=inputs.ADGR.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_apor" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">APOR</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">AFP.Aporte Obligatorio</field>
+            <field name="sequence" eval="104"/>
+            <field name="amount_python_compute">if employee.pension_fund.name != 'ONP':
+    result=imp_spp*employee.pension_fund.percentage_incoming_required/100
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_comf" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">COMF</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">AFP. Comisión Flujo</field>
+            <field name="sequence" eval="105"/>
+            <field name="amount_python_compute">if employee.pension_fund.name != 'ONP' and employee.commission_scheme=='flujo':
+    result=imp_spp*employee.pension_fund.commission_on_flow/100
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_comm" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">COMM</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">AFP. Comisión Mixta</field>
+            <field name="sequence" eval="106"/>
+            <field name="amount_python_compute">if employee.pension_fund.name != 'ONP' and employee.commission_scheme=='mixta':
+    result=imp_spp*employee.pension_fund.commission_on_flow_mix/100
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_segv" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SEGV</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">AFP.Seguro de Vida</field>
+            <field name="sequence" eval="107"/>
+            <field name="amount_python_compute">if employee.pension_fund.name != 'ONP':
+    if imp_spp &lt; employee.pension_fund.maximum_insurable_remuneration:
+        result=imp_spp*employee.pension_fund.sure_prime/100
+    else:
+        result=employee.pension_fund.maximum_insurable_remuneration*employee.pension_fund.sure_prime/100
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_5cat" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">5CAT</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">RENTA 5TA CATEGORIA</field>
+            <field name="sequence" eval="108"/>
+            <field name="amount_python_compute">result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_tard" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">TARD</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Tardanzas</field>
+            <field name="sequence" eval="109"/>
+            <field name="amount_python_compute">result=contract.wage*worked_days.TARD.number_of_hours/14400</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_deju" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DEJU</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Descuento Judicial</field>
+            <field name="sequence" eval="110"/>
+            <field name="amount_python_compute">if inputs.DEJU:
+    result=inputs.DEJU.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_epse" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EPSE</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">EPS Empleados</field>
+            <field name="sequence" eval="111"/>
+            <field name="amount_python_compute">if employee.affiliate_eps:
+    result=eps_obj.get_amount_eps(employee)['amount']
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_onnp" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ONNP</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">O.N.P.</field>
+            <field name="sequence" eval="112"/>
+            <field name="amount_python_compute">if employee.pension_fund.name == 'ONP':
+    result=imp_onp*employee.pension_fund.percentage_incoming_required/100
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_otde" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">OTDE</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="name">Otros Descuentos</field>
+            <field name="sequence" eval="113"/>
+            <field name="amount_python_compute">if inputs.OTRD:
+    result=inputs.OTRD.amount
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_total_deductions" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">TOTAL_DESCUENTOS</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="name">TOTAL DESCUENTOS</field>
+            <field name="sequence" eval="200"/>
+            <field name="amount_python_compute">result=categories.DED</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_essa" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">ESSA</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="name">Essalud</field>
+            <field name="sequence" eval="201"/>
+            <field name="amount_python_compute">if employee.affiliate_eps:
+    result=imp_essalud*0.0675
+else:
+    result=imp_essalud*0.09</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_epsa" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EPSA</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="name">EPS Aport</field>
+            <field name="sequence" eval="202"/>
+            <field name="amount_python_compute">if employee.affiliate_eps:
+    result=imp_essalud*0.0225
+else:
+    result=0</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_total_contributions" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">TOTAL_APORTES</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="name">TOTAL APORTES</field>
+            <field name="sequence" eval="299"/>
+            <field name="amount_python_compute">result=categories.COMP</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+         <record id="hr_salary_rule_total_net" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">TOTAL_NETO</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="name">TOTAL NETO</field>
+            <field name="sequence" eval="300"/>
+            <field name="amount_python_compute">result=TOTAL_INGRESOS-TOTAL_DESCUENTOS</field>
+            <field name="struct_id" ref="structure_r_g"/>
+         </record>
+
+	</data>
+</odoo>

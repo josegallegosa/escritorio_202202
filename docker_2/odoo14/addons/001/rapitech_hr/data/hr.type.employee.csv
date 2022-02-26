@@ -1,0 +1,7 @@
+id,name
+rapitech_hr.type_employee_employee,Empleado
+rapitech_hr.type_employee_worker,Obrero
+rapitech_hr.type_employee_pensioner,Pensionista
+rapitech_hr.type_employee_executive,Ejecutivo
+rapitech_hr.type_employee_pilot,Piloto
+rapitech_hr.type_employee_co-pilot,Copiloto

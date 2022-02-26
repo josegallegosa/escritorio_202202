@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_type_risk_arl_opc1" model="hr.type.risk.arl">
+            <field name="name">0.522</field>
+            <field name="code">1</field>
+        </record>
+        
+        <record id="hr_type_risk_arl_opc2" model="hr.type.risk.arl">
+            <field name="name">1.044</field>
+            <field name="code">2</field>
+        </record>
+
+        <record id="hr_type_risk_arl_opc3" model="hr.type.risk.arl">
+            <field name="name">2.436</field>
+            <field name="code">3</field>
+        </record>
+
+        <record id="hr_type_risk_arl_opc4" model="hr.type.risk.arl">
+            <field name="name">4.350</field>
+            <field name="code">4</field>
+        </record>
+
+        <record id="hr_type_risk_arl_opc5" model="hr.type.risk.arl">
+            <field name="name">6.900</field>
+            <field name="code">5</field>
+        </record>
+
+    </data>
+</odoo>

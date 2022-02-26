@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <record id="res_bank_co_1" model="res.bank">
+            <field name="code">1</field>
+            <field name="name">BANCO DE BOGOTÁ</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_2" model="res.bank">
+            <field name="code">2</field>
+            <field name="name">BANCO POPULAR</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_6" model="res.bank">
+            <field name="code">6</field>
+            <field name="name">ITAÚ CORPBANCA COLOMBIA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_7_1" model="res.bank">
+            <field name="code">7</field>
+            <field name="name">BANCOLOMBIA S.A. ACH</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_7_2" model="res.bank">
+            <field name="code">7</field>
+            <field name="name">BANCOLOMBIA S.A. PAB</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_9" model="res.bank">
+            <field name="code">9</field>
+            <field name="name">CITIBANK COLOMBIA</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_12" model="res.bank">
+            <field name="code">12</field>
+            <field name="name">GNB SUDAMERIS S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_13" model="res.bank">
+            <field name="code">13</field>
+            <field name="name">BBVA COLOMBIA</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_19" model="res.bank">
+            <field name="code">19</field>
+            <field name="name">COLPATRIA</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_23" model="res.bank">
+            <field name="code">23</field>
+            <field name="name">BANCO DE OCCIDENTE</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_32" model="res.bank">
+            <field name="code">32</field>
+            <field name="name">BANCO CAJA SOCIAL - BCSC S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_40" model="res.bank">
+            <field name="code">40</field>
+            <field name="name">BANCO AGRARIO DE COLOMBIA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_51" model="res.bank">
+            <field name="code">51</field>
+            <field name="name">BANCO DAVIVIENDA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+            <record id="res_bank_co_52" model="res.bank">
+            <field name="code">52</field>
+            <field name="name">BANCO AV VILLAS</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_53" model="res.bank">
+            <field name="code">53</field>
+            <field name="name">BANCO W S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_58" model="res.bank">
+            <field name="code">58</field>
+            <field name="name">BANCO CREDIFINANCIERA S.A.C.F</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_59" model="res.bank">
+            <field name="code">59</field>
+            <field name="name">BANCAMIA</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_60" model="res.bank">
+            <field name="code">60</field>
+            <field name="name">BANCO PICHINCHA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_61" model="res.bank">
+            <field name="code">61</field>
+            <field name="name">BANCOOMEVA</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_62" model="res.bank">
+            <field name="code">62</field>
+            <field name="name">CMR FALABELLA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_63" model="res.bank">
+            <field name="code">63</field>
+            <field name="name">BANCO FINANDINA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_65" model="res.bank">
+            <field name="code">65</field>
+            <field name="name">BANCO SANTANDER DE NEGOCIOS COLOMBIA S.A.</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_66" model="res.bank">
+            <field name="code">66</field>
+            <field name="name">BANCO COOPERATIVO COOPCENTRAL</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_67" model="res.bank">
+            <field name="code">67</field>
+            <field name="name">BANCO COMPARTIR S.A</field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+        <record id="res_bank_co_68" model="res.bank">
+            <field name="code">69</field>
+            <field name="name">BANCO SERFINANZA S.A </field>
+            <field name="country" ref="base.co"/>
+        </record>
+
+
+    </data>
+</odoo>

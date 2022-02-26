@@ -1,0 +1,2115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" href="/theme_reliant/static/css/style.css"/>  
+        </xpath>
+
+        <xpath expr="//script[last()]" position="after">
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCIGtBJv-_ZQSoRX3_THd4zZ8GsPAI89s"></script>
+            <script type="text/javascript" src="/theme_reliant/static/js/home.js"></script>
+            <script type="text/javascript" src="/theme_reliant/static/js/slick.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script src="https://use.fontawesome.com/ddbe47651f.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+            
+        </xpath>
+    </template>
+
+    <template id="projects" name="Projects">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_projects{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }
+            </style>
+            <section id="section_projects_1" class="s_text_block s_masonry_block"  style="padding-top: 85px;">
+                <div class="container" >
+                    <div class="row" style="padding: 0 3px 0 3px;">
+                        <div class="col-md-6 col-12" style="padding:0;">
+                            <div class="reliant_project_div1">
+                                <p class="p_reliant_project_list_1">Our Projects</p>
+                            </div>
+                        </div>
+                        <div id="col3_sec1" class="col-md-3 col-9" style="padding:0;padding-left: 3px;">
+                            <div class="reliant_project_div2_1">
+                                <p class="p_reliant_project_list_2" style="padding-bottom: 1%;">Our <b>Integrated Management System</b> allows us to align the processes, equipment, and people's skills across all our projects, building strong relationships of trust with our clients, truly <b>understanding their needs and expectations.</b> We use all our strength to maintain and increase its current performance of <b>safety, quality, and productivity in our projects.</b></p>
+                            </div>
+                        </div>
+                        <div id="col3_sec2" class="col-md-3 col-3" style="padding:0;">
+                            <div class="reliant_project_div2_2">
+                                <p class="p_reliant_project_list_2_0" style="padding-bottom: 1%;text-align: end;">ALL</p>
+                                <div id="countries1">
+                                    <t t-foreach="countries" t-as="c">
+                                        <p t-att-id="c.id" class="p_reliant_project_list_2_1"><t t-esc="c.name"/></p>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+                
+            <section id="section_projects_2" class="s_text_block s_masonry_block">
+                <div class="container">  
+                    <div class="row init"  >
+                        <t t-foreach="projects" t-as="pro">
+                            <div t-att-id="pro.location_country.id" class="col-xl-4 col-6 reliant_ex3 show_init" style="margin:6px 0 0 0;">
+                                <div class="div_reliant_project" style="padding: 0 3px 0 3px ;">
+                                    <div class="rel_snippet_project" data-name="Block" t-attf-style="background: transparent url(data:image/png;base64,#{pro.image.decode('utf-8')});background-size: cover; ">
+                                        <div class="div_reliant_project_1" >
+                                            <a  style="text-decoration: none;">
+                                                <p><t t-esc="pro.name"/><br><strong>></strong></br></p>
+                                                <p><t t-raw="pro.description"/></p>
+                                            </a>
+                                        </div>
+                                        <div class="div_reliant_project_2" style="display:none;">
+                                                <p><t t-esc="pro.name"/><br>></br></p>
+                                                <p><t t-raw="pro.description"/></p>
+                                                
+                                        </div>
+                                    </div>
+                                    <div class="div_reliant_project_3" style="display:none;">
+                                        <a data-toggle="modal" data-target="#myModal" t-att-id="pro.id" onclick="project_modal_function(this.id)" class=" btn_reliant_projects"> >Read More</a>
+                                    </div>    
+                                </div>
+                            </div>
+                        </t>
+                        <div class="modal fade" id="myModal"  role="dialog">
+                            <div class="modal-dialog" style="max-width:1280px !important;">
+                                <!-- Modal content-->
+                                <div id="modal_content_project" class="modal-content" style="background-color: #E6E6E6">
+                                    
+                                    <div class="">
+                                        <div  id="header_modal_project" class="row" style="padding: 0 25px 0 25px;margin-top: 20px;">
+
+                                            <div class="p-2 ">
+                                                <a href="/" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                                    <img id="img_logo_modal_project" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" style="width:304;height:60px;"/>
+                                                </a>
+                                            </div>
+                                            <div id="icon_nav_reliant_1" class="ml-auto p-2 ">
+                                                <a  data-dismiss="modal" style="display: flex;align-items: center;text-decoration: none;padding: 25px 0 0 0;">
+                                                  <i class="fa fa-times fa-2x " style="color:black;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div id="myModal_reliant">
+                                             
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                    </div>
+                </div>        
+            </section>
+            <section id="section_projects_4" class="s_text_block s_masonry_block" data-vcss="001" style="padding:8px 0 0 0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="project_description_text">Looking for<br></br>specialized mining services?</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div style="width:100%;display: flex;justify-content: center;">
+                                <div class="linea_vertical_project"/>
+                            </div>
+                            <div style="width:100%;display: flex;justify-content: center;">
+                                <a href="/contacts" class="btn_reliant_project">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+      
+                window.onload = function readyProjects(){
+                    $("p.p_reliant_project_list_2_0").css('font-weight', 'bold');
+                }
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+    </template>
+
+
+    <template id="services" name="Services">
+            <t t-call="website.layout">
+                <div class="se-pre-con"></div>
+                <style>
+                    #option_services{
+                        font-weight: bold;
+                    }
+                    #option_blog{
+                        font-weight: normal !important;
+                    }
+                </style>
+                <section id="section_services_1" class="s_text_block pt-1 s_masonry_block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-12 rel_snippet4_loc">
+                                    <div class="rel_snippet4_1_1">
+                                        <p class="p_reliant_service_1">Our Services</p>
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-12 rel_snippet4_loc">
+                                    <div class="rel_snippet4_1_2">
+                                        <p class="p_reliant_service_2">
+                                            We deliver <b>integral solutions</b> for the <b>mining industry.</b> Our services include long-term <b>mine development and production contracts.</b> We have the ability to deliver integral services for the whole mine while also offering our specialized capabilities separately, to meet the short and long term requirements of our clients.
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div> 
+                </section>  
+                <section id="section_services_2" class="s_text_block pt-1 pb-1 s_masonry_block" >
+                        <div class="container">
+                            <div class="row" >
+                                <div class="col-8" >
+                                    <div id="row_services" class="row">  
+                                        <t t-foreach="services" t-as="serv">
+                                            <t t-if="serv_index==0">           
+                                                <div t-att-id="serv[0]" class="col-md-3 col-6 rel_snippet4_loc_service_detail show_init_services show_init_services_project">                                
+                                                    <div class="rel_snippet4_2_1 info_service_estado_1 service_active" >
+                                                        <p class="p_reliant_service_title"><t t-esc="serv[1]"/></p>
+                                                        <p class="p_reliant_service_description_2_1">→</p>
+                                                        <div class="p_reliant_service_description_2_2">
+                                                            <t t-raw="serv[2]" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                            <t t-if="serv_index!=0">           
+                                                <div t-att-id="serv[0]" class="col-md-3 col-6 rel_snippet4_loc_service_detail show_init_services show_init_services_project">                                
+                                                    <div class="rel_snippet4_2_1 info_service_estado_1" >
+                                                        <p class="p_reliant_service_title"><t t-esc="serv[1]"/></p>
+                                                        <p class="p_reliant_service_description_2_1">→</p>
+                                                        <div class="p_reliant_service_description_2_2">
+                                                            <t t-raw="serv[2]" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                    </div>    
+                                </div>
+                                <div class="col-4 rel_snippet4_1_3 show_init_services_2" style="padding:0;  ">
+                                    <t t-foreach="services" t-as="serv_desc" >
+                                        <t t-if="serv_desc_index==0">
+                                            <div class="rel_snippet4_loc_service_detail_right">
+                                                <p class="p_reliant_service_title_right"><t t-esc="serv_desc[1]"/></p>
+                                                <div class="p_reliant_service_description_4">
+                                                    <t t-raw="serv_desc[2]"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </t>
+                                </div>
+                            </div>
+                            <div class="row" >
+                                <div class="col-12 rel_snippet4_loc" >
+                                    <div class="rel_snippet4_3_1">
+                                            <p class="p_reliant_service_title_2">Current Projects</p>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                </section>
+                <section id="section_services_3" class="s_text_block pt-1 pb-1 s_masonry_block" >
+                    <div class="container">
+                        <div id="show_project" class="row" >
+                            <t t-foreach="values_project_initial" t-as="proj">
+                                <div class="col-md-4 col-6 rel_snippet4_loc show1" data-toggle="modal" data-target="#myModal" t-att-id="proj[0]" onclick="project_modal_function(this.id)">
+                                    <div class="rel_snippet4_3_2 info_current_project_estado_1">
+                                        <div t-attf-style="background: transparent url(data:image/png;base64,#{proj[2].decode('utf-8')}); width: 100%;height:100%;background-size: cover;background-repeat: no-repeat;background-position: center;" >
+                                            
+                                            <div class="rel_snippet4_3_2_aux" style="display:none;">
+                                                    <p class="p_reliant_service_title_4"><t t-esc="proj[1]"/></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                            <div class="modal fade" id="myModal"  role="dialog">
+                                <div class="modal-dialog" style="max-width:1280px !important;">
+                                    <!-- Modal content-->
+                                    <div id="modal_content_project" class="modal-content" style="background-color: #E6E6E6">
+                                        
+                                        <div class="">
+                                            <div  id="header_modal_project" class="row" style="padding: 0 25px 0 25px;margin-top: 20px;">
+
+                                                <div class="p-2 ">
+                                                    <a href="/" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                                        <img id="img_logo_modal_project" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" style="width:304;height:60px;"/>
+                                                    </a>
+                                                </div>
+                                                <div id="icon_nav_reliant_1" class="ml-auto p-2 ">
+                                                    <a  data-dismiss="modal" style="display: flex;align-items: center;text-decoration: none;padding: 25px 0 0 0;">
+                                                      <i class="fa fa-times fa-2x " style="color:black;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div id="myModal_reliant">
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                </section>
+                <script>
+                    function changeovershow(x){
+                        
+                        $(x).find('div.rel_snippet4_3_2_aux').show()
+                    }
+                    function changeoutshow(x){
+                        
+                        $(x).find('div.rel_snippet4_3_2_aux').hide()
+                    }
+
+                    $(window).load(function() {
+                        $(".se-pre-con").fadeOut("slow");;
+                    });
+                </script>
+                <div class="oe_structure oe_empty"/>
+            </t>
+    </template>
+
+
+    <template id="template_header_magazine_proyect_reliant_2" inherit_id="website.layout" name="Template Header Magazine" active="False">
+        <xpath expr="//header//nav" position="replace">
+        </xpath>
+    </template>
+
+
+    <template id="template_header_magazine_proyect_reliant" inherit_id="website.layout" name="Template Header Magazine" active="False">
+        <xpath expr="//header//nav" position="replace">
+            <nav id="header"/>
+            <!-- Topbar -->
+            <div class="oe_structure" id="oe_structure_header_magazine_1"/>
+            <div id="nav-reliant" class="container" style="background-color:#E6E6E6;height:95px;">
+                
+                <div class="container">
+                    <div  class="row" style="margin:0">
+                        <div class="p-2 ">
+                            <a href="/home" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                <img id="logo_reliant_header" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" />
+                            </a>
+                        </div>
+                        <div id="menu_options_reliant_1" class="ml-auto p-2" >
+                            <div id="option_menu_reliant" style="display:flex; align-items: center;padding: 35px 0 0 0;">
+                                <a id="option_home" href="/home" ><span >Home</span></a>
+                                <a id="option_about" href="/about" ><span >About us</span></a>
+                                <a id="option_projects" href="/projects" ><span >Projects</span></a>
+                                <a id="option_services" href="/services" ><span >Services</span></a>
+                                <a id="option_sustainability" href="/sustainability" ><span >Sustainability</span></a>
+                                <a id="option_blog" style="font-weight: bold;" href="/blog" ><span >News</span></a>
+                                <a id="option_job_opportunities" href="/job_opportunities" ><span >Job Opportunities</span></a>
+                                <a id="option_contacts" href="/contacts" ><span >Contacts us</span></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="nav-reliant-movil" class="container" style="background-color:#E6E6E6;display:none;">
+                
+                <div class="container">
+                    <div  class="row" style="margin:0">
+                        <div class="p-2 ">
+                            <a href="/home" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                <img id="logo_reliant_header" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" />
+                            </a>
+                        </div>
+                        <div id="icon_nav_reliant_1_movil" class="ml-auto p-2 " >
+                            <a   style="display: flex;text-decoration: none;">
+                              <i class="fa fa-bars fa-2x " style="color:black;"></i>
+                            </a>
+                        </div>
+                        <div id="menu_options_reliant_1_movil" class="" style="display:none;background-color: #D4FCE8;" >
+                            <div id="option_menu_reliant" >
+                                <a href="/home" ><span >Home</span></a>
+                                <a href="/about" ><span >About us</span></a>
+                                <a href="/projects" ><span >Projects</span></a>
+                                <a href="/services" ><span >Services</span></a>
+                                <a href="/sustainability" ><span >Sustainability</span></a>
+                                <a href="/blog" ><span >News</span></a>
+                                <a href="/job_opportunities" ><span >Job Opportunities</span></a>
+                                <a href="/contacts" ><span >Contacts us</span></a>
+                            </div>
+                        </div>
+                        <script>
+                            
+                        </script>
+                    </div>
+                </div>
+                
+            </div>
+            <script>
+                var cont = 0;
+                $("#icon_nav_reliant_1_movil").click(function(){
+                    console.log("aparece menu")
+                    $('#menu_options_reliant_1_movil').show();
+                });
+                $(document).on("click",function(e) {   
+                cont = cont +1;                      
+                    var container = $("#menu_options_reliant_1_movil");
+                    
+                    if (!container.is(e.target) &amp;&amp; container.has(e.target).length === 0 &amp;&amp; cont>1) { 
+                        $('#menu_options_reliant_1_movil').hide(); 
+                        cont = 0;           
+                    }    
+                                
+                });
+            </script>
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+       <xpath expr="//div[@data-selector='#wrapwrap > header']//we-select[@data-variable='header-template']" attributes="inside">
+            <we-button title="header reliant "
+               data-name="Reliant"
+               data-customize-website-views="theme_reliant.template_header_magazine_proyect_reliant"
+               data-customize-website-variable="'Project Reliant'"
+               data-img="/theme_reliant/static/img/header-reliant.png"/>
+       </xpath>
+        
+    </template>
+
+    
+
+    <template id="home" name="Home">
+        <t t-call="website.layout" >
+           <div class="se-pre-con"></div>
+            <style>
+
+            #option_home {
+                font-weight: bold;
+            }
+            #option_blog{
+                font-weight: normal !important;
+            }
+            </style>
+            
+            
+
+            <section id="home_section_1" class="s_carousel_wrapper" data-vxml="001">
+                <div id="myCarousel" class="s_carousel s_carousel_default carousel slide" data-interval="3000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel" data-slide-to="1"/>
+                        <li data-target="#myCarousel" data-slide-to="2"/>
+                        <li data-target="#myCarousel" data-slide-to="3"/>
+                        <li data-target="#myCarousel" data-slide-to="4"/>
+                    </ol>
+                    <!-- Content -->
+                    <div id="reliant-carousel" class="carousel-inner">
+                        <!-- #01 -->
+                        <div class="carousel-item active oe_img_bg " style="background-image: url('/theme_reliant/static/img/jpg_home_carrusel_1c.jpg');padding-top:20px;background-position: center;" data-name="Slide">
+                            <div class="container" >
+                                <div  class="row content">
+                                    <div class="carousel-content o_colored_level col-lg-12" style="">
+                                      <p class="home_description_carousel_2">
+                                        <br></br>
+                                        <br></br>
+                                        <font style="color: rgb(215, 255, 235);">WE SYNERGIZE FOR SUCCESS</font>
+                                        <br></br>
+                                        <font id="font_carousel" style="color: rgb(215, 255, 235);">Redifining what is possible<br></br>to achieve your targets</font>
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn_learn_more_home" class="learn_more_home" >
+                                <a href="/about" class="btn_reliant_home" style="" >Learn more</a>
+                            </div>
+                        </div>
+                        <!-- #02 -->
+                        <div class="carousel-item oe_img_bg " style="background-image: url('/theme_reliant/static/img/jpg_home_carrusel_2c.jpg');padding-top:20px;background-position: center;" data-name="Slide">
+                            <div class="container">
+                                <div class="row content">
+                                    <div class="carousel-content o_colored_level col-lg-12" style="">
+                                      <p class="home_description_carousel_2">
+                                        <br></br>
+                                        <br></br>
+                                        <font style="color: rgb(215, 255, 235);">WE SHAPE YOUR NEEDS</font>
+                                        <br></br>
+                                        <font id="font_carousel" style="color: rgb(215, 255, 235);">Delivering customized strategies<br></br>and designed solutions</font>
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn_learn_more_home" class="learn_more_home" >
+                                <a href="/about" class="btn_reliant_home" style="" >Learn more</a>
+                            </div>
+                        </div>
+                        <!-- #03 -->
+                        <div class="carousel-item oe_img_bg " style="background-image: url('/theme_reliant/static/img/jpg_home_carrusel_3c.jpg');padding-top:20px;background-position: center;" data-name="Slide">
+                            <div class="container">
+                                <div class="row content">
+                                    <div class="carousel-content o_colored_level col-lg-12" style="">
+                                      <p class="home_description_carousel_2">
+                                        <br></br>
+                                        <br></br>
+                                        <font style="color: rgb(215, 255, 235);">WE EARN YOUR TRUST</font>
+                                        <br></br>
+                                        <font id="font_carousel" style="color: rgb(215, 255, 235);">Increasing safety,productivity,<br></br>and quality of your mining projects</font>
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn_learn_more_home" class="learn_more_home" >
+                                <a href="/about" class="btn_reliant_home" style="" >Learn more</a>
+                            </div>
+                        </div>
+                        <!-- #04 -->
+                        <div class="carousel-item oe_img_bg " style="background-image: url('/theme_reliant/static/img/jpg_home_carrusel_4c.jpg');padding-top:20px;background-position: center;" data-name="Slide">
+                            <div class="container">
+                                <div class="row content">
+                                    <div class="carousel-content o_colored_level col-lg-12" style="">
+                                      <p class="home_description_carousel_2">
+                                        <br></br>
+                                        <br></br>
+                                        <font style="color: rgb(215, 255, 235);">WE LEAD THE CHANGE</font>
+                                        <br></br>
+                                        <font id="font_carousel" style="color: rgb(215, 255, 235);">Transforming challenges<br></br>into new opportunities</font>
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn_learn_more_home" class="learn_more_home" >
+                                <a href="/about" class="btn_reliant_home" style="" >Learn more</a>
+                            </div>
+                        </div>
+                        <!-- #05 -->
+                        <div class="carousel-item oe_img_bg " style="background-image: url('/theme_reliant/static/img/jpg_home_carrusel_5c.jpg');padding-top:20px;background-position: center;" data-name="Slide">
+                            <div class="container">
+                                <div class="row content">
+                                    <div class="carousel-content o_colored_level col-lg-12" style="">
+                                      <p class="home_description_carousel_2">
+                                        <br></br>
+                                        <br></br>
+                                        <font style="color: rgb(215, 255, 235);">Integral solutions<br></br>in mining projects</font>
+                                      </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn_learn_more_home" class="learn_more_home" >
+                                <a href="/about" class="btn_reliant_home" style="" >Learn more</a>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <!-- Controls -->
+                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+            <section id="home_section_2" class="s_text_block s_masonry_block" >
+                <div  class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-12 " style="padding:0;">
+                            <div class="row" style="width: 100%;height:100%;justify-content: center;margin:0;">
+                                <div class="div_safety_reliant">
+                                    <p class="rel_snippet_home_descripcion_left">Safety + Quality</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-12 ">
+                            <div id="row_col-md-2" class="row">
+                                <div class="col-12">
+                                    <div class="rel_description_home">
+                                        <p class="rel_snippet_home_descripcion_right" >Our Integrated Management System (IMS) provides details for the responsibilities and governs the resource management, service provision, and measurement benchmarks, all within a robust and practical framework. Our IMS is regularly monitored by internal and external audits to ensure system compliance.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="rel_description_home">
+                                        <p class="rel_snippet_home_descripcion_right" >We are certified  under ISO:9001:2015 14001:2015 45001:2018</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div id="rel_snippet_home_descripcion_img"  data-name="Block">
+                                        <img src="/theme_reliant/static/img/img_home_1.png"  alt=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="home_section_3"  >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 rel_snippet4_loc">
+                            <div class="rel_snippet_home_1">
+                                <a t-att-href="'/services/'"   style="text-decoration: none;">
+                                    <p class="p_reliant_home_1">Our Services</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 rel_snippet4_loc left">
+                            <div class="rel_snippet_home_2">
+                                <p class="p_reliant_home_2">With a <b>20-year</b> mining history. We deliver <b>integral solutions</b> for the <b>mining industry.</b>Our services include long-term <b>mine development and production contracts.</b> RELIANT completes all the corresponding ground support (cable bolting, shotcrete, bolts and mesh installation, other), mucking, loading, hauling, and service activities. We have the ability to deliver integral services for the whole mine while also offering our specialized capabilities separately, to meet the short and long term requirements of our clients.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+            </section>  
+            <section id="home_section_5"  >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 rel_snippet4_loc">
+                            <div class="rel_snippet_home_1_2">
+                                <a t-att-href="'/projects/'"  style="text-decoration: none;">
+                                    <p class="p_reliant_home_1">Our Projects</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 rel_snippet4_loc">
+                            <div class="rel_snippet_home_2">
+                                <p class="p_reliant_home_2">We are the leading provider of <b>integral mining solutions</b> around the world using <b>different mining methods.</b> Our <b>Integrated Management System</b> allows us to align the processes, equipment, and people's skills across all our projects, building strong relationships of trust with our clients, truly <b>understanding their needs and expectations.</b> That’s how we deliver best-practice for the <b>most suitable and integral insights and solutions</b> by creating a framework for success for every project.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+            </section>  
+            <section id="home_section_6">
+                <div class="container">
+                    <div class="row ">
+                        <t t-set="cont" t-value="1"/> 
+                        <t t-foreach="project_home" t-as="phom">
+                            <t t-if="cont%2!=0">
+                                <div class="col-md-4 col-6 show_init_home_bottom_1" style="padding: 0 6px 0 0;">
+                                    <div class="div_reliant_home_bottom" data-toggle="modal" data-target="#myModal" t-att-id="phom[0]" onclick="project_modal_function(this.id)">
+                                        <img class="img_reliant_home_bottom" t-attf-src="data:image/png;base64,#{phom[2].decode('utf-8')}" />
+                                        <div class="div_name_home_bottom_1 p_reliant_home_bottom" ><p class="p_reliant_home_bottom_description"><t t-esc="phom[1]"/></p></div>
+                                    </div>              
+                                </div>
+                            </t>
+                            <t t-if="cont%2==0">
+                                <div id="col_home_projects_3" class="col-md-4 col-6 show_init_home_bottom_1" style="padding: 0 6px 0 0;">
+                                    <div class="div_reliant_home_bottom btn_reliant_projects_info_estado_1" data-toggle="modal" data-target="#myModal" t-att-id="phom[0]" onclick="project_modal_function(this.id)">
+                                        <img class="img_reliant_home_bottom" t-attf-src="data:image/png;base64,#{phom[2].decode('utf-8')}" />
+                                        <div class="div_name_home_bottom_1 p_reliant_home_bottom" ><p class="p_reliant_home_bottom_description"><t t-esc="phom[1]"/></p></div>
+                                    </div>              
+                                </div>
+                            </t>
+                            <t t-set="cont" t-value="cont+1"/>
+                        </t>
+                        <div class="modal fade" id="myModal"  role="dialog">
+                            <div class="modal-dialog" style="max-width:1280px !important;">
+                                <!-- Modal content-->
+                                <div id="modal_content_project" class="modal-content" style="background-color: #E6E6E6">
+                                    
+                                    <div class="">
+                                        <div  id="header_modal_project" class="row" style="padding: 0 25px 0 25px;margin-top: 20px;">
+
+                                            <div class="p-2 ">
+                                                <a href="/" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                                    <img id="img_logo_modal_project" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" style="width:304;height:60px;"/>
+                                                </a>
+                                            </div>
+                                            <div id="icon_nav_reliant_1" class="ml-auto p-2 ">
+                                                <a  data-dismiss="modal" style="display: flex;align-items: center;text-decoration: none;padding: 25px 0 0 0;">
+                                                  <i class="fa fa-times fa-2x " style="color:black;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div id="myModal_reliant">
+                                             
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                    </div>  
+                </div> 
+            </section> 
+            <section id="home_section_7" class="s_text_block s_masonry_block">
+                <div class="container">
+                    <div class="row" style="display: block">
+                        <div class="reliant_ex4">
+                            <div class="reliant_home_div_2" data-name="Block" >
+                            <p class="p_reliant_home_3" >
+                                We have a global<br></br>presence executing<br></br>specialized mining services<br></br>around the world<br></br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-logos slider">
+                        <t t-foreach="customers_type" t-as="cus">
+                            <t t-if="cus[2]==1">
+                                <div class="slide slide_logo">
+                                 <img  t-attf-src="data:image/png;base64,#{cus[1].decode('utf-8')}"  />
+                                </div>
+                            </t>
+                        </t>
+                   </div>
+                </div>
+            </section>
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+    </template>
+
+    <template id="about" name="About us">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_about{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }
+            </style>
+            <section class="s_carousel_wrapper" data-vxml="001">
+                <div id="myCarousel_2" class="s_carousel s_carousel_default carousel slide" data-interval="3000">
+                    <!-- Indicators -->
+                    <ol id="carousel-indicators-about" class="carousel-indicators">
+                        
+                        <li data-target="#myCarousel_2" data-slide-to="0" class="active"/>
+                        <li data-target="#myCarousel_2" data-slide-to="1"/>
+                        <li data-target="#myCarousel_2" data-slide-to="2"/>
+                        <li data-target="#myCarousel_2" data-slide-to="3"/>
+                    </ol>
+                    <!-- Content -->
+                    <div id="reliant-carousel_about" class="carousel-inner">
+                        <!-- #01 -->
+                        <div id="background_about" class="carousel-item active oe_img_bg" data-name="Slide" style="background-image: url('/theme_reliant/static/img/jpg_about_slider_1.jpg');background-position: center;">
+                            <section>
+                                <section id="about_section_1" >
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="img_sq"  >
+                                                <img src="/theme_reliant/static/img/sq.png" style=""  alt=""/>
+                                            </div>
+                                            <div class="vertical-line_about_slide_1"  >
+                                                <div/>
+                                            </div>
+                                            <div class="reliant_ex4_about">
+                                                <div class="reliant_about_div " data-name="Block" >
+                                                <p class="p_reliant_about" >
+                                                    The synergy between Safety and Quality is a<br></br>key feature that represents us and runs deep<br></br>inside our organization. This combination is<br></br>present across all our projects and it has<br></br>become our core priority. It is our trademark,<br></br>our flagship, and it makes us proud.</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </section>
+                                <section id="about_section_2" >
+                                <div class="container">
+                                    <div class="row" style="display: block">
+                                        <div class="vertical-line_about_3"  >
+                                            <div/>
+                                        </div>
+                                        <div class="vertical-line_about_3_point"  >
+                                            <div class="point"/>
+                                        </div>
+                                        <div class="vertical-line_about_3"  >
+                                            <p class="p_reliant_about_2 d-none">Our seal of approval, as always</p>
+                                        </div>
+                                        <div class="container">    
+                                            <div style="display:flex;margin: 0;padding: 0 0 5px 0;">
+                                                <div style="width:48%;">
+                                                    <div style="text-align:right;">
+                                                        <p class="p_reliant_about_1_2">Safety</p>
+                                                        <p class="p_reliant_about_1_2">People</p>
+                                                        <p class="p_reliant_about_1_2">Collaboration</p>
+                                                        <p class="p_reliant_about_1_2">Feel</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:4%;">
+                                                    <div style="text-align:center;">
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:48%;">
+                                                    <div style="text-align:left;">
+                                                        <p class="p_reliant_about_1_2">Quality</p>
+                                                        <p class="p_reliant_about_1_2">Technology</p>
+                                                        <p class="p_reliant_about_1_2">Innovation</p>
+                                                        <p class="p_reliant_about_1_2">Think</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </section>
+                            </section>
+                            
+                        </div>
+                        <!-- #02 -->
+                        <div id="background_about" class="carousel-item oe_img_bg background_about_2_mobile" data-name="Slide" style="background-image: url('/theme_reliant/static/img/jpg_about_slider_2.jpg');background-position: center;">
+                            <section>
+                                <section id="about_section_1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="img_sq"  >
+                                                <img src="/theme_reliant/static/img/pt.png" style=""  alt=""/>
+                                            </div>
+                                            <div class="vertical-line_about_slide_2"  >
+                                                <div/>
+                                            </div>
+                                            <div class="reliant_ex4_about">
+                                                <div class="reliant_about_div " data-name="Block" >
+                                                <p class="p_reliant_about" >
+                                                    The interaction between our people and<br></br>the technology acquired from the market<br></br>makes all the difference, ensuring that our<br></br>service offering has a clear competitive<br></br>advantage in all our projects.</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </section>
+                                <section id="about_section_2" >
+                                <div class="container">
+                                    <div class="row" style="display: block">
+                                        <div class="vertical-line_about_3_2">
+                                            <div/>
+                                        </div>
+                                        <div class="vertical-line_about_3_point_2">
+                                            <div class="point"/>
+                                        </div>
+                                        <div class="vertical-line_about_3_2">
+                                            <p class="p_reliant_about_2 d-none">Our seal of approval, as always</p>
+                                        </div>
+                                        <div class="container">    
+                                            <div style="display:flex;margin: 0;padding: 0 0 5px 0;">
+                                                <div style="width:48%;">
+                                                    <div style="text-align:right;">
+                                                        <p class="p_reliant_about_1_2">Safety</p>
+                                                        <p class="p_reliant_about_1_2">People</p>
+                                                        <p class="p_reliant_about_1_2">Collaboration</p>
+                                                        <p class="p_reliant_about_1_2">Feel</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:4%;">
+                                                    <div style="text-align:center;">
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:48%;">
+                                                    <div style="text-align:left;">
+                                                        <p class="p_reliant_about_1_2">Quality</p>
+                                                        <p class="p_reliant_about_1_2">Technology</p>
+                                                        <p class="p_reliant_about_1_2">Innovation</p>
+                                                        <p class="p_reliant_about_1_2">Think</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </section>
+                            </section>
+                            
+                        </div>
+                        <!-- #03 -->
+                        <div id="background_about" class="carousel-item oe_img_bg" data-name="Slide" style="background-image: url('/theme_reliant/static/img/jpg_about_slider_3.jpg');background-position: center;">
+                            <section>
+                                <section id="about_section_1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="img_sq"  >
+                                                <img src="/theme_reliant/static/img/ci.png" style=""  alt=""/>
+                                            </div>
+                                            <div class="vertical-line_about_slide_3"  >
+                                                <div/>
+                                            </div>
+                                            <div class="reliant_ex4_about">
+                                                <div class="reliant_about_div " data-name="Block" >
+                                                <p class="p_reliant_about" >
+                                                    Our ability to discover new trends and our<br></br>capability to integrate them with our<br></br>collaborative approach gives us the<br></br>strength to challenge the status quo<br></br>providing out of the box specialized<br></br>integral mining solutions.</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </section>
+                                <section id="about_section_2" >
+                                <div class="container">
+                                    <div class="row" style="display: block">
+                                        <div class="vertical-line_about_3_3">
+                                            <div/>
+                                        </div>
+                                        <div class="vertical-line_about_3_point_3">
+                                            <div class="point"/>
+                                        </div>
+                                        <div class="vertical-line_about_3_3">
+                                            <p class="p_reliant_about_2 d-none">Our seal of approval, as always</p>
+                                        </div>
+                                        <div class="container">    
+                                            <div style="display:flex;margin: 0;padding: 0 0 5px 0;">
+                                                <div style="width:48%;">
+                                                    <div style="text-align:right;">
+                                                        <p class="p_reliant_about_1_2">Safety</p>
+                                                        <p class="p_reliant_about_1_2">People</p>
+                                                        <p class="p_reliant_about_1_2">Collaboration</p>
+                                                        <p class="p_reliant_about_1_2">Feel</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:4%;">
+                                                    <div style="text-align:center;">
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:48%;">
+                                                    <div style="text-align:left;">
+                                                        <p class="p_reliant_about_1_2">Quality</p>
+                                                        <p class="p_reliant_about_1_2">Technology</p>
+                                                        <p class="p_reliant_about_1_2">Innovation</p>
+                                                        <p class="p_reliant_about_1_2">Think</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </section>
+                            </section>
+                            
+                        </div>
+                        <!-- #04 -->
+                        <div id="background_about" class="carousel-item oe_img_bg" data-name="Slide" style="background-image: url('/theme_reliant/static/img/jpg_about_slider_4.jpg');background-position: center;">
+                            <section>
+                                <section id="about_section_1">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="img_sq"  >
+                                                <img src="/theme_reliant/static/img/ft.png" style=""  alt=""/>
+                                            </div>
+                                            <div class="vertical-line_about_slide_4"  >
+                                                <div/>
+                                            </div>
+                                            <div class="reliant_ex4_about">
+                                                <div class="reliant_about_div " data-name="Block" >
+                                                <p class="p_reliant_about" >
+                                                    We are constantly encouraging our people to<br></br>find that balance between their feelings and<br></br>thoughts to develop the best miners in the <br></br>world. We look for people with an aptitude<br></br>and interest in developing their skills to <br></br>ensure that our learning culture continues.</p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </section>
+                                <section id="about_section_2" >
+                                <div class="container">
+                                    <div class="row" style="display: block">
+                                        <div class="vertical-line_about_3_4">
+                                            <div/>
+                                        </div>
+                                        <div class="vertical-line_about_3_point_4">
+                                            <div class="point"/>
+                                        </div>
+                                        <div class="vertical-line_about_3_4">
+                                            <p class="p_reliant_about_2 d-none">Our seal of approval, as always</p>
+                                        </div>
+                                        <div class="container">    
+                                            <div style="display:flex;margin: 0;padding: 0 0 5px 0;">
+                                                <div style="width:48%;">
+                                                    <div style="text-align:right;">
+                                                        <p class="p_reliant_about_1_2">Safety</p>
+                                                        <p class="p_reliant_about_1_2">People</p>
+                                                        <p class="p_reliant_about_1_2">Collaboration</p>
+                                                        <p class="p_reliant_about_1_2">Feel</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:4%;">
+                                                    <div style="text-align:center;">
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                        <p class="p_reliant_about_1_2">+</p>
+                                                    </div>
+                                                </div>
+                                                <div style="width:48%;">
+                                                    <div style="text-align:left;">
+                                                        <p class="p_reliant_about_1_2">Quality</p>
+                                                        <p class="p_reliant_about_1_2">Technology</p>
+                                                        <p class="p_reliant_about_1_2">Innovation</p>
+                                                        <p class="p_reliant_about_1_2">Think</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </section>
+                            </section>
+                            
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a id="carousel-control-prev_about" class="carousel-control-prev" href="#myCarousel_2" data-slide="prev" role="img" aria-label="Previous" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a id="carousel-control-next_about" class="carousel-control-next" href="#myCarousel_2" data-slide="next" role="img" aria-label="Next" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="about_section_3" class="s_text_block s_masonry_block" style="padding:50px 0 50px 0;">
+                <div  class="container">
+                    <div class="row">
+                        <img  src="/theme_reliant/static/img/about_history.png" style="width: 100% !important;" alt=""/>
+                    </div>
+                </div>
+            </section>
+            <section id="about_section_3_mobile" class="s_text_block s_masonry_block" style="padding:50px 0 50px 0;">
+                <div id="container_history" class="container">
+                    <div class="customer-history slider">  
+                        <div class="slide slide_history">
+                            <img  src="/theme_reliant/static/img/hhistory_tablet_1.jpg" style="width: 100% !important;" alt=""/>    
+                        </div>
+                        <div class="slide slide_footer">
+                            <img  src="/theme_reliant/static/img/hhistory_tablet_2.jpg" style="width: 100% !important;" alt=""/>
+                        </div>
+                        <div class="slide slide_footer">
+                            <img  src="/theme_reliant/static/img/hhistory_tablet_3.jpg" style="width: 100% !important;" alt=""/>
+                        </div>
+                        <div class="slide slide_footer">
+                            <img  src="/theme_reliant/static/img/hhistory_tablet_4.jpg" style="width: 100% !important;" alt=""/>
+                        </div>
+                   </div>
+                </div>
+            </section>
+            <section id="about_section_4" class="oe_img_bg" style="background-image: url('/theme_reliant/static/img/about.png');background-size: cover;">
+                <section  style="background: rgba(255, 255, 255, 0.47);padding:50px 0 50px 0;" >
+                    <div id="container-about-1" class="container">
+                        <div class="row">
+                            <div class="col-6" style="padding: 0; margin: 0 0 5px 0;">
+                                    <div class="rel_snippet_about_1">
+                                        <p class="p_reliant_about_1">Our Mission</p>
+                                    </div>
+                            </div>
+                            <div class="col-6" style="padding: 0; margin: 0 0 5px 0;">
+                                    <div class="rel_snippet_about_1" style="margin-right:0;">
+                                        <p class="p_reliant_about_1">Our Vision</p>
+                                    </div>
+                            </div>
+                        </div> 
+                        <div class="row" >
+                           <div class="col-6" style="padding:0;">                          
+                                <div class="rel_snippet_about_3">
+                                    <p class="p_reliant_about_description">We are an organization that designs and executes integral solutions in mining projects, maximizing the profitability of our resources and contributing to staff development through prioritizing safety standards and meeting our corporate social responsibilities.</p>
+                                </div>
+                            </div>
+                            <div class="col-6" style="padding:0;">                          
+                                <div style="background-color:#E6E6E6 ;color: #000000 ;height: 100%;">
+                                    <p class="p_reliant_about_description">To be recognized as one of the top specialists in design and execution of integral solutions for the mining industry and a preferred partner in all mining projects, by providing services with high standards in safety, quality, productivity, and continuous innovation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 5px 0 0 0;">
+                            <div class="col-xl-6 col-8" style="padding: 0; margin: 0 0 5px 0;">
+                                    <div class="rel_snippet_about_1_2">
+                                        <p class="p_reliant_about_1">Our Values</p>
+                                    </div>
+                                    <div id="block_white_about_2" class="rel_snippet_about_4_1">
+                                        <p class="p_reliant_about_description_2">Our Values define our purpose, our priorities, and the fundamental principles by which we conduct business. Acting according to these values and behaviors defines our culture as an organization, underpinning our good reputation and the promise we make to all our stakeholders. All our people are aware of our values and know what is expected from them.</p>
+                                    </div>
+                            </div>
+                            <div id="value_1" class="col-xl-2 col-4" style="padding:0;margin: 0 0 5px 0;">                          
+                                <div class="rel_snippet_about_4">
+                                    <p class="p_reliant_about_title">SAFETY CULTURE<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We provide to our employees the necessary safety tools to execute their work in strict compliance with safety standards, zero tolerance to harm, and to develop a corporate culture of risk prevention.</p>
+                                </div>
+                            </div>
+                            <div id="value_2" class="col-xl-2 col-4" style="padding:0;margin: 0 0 5px 0;">                          
+                                <div class="rel_snippet_about_4">
+                                    <p class="p_reliant_about_title">QUALITY<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We aim to achieve ambitiuos goals, passionately ensuring that our services reflect a legacy in the mining industry.</p>
+                                </div>
+                            </div>
+                            <div id="value_3" class="col-xl-2 col-4" style="padding:0;margin: 0 0 5px 0;">                          
+                                <div style="background-color:#E6E6E6 ;color: #000000 ;height: 100%;padding: 8px;">
+                                    <p class="p_reliant_about_title">TEAM WORK<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">All our colleagues make the difference. When we share our skills, knowledge, and experience we become one united team. We are on this great shared challenge together.</p>
+                                </div>
+                            </div>
+                        
+                           <div id="block_white_about" class="col-xl-4 col-12" style="padding:0;">                          
+                                <div class="rel_snippet_about_4_1">
+                                    <p class="p_reliant_about_description_2_blanco">Our Values define our purpose, our priorities, and the fundamental principles by which we conduct business. Acting according to these values and behaviors defines our culture as an organization, underpinning our good reputation and the promise we make to all our stakeholders. All our people are aware of our values and know what is expected from them.</p>
+                                </div>
+                            </div>
+                            <div id="value_4" class="col-xl-2 col-4" style="padding:0;">                          
+                                <div class="rel_snippet_about_4">
+                                    <p class="p_reliant_about_title">INTEGRITY<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We believe that nothing is more important than our reputation, we adhere to strong moral and ethical principles. The highest level of integrity is fundamental to who we are.</p>
+                                </div>
+                            </div>
+                            <div id="value_5" class="col-xl-2 col-4" style="padding:0;">                          
+                                <div class="rel_snippet_about_4">
+                                    <p class="p_reliant_about_title">INNOVATION<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We are efficient and have integral business knowledge to obtain successful results in our customer operations.We observe, investigate, and create trasnformation in our value chain to make our solutions sustainable.</p>
+                                </div>
+                            </div>
+                            <div id="value_6" class="col-xl-2 col-4" style="padding:0;">                          
+                                <div class="rel_snippet_about_4">
+                                    <p class="p_reliant_about_title">COMMITMENT<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We take our responsibility as a company and individuals to achieve the best results in all the entrusted tasks.</p>
+                                </div>
+                            </div>
+                            <div id="value_7" class="col-xl-2 col-4" style="padding:0;">                          
+                                <div style="background-color:#E6E6E6 ;color: #000000 ;height: 100%;padding:8px;">
+                                    <p class="p_reliant_about_title">TRUST<br></br>→ </p>
+                                    <p class="p_reliant_about_description_2">We are efficient and have integral business knowledge to obtain successful results in our client's projects and operations.</p>
+                                </div>
+                            </div>
+                            
+                        </div>  
+                    </div> 
+                </section>           
+            </section>  
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+    </template>
+
+    <template id="sustainability" name="Sustainability">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_sustainability{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }
+            </style>
+            <section id="sustainability_section_1" class="s_text_block   s_masonry_block" style="background-image:url('/theme_reliant/static/img/img_sustainability_1a.png') ;">
+                <div class="container">
+                    <div class="row  reliant_sustent_row_1">
+                        <div  class="s_text_block s_masonry_block reliant_sustent_1" >
+                            <p class="reliant_sustent_1_titulo">Our sustainability strategy<br></br></p>
+                            <p class="reliant_sustent_1_cuerpo">We execute integral mining solutions to create lasting value prioritizing safety standards and continually meet the dynamic requirements of the mining industry.</p>
+                            <p class="reliant_sustent_1_cuerpo">Our Sustainable Development Model is based on our approach to safety, health, environment, quality, ethics, performance and other sustainability-related aspects to increase the value we deliver to our stakeholders.</p>
+                            <div style="width:100%;display: flex;justify-content: center;">
+                                <div class="linea_vertical_sustainability"/>
+                            </div>
+                            <div style="width:100%;display: flex;justify-content: center;">
+                                <a href="/about" class="btn_reliant_sustainability">Synergy</a>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </section>
+
+            <section id="sustainability_section_2" class="s_text_block pt-1 s_masonry_block" >
+                <div id="container-sustainability-1" class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 reliant_sustent_loc_1">
+                            <div class="reliant_sustent_2_1">
+                                <p class="reliant_sustent_1_titulo_2">Our Policies, standards and principles</p>
+                            </div>
+                        </div>
+                        <div id="second_reliant_sustent_loc_1" class="col-md-6 col-12 reliant_sustent_loc_1">
+                            <div class="reliant_sustent_2_1_2">
+                                <p class="p_reliant_project_sust_2" style="padding-bottom: 1%;">RELIANT is focused on delivering sustainable value for our people and stakeholders now and in the future. Our sustainability framework encompasses policies, standards, and principles. Also represents our commitment to uphold good business practices, to apply clients’ standards and policies across all projects, and to meet or exceed applicable laws and external requirements. It provides clear guidance to all our people on the societal, environmental, and compliance standards. These guidelines are the foundation of our business sustainability.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+                <div id="container-sustainability-2" class="container">
+                    <div class="row" >
+                        <t t-set="id_primer_value"/>
+                        <div class="col-4" style="justify-content: initial;">
+                            <div class="row"> 
+                                <t t-foreach="values_type" t-as="val">
+                                    <t t-if="val_index==0">
+                                        <span class="test_class" t-att-data-test_var="val[0]"/>
+                                        <div class="col-md-6 col-12 reliant_sustent_loc_1">             
+                                            <div t-att-id="val[0]" class="reliant_sustent_3_1 sustent_active">
+                                                <p class="reliant_sustent_1_cuerpo_2"><t t-esc="val[1]"/></p>
+                                            </div>
+                                        </div>
+                                    </t>
+                                    <t t-if="val_index!=0">
+                                        <div class="col-md-6 col-12 reliant_sustent_loc_1">             
+                                            <div t-att-id="val[0]" class="reliant_sustent_3_1">
+                                                <p class="reliant_sustent_1_cuerpo_2"><t t-esc="val[1]"/></p>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+                            </div>
+                        </div>
+                        <div  class="col-8 sustainability_scroll_section">
+                            <t t-set="cont" t-value="1"/> 
+                            <t t-foreach="values" t-as="pdf"> 
+                                <div t-att-id="pdf[2]" class="show_init">
+                                    <a t-att-href="pdf[0]" t-att-download="pdf[1]" target="_blank">
+                                        <t t-if="cont%2==1">            
+                                            <div class="reliant_sustent_3_2">
+                                                <div style="width:100%;">
+                                                    <p class="reliant_sustent_1_cuerpo_3"><t t-esc="pdf[1]"/></p>
+                                                </div>
+                                                <img class="img_arrow" src="/theme_reliant/static/img/arrow_down.svg" alt=""/>
+                                                <img class="img_pdf" src="/theme_reliant/static/img/logo_pdf.svg" alt="" />
+                                            </div>
+                                        </t>
+                                        <t t-if="cont%2==0">
+                                            <div class="reliant_sustent_3_2" style="background-color: #fff !important;">
+                                                <div style="width:100%;">
+                                                    <p class="reliant_sustent_1_cuerpo_3"><t t-esc="pdf[1]"/></p>
+                                                </div>
+                                                <img class="img_arrow" src="/theme_reliant/static/img/arrow_down.svg" alt=""/>
+                                                <img class="img_pdf" src="/theme_reliant/static/img/logo_pdf.svg" alt="" />
+                                            </div>
+                                        </t>
+                                    </a>
+                                </div>
+                                <t t-set="cont" t-value="cont+1"/>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            
+            <script>
+            
+                window.onload = function readySustainability(){
+                    var id_prim = $( ".test_class" ).data().test_var; 
+                    var id_values_type_filtro = $(this).attr("id");
+                    var selector_oculta = "div.show_init:not([id='" + String(id_values_type_filtro) + "'])";
+                    var selector_muestra = "div.show_init[id='" + String(id_prim) + "']";
+                    $(selector_oculta).hide();
+                    $(selector_muestra).show();
+
+                    var selector_pinta_option = "div.reliant_sustent_3_1[id='" + String(id_prim) + "']";
+                    $(selector_pinta_option).addClass('sustent_active') 
+                }
+            </script>
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+
+        </t>
+    </template>
+
+<!-- CONTACT-->
+
+    <template id="contacts" name="Contacts us">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_contacts{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }   
+            </style>
+            <section class="s_text_block s_masonry_block reliant_contact_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 reliant_contact_form">
+                            <span class="hidden" data-for="contactus_form" t-att-data-values="{'email_to': res_company.email}" />
+                            <form id="contactus_form" action="/contacts/thank-you" method="post" enctype="multipart/form-data" class="contacto_form o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                                <div class="div_left_reliant_contact">
+                                    <div class="reliant_contact_titulo">
+                                        <p class="reliant_contact_titulo">Contact us</p>
+                                    </div>
+                                    <p class="reliant_contact_subtitulo">Send us a message</p>
+                                    <div class="row">
+                                        <div class="col-6 col_left_contact">
+                                            <input name="your_name" class="reliant_contact_text" type="text" onkeypress="return /[a-z\s]/i.test(event.key)" placeholder="First Name"></input> 
+                                        </div>
+                                        <div class="col-6 col_right_contact">
+                                            <input name="last_name" class="reliant_contact_text" type="text" onkeypress="return /[a-z\s]/i.test(event.key)" placeholder="Last Name"></input>
+                                        </div>
+                                    </div>
+                                    <input name="email" type="email" class="reliant_contact_text" placeholder="Email"/>
+                                    <input name="subject" class="reliant_contact_text" type="text" placeholder="Subject"></input>
+                                    <textarea name="type_here" class="reliant_contact_text_2" placeholder="Type here" required=""></textarea>
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <input type="hidden" name="email_company" t-att-value="res_company.email"/>
+                                    <input class="reliant_contact_submit" name="send" type="submit" value="Send a message"></input>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-12 reliant_contact_maps">
+                            <!--<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.816349218515!2d-77.02760168555852!3d-12.056153645356865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8bb99eb4fab%3A0x7e35a99166297e5e!2sRapiTech!5e0!3m2!1ses-419!2spe!4v1606848627222!5m2!1ses-419!2spe" width="600" height="555" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+                            <div id="googleMap" style="width:100%;height:602px;"></div>
+                            <script>
+                            var element = document.getElementById("googleMap")
+                                
+                            var options = {
+                                zoom: 10,
+                                center: new google.maps.LatLng(-11.583768, -77.088495)
+                            }
+                   
+                            var infoWindow = new google.maps.InfoWindow(), marker, i;
+                            var coordinates = [{'indice':1,'title':'RELIANT Zambia','lat':-12.775355899483152,'long':28.202972979433735,'des':'<div class="info_content">'+'<h4>RELIANT Zambia</h4>'+'<p>4137 Alick Nkhata Road, Chimwemwe Industrial Area</p>' + '<p>P.O. Box 20441 Kitwe, Zambia</p>' + '</div>'},{'indice':2,'title':'RELIANT Congo','lat':-11.636986157516976,'long':27.487685427099194,'des':'<div class="info_content">'+'<h4>RELIANT Congo</h4>'+'<p>1132, Bd MSIRI, Commune de Kampemba,</p>' + '<p>Q. Bel Air, Lubumbashi, CONGO D.R</p>' + '</div>'},{'indice':3,'title':'RELIANT India','lat':28.639745323340083,'long':77.18437344716934,'des':'<div class="info_content">'+'<h4>RELIANT India</h4>'+'<p>25/8, Old Rajinder Nagar, Guru House, New Delhi, Delhi 110060, India</p>'+'</div>'},{'indice':4,'title':'RELIANT South Africa','lat':-26.21509508002945,'long':28.326650242608405,'des':'<div class="info_content">'+'<h4>RELIANT South Africa</h4>'+'<p>54 Apex Road, Apex, Benoni. Gauteng 1501.</p>' + '<p>P.O. Box X014, Benoni 1500 South Africa</p>' + '</div>'}]
+                                
+                            const image = {
+                                url:
+                                  "theme_reliant/static/img/marker.png",
+                                // This marker is 20 pixels wide by 32 pixels high.
+                                size: new google.maps.Size(64, 80),
+                                // The origin for this image is (0, 0).
+                                origin: new google.maps.Point(0, 0),
+                                // The anchor for this image is the base of the flagpole at (0, 32).
+                                anchor: new google.maps.Point(20, 10),
+                              };
+                            const image1 = {
+                                url:
+                                  "theme_reliant/static/img/marker.png",
+                                // This marker is 20 pixels wide by 32 pixels high.
+                                size: new google.maps.Size(64, 80),
+                                // The origin for this image is (0, 0).
+                                origin: new google.maps.Point(0, 0),
+                                // The anchor for this image is the base of the flagpole at (0, 32).
+                                anchor: new google.maps.Point(15, 30),
+                              };
+                            var bounds = new google.maps.LatLngBounds();
+                            
+                            function mapa(){
+                                map = new google.maps.Map(element, options);
+                                coordinates.forEach(coord => {
+                                if (coord.indice==2){
+                                    console.log(coord.lat)
+                                    const position = new google.maps.LatLng(
+                                    coord.lat,
+                                    coord.long,
+                                    );
+                                    marker = new google.maps.Marker({
+                                        position,
+                                        icon: image1,
+                                        map: this.map,
+                                        animation: google.maps.Animation.DROP,
+                                        draggable: false,
+                                        title: coord.title
+                                    });
+                                    this.map.fitBounds(bounds.extend(position));
+                                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                        return function() {
+                                            infoWindow.setContent(coord.des);
+                                            infoWindow.open(map, marker);
+                                        }
+                                    })(marker, i));
+                                }
+                                else{
+                                    console.log(coord.lat)
+                                    const position = new google.maps.LatLng(
+                                    coord.lat,
+                                    coord.long,
+                                    );
+                                    marker = new google.maps.Marker({
+                                        position,
+                                        icon: image,
+                                        map: this.map,
+                                        animation: google.maps.Animation.DROP,
+                                        draggable: false,
+                                        title: coord.title
+                                    });
+                                    this.map.fitBounds(bounds.extend(position));
+                                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                        return function() {
+                                            infoWindow.setContent(coord.des);
+                                            infoWindow.open(map, marker);
+                                        }
+                                    })(marker, i));
+                                }
+
+                                });
+                            }
+                        
+                            mapa();
+                            </script>
+                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block s_masonry_block reliant_contact_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" style="display: flex;justify-content: center;">
+                            <p class="p_reliant_contact_text_1">We are aligned to international quality standards and respect environment. We value the ability of our staff and the organisation to work diligently and honour our commitments. We fully acknowledge responsibility for all actions, decisions, services and policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+    </template>
+
+<!-- CONTACT THANKS YOU-->
+
+    <template id="contacts-thanks" name="Contacts">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_contacts{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }   
+            </style>
+            <section class="s_text_block s_masonry_block reliant_contact_1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 reliant_contact_form">
+                            <div id="contactus_form_thanks">
+                                <div class="container">
+                                    <span id="contactus_form_thanks_icon" class="d-block fa fa-4x fa-thumbs-up mx-auto rounded-circle bg-primary"/><br/>
+                                    <h1 class="text-center">Thank you!</h1>
+                                    <div id="subraya" class="pb16 pt16 s_hr" data-snippet="s_hr" data-name="Separator">
+                                        <hr class="mx-auto border-top w-50 border-dark text-center"/>
+                                    </div>
+                                    <h5 class="text-center">
+                                        <span class="fa fa-check-circle"/>
+                                        <span>Your message has been sent <b>successfully</b></span>
+                                    </h5>
+                                    <p class="text-center">We will get in touch with you shortly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 reliant_contact_maps">
+                            <!--<iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.816349218515!2d-77.02760168555852!3d-12.056153645356865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8bb99eb4fab%3A0x7e35a99166297e5e!2sRapiTech!5e0!3m2!1ses-419!2spe!4v1606848627222!5m2!1ses-419!2spe" width="600" height="555" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+                            <div id="googleMap" style="width:100%;height:602px;"></div>
+                            <script>
+                            var element = document.getElementById("googleMap")
+                                
+                            var options = {
+                                zoom: 10,
+                                center: new google.maps.LatLng(-11.583768, -77.088495)
+                            }
+                   
+                            var infoWindow = new google.maps.InfoWindow(), marker, i;
+                            var coordinates = [{'title':'RELIANT Zambia','lat':-12.775355899483152,'long':28.202972979433735,'des':'<div class="info_content">'+'<h4>RELIANT Zambia</h4>'+'<p>4137 Alick Nkhata Road, Chimwemwe Industrial Area</p>' + '<p>P.O. Box 20441 Kitwe, Zambia</p>' + '</div>'},{'title':'RELIANT Congo','lat':-11.636986157516976,'long':27.487685427099194,'des':'<div class="info_content">'+'<h4>RELIANT Congo</h4>'+'<p>1132, Bd MSIRI, Commune de Kampemba,</p>' + '<p>Q. Bel Air, Lubumbashi, CONGO D.R</p>' + '</div>'},{'title':'RELIANT India','lat':28.639745323340083,'long':77.18437344716934,'des':'<div class="info_content">'+'<h4>RELIANT India</h4>'+'<p>25/8, Old Rajinder Nagar, Guru House, New Delhi, Delhi 110060, India</p>'+'</div>'},{'title':'RELIANT South Africa','lat':-26.21509508002945,'long':28.326650242608405,'des':'<div class="info_content">'+'<h4>RELIANT South Africa</h4>'+'<p>54 Apex Road, Apex, Benoni. Gauteng 1501.</p>' + '<p>P.O. Box X014, Benoni 1500 South Africa</p>' + '</div>'}]
+                                
+                            
+
+                            var bounds = new google.maps.LatLngBounds();
+                            
+                            function mapa(){
+                                map = new google.maps.Map(element, options);
+                                coordinates.forEach(coord => {
+                                    console.log(coord)
+                                    const position = new google.maps.LatLng(
+                                    coord.lat,
+                                    coord.long,
+                                    );
+                                    marker = new google.maps.Marker({
+                                        position,
+                                        map: this.map,
+                                        animation: google.maps.Animation.DROP,
+                                        draggable: false,
+                                        title: coord.title
+                                    });
+                                    this.map.fitBounds(bounds.extend(position));
+                                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                        return function() {
+                                            infoWindow.setContent(coord.des);
+                                            infoWindow.open(map, marker);
+                                        }
+                                    })(marker, i));
+                                });
+                            }
+                        
+                            mapa();
+                            </script>
+                             
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block s_masonry_block reliant_contact_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" style="display: flex;justify-content: center;">
+                            <p class="p_reliant_contact_text_1">We are aligned to international quality standards and respect environmental stewarship. endeavor to act with social responsibility and credit value in our services in order to gain the trust and satisfaction of our customers.<br></br><br></br>The core of accountabilty is reliability and personal responsibility. Therefore, we value the ability of our staff and the organisation to work deligently and honour our commitments.We fully acknowledge responsibility for all actions, decisions, products and policies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+    </template>
+
+<!-- BLOG -->
+
+    <template id="id_website_blog_reliant_1" inherit_id="website_blog.posts_loop">
+        <xpath expr="//div[@t-attf-class='pb-4 col-12 #{colWidth}']" position="attributes">
+            <attribute name="style">
+                display: none;
+            </attribute>
+        </xpath>
+    </template>
+
+    <template id="id_website_blog_reliant_2_1" inherit_id="website_blog.posts_loop">
+        <xpath expr="//t[@t-foreach='posts']" position="before">
+             <t t-set="cont" t-value="1"/>
+        </xpath>
+    </template>
+
+
+    <template id="id_website_blog_reliant_2" inherit_id="website_blog.posts_loop">
+        <xpath expr="//div[@t-attf-class='pb-4 col-12 #{colWidth}']" position="after">
+            <t t-if="cont%2==1">
+                <div class="col-xl-12 col-md-6 " style="background-color:#B4B4AF">
+                    <div id="id_row_reliant_blog" class="row">
+                        <div class="col-xl-4 col-md-12 " style="top: 20px;padding-bottom: 10px;">
+                           <div t-if="opt_posts_loop_show_cover">
+                                <t t-call="website_blog.post_cover_image"/>
+                            </div>
+                            <div t-if="opt_blog_cards_design" t-attf-class="opt_blog_cards_design and 'card-body pt-0 pb-2'}">
+                                <t t-call="website_blog.post_info"></t>
+                            </div>
+                            <!-- Add 'unpublished' badge -->
+                            <span t-if="not blog_post.website_published" class="bg-danger small py-1 px-2 position-absolute o_not_editable" style="top:0; right:0">No Publicado</span>
+                        </div> 
+                        <div class="col-xl-8 col-md-12">
+                            <div id="impar_id" t-if="not opt_blog_cards_design" class="py-2">
+                                <t t-call="website_blog.post_info"></t>
+                            </div>
+                            <div t-att-class="opt_blog_cards_design and 'card-body py-3'">
+                                <t t-call="website_blog.post_heading"/>
+                            </div>
+                            <div t-if="is_view_active('website_blog.opt_posts_loop_show_teaser')" t-att-class="opt_blog_cards_design and 'card-body pt-0'">
+                                <t t-call="website_blog.post_teaser"/>
+                            </div>
+                            <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}" class="btn_reliant_blog" style="" >> Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-if="cont%2==0">
+                <div class="col-xl-12 col-md-6 " style="background-color:#E6E6E6">
+                    <div id="id_row_reliant_blog" class="row">
+                        <div class="col-xl-4 col-md-12 " style="top: 20px;padding-bottom: 10px;">
+                           <div t-if="opt_posts_loop_show_cover">
+                                <t t-call="website_blog.post_cover_image"/>
+                            </div>
+                            <div t-if="opt_blog_cards_design" t-attf-class="opt_blog_cards_design and 'card-body pt-0 pb-2'}">
+                                <t t-call="website_blog.post_info"></t>
+                            </div>
+                            <!-- Add 'unpublished' badge -->
+                            <span t-if="not blog_post.website_published" class="bg-danger small py-1 px-2 position-absolute o_not_editable" style="top:0; right:0">No Publicado</span>
+                        </div> 
+                        <div class="col-xl-8 col-md-12">
+                            <div id="par_id" t-if="not opt_blog_cards_design" class="py-2">
+                                <t t-call="website_blog.post_info"></t>
+                            </div>
+                            <div t-att-class="opt_blog_cards_design and 'card-body py-3'">
+                                <t t-call="website_blog.post_heading"/>
+                            </div>
+                            <div t-if="is_view_active('website_blog.opt_posts_loop_show_teaser')" t-att-class="opt_blog_cards_design and 'card-body pt-0'">
+                                <t t-call="website_blog.post_teaser"/>
+                            </div>
+                            <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/#{slug(blog_post)}" class="btn_reliant_blog" style="" >> Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <t t-set="cont" t-value="cont+1"/>
+        </xpath>
+    </template>
+
+    <template id="id_website_blog_reliant_3" inherit_id="website_blog.blog_post_short">
+        <xpath expr="//div[@id='o_wblog_blog_top']" position="attributes">
+            <attribute name="style">
+                display: none;
+            </attribute>
+        </xpath>
+    </template>
+
+    <template id="id_website_blog_reliant_4" inherit_id="website_blog.blog_post_short">
+        <xpath expr="//div[@id='o_wblog_blog_top']" position="after">
+            <section id="section_blog_0" class="oe_img_bg" >
+                <div style="width:100%;height: 100%;display: flex;justify-content: center;align-items: center;">
+                    <p class="p_reliant_news_1">Latest news, updates</p>
+                    <p class="p_reliant_news_1">and presentations</p>
+                </div>
+            </section>
+            <section id="section_blog_1">
+                <div class="container">
+                    <p class="p_reliant_blog_1">Latest News</p>
+                </div>
+            </section>
+        </xpath>
+    </template>
+
+<!-- *********** -->
+<!-- BLOG DETAIL -->
+
+    <template id="id_website_blog_detail_reliant_1" inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='o_wblog_post_top']" position="before">
+            <section id="section_blog_1">
+                <div class="container">
+                    <p class="p_reliant_blog_1_2">Latest News</p>
+                </div>
+            </section>
+            <section id="section_blog_2">
+                <div class="container">
+                    <p class="p_reliant_blog_2">HOME/ NEWS /</p>
+                </div>
+            </section>
+            <section id="section_blog_3">
+                <div class="container">
+                    <div t-field="blog_post.name" id="o_wblog_post_name" class="o_editable_no_shadow p_reliant_blog_3" data-oe-expression="blog_post.name" t-att-data-blog-id="blog_post.id" placeholder="Blog Post Title"/>
+                </div>
+            </section>
+            <style>
+                div.d-flex.flex-wrap.align-items-center.justify-content-between.mx-n2.flex-grow-1 {
+                    padding: 5px 0 5px 0;
+                    font-family: "BwGradual-Thin";
+                    color: #FFFFFF;
+                    font-size: 22px;
+                    text-decoration: none;
+                }
+            </style>
+            <section id="section_blog_4">
+                <div class="container">
+                    <div t-if="not opt_blog_cards_design">
+                        <t t-call="website_blog.post_info"></t>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+    <template id="id_website_blog_detail_reliant_2" inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='o_wblog_post_top']" position="attributes">
+            <attribute name="style">
+                display: none;
+            </attribute>
+        </xpath>
+    </template>
+    <template id="id_website_blog_detail_reliant_3" inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='o_wblog_post_main']" position="before">
+            <section id="o_wblog_post_top">
+            <div id="title" class="blog_header" t-ignore="True">
+                <t t-call="website.record_cover">
+                    <t t-set="_record" t-value="blog_post"/>
+                    <t t-set="snippet_autofocus" t-value="True"/>
+                    <t t-set="use_filters" t-value="True"/>
+                    <t t-set="use_size" t-value="True"/>
+                    <t t-set="display_opt_name">Blog Post Cover</t>
+                    <t t-set="additionnal_classes" t-value="'o_wblog_post_page_cover'"/>
+
+
+                    <div class="container text-center position-relative h-100 d-flex flex-column flex-grow-1 justify-content-around">
+                        
+                        <t t-set="resize_classes" t-value="set(json.loads(_record.cover_properties).get('resize_class', '').split(' '))"/>
+                        <a t-if="{'o_full_screen_height', 'o_half_screen_height', 'cover_full', 'cover_mid'}.intersection(resize_classes)"
+                            id="o_wblog_post_content_jump" href="#o_wblog_post_main"
+                            class="css_editable_mode_hidden justify-content-center align-items-center rounded-circle mx-auto mb-5 text-decoration-none">
+                            <i class="fa fa-angle-down fa-3x text-white" aria-label="To blog content" title="To blog content"/>
+                        </a>
+                    </div>
+                </t>
+            </div>
+        </section>
+        </xpath>
+    </template>
+    <template id="id_website_blog_detail_reliant_4" inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='o_wblog_post_main']"  position="attributes">
+            <attribute name="style">
+                background-color: #B4B4AF;
+            </attribute>
+        </xpath>
+    </template>
+    <template id="id_website_blog_detail_reliant_5" inherit_id="website_blog.blog_post_content">
+        <xpath expr="//div[@t-field='blog_post.content']"  position="attributes">
+            <attribute name="style">
+                -webkit-column-count: 3; /* Chrome, Safari, Opera */
+                -moz-column-count: 3; /* Firefox */
+                column-count: 3;
+            </attribute>
+        </xpath>
+    </template>
+
+
+
+<!-- JOB OPPORTUNITIES -->
+
+    <template id="job_opportunities" name="Job Opportunities">
+        <t t-call="website.layout">
+            <div class="se-pre-con"></div>
+            <style>
+                #option_job_opportunities{
+                    font-weight: bold;
+                }
+                #option_blog{
+                    font-weight: normal !important;
+                }
+            </style>
+            <section id="job_section_5"  >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 rel_snippet4_loc">
+                            <div class="rel_snippet_job_1_1">
+                                <p class="p_reliant_job_1"><strong>Job Opportunities</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 rel_snippet4_loc">
+                            <div class="rel_snippet_job_1_2">
+                                <p class="p_reliant_job_2">RELIANT is constantly looking for the best talent to start a mutual relationship of growth. View our current vacancies that will assist you in planning the next step in your career, or submit your details for future consideration to recruitment@reliantmining.com.Join the best team in the mining industry.</p>
+                            </div>
+                        </div>
+                    </div>  
+                </div> 
+            </section> 
+            <section style="background-color: #E6E6E6 !important;">
+                <div class="container" style="padding: 0;">
+                    <div class="form-row">
+                        <div class="form-group col-md-3 col-6">
+                            <label for="inputCountry"><p class="p_font_job"><strong>Select Country</strong></p></label>
+                            <select id="inputCountry" class="form-control" >
+                                <option  value="0">Select Country</option>
+                                <t t-foreach="countries" t-as="cou">
+                                    <option t-att-value="cou.id"><t t-esc="cou.name"/></option>
+                                </t>    
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3 col-6">
+                            <label for="inputDepartment"><p class="p_font_job"><strong>Department</strong></p></label>
+                            <select  id="inputDepartment" class="form-control">
+                                <option value="0">Select Department</option>
+                                <t t-foreach="departments" t-as="dep">
+                                    <option t-att-value="dep.id"><t t-esc="dep.name"/></option>
+                                </t> 
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3 col-6">
+                            <label for="inputSite"><p class="p_font_job"><strong>Site</strong></p></label>
+                            <select  id="inputSite" class="form-control">
+                                <option value="0">Select Site</option>
+                                <t t-foreach="sites" t-as="sit">
+                                    <option t-att-value="sit.id"><t t-esc="sit.name"/></option>
+                                </t> 
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3 col-6">
+                            <label for="inputLanguage"><p class="p_font_job"><strong>Language</strong></p></label>
+                            <select  id="inputLanguage" class="form-control">
+                                <option value="0">Select Language</option>
+                                <t t-foreach="languages_opportunity" t-as="language">
+                                    <option t-att-value="language.id"><t t-esc="language.name"/></option>
+                                </t> 
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="d-flex flex-row " style="padding: 10px 0 10px 0;">
+                        <div style="width:50%;font-size:20px;padding: 0 0 0 17px;">
+                            <div><p class="p_font_job"><strong>Position</strong></p></div>
+                        </div>
+                        <div style="width:29%;font-size:20px;">
+                            <div><p class="p_font_job"><strong>Location / Site</strong></p></div>
+                        </div>
+                        <div style="width:21%;font-size:20px;">
+                            <div><p class="p_font_job"><strong>Closing Date</strong></p></div>
+                        </div>
+                    </div>
+                    <div id="job_opportunity">
+                        <t t-foreach="opportunities" t-as="opp">
+                            <div style="padding: 10px 0 10px 0;">
+                                <div id="id_div_job" style="background-color:#C8C8C8;padding:18px 18px 0 18px;">    
+                                    <div id="id_div_job_1" style="display:flex;margin: 0 0 12px 0;">
+                                        <div style="width:50%;font-size:15px;">
+                                            <div id="id_name_position_job" style="width: 45%;">
+                                                <p class="p_font_job"><strong><t t-esc="opp.position.name"/></strong></p>
+                                            </div>
+                                        </div>
+                                        <div style="width:30%;font-size:15px;">
+                                            <div style="width: 75%;">
+                                                <p class="p_font_job"><strong><t t-esc="opp.location.name"/></strong> / <strong><t t-esc="opp.site.name"/></strong></p>
+                                            </div>
+                                        </div>
+                                        <div style="width:20%;font-size:15px;">
+                                            <div>
+                                                <p class="p_font_job"><strong><t t-esc="opp.closing_date"/></strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="id_div_job_2" style="display:flex;margin: 0 0 12px 0;">
+                                        <div style="width:100%;font-size:12px;">
+                                            <div><p class="p_font_job"><t t-esc="opp.category_job_opportunity.name"/></p></div>
+                                        </div>
+                                    </div>
+                                    <div id="id_div_job_3" tyle="display:flex;">
+                                        <div class="p_font_job" style="font-size:12px;">
+                                            <t t-raw="opp.description_job_opportunity.replace('&lt;p>','').replace('&lt;/p>','').replace('&lt;br>','').replace('&lt;/br>','')"/>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="justify-content: flex-end;">
+                                        <a data-toggle="modal" data-target="#myModal" style="text-decoration: none;" onclick="jobfunction(this.id)" t-att-id="opp.id" class="btn_reliant_job">> Read more</a>
+                                    </div>  
+                                </div>
+                            </div>  
+                            <div class="modal fade" id="myModal"  role="dialog">
+                                <div class="modal-dialog" style="max-width:1280px !important;">
+                                    <!-- Modal content-->
+                                    <div id="modal-content-job" class="modal-content" style="background-color: #E6E6E6">
+                                        <div class="">
+                                            <div id="header-modal-job" class="row" style="padding: 0 25px 0 25px;margin-top:20px;">
+                                                <div class="p-2 ">
+                                                    <a href="/" aria-current="page" id="log_main_mobile" class="list__item__enlace logo justify-content-center py-0 nuxt-link-exact-active nuxt-link-active" >
+                                                        <img id="img_logo_modal_job" src="/theme_reliant/static/img/reliant_logo_home.png" alt="Logo RELIANT" class="img-fluid list__item__enlace__logo" style="width:304;height:60px;"/>
+                                                    </a>
+                                                </div>
+                                                <div id="icon_nav_reliant_1" class="ml-auto p-2 ">
+                                                    <a  data-dismiss="modal" style="display: flex;align-items: center;text-decoration: none;padding: 25px 0 0 0;">
+                                                      <i class="fa fa-times fa-2x " style="color:black;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div id="myModal_reliant_job">
+                                                 
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                     </div>    
+                </div>
+            </section>       
+            <script>
+                $(window).load(function() {
+                    $(".se-pre-con").fadeOut("slow");;
+                });
+            </script>
+            <div class="oe_structure oe_empty"/>
+        </t>
+</template>
+
+<!-- footer -->
+    
+    <template id="footer_reliant" name="Footer Reliant" inherit_id="website.layout"  active="False">     
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer"/>
+            <section id="section_footer_reliant" class="s_text_block s_masonry_block reliant_footer_cuerpo">
+                <div class="container">
+                    <div id="first_row_footer" class="row">
+                        <div class="col-3">
+                            <row id="row_logo_footer">
+                                <div class="footer_logo">
+                                    <img src="/theme_reliant/static/img/logo_footer_2.png" style="height:100%;
+                                                        width:100%;"  alt=""/>
+                                </div>
+                            </row>
+                        </div>
+                        <div class="col-1">
+
+                        </div>
+                        <div class="col-8">
+                            <div class="reliant_footer_1">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="reliant_footer_titulo">ZAMBIA</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_titulo">INDIA</p>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <p class="reliant_footer_titulo">CONGO DR</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_titulo">SOUTH AFRICA</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">RELIANT MINING AND CONSTRUCTION LTD </p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">RELIANT DRILLING (Pvt) LIMITED</p>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <p class="reliant_footer_cuerpo">RELIANT CONGO SARL</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">RELIANT SA (Pty) LIMITED</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">4137,Alick Nkhata Road<br></br>Kitwe</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">25/8 Old Rajinder Nagar<br></br>New Delhi</p>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <p class="reliant_footer_cuerpo">1932, Bd M´Siri<br></br>Lubumbashi</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">54 Apex Road, Apex<br></br>Gauteng</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">+260 212 261 322</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">+911 141 050 560</p>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <p class="reliant_footer_cuerpo">+243 995 556 006</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">+270 824 960 927</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">reliant.zm@reliantmining.com</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">reliant.in@reliantmining.com</p>
+                                    </div>
+                                    <div class="col-3 ">
+                                        <p class="reliant_footer_cuerpo">reliant.cd@reliantmining.com</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <p class="reliant_footer_cuerpo">reliant.za@reliantmining.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="img_certificate" style="width: 100%; text-align: end;margin: 20px 30px 0 0;">
+                                <img class="type1" src="/theme_reliant/static/img/img_certificado_1.png" style="width:110px;height:113px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_2.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_3.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_4.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reliant_footer_final" class="row" style="margin: 30px 0 0 0;">
+                        <div class="col-3">
+                            <div id="row_button_footer">
+                                <style>
+                                  .fa-stack { font-size: 22px; }
+                                  i { vertical-align: middle; }
+                                </style>
+
+                                <a id="button_red_social" href="https://www.facebook.com/ReliantMining" class="fa-stack" target="_blank">
+                                  <i class="fa fa-square fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x" style="color:#000"></i>
+                                </a>
+                                <a id="button_red_social" href="https://www.linkedin.com/company/reliantminingandconstruction" class="fa-stack" target="_blank">
+                                  <i class="fa fa-square fa-stack-2x"></i>
+                                  <i class="fa fa-linkedin fa-stack-1x" style="color:#000"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-1"/>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-2">
+                            <div class="reliant_footer_1">
+                                <p class="reliant_footer_cuerpo_final">Privacy Policies</p>
+                            </div>
+                        </div>
+                        <div class="col-2 ">
+                            <div class="reliant_footer_1">
+                                <p class="reliant_footer_cuerpo_final">Terms and Conditions</p>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="reliant_footer_1">
+                                <p class="reliant_footer_cuerpo_final">Transparency Portal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_footer_reliant_mobile" class="s_text_block s_masonry_block reliant_footer_cuerpo">
+                <div class="container">
+                    <div id="first_row_footer" class="row">
+                        <div class="col-3">
+                            <row id="row_logo_footer">
+                                <div class="footer_logo">
+                                    <img src="/theme_reliant/static/img/logo_footer_2.png" style="height:100%;
+                                                        width:100%;"  alt=""/>
+                                </div>
+                            </row>
+                        </div>
+                    </div>
+                    <div id="container_footer" class="container">
+                        
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="reliant_footer_titulo">ZAMBIA</p>
+                            </div>
+                            <div class="col-6">
+                                 <p class="reliant_footer_titulo">INDIA</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">RELIANT MINING AND CONSTRUCTION LTD</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">RELIANT DRILLING (Pvt) LIMITED</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">4137,Alick Nkhata Road<br></br>Kitwe</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">25/8 Old Rajinder Nagar<br></br>New Delhi</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">+260 212 261 322</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">+911 141 050 560</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo_email">reliant.zm@reliantmining.com</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo_email">reliant.in@reliantmining.com</p>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 15px 0 0 0;">
+                            <div class="col-6">
+                                <p class="reliant_footer_titulo">CONGO DR</p>
+                            </div>
+                            <div class="col-6">
+                                 <p class="reliant_footer_titulo">SOUTH AFRICA</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">RELIANT CONGO SARL</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">RELIANT SA (Pty) LIMITED</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">1932, Bd M´Siri<br></br>Lubumbashi</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">54 Apex Road, Apex<br></br>Gauteng</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">+243 995 556 006</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo">+270 824 960 927</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo_email">reliant.cd@reliantmining.com</p>
+                            </div>
+                            <div class="col-6">
+                                    <p class="reliant_footer_cuerpo_email">reliant.za@reliantmining.com</p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="img_certificate" style="width: 100%; text-align: end;margin: 0 30px 0 0;">
+                                <img class="type1" src="/theme_reliant/static/img/img_certificado_1.png" style="width:110px;height:113px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_2.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_3.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                                <img class="type2" src="/theme_reliant/static/img/img_certificado_4.png" style="width:145px;height:119px;margin: 0 0 0 30px" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div >
+                        <p class="reliant_footer_cuerpo_final">Privacy Policies</p>
+                        <p class="reliant_footer_cuerpo_final">Terms and Conditions</p>
+                        <p class="reliant_footer_cuerpo_final">Transparency Portal</p>
+                    </div>
+                    <div id="reliant_footer_final" class="row" style="margin: 30px 0 0 0;">
+                        <div id="row_button_footer">
+                            <style>
+                              .fa-stack { font-size: 22px; }
+                              i { vertical-align: middle; }
+                            </style>
+
+                            <a id="button_red_social" href="https://www.facebook.com/ReliantMining" class="fa-stack" target="_blank">
+                              <i class="fa fa-square fa-stack-2x"></i>
+                              <i class="fa fa-facebook fa-stack-1x" style="color:#000"></i>
+                            </a>
+                            <a id="button_red_social" href="https://www.linkedin.com/company/reliantminingandconstruction" class="fa-stack" target="_blank">
+                              <i class="fa fa-square fa-stack-2x"></i>
+                              <i class="fa fa-linkedin fa-stack-1x" style="color:#000"></i>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </section>  
+        </xpath>  
+    </template>
+
+
+
+</odoo>

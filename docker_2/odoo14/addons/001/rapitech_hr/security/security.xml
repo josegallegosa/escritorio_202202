@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="hr_pension_fund_company_rule" model="ir.rule">
+	        <field name="name">AFP Rule</field>
+	        <field name="model_id" ref="model_hr_pension_fund"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_arl_company_rule" model="ir.rule">
+	        <field name="name">ARL Rule</field>
+	        <field name="model_id" ref="model_hr_arl"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_type_transport_company_rule" model="ir.rule">
+	        <field name="name">Type Transport Rule</field>
+	        <field name="model_id" ref="model_hr_type_transport"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_type_layoffs_company_rule" model="ir.rule">
+	        <field name="name">Type Layoffs Rule</field>
+	        <field name="model_id" ref="model_hr_type_layoffs"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_type_contributor_company_rule" model="ir.rule">
+	        <field name="name">Type Contributor Rule</field>
+	        <field name="model_id" ref="model_hr_type_contributor"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_type_risk_arl_company_rule" model="ir.rule">
+	        <field name="name">Type Risk ARL Rule</field>
+	        <field name="model_id" ref="model_hr_type_risk_arl"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_withholding_procedure_company_rule" model="ir.rule">
+	        <field name="name">Withholding Procedure Rule</field>
+	        <field name="model_id" ref="model_hr_withholding_procedure"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_eps_company_rule" model="ir.rule">
+	        <field name="name">EPS Rule</field>
+	        <field name="model_id" ref="model_hr_eps"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	    <record id="hr_ccf_company_rule" model="ir.rule">
+	        <field name="name">CCF Rule</field>
+	        <field name="model_id" ref="model_hr_ccf"/>
+	        <field name="domain_force">['|',('company_ids','=',False),('company_ids', 'in', company_ids)]</field>
+	    </record>
+
+	</data>
+</odoo>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- structure type -->
+        <record id="structure_type_p_l_d_s_co" model="hr.payroll.structure.type">
+            <field name="name">PRIMA LEGAL DE SERVICIO</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="wage_type">monthly</field>
+        </record>
+
+        <!-- Salary Structure -->
+        <record id="structure_p_l_d_s_co" model="hr.payroll.structure">
+            <field name="name">PRIMA LEGAL DE SERVICIO</field>
+            <field name="type_id" ref="structure_type_p_l_d_s_co"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+        <!-- Input Type-->
+        
+        <!-- Categories-->
+        <record id="bapr_category" model="hr.salary.rule.category">
+            <field name="name">BAPR</field>
+            <field name="code">BAPR</field>
+        </record>
+
+        <record id="dise_category" model="hr.salary.rule.category">
+            <field name="name">DISE</field>
+            <field name="code">DISE</field>
+        </record>
+
+        <record id="prim_category" model="hr.salary.rule.category">
+            <field name="name">PRIM</field>
+            <field name="code">PRIM</field>
+        </record>
+        
+        <!-- Salary rules -->
+
+        <record id="hr_salary_rule_sb_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SB</field>
+            <field name="category_id" ref="hr_payroll_rg_co.sue_category"/>
+            <field name="name">SUELDO BASICO</field>
+            <field name="sequence" eval="1"/>
+            <field name="amount_python_compute">result = employee.AverageWageBiannual(payslip.date_to,['SB'],contract)</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+
+        <record id="hr_salary_rule_ext_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">EXT</field>
+            <field name="category_id" ref="hr_payroll_rg_co.ext_category"/>
+            <field name="name">EXTRAS</field>
+            <field name="sequence" eval="2"/>
+            <field name="amount_python_compute">result = employee.MethodAverageBiannual(payslip.date_to,['COM','BNS','RES'],contract)</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+
+        <record id="hr_salary_rule_he_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">HE</field>
+            <field name="category_id" ref="hr_payroll_rg_co.he_category"/>
+            <field name="name">HE</field>
+            <field name="sequence" eval="3"/>
+            <field name="amount_python_compute">result = employee.MethodAverageBiannual(payslip.date_to,['HED','HEN','HFD','HFN'],contract)</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+
+        <record id="hr_salary_rule_rc_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">RC</field>
+            <field name="category_id" ref="hr_payroll_rg_co.rc_category"/>
+            <field name="name">RC</field>
+            <field name="sequence" eval="4"/>
+            <field name="amount_python_compute">result = employee.MethodAverageBiannual(payslip.date_to,['RF','RN','RNF','FSC'],contract)</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+         
+        <record id="hr_salary_rule_slt_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">SLT</field>
+            <field name="category_id" ref="hr_payroll_rg_co.sub_category"/>
+            <field name="name">SUBSIDIO DE TRANSPORTE</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">if categories.SUE + categories.EXT + categories.HE + categories.RC  &lt; parameter_obj.get_amount('SMMLV',payslip.date_from)*2:
+                result = parameter_obj.get_amount('SUBSIDIO DE TRANSPORTE',payslip.date_from)
+else:
+    result = 0</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+        
+        <record id="hr_salary_rule_BAPR_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BAPR</field>
+            <field name="category_id" ref="bapr_category"/>
+            <field name="name">BASE PRIMA</field>
+            <field name="sequence" eval="6"/>
+            <field name="amount_python_compute">result = categories.SUE + categories.EXT + categories.HE + categories.RC + categories.SUB</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+        
+        <record id="hr_salary_rule_dise_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">DISE</field>
+            <field name="category_id" ref="dise_category"/>
+            <field name="name">DIAS SEMESTRE</field>
+            <field name="sequence" eval="7"/>
+            <field name="amount_python_compute">result = employee.GetWorkedDays(payslip.date_to,contract)</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+
+        <record id="hr_salary_rule_prim_p_l_d_s" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PRIM</field>
+            <field name="category_id" ref="prim_category"/>
+            <field name="name">PRIMA</field>
+            <field name="sequence" eval="8"/>
+            <field name="amount_python_compute">result = BAPR*DISE/360</field>
+            <field name="struct_id" ref="structure_p_l_d_s_co"/>
+        </record>
+	</data>
+</odoo>

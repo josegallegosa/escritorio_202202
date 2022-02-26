@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="group_merchant_account" model="res.groups">
+            <field name="name">Cuenta Mercantil</field>        
+        </record>
+
+    </data>
+</odoo>

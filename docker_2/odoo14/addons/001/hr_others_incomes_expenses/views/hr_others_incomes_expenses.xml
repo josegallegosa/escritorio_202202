@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Inherit input type -->
+        
+        <record id="hr_payslip_input_type_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.input.type.form</field>
+            <field name="model">hr.payslip.input.type</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payslip_input_type_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="afecta_todo"/>
+                    <field name="percent_of_base" attrs="{'invisible': [('afecta_todo', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+
+<!-- Adelantos -->
+        
+        <record id="view_others_income_expense_tree" model="ir.ui.view">
+            <field name="name">hr.others.incomes.expenses.tree</field>
+            <field name="model">hr.others.incomes.expenses</field>
+            <field name="arch" type="xml">
+                <tree string="Otros ingresos o egresos">
+                    <field name="name"/>
+                    <field name="input_type_id"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_others_income_expense_form" model="ir.ui.view">
+            <field name="name">hr.others.incomes.expenses.form</field>
+            <field name="model">hr.others.incomes.expenses</field>
+            <field name="arch" type="xml">
+                <form string="Otro ingreso o egreso">
+                    <header>
+                    	<button name="action_validate" type="object"
+                                string="Validar"
+                                states="draft"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                    <group>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('state', '=', 'validate')]}"/>
+                            <field name="date" attrs="{'readonly': [('state', '=', 'validate')]}"/>
+                        </group>
+                        <group>
+                            <field name="input_type_id" attrs="{'readonly': [('state', '=', 'validate')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    	<page string="Ingreso o egreso x empleado">
+	                    	<field name="line_ids">
+	                    		<tree editable="button">
+	                    			<field name="employee_id"/>
+                                    <field name="amount"/>
+	                    			<field name="percent"/>
+	                    		</tree>
+	                    	</field>
+                    	</page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="open_others_income_expense_view" model="ir.actions.act_window">
+            <field name="name">Otros ingresos o egresos</field>
+            <field name="res_model">hr.others.incomes.expenses</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_others_income_expense_view_main" parent="hr_work_entry_contract.menu_hr_payroll_root" name="Otros ingresos o egresos" groups="hr.group_hr_manager" sequence="55"/>
+
+        <menuitem action="open_others_income_expense_view" id="menu_others_income_expense_view" parent="hr_others_incomes_expenses.menu_others_income_expense_view_main" sequence="55"/>
+
+</odoo>

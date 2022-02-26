@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <!--UNIDAD DE MEDIDA-->
+        <record id="unit_measurement_form_view" model="ir.ui.view">
+            <field name="name">unit.measurement.form</field>
+            <field name="model">unit.measurement</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="unit_measurement_tree_view" model="ir.ui.view">
+            <field name="name">unit.measurement.tree</field>
+            <field name="model">unit.measurement</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+        <record id="unit_measurement_action" model="ir.actions.act_window">
+            <field name="name">Unidad de Medida</field>
+            <field name="res_model">unit.measurement</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    </data>
+</odoo>

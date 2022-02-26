@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <record model="ir.ui.view" id="view_account_journal_form_inherit">
+        <field name="name">account.journal.form.inherit.page</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="account_fiscal_position_tax" string="Mapeo de Cuentas">
+                    <field name="journal_ids" nolabel="1">
+                        <tree editable="bottom">
+                            <field name="account_src_id"/>
+                            <field name="account_dest_id"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

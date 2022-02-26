@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_withholding_procedure_pr1" model="hr.withholding.procedure">
+            <field name="name">PR1</field>
+        </record>
+        
+        <record id="hr_withholding_procedure_pr2" model="hr.withholding.procedure">
+            <field name="name">PR2</field>
+        </record>
+
+    </data>
+</odoo>

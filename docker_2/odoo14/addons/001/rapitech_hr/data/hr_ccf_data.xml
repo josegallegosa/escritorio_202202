@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_nit_890900840-1" model="hr.nit">
+            <field name="name">890900840</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890900842-6" model="hr.nit">
+            <field name="name">890900842</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_890900841-9" model="hr.nit">
+            <field name="name">890900841</field>
+            <field name="code">9</field>
+        </record>
+ 
+        <record id="hr_nit_890102044-1" model="hr.nit">
+            <field name="name">890102044</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890102002-2" model="hr.nit">
+            <field name="name">890102002</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_890101994-9" model="hr.nit">
+            <field name="name">890101994</field>
+            <field name="code">9</field>
+        </record>
+ 
+        <record id="hr_nit_890480023-7" model="hr.nit">
+            <field name="name">890480023</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_890480110-1" model="hr.nit">
+            <field name="name">890480110</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_891800213-8" model="hr.nit">
+            <field name="name">891800213</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_890806490-5" model="hr.nit">
+            <field name="name">890806490</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_891190047-2" model="hr.nit">
+            <field name="name">891190047</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_891500182-0" model="hr.nit">
+            <field name="name">891500182</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_892399989-8" model="hr.nit">
+            <field name="name">892399989</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_891080005-1" model="hr.nit">
+            <field name="name">891080005</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_860013570-3" model="hr.nit">
+            <field name="name">860013570</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_860007336-1" model="hr.nit">
+            <field name="name">860007336</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_860066942-7" model="hr.nit">
+            <field name="name">860066942</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_860045904-7" model="hr.nit">
+            <field name="name">860045904</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_891600091-8" model="hr.nit">
+            <field name="name">891600091</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_892115006-5" model="hr.nit">
+            <field name="name">892115006</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_891180008-2" model="hr.nit">
+            <field name="name">891180008</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_891780093-3" model="hr.nit">
+            <field name="name">891780093</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_892000146-3" model="hr.nit">
+            <field name="name">892000146</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_891280008-1" model="hr.nit">
+            <field name="name">891280008</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890500675-6" model="hr.nit">
+            <field name="name">890500675</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_890500516-3" model="hr.nit">
+            <field name="name">890500516</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_890270275-5" model="hr.nit">
+            <field name="name">890270275</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_890200106-1" model="hr.nit">
+            <field name="name">890200106</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890201578-7" model="hr.nit">
+            <field name="name">890201578</field>
+            <field name="code">7</field>
+        </record>
+ 
+        <record id="hr_nit_892200015-5" model="hr.nit">
+            <field name="name">892200015</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_890000381-0" model="hr.nit">
+            <field name="name">890000381</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_891480000-1" model="hr.nit">
+            <field name="name">891480000</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890704737-0" model="hr.nit">
+            <field name="name">890704737</field>
+            <field name="code">0</field>
+        </record>
+ 
+        <record id="hr_nit_800211025-1" model="hr.nit">
+            <field name="name">800211025</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_890700148-4" model="hr.nit">
+            <field name="name">890700148</field>
+            <field name="code">4</field>
+        </record>
+ 
+        <record id="hr_nit_890303093-5" model="hr.nit">
+            <field name="name">890303093</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_890303208-5" model="hr.nit">
+            <field name="name">890303208</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_891200337-8" model="hr.nit">
+            <field name="name">891200337</field>
+            <field name="code">8</field>
+        </record>
+ 
+        <record id="hr_nit_892400320-5" model="hr.nit">
+            <field name="name">892400320</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_800003122-6" model="hr.nit">
+            <field name="name">800003122</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_800219488-4" model="hr.nit">
+            <field name="name">800219488</field>
+            <field name="code">4</field>
+        </record>
+ 
+        <record id="hr_nit_800231969-4" model="hr.nit">
+            <field name="name">800231969</field>
+            <field name="code">4</field>
+        </record>
+ 
+        <record id="hr_nit_844003392-8" model="hr.nit">
+            <field name="name">844003392</field>
+            <field name="code">8</field>
+        </record>
+
+        <record id="hr_ccf_co_CCF02" model="hr.ccf">
+            <field name="name">Camacol</field>
+            <field name="code">CCF02</field>
+            <field name="nit" ref="hr_nit_890900840-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF03" model="hr.ccf">
+            <field name="name">Comfenalco Antioquia CCF</field>
+            <field name="code">CCF03</field>
+            <field name="nit" ref="hr_nit_890900842-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF04" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar de Antioquia</field>
+            <field name="code">CCF04</field>
+            <field name="nit" ref="hr_nit_890900841-9"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF05" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar Cajacopi Atlántico</field>
+            <field name="code">CCF05</field>
+            <field name="nit" ref="hr_nit_890102044-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF06" model="hr.ccf">
+            <field name="name">Combarranquilla</field>
+            <field name="code">CCF06</field>
+            <field name="nit" ref="hr_nit_890102002-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF07" model="hr.ccf">
+            <field name="name">Comfamiliar Atlántico</field>
+            <field name="code">CCF07</field>
+            <field name="nit" ref="hr_nit_890101994-9"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF08" model="hr.ccf">
+            <field name="name">Comfenalco Cartagena</field>
+            <field name="code">CCF08</field>
+            <field name="nit" ref="hr_nit_890480023-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF09" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar de Cartagena</field>
+            <field name="code">CCF09</field>
+            <field name="nit" ref="hr_nit_890480110-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF10" model="hr.ccf">
+            <field name="name">Comfaboy</field>
+            <field name="code">CCF10</field>
+            <field name="nit" ref="hr_nit_891800213-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF11" model="hr.ccf">
+            <field name="name">CCF de Caldas</field>
+            <field name="code">CCF11</field>
+            <field name="nit" ref="hr_nit_890806490-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF13" model="hr.ccf">
+            <field name="name">Comfaca</field>
+            <field name="code">CCF13</field>
+            <field name="nit" ref="hr_nit_891190047-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF14" model="hr.ccf">
+            <field name="name">Comfacauca</field>
+            <field name="code">CCF14</field>
+            <field name="nit" ref="hr_nit_891500182-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF15" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar Cesar</field>
+            <field name="code">CCF15</field>
+            <field name="nit" ref="hr_nit_892399989-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF16" model="hr.ccf">
+            <field name="name">Comfacor</field>
+            <field name="code">CCF16</field>
+            <field name="nit" ref="hr_nit_891080005-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF21" model="hr.ccf">
+            <field name="name">Cafam</field>
+            <field name="code">CCF21</field>
+            <field name="nit" ref="hr_nit_860013570-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF22" model="hr.ccf">
+            <field name="name">Colsubsidio</field>
+            <field name="code">CCF22</field>
+            <field name="nit" ref="hr_nit_860007336-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF24" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar Compensar</field>
+            <field name="code">CCF24</field>
+            <field name="nit" ref="hr_nit_860066942-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF26" model="hr.ccf">
+            <field name="name">Comfacundi</field>
+            <field name="code">CCF26</field>
+            <field name="nit" ref="hr_nit_860045904-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF29" model="hr.ccf">
+            <field name="name">CCF del Chocó</field>
+            <field name="code">CCF29</field>
+            <field name="nit" ref="hr_nit_891600091-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF30" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar de La Guajira</field>
+            <field name="code">CCF30</field>
+            <field name="nit" ref="hr_nit_892115006-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF32" model="hr.ccf">
+            <field name="name">Comfamiliar del Huila</field>
+            <field name="code">CCF32</field>
+            <field name="nit" ref="hr_nit_891180008-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF33" model="hr.ccf">
+            <field name="name">CCF del Magdalena</field>
+            <field name="code">CCF33</field>
+            <field name="nit" ref="hr_nit_891780093-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF34" model="hr.ccf">
+            <field name="name">Cofrem Meta</field>
+            <field name="code">CCF34</field>
+            <field name="nit" ref="hr_nit_892000146-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF35" model="hr.ccf">
+            <field name="name">CCF de Nariño</field>
+            <field name="code">CCF35</field>
+            <field name="nit" ref="hr_nit_891280008-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF36" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar del Oriente</field>
+            <field name="code">CCF36</field>
+            <field name="nit" ref="hr_nit_890500675-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF37" model="hr.ccf">
+            <field name="name">Caja de Comp. Familiar Comfanorte </field>
+            <field name="code">CCF37</field>
+            <field name="nit" ref="hr_nit_890500516-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF38" model="hr.ccf">
+            <field name="name">Caja de Comp. Familiar de Barrancabermeja Cafaba </field>
+            <field name="code">CCF38</field>
+            <field name="nit" ref="hr_nit_890270275-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF39" model="hr.ccf">
+            <field name="name">Cajasan </field>
+            <field name="code">CCF39</field>
+            <field name="nit" ref="hr_nit_890200106-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF40" model="hr.ccf">
+            <field name="name">Comfenalco Santander</field>
+            <field name="code">CCF40</field>
+            <field name="nit" ref="hr_nit_890201578-7"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF41" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar del Sucre</field>
+            <field name="code">CCF41</field>
+            <field name="nit" ref="hr_nit_892200015-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF43" model="hr.ccf">
+            <field name="name">Comfenalco Quindío</field>
+            <field name="code">CCF43</field>
+            <field name="nit" ref="hr_nit_890000381-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF44" model="hr.ccf">
+            <field name="name">Comfamiliar Risaralda</field>
+            <field name="code">CCF44</field>
+            <field name="nit" ref="hr_nit_891480000-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF46" model="hr.ccf">
+            <field name="name">CCF del Sur del Tolima Cafasur </field>
+            <field name="code">CCF46</field>
+            <field name="nit" ref="hr_nit_890704737-0"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF48" model="hr.ccf">
+            <field name="name">Comfatolima </field>
+            <field name="code">CCF48</field>
+            <field name="nit" ref="hr_nit_800211025-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF50" model="hr.ccf">
+            <field name="name">Comfenalco –Tolima</field>
+            <field name="code">CCF50</field>
+            <field name="nit" ref="hr_nit_890700148-4"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF56" model="hr.ccf">
+            <field name="name">Comfenalco Valle</field>
+            <field name="code">CCF56</field>
+            <field name="nit" ref="hr_nit_890303093-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF57" model="hr.ccf">
+            <field name="name">Comfandi </field>
+            <field name="code">CCF57</field>
+            <field name="nit" ref="hr_nit_890303208-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF63" model="hr.ccf">
+            <field name="name">Caja de Compensación Familiar del Putumayo</field>
+            <field name="code">CCF63</field>
+            <field name="nit" ref="hr_nit_891200337-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF64" model="hr.ccf">
+            <field name="name">Cajasai </field>
+            <field name="code">CCF64</field>
+            <field name="nit" ref="hr_nit_892400320-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF65" model="hr.ccf">
+            <field name="name">Caja de Comp Familiar del Amazonas Cafamaz</field>
+            <field name="code">CCF65</field>
+            <field name="nit" ref="hr_nit_800003122-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF67" model="hr.ccf">
+            <field name="name">Comfiar Caja de Compensacion Familiar de Arauca</field>
+            <field name="code">CCF67</field>
+            <field name="nit" ref="hr_nit_800219488-4"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF68" model="hr.ccf">
+            <field name="name">Comcaja</field>
+            <field name="code">CCF68</field>
+            <field name="nit" ref="hr_nit_800231969-4"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_ccf_co_CCF69" model="hr.ccf">
+            <field name="name">Comfacasanare</field>
+            <field name="code">CCF69</field>
+            <field name="nit" ref="hr_nit_844003392-8"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+    </data>
+</odoo>

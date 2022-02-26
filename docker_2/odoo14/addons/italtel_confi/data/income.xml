@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Income-->
+        <record forcecreate="True" id="income_0" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2008</field>
+            <field name="exchange_rate">3.14</field>
+            <field name="amount_sol">11035278.0</field>
+            <field name="amount_thousands_usd">3514.41974522293</field>
+        </record>
+        
+        <record forcecreate="True" id="income_1" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2009</field>
+            <field name="exchange_rate">2.891</field>
+            <field name="amount_sol">35564877.0</field>
+            <field name="amount_thousands_usd">12301.9290902802</field>
+        </record>
+        
+        <record forcecreate="True" id="income_2" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2010</field>
+            <field name="exchange_rate">2.809</field>
+            <field name="amount_sol">56215651.59</field>
+            <field name="amount_thousands_usd">20012.6919152723</field>
+        </record>
+        
+        <record forcecreate="True" id="income_3" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2011</field>
+            <field name="exchange_rate">2.697</field>
+            <field name="amount_sol">90021578.83</field>
+            <field name="amount_thousands_usd">33378.4126177234</field>
+        </record>
+        
+        <record forcecreate="True" id="income_4" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2012</field>
+            <field name="exchange_rate">2.551</field>
+            <field name="amount_sol">71135965.26</field>
+            <field name="amount_thousands_usd">27885.5214660917</field>
+        </record>
+        
+        <record forcecreate="True" id="income_5" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2013</field>
+            <field name="exchange_rate">2.796</field>
+            <field name="amount_sol">88834435.09</field>
+            <field name="amount_thousands_usd">31771.9724928469</field>
+        </record>
+        
+        <record forcecreate="True" id="income_6" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2014</field>
+            <field name="exchange_rate">2.99</field>
+            <field name="amount_sol">119266984.0</field>
+            <field name="amount_thousands_usd">39888.6234113712</field>
+        </record>
+        
+        <record forcecreate="True" id="income_7" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2015</field>
+            <field name="exchange_rate">3.41</field>
+            <field name="amount_sol">171454624.0</field>
+            <field name="amount_thousands_usd">50279.9483870968</field>
+        </record>
+        
+        <record forcecreate="True" id="income_8" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2016</field>
+            <field name="exchange_rate">3.36</field>
+            <field name="amount_sol">111768260.0</field>
+            <field name="amount_thousands_usd">33264.3630952381</field>
+        </record>
+        
+        <record forcecreate="True" id="income_9" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2017</field>
+            <field name="exchange_rate">3.245</field>
+            <field name="amount_sol">108751605.0</field>
+            <field name="amount_thousands_usd">33513.5916795069</field>
+        </record>
+        
+        <record forcecreate="True" id="income_10" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2018</field>
+            <field name="exchange_rate">3.37</field>
+            <field name="amount_sol">149111538.74</field>
+            <field name="amount_thousands_usd">44246.7474005935</field>
+        </record>
+        
+        <record forcecreate="True" id="income_11" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2019</field>
+            <field name="exchange_rate">3.319</field>
+            <field name="amount_sol">191181979.58</field>
+            <field name="amount_thousands_usd">57602.2836938837</field>
+        </record>
+        
+        <record forcecreate="True" id="income_12" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2020</field>
+            <field name="exchange_rate">3.621</field>
+            <field name="amount_sol">82148077.33</field>
+            <field name="amount_thousands_usd">22686.5720325877</field>
+        </record>
+        
+        <record forcecreate="True" id="income_13" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2021</field>
+            <field name="exchange_rate">4.30329778797371</field>
+            <field name="amount_sol">106059077.2824</field>
+            <field name="amount_thousands_usd">24646.0</field>
+        </record>
+        
+        <record forcecreate="True" id="income_14" model="income">
+            <field name="income_type" ref="income_type_1"/>
+            <field name="year">2022</field>
+            <field name="exchange_rate">3.98367795138042</field>
+            <field name="amount_sol">115526660.590032</field>
+            <field name="amount_thousands_usd">29000.0</field>
+        </record>
+        
+        <record forcecreate="True" id="income_15" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2008</field>
+            <field name="exchange_rate">3.14</field>
+            <field name="amount_sol">4604717.90897754</field>
+            <field name="amount_thousands_usd">1466.4706716489</field>
+        </record>
+        
+        <record forcecreate="True" id="income_16" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2009</field>
+            <field name="exchange_rate">2.891</field>
+            <field name="amount_sol">1110643.39246191</field>
+            <field name="amount_thousands_usd">384.172740388069</field>
+        </record>
+        
+        <record forcecreate="True" id="income_17" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2010</field>
+            <field name="exchange_rate">2.809</field>
+            <field name="amount_sol">592277.79</field>
+            <field name="amount_thousands_usd">210.850049839801</field>
+        </record>
+        
+        <record forcecreate="True" id="income_18" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2011</field>
+            <field name="exchange_rate">2.697</field>
+            <field name="amount_sol">5401487.49</field>
+            <field name="amount_thousands_usd">2002.77622914349</field>
+        </record>
+        
+        <record forcecreate="True" id="income_19" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2012</field>
+            <field name="exchange_rate">2.551</field>
+            <field name="amount_sol">1125916.65</field>
+            <field name="amount_thousands_usd">441.362857702862</field>
+        </record>
+        
+        <record forcecreate="True" id="income_20" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2013</field>
+            <field name="exchange_rate">2.796</field>
+            <field name="amount_sol">5941642.25</field>
+            <field name="amount_thousands_usd">2125.05087625179</field>
+        </record>
+        
+        <record forcecreate="True" id="income_21" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2014</field>
+            <field name="exchange_rate">2.99</field>
+            <field name="amount_sol">10280807.09</field>
+            <field name="amount_thousands_usd">3438.39702006689</field>
+        </record>
+        
+        <record forcecreate="True" id="income_22" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2015</field>
+            <field name="exchange_rate">3.41</field>
+            <field name="amount_sol">18282833.0</field>
+            <field name="amount_thousands_usd">5361.53460410557</field>
+        </record>
+        
+        <record forcecreate="True" id="income_23" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2016</field>
+            <field name="exchange_rate">3.36</field>
+            <field name="amount_sol">4522054.77</field>
+            <field name="amount_thousands_usd">1345.84963392857</field>
+        </record>
+        
+        <record forcecreate="True" id="income_24" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2017</field>
+            <field name="exchange_rate">3.245</field>
+            <field name="amount_sol">2697698.4</field>
+            <field name="amount_thousands_usd">831.340030816641</field>
+        </record>
+        
+        <record forcecreate="True" id="income_25" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2018</field>
+            <field name="exchange_rate">3.37</field>
+            <field name="amount_sol">8468147.36</field>
+            <field name="amount_thousands_usd">2512.80337091988</field>
+        </record>
+        
+        <record forcecreate="True" id="income_26" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2019</field>
+            <field name="exchange_rate">3.319</field>
+            <field name="amount_sol">12296184.0</field>
+            <field name="amount_thousands_usd">3704.78577884905</field>
+        </record>
+        
+        <record forcecreate="True" id="income_27" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2020</field>
+            <field name="exchange_rate">3.621</field>
+            <field name="amount_sol">1359396.79</field>
+            <field name="amount_thousands_usd">375.420267881801</field>
+        </record>
+        
+        <record forcecreate="True" id="income_28" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2021</field>
+            <field name="exchange_rate">4.30329778797371</field>
+            <field name="amount_sol">4266976.37782285</field>
+            <field name="amount_thousands_usd">991.559633578608</field>
+        </record>
+        
+        <record forcecreate="True" id="income_29" model="income">
+            <field name="income_type" ref="income_type_2"/>
+            <field name="year">2022</field>
+            <field name="exchange_rate">3.98367795138042</field>
+            <field name="amount_sol">4604717.90897754</field>
+            <field name="amount_thousands_usd">1155.89612543401</field>
+        </record>
+        
+        <record forcecreate="True" id="income_30" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2008</field>
+            <field name="exchange_rate">3.14</field>
+            <field name="amount_sol">264182.585693558</field>
+            <field name="amount_thousands_usd">84.1345814310694</field>
+        </record>
+        
+        <record forcecreate="True" id="income_31" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2009</field>
+            <field name="exchange_rate">2.891</field>
+            <field name="amount_sol">-190795.33</field>
+            <field name="amount_thousands_usd">-65.9963092355586</field>
+        </record>
+        
+        <record forcecreate="True" id="income_32" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2010</field>
+            <field name="exchange_rate">2.809</field>
+            <field name="amount_sol">-337547.77</field>
+            <field name="amount_thousands_usd">-120.166525453898</field>
+        </record>
+        
+        <record forcecreate="True" id="income_33" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2011</field>
+            <field name="exchange_rate">2.697</field>
+            <field name="amount_sol">2902838.16</field>
+            <field name="amount_thousands_usd">1076.32115684093</field>
+        </record>
+        
+        <record forcecreate="True" id="income_34" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2012</field>
+            <field name="exchange_rate">2.551</field>
+            <field name="amount_sol">122777.51</field>
+            <field name="amount_thousands_usd">48.1291689533516</field>
+        </record>
+        
+        <record forcecreate="True" id="income_35" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2013</field>
+            <field name="exchange_rate">2.796</field>
+            <field name="amount_sol">1792347.27</field>
+            <field name="amount_thousands_usd">641.039796137339</field>
+        </record>
+        
+        <record forcecreate="True" id="income_36" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2014</field>
+            <field name="exchange_rate">2.99</field>
+            <field name="amount_sol">4523933.0</field>
+            <field name="amount_thousands_usd">1513.02107023411</field>
+        </record>
+        
+        <record forcecreate="True" id="income_37" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2015</field>
+            <field name="exchange_rate">3.41</field>
+            <field name="amount_sol">8952128.0</field>
+            <field name="amount_thousands_usd">2625.25747800587</field>
+        </record>
+        
+        <record forcecreate="True" id="income_38" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2016</field>
+            <field name="exchange_rate">3.36</field>
+            <field name="amount_sol">1020149.0</field>
+            <field name="amount_thousands_usd">303.615773809524</field>
+        </record>
+        
+        <record forcecreate="True" id="income_39" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2017</field>
+            <field name="exchange_rate">3.245</field>
+            <field name="amount_sol">1278246.0</field>
+            <field name="amount_thousands_usd">393.912480739599</field>
+        </record>
+        
+        <record forcecreate="True" id="income_40" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2018</field>
+            <field name="exchange_rate">3.37</field>
+            <field name="amount_sol">3238289.33</field>
+            <field name="amount_thousands_usd">960.916715133531</field>
+        </record>
+        
+        <record forcecreate="True" id="income_41" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2019</field>
+            <field name="exchange_rate">3.319</field>
+            <field name="amount_sol">5564020.18</field>
+            <field name="amount_thousands_usd">1676.41463693884</field>
+        </record>
+        
+        <record forcecreate="True" id="income_42" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2020</field>
+            <field name="exchange_rate">3.621</field>
+            <field name="amount_sol">-1811296.3</field>
+            <field name="amount_thousands_usd">-500.219911626623</field>
+        </record>
+        
+        <record forcecreate="True" id="income_43" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2021</field>
+            <field name="exchange_rate">4.30329778797371</field>
+            <field name="amount_sol">1078987.00880832</field>
+            <field name="amount_thousands_usd">250.734915864696</field>
+        </record>
+        
+        <record forcecreate="True" id="income_44" model="income">
+            <field name="income_type" ref="income_type_3"/>
+            <field name="year">2022</field>
+            <field name="exchange_rate">3.98367795138042</field>
+            <field name="amount_sol">1110643.39246191</field>
+            <field name="amount_thousands_usd">278.798488737537</field>
+        </record>
+        
+    </data>
+</odoo>

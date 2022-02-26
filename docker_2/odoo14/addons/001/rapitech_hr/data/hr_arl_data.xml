@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_nit_860002183-9" model="hr.nit">
+            <field name="name">860002183</field>
+            <field name="code">9</field>
+        </record>
+ 
+        <record id="hr_nit_860002503-2" model="hr.nit">
+            <field name="name">860002503</field>
+            <field name="code">2</field>
+        </record>
+ 
+        <record id="hr_nit_860022137-5" model="hr.nit">
+            <field name="name">860022137</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_890903790-5" model="hr.nit">
+            <field name="name">890903790</field>
+            <field name="code">5</field>
+        </record>
+ 
+        <record id="hr_nit_860503617-3" model="hr.nit">
+            <field name="name">860503617</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_860011153-6" model="hr.nit">
+            <field name="name">860011153</field>
+            <field name="code">6</field>
+        </record>
+ 
+        <record id="hr_nit_800226175-3" model="hr.nit">
+            <field name="name">800226175</field>
+            <field name="code">3</field>
+        </record>
+ 
+        <record id="hr_nit_830008686-1" model="hr.nit">
+            <field name="name">830008686</field>
+            <field name="code">1</field>
+        </record>
+ 
+        <record id="hr_nit_830054904-6" model="hr.nit">
+            <field name="name">830054904</field>
+            <field name="code">6</field>
+        </record>
+
+        <record id="hr_arl_co_14-4" model="hr.arl">
+            <field name="name">A.R.L. Seguros de Vida Colpatria S.A.</field>
+            <field name="code">14-4</field>
+            <field name="nit" ref="hr_nit_860002183-9"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-7" model="hr.arl">
+            <field name="name">Compañía de Seguros Bolívar S.A.</field>
+            <field name="code">14-7</field>
+            <field name="nit" ref="hr_nit_860002503-2"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-8" model="hr.arl">
+            <field name="name">Seguros de Vida Aurora</field>
+            <field name="code">14-8</field>
+            <field name="nit" ref="hr_nit_860022137-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-11" model="hr.arl">
+            <field name="name">Seguros de Vida Suramericana S.A.</field>
+            <field name="code">14-11</field>
+            <field name="nit" ref="hr_nit_890903790-5"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-17" model="hr.arl">
+            <field name="name">ARP Alfa</field>
+            <field name="code">14-17</field>
+            <field name="nit" ref="hr_nit_860503617-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-23" model="hr.arl">
+            <field name="name">Positiva Compañía de Seguros</field>
+            <field name="code">14-23</field>
+            <field name="nit" ref="hr_nit_860011153-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-25" model="hr.arl">
+            <field name="name">Colmena Riesgos Profesionales</field>
+            <field name="code">14-25</field>
+            <field name="nit" ref="hr_nit_800226175-3"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-29" model="hr.arl">
+            <field name="name">La Equidad Seguros de Vida</field>
+            <field name="code">14-29</field>
+            <field name="nit" ref="hr_nit_830008686-1"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_arl_co_14-30" model="hr.arl">
+            <field name="name">Mapfre Colombia Vida Seguros S.A</field>
+            <field name="code">14-30</field>
+            <field name="nit" ref="hr_nit_830054904-6"/>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+    </data>
+</odoo>

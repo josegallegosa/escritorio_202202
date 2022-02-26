@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- ALERT_JOSE -->
+
+<template id="s_alert_jose" inherit_id="website.snippets" name="s alert jose">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_tutorial.s_alert"
+       t-thumbnail="/theme_tutorial/static/snippet_thumb.jpg"/>
+  </xpath>
+</template>
+
+
+<template id="s_alert" name="Alert_jose">
+    <div class="s_alert s_alert_md alert-info w-100 clearfix">
+        <i class="fa fa-2x fa-info-circle s_alert_icon"/>
+        <div class="s_alert_content">
+            <p>hola <br/>holaholaholaholaholaholahola</p>
+        </div>
+    </div>
+</template>
+
+<!-- COLUMNS_JOSE -->
+
+<template id="place_into_bar" inherit_id="website.snippets" name="Place into bar">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_tutorial.s_three_columns"
+       t-thumbnail="/theme_tutorial/static/snippet_thumb.jpg"/>
+  </xpath>
+</template>
+
+
+<template id="s_three_columns" name="Columns_jose">
+    <section class="s_three_columns o_cc o_cc1 pt32 pb32" data-vcss="001">
+        <div class="container">
+            <div class="row d-flex align-items-stretch">
+                <div class="col-lg-3 s_col_no_bgcolor pt16 pb16">
+                    <div class="card border rounded shadow bg-white h-100" style="border-width: 5px !important; border-color: rgb(36, 35, 39) !important; border-radius: 25px !important; box-shadow: rgb(36, 35, 39) 0px 0px 25px 0px !important; height: 500px !important" separator=" ">
+                        <img class="card-img-top" style="max-width: auto; max-height: 76%;" src="/web/image/website.s_three_columns_default_image_1" alt=""/>
+                        <div class="card-body">
+                            <h3 class="card-title">AVENGERS </h3>
+                            <p class="card-text">5 S/.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 s_col_no_bgcolor pt16 pb16">
+                    <div class="card border rounded shadow bg-white h-100" style="border-width: 5px !important; border-color: rgb(36, 35, 39) !important; border-radius: 25px !important; box-shadow: rgb(36, 35, 39) 0px 0px 25px 0px !important; height: 500px !important" separator=" ">
+                        <img class="card-img-top" style="max-width: auto; max-height: 76%;" src="/web/image/website.s_three_columns_default_image_2" alt=""/>
+                        <div class="card-body">
+                            <h3 class="card-title">AVENGERS 3</h3>
+                            <p class="card-text">5.5 S/.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 s_col_no_bgcolor pt16 pb16">
+                    <div class="card border rounded shadow bg-white h-100" style="border-width: 5px !important; border-color: rgb(36, 35, 39) !important; border-radius: 25px !important; box-shadow: rgb(36, 35, 39) 0px 0px 25px 0px !important; height: 500px !important" separator=" ">
+                        <img class="card-img-top" style="max-width: auto; max-height: 76%;" src="/web/image/website.s_three_columns_default_image_3" alt=""/>
+                        <div class="card-body">
+                            <h3 class="card-title">AVENGERS ENDGAME</h3>
+                            <p class="card-text">6 S/.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 s_col_no_bgcolor pt16 pb16">
+                    <div class="card border rounded shadow bg-white h-100" style="border-width: 5px !important; border-color: rgb(36, 35, 39) !important; border-radius: 25px !important; box-shadow: rgb(36, 35, 39) 0px 0px 25px 0px !important; height: 500px !important" separator=" ">
+                        <img class="card-img-top" style="max-width: auto; max-height: 76%;" src="/web/image/website.s_three_columns_default_image_3" alt=""/>
+                        <div class="card-body">
+                            <h3 class="card-title">AVENGERS 2</h3>
+                            <p class="card-text">7 S/.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+<!-- PRODUCTO_JOSE -->
+
+<template id="s_producto_jose" inherit_id="website.snippets" name="s producto jose">
+  <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+    <t t-snippet="theme_tutorial.s_producto"
+       t-thumbnail="/theme_tutorial/static/snippet_thumb.jpg"/>
+  </xpath>
+</template>
+
+
+<template id="s_producto" name="Producto_jose">
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-3 ">
+                    <img src="/web/image/website.s_image_text_default_image" class="img img-fluid mx-auto" alt=""/>    
+                </div>
+                <div class="col-sm-5">
+                    <h1>Nombre del libro</h1>
+                    <h4 style="color:#7d7c7c"><i><u>Autor</u></i></h4>
+                    <div class="s_rating pt16 pb16" data-vcss="001" data-icon="fa-star">
+                        <div class="s_rating_icons o_not_editable">
+                            <span class="s_rating_active_icons">
+                                <i class="fa fa-star"/>
+                                <i class="fa fa-star"/>
+                                <i class="fa fa-star"/>
+                            </span>
+                            <span class="s_rating_inactive_icons">
+                                <i class="fa fa-star-o"/>
+                                <i class="fa fa-star-o"/>
+                            </span>
+                        </div>
+                    </div>
+                    <h4 style="color:#5e5d5d">ISBN: </h4>
+                    <h4 style="color:#5e5d5d">Editorial: </h4>
+                    <h4 style="color:#5e5d5d">Categoría: </h4>
+                    <h4 style="color:#5e5d5d">Proveedor: </h4>
+                    <h4 style="color:#5e5d5d">Empaste: </h4>
+                    <h4 style="color:#5e5d5d">Idioma: </h4>
+                    <h4 style="color:#5e5d5d">Nº de páginas: </h4>
+                    <h4 style="color:#5e5d5d">Año de publicación: </h4>
+                    <h4 style="color:#5e5d5d">Dimensiòn: </h4>
+                </div>
+                <div class="col-sm-4 text-center">
+                <h1>S/. 00.00</h1>
+                <button icon = "fa-cogs" type="button" class="btn btn-primary" ><span class="fa fa-shopping-cart mr-2 fa-lg"/>Carrito de compras
+                </button>  
+                </div>
+            </div>
+        </div>    
+    </section>   
+</template>
+
+<template id="id_website_sale_product" inherit_id="website_sale.product" name="Products">
+    <xpath expr="(//div[hasclass('row')])[2]" position="attributes">
+        <attribute name="class">
+            row align-items-center
+        </attribute>
+    </xpath>
+     <xpath expr="//div[hasclass('col-xl-8')]" position="attributes">
+        <attribute name="class">
+            col-md-3
+        </attribute>
+        <attribute name="style" add="height: 100% !important; width: auto !important" separator=" "/>
+    </xpath>
+    <xpath expr="//div[hasclass('col-md-3')]" position="after">
+        <div class="col-sm-5">
+                    <h1 itemprop="name" t-field="product.name">Product Name</h1>
+                    <h4 style="color:#7d7c7c"><i><u>Autor</u></i></h4>
+                    <div class="s_rating pt16 pb16" data-vcss="001" data-icon="fa-star">
+                        <div class="s_rating_icons o_not_editable">
+                            <span class="s_rating_active_icons">
+                                <i class="fa fa-star"/>
+                                <i class="fa fa-star"/>
+                                <i class="fa fa-star"/>
+                            </span>
+                            <span class="s_rating_inactive_icons">
+                                <i class="fa fa-star-o"/>
+                                <i class="fa fa-star-o"/>
+                            </span>
+                        </div>
+                    </div>
+                    <h5 style="color:#5e5d5d">ISBN: </h5>
+                    <h5 style="color:#5e5d5d">Editorial: </h5>
+                    <h5 style="color:#5e5d5d">Categoría: </h5>
+                    <h5 style="color:#5e5d5d">Proveedor: </h5>
+                    <h5 style="color:#5e5d5d">Empaste: </h5>
+                    <h5 style="color:#5e5d5d">Idioma: </h5>
+                    <h5 style="color:#5e5d5d">Nº de páginas: </h5>
+                    <h5 style="color:#5e5d5d">Año de publicación: </h5>
+                    <h5 style="color:#5e5d5d">Dimensiòn: </h5>
+        </div>
+    </xpath>
+    
+    <xpath expr="//div[hasclass('col-xl-4')]" position="attributes">
+        <attribute name="class">
+            col-sm-4 text-center
+        </attribute>
+        
+    </xpath>
+
+    <xpath expr="//div[@id='product_details']/h1" position="attributes">
+        <attribute name="style">
+            display:none
+        </attribute>
+    </xpath>
+
+    <xpath expr="(//div[hasclass('row')])[2]" position="after">
+        <div class="row">
+            <div class="col-sm-3">
+            <p>Guardar en Mi Lista / Comparte</p>
+            </div>     
+        </div>
+    </xpath>
+    <xpath expr="(//div[hasclass('row')])[3]" position="after">
+        <section class="s_text_block ">
+        <div class="container s_allow_columns border rounded shadow" style="border-width: 5px !important; border-color: rgb(62, 195, 207) !important; border-radius: 25px !important; padding:20px !important;">
+            <h1>SINOPSIS</h1>
+            <p style="text-align: justify">Harry Potter y la piedra filosofal es el primer libro de la heptalogía acerca del joven mago Harry Potter, escrita por J.K. Rowling. Salió a la venta el 30 de junio de 1997, y se hizo una película basada en el mismo en 2001.
+
+            El libro y la película salieron en Estados Unidos bajo el título de "Harry Potter y la piedra del hechicero", pues los publicadores querían que el título mostrase que se trataba de magia y hechiceros y fuera entendible para el público, a pesar de que la Piedra Filosofal es un objeto mítico que tiene leyendas desde hace muchos años.
+
+            Este libro es uno de los más vendidos y traducidos de la historia, superado levemente por Don Quijote de la Mancha, de Miguel de Cervantes.</p>
+        </div>
+    </section>      
+    </xpath>
+</template>
+
+
+
+</odoo>
+
+<!-- PARA HACER LA S_THREE_COLUMNS
+
+<template id="s_plantilla_1" name="plantilla 1">
+    <section class="s_media_list bg-200 pt32 pb32" data-vcss="001">
+        <div class="container">
+            <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                    <div class="row s_col_no_resize s_col_no_bgcolor no-gutters align-items-center o_cc o_cc1">
+                        <div class="col-lg-12 align-self-stretch s_media_list_img_wrapper">
+                            <img src="/web/image/website.s_media_list_default_image_1" class="s_media_list_img h-100 w-100" alt=""/>
+                        </div>
+                        <div class="col-lg-8 s_media_list_body">
+                            <h3>Media heading</h3>
+                            <p>Use this snippet to build various types of components that feature a left- or right-aligned image alongside textual content. Duplicate the element to create a list that fits your needs.</p>
+                            <a href="#" class="btn btn-primary">Discover</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+-->

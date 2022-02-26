@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+<!--DEPARTAMENTOS-->
+        <record id="hr_country_department_co_1" model="hr.country.department">
+            <field name="code">5</field>
+            <field name="name">Antioquia</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_2" model="hr.country.department">
+            <field name="code">8</field>
+            <field name="name">Atlantico</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_3" model="hr.country.department">
+            <field name="code">11</field>
+            <field name="name">Bogota D.C</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_4" model="hr.country.department">
+            <field name="code">13</field>
+            <field name="name">Bolivar</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_5" model="hr.country.department">
+            <field name="code">15</field>
+            <field name="name">Boyaca</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_6" model="hr.country.department">
+            <field name="code">17</field>
+            <field name="name">Caldas</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_7" model="hr.country.department">
+            <field name="code">18</field>
+            <field name="name">Caqueta</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_8" model="hr.country.department">
+            <field name="code">19</field>
+            <field name="name">Cauca</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_9" model="hr.country.department">
+            <field name="code">20</field>
+            <field name="name">Cesar</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_10" model="hr.country.department">
+            <field name="code">23</field>
+            <field name="name">Cordoba</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_11" model="hr.country.department">
+            <field name="code">25</field>
+            <field name="name">Cundinamarca</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_12" model="hr.country.department">
+            <field name="code">27</field>
+            <field name="name">Choco</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_13" model="hr.country.department">
+            <field name="code">41</field>
+            <field name="name">Huila</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_14" model="hr.country.department">
+            <field name="code">44</field>
+            <field name="name">La Guajira</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_15" model="hr.country.department">
+            <field name="code">47</field>
+            <field name="name">Magdalena</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_16" model="hr.country.department">
+            <field name="code">50</field>
+            <field name="name">Meta</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_17" model="hr.country.department">
+            <field name="code">52</field>
+            <field name="name">Nariño</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_18" model="hr.country.department">
+            <field name="code">54</field>
+            <field name="name">Norte De Santander</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_19" model="hr.country.department">
+            <field name="code">63</field>
+            <field name="name">Quindio</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_20" model="hr.country.department">
+            <field name="code">66</field>
+            <field name="name">Risaralda</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_21" model="hr.country.department">
+            <field name="code">68</field>
+            <field name="name">Santander</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_22" model="hr.country.department">
+            <field name="code">70</field>
+            <field name="name">Sucre</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_23" model="hr.country.department">
+            <field name="code">73</field>
+            <field name="name">Tolima</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_24" model="hr.country.department">
+            <field name="code">76</field>
+            <field name="name">Valle Del Cauca</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_25" model="hr.country.department">
+            <field name="code">81</field>
+            <field name="name">Arauca</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_26" model="hr.country.department">
+            <field name="code">85</field>
+            <field name="name">Casanare</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_27" model="hr.country.department">
+            <field name="code">86</field>
+            <field name="name">Putumayo</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_28" model="hr.country.department">
+            <field name="code">88</field>
+            <field name="name">San Andres Y Providencia</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_29" model="hr.country.department">
+            <field name="code">91</field>
+            <field name="name">Amazonas</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_30" model="hr.country.department">
+            <field name="code">94</field>
+            <field name="name">Guainia</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_31" model="hr.country.department">
+            <field name="code">95</field>
+            <field name="name">Guaviare</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_32" model="hr.country.department">
+            <field name="code">97</field>
+            <field name="name">Vaupes</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+ 
+        <record id="hr_country_department_co_33" model="hr.country.department">
+            <field name="code">99</field>
+            <field name="name">Vichada</field>
+            <field name="country_id" ref="base.co"/>
+        </record>
+
+
+    </data>
+</odoo>

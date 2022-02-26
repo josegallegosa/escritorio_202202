@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    
+     <record id="view_form_tree" model="ir.ui.view">
+         <field name="name">view.form.tree</field>
+         <field name="model">cliente</field> <!-- es el modelo que que hará la accion --> 
+         <field name="arch" type="xml"> <!-- Es como un comentario-->
+            <tree  create="true" delete="true" import="true"
+                decoration-muted="sexo=='masculino'" 
+                decoration-bf="sexo=='femenino'"
+                decoration-success="activo==True">  
+                <field name="name"/>
+                <field name="last_name"/>
+                <field name="sexo" options="{'no_create': True}"/>
+                <field name="country_id" />
+                <field name="phone1" options="{'no_create': True}"/>
+                <field name="email" options="{'no_create': True}"/>
+                <field name="activo" options="{'no_create': True}"/>
+
+            </tree> 
+
+         </field>   
+    </record> 
+
+    <record id="view_form_type_identification_tree" model="ir.ui.view">
+         <field name="name">view.form.type.identification.tree</field>
+         <field name="model">l10n_latam.identification.type</field>
+         <field name="type">tree</field>
+         <field name="arch" type="xml"> <!-- Es como un comentario-->
+            <tree  create="true" delete="true" import="true">  
+                <field name="name"/>
+                <field name="l10n_pe_vat_code"/>
+                <field name="id"/>
+                <field name="aaa"/>
+
+            </tree> 
+
+         </field>   
+    </record> 
+
+
+
+
+    <record id="view_form_cliente" model="ir.ui.view">
+         <field name="name">view.form.cliente </field>
+         <field name="model">cliente</field> <!-- es el modelo que que hará la accion --> 
+         <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar" />
+                        <div class="oe_title">
+                            <group name="group_coll" string="Datos Cliente" col="4" colspan="4">
+                                <label for="name" class="oe_edit_only" />
+                                <h3><field name="name" /></h3>
+                                <label for="last_name" class="oe_edit_only" />
+                                <h3><field name="last_name" /></h3>
+                            </group>                       
+                            <h3>
+                                <span class="oe_read_only">Afiliado el: </span>
+                                <label for="date_order" class="oe_edit_only" />
+                                <field name="date_order" class="oe_inline" />
+                            </h3>
+                            <h3>    
+                                <span class="oe_read_only">Genero: </span>
+                                <label for="sexo" class="oe_edit_only" />
+                                <field name="sexo" class="oe_inline" />
+                            </h3>
+                        </div>
+                        <group name="group_top">
+                            <group name="group_coll" string="Datos Generales" col="4" colspan="2">
+                                <field name="tipo_empresa" options="{'no_create': True}"/>
+                                <field name="email" options="{'no_create': True}"/>
+                                <field name="razon_social" options="{'no_create': True}"/>
+                                <field name="phone1" options="{'no_create': True}"/>
+                                <field name="country_id" />
+                                <field name="phone2" options="{'no_create': True}"/>
+                                <field name="city_id" options="{'no_create': True}"/>
+                                <field name="phone3" options="{'no_create': True}"/>
+                                <field name="district_id" options="{'no_create': True}"/>
+                                <field name="direccion" options="{'no_create': True}"/>
+                                <field name="type_identification" options="{'no_create': True}"/>
+                                <field name="website" options="{'no_create': True}"/>
+                                <field name="num_identification" options="{'no_create': True}"/>                                
+                            </group>
+                            <group name="group_col2" string="Estado" />
+                                <field name="activo" options="{'no_create': True}"/>
+                        </group>
+
+                </sheet>
+            </form>
+
+         </field>   
+    </record>
+
+
+    <record id="action_cliente" model="ir.actions.act_window">
+         <field name="name">Formulario Cliente </field>
+         <field name="res_model">cliente</field> <!-- es el modelo que que hará la accion -->
+         <field name="view_mode">tree,form</field> <!-- distintas vistas que pueden tener --> 
+         <field name="help" type="html"> <!-- Es como un comentario-->
+            <p>
+                Es un modulo para hacer tareas 
+            </p> 
+
+         </field>   
+    </record>
+
+    <record id="action_tipo_identificacion" model="ir.actions.act_window">
+         <field name="name">Formulario tipo identificacion </field>
+         <field name="res_model">l10n_latam.identification.type</field> <!-- es el modelo que que hará la accion -->
+         <field name="view_mode">tree,form</field>
+         <field name="view_id" ref="view_form_type_identification_tree"/> <!-- distintas vistas que pueden tener --> 
+         <field name="help" type="html"> <!-- Es como un comentario-->
+            <p>
+                Es un modulo para hacer tareas  
+            </p> 
+
+         </field>   
+    </record>
+
+
+
+
+    <menuitem id="menu_cliente_principal" name="Todo Principal" />
+        <menuitem id="menu_cliente_1" parent="menu_cliente_principal" name="Registro Cliente" action="action_cliente" sequence="10"/>
+        <menuitem id="menu_cliente_2" parent="menu_cliente_1" name="Registro Cliente" action="action_tipo_identificacion" sequence="20"/>
+
+
+    <menuitem id="menu_adicional" name="Menu Adicional" />
+        <menuitem id="submenu_adicional_1" parent="menu_adicional" name="Submenu1" action="action_cliente" sequence="10"/>
+        <menuitem id="submenu_adicional_2" parent="menu_adicional" name="Submenu2" action="action_tipo_identificacion" sequence="20"/>
+
+    <menuitem id="menu_adicional2" name="Nuevo menu" />
+        <menuitem id="submenu_adicional2_1" parent="menu_adicional2" name="Primero" action="action_cliente" sequence="10"/>
+        <menuitem id="submenu_adicional2_2" parent="menu_adicional2" name="Segundo" action="action_tipo_identificacion" sequence="20"/>
+
+    <!--<menuitem id="menu_cliente_principal" name="Todo Principal"/>
+        <menuitem id="menu_cliente_1" parent="menu_cliente_principal" name="Secundario 1" action="action_cliente" sequence="10"/> -->
+
+
+</odoo>

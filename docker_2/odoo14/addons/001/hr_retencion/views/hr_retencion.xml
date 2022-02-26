@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Retencion parameter -->
+    <record id="view_hr_retencion_line_tree" model="ir.ui.view">
+            <field name="name">hr_retencion_line_tree</field>
+            <field name="model">hr.retencion.line</field>
+            <field name="arch" type="xml">
+                <tree string="Escalas Retención en la Fuente">
+                    <field name="sequence"/>
+                    <field name="init_value"/>
+                    <field name="final_value"/>
+                    <field name="marginal_rate"/>
+                    <field name="additional_value"/> 
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_retencion_line_form" model="ir.ui.view">
+            <field name="name">hr_retencion_line_form</field>
+            <field name="model">hr.retencion.line</field>
+            <field name="arch" type="xml">
+                <form string="Escala Retención en la Fuente">
+                    <sheet>
+                        <group col="4">
+                            <field name="sequence"/>
+                            <field name="marginal_rate"/>
+                            <field name="additional_value"/>                         
+                        </group>
+                        <group col="4">
+                            <field name="init_value"/>
+                            <field name="final_value"/>                         
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_hr_retencion_line_view" model="ir.actions.act_window">
+            <field name="name">Escalas Retención en la Fuente</field>
+            <field name="res_model">hr.retencion.line</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hr_retencion_line" action="open_hr_retencion_line_view" parent="hr_work_entry_contract.menu_hr_payroll_configuration" name="Escalas Retención en la Fuente" groups="hr.group_hr_manager" sequence="61"/>
+                  
+
+</odoo>

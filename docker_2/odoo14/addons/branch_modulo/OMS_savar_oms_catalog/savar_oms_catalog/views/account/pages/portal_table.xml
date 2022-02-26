@@ -1,0 +1,22 @@
+<odoo>
+
+    <template id="portal_merchant_orders_table_list" name="Pedidos Mercantiles" inherit_id="portal.portal_table" customize_show="True">
+        <xpath expr="//div/table" position="inside">
+            <div class="buttons-container">                
+                <form action="/orders/massive_save" method="post" class="s_website_form form-horizontal container-fluid mt32" enctype="multipart/form-data" id="massive_save">
+                    <div t-attf-class="form-group">
+                        <div class="col-md-7 col-sm-8">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>   
+                            <input accept="xls, .xlsx" class="o_input_file file btn btn-primary" type="file" name="attachment"/>                            
+                            <button id="upload_massive_orders" class="btn btn-primary" type="submit">
+                                <i class="fa fa-file-excel"></i> 
+                                <span>Importar Pedidos</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

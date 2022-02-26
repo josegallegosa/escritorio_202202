@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_type_layoffs_porvenir" model="hr.type.layoffs">
+            <field name="name">Porvenir</field>
+        </record>
+        
+        <record id="hr_type_layoffs_proteccion" model="hr.type.layoffs">
+            <field name="name">Proteccion</field>
+        </record>
+
+        <record id="hr_type_layoffs_colfondos" model="hr.type.layoffs">
+            <field name="name">Colfondos</field>
+        </record>
+
+        <record id="hr_type_layoffs_skandia" model="hr.type.layoffs">
+            <field name="name">Skandia</field>
+        </record>
+
+    </data>
+</odoo>

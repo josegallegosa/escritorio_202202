@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+        <!-- Inherited Views -->        
+        <record id="view_hr_payroll_form_2" model="ir.ui.view">
+            <field name="name">view.hr.payroll.form.2</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form"/>
+            <field name="arch" type="xml">
+                <field name="schedule_pay" position="after">
+                        <field name="bool_provision" />
+                </field>
+            </field>
+        </record>
+
+		<!-- Structure Type -->
+        <record id="structure_type_employee_prov" model="hr.payroll.structure.type">
+            <field name="name">Provisiones</field>
+            <field name="country_id" eval="False"/>
+            <field name="wage_type">monthly</field>
+        </record>
+
+        <!-- Salary Structure -->
+        <record id="structure_employee_prov" model="hr.payroll.structure">
+        	<field name="name">Provisiones</field>
+            <field name="type_id" ref="structure_type_employee_prov"/>
+            <field name="country_id" eval="False"/>
+        </record>
+
+
+        <record id="hr_rule_prov_1" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">BASIC</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Basico</field>
+            <field name="sequence" eval="2"/>
+            <field name="amount_python_compute">result = contract.wage</field>
+            <field name="struct_id" ref="structure_employee_prov"/>
+        </record>
+         <record id="hr_rule_prov_2" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PBCA</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Promedio de Bono Cargo</field>
+            <field name="sequence" eval="3"/>
+            <field name="amount_python_compute">result = employee.AverageBC(payslip.date_from,payslip.date_to,contract)</field>
+            <field name="struct_id" ref="structure_employee_prov"/>
+        </record>
+         <record id="hr_rule_prov_3" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PHEX</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="name">Promedio Horas Extras</field>
+            <field name="sequence" eval="4"/>
+            <field name="amount_python_compute">result = employee.AverageHE(payslip.date_from,payslip.date_to,contract)</field>
+            <field name="struct_id" ref="structure_employee_prov"/>
+        </record>
+
+        <record id="hr_rule_prov_cts" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PCTS</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="name">Provisión CTS Mensual</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">result = employee.GetPCTS(payslip.date_from,payslip.date_to,employee.date_entry,(BASIC+PBCA+PHEX),contract)</field>
+            <field name="struct_id" ref="structure_employee_prov"/>
+        </record>
+
+        <record id="hr_rule_prov_grat" model="hr.salary.rule">
+            <field name="amount_select">code</field>
+            <field name="code">PGRAT</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="name">Provisión Gratificacion Mensual</field>
+            <field name="sequence" eval="5"/>
+            <field name="amount_python_compute">result = employee.GetPGRAT(payslip.date_from,payslip.date_to,employee.date_entry,(BASIC+PBCA+PHEX),contract)</field>
+            <field name="struct_id" ref="structure_employee_prov"/>
+        </record>
+	</data>
+</odoo>

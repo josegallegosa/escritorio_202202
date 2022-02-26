@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="product_config" inherit_id="website_sale.product">
+        <xpath expr="//div[last()]" position="after">
+            <!--<input itemprop="name" t-field="product.name"/>-->
+            <input type="text" t-att-value="product.name" name="name" class="form-control"/>
+        </xpath>
+          
+    </template>
+</odoo>

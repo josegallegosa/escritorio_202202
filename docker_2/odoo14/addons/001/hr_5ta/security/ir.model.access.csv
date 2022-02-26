@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_5ta_user,access_hr_5ta_user,model_hr_5ta,base.group_user,1,0,0,0
+access_hr_5ta_manager,access_hr_5ta_manager,model_hr_5ta,hr.group_hr_manager,1,1,1,1
+access_hr_5ta_parameter_line_user,access_hr_5ta_parameter_line_user,model_hr_5ta_parameter_line,base.group_user,1,0,0,0
+access_hr_5ta_parameter_line_manager,access_hr_5ta_parameter_line_manager,model_hr_5ta_parameter_line,hr.group_hr_manager,1,1,1,1

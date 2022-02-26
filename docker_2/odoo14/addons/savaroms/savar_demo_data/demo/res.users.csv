@@ -1,0 +1,3 @@
+"id","name","login","lang","login_date","company_id","groups_id/id"
+"__export__.res_users_9_0fb8bbdc","Alex Grisales","comerciante001@gmail.com","es_PE","2022-01-17 16:21:47","YourCompany","product.group_product_variant,__export__.res_groups_116_bc3ac21a,sale.group_delivery_invoice_address,account.group_show_line_subtotals_tax_excluded,base.group_portal,product_configurator.group_product_configurator"
+"__export__.res_users_6_bfcde6fa","Jhon Rivera","comerciante002@gmail.com","es_PE","2021-12-20 18:04:59","YourCompany","product.group_product_variant,sale.group_delivery_invoice_address,account.group_show_line_subtotals_tax_excluded,base.group_portal,product_configurator.group_product_configurator"

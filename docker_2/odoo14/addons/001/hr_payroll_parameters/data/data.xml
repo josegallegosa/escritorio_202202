@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record forcecreate="True" id="uit" model="hr.payroll.parameters">
+            <field name="name">Unidad Impositiva Tributaria</field>
+            <field name="code">UIT</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+        <record forcecreate="True" id="rmv" model="hr.payroll.parameters">
+            <field name="name">Remuneración Mínima vital</field>
+            <field name="code">RMV</field>
+            <field name="country_id" ref="base.pe"/>
+        </record>
+
+        <record id="hr_payroll_parameters_co_smmlv" model="hr.payroll.parameters">
+            <field name="name">SMMLV</field>
+            <field name="code">SMMLV</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="line_ids" eval="[(0, 0, {'date_start': '2019-01-01', 'amount': 828116}),(0, 0, {'date_start': '2020-01-01', 'amount': 877803})
+                ,(0, 0, {'date_start': '2021-01-01', 'amount': 908526})]"/>
+        </record>
+        <record id="hr_payroll_parameters_co_sub_transp" model="hr.payroll.parameters">
+            <field name="name">SUBSIDIO DE TRANSPORTE</field>
+            <field name="code">SUBSIDIO DE TRANSPORTE</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="line_ids" eval="[(0, 0, {'date_start': '2019-01-01', 'amount': 97032}),(0, 0, {'date_start': '2020-01-01', 'amount': 102854})
+                ,(0, 0, {'date_start': '2021-01-01', 'amount': 106454})]"/>
+        </record>
+        <record id="hr_payroll_parameters_co_uvt" model="hr.payroll.parameters">
+            <field name="name">UVT</field>
+            <field name="code">UVT</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="line_ids" eval="[(0, 0, {'date_start': '2019-01-01', 'amount': 34270}),(0, 0, {'date_start': '2020-01-01', 'amount': 35607})
+                ,(0, 0, {'date_start': '2021-01-01', 'amount': 36308})]"/>
+        </record>
+        <record id="hr_payroll_parameters_co_ibc_min" model="hr.payroll.parameters">
+            <field name="name">IBC MINIMO SEG SOC</field>
+            <field name="code">IBC MINIMO SEG SOC</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="line_ids" eval="[(0, 0, {'date_start': '2019-01-01', 'amount': 828116}),(0, 0, {'date_start': '2020-01-01', 'amount': 877803})
+                ,(0, 0, {'date_start': '2021-01-01', 'amount': 908526})]"/>
+        </record>
+
+        <record id="hr_payroll_parameters_co_ibc_max" model="hr.payroll.parameters">
+            <field name="name">IBC MAXIMO SEG SOC</field>
+            <field name="code">IBC MAXIMO SEG SOC</field>
+            <field name="country_id" ref="base.co"/>
+            <field name="line_ids" eval="[(0, 0, {'date_start': '2019-01-01', 'amount': 20702900}),(0, 0, {'date_start': '2020-01-01', 'amount': 21945075})
+                ,(0, 0, {'date_start': '2021-01-01', 'amount': 22713150})]"/>
+        </record>
+
+    </data>
+</odoo>

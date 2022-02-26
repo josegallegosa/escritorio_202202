@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- USUARIOS -->
+
+<odoo>
+    <data noupdate="1">
+
+        
+        <record forcecreate="True" id="res_users_1" model="res.users">
+            <field name="name">BARDALEZ TRIGOSO GONZALO</field>
+            <field name="login">1bardalez@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_2" model="res.users">
+            <field name="name">CANALES FELICES GUSTAVO JAVIER</field>
+            <field name="login">2canalesf@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_3" model="res.users">
+            <field name="name">CARDENAS RAMIREZ  MARIA VICTORIA</field>
+            <field name="login">3cardenas@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_4" model="res.users">
+            <field name="name">CARRERA SOPLIN EMERSON ANDRES</field>
+            <field name="login">4carreras@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_5" model="res.users">
+            <field name="name">CASTRO RIVERA VICTOR JAVIER</field>
+            <field name="login">5castrori@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_6" model="res.users">
+            <field name="name">CHAVEZ MEJIA CARLOS ALBERTO</field>
+            <field name="login">6chavezme@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_7" model="res.users">
+            <field name="name">CONTRERAS SULCA JOSUE CARLO</field>
+            <field name="login">7contrera@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_8" model="res.users">
+            <field name="name">CUESTAS RODRIGUEZ CARLOS RODOLFO</field>
+            <field name="login">8cuestasr@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_9" model="res.users">
+            <field name="name">DE LA PUENTE ANCCO VICTOR ANDRES</field>
+            <field name="login">9delapuen@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_10" model="res.users">
+            <field name="name">DONAYRE ALCALA CARLA GIULIANA</field>
+            <field name="login">10donayrea@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_11" model="res.users">
+            <field name="name">GARCIA CAVERO MARIANA</field>
+            <field name="login">11garciaca@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_12" model="res.users">
+            <field name="name">GASTELU LEDESMA FLAVIA KARINA</field>
+            <field name="login">12gastelul@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_13" model="res.users">
+            <field name="name">GONZALES CALERO CESIA HEFZIBA RENATA</field>
+            <field name="login">13gonzales@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_14" model="res.users">
+            <field name="name">GUERRA HUAMAN DAVID ALFREDO</field>
+            <field name="login">14guerrahu@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_15" model="res.users">
+            <field name="name">HUATUCO CHAVEZ DIEGO ARTURO</field>
+            <field name="login">15huatucoc@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_16" model="res.users">
+            <field name="name">JAIME LANDABURU JORGE ALBERTO</field>
+            <field name="login">16jaimelan@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_17" model="res.users">
+            <field name="name">JAUREGUI RIVAS BEATRIZ FELICITA</field>
+            <field name="login">17jauregui@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_18" model="res.users">
+            <field name="name">LEON MORENO WALTER DANIEL</field>
+            <field name="login">18leonmore@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_19" model="res.users">
+            <field name="name">MAMANI GUEVARA ANNY CRISTINA</field>
+            <field name="login">19mamanigu@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_20" model="res.users">
+            <field name="name">MANCO MARCA EMILY MILAGROS</field>
+            <field name="login">20mancomar@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_21" model="res.users">
+            <field name="name">MELENDEZ NEYRA EDGARD MARTIN</field>
+            <field name="login">21melendez@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_22" model="res.users">
+            <field name="name">MONTALVO VELAZCO YOMIRA CRISTAL</field>
+            <field name="login">22montalvo@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_23" model="res.users">
+            <field name="name">MORALES SILVESTRE VALERIA PAOLA</field>
+            <field name="login">23moraless@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_24" model="res.users">
+            <field name="name">NAVARRO SONCCO MOISES</field>
+            <field name="login">24navarros@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_25" model="res.users">
+            <field name="name">NECIOSUP CAJAS MARIA ALEJANDRA</field>
+            <field name="login">25neciosup@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_26" model="res.users">
+            <field name="name">PATIÑO SILES JUAN PABLO</field>
+            <field name="login">26patiñosi@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_27" model="res.users">
+            <field name="name">PELAEZ DELGADO JOSÉ CRISTHOFER</field>
+            <field name="login">27pelaezde@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_28" model="res.users">
+            <field name="name">PEÑALOZA CALIXTO JIM RICHARD</field>
+            <field name="login">28peñaloza@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_29" model="res.users">
+            <field name="name">PINTO ROSALES GONZALO</field>
+            <field name="login">29pintoros@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_30" model="res.users">
+            <field name="name">RAMÍREZ CHANDUVÍ GABRIEL ALEXANDER</field>
+            <field name="login">30ramírezc@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_31" model="res.users">
+            <field name="name">RAMIREZ CONDE PABLO JOSE ANGEL</field>
+            <field name="login">31ramirezc@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_32" model="res.users">
+            <field name="name">REYES ACOSTA OSCAR JAVIER</field>
+            <field name="login">32reyesaco@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_33" model="res.users">
+            <field name="name">REYNOSO LEGOVIC JOSE CARLO</field>
+            <field name="login">33reynosol@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_34" model="res.users">
+            <field name="name">RIVERA PANDO KAREN MARIA</field>
+            <field name="login">34riverapa@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_35" model="res.users">
+            <field name="name">SALCEDO CASTRO FRANCO MANUEL</field>
+            <field name="login">35salcedoc@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_36" model="res.users">
+            <field name="name">SAMANEZ CORNEJO MARITA ANGELA</field>
+            <field name="login">36samanezc@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_37" model="res.users">
+            <field name="name">SEGURA LEDESMA JOSE MANUEL</field>
+            <field name="login">37segurale@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_38" model="res.users">
+            <field name="name">SERVAT BARRANTES MARIA PIA</field>
+            <field name="login">38servatba@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_39" model="res.users">
+            <field name="name">SOTIL LOZADA ANDREA ISABEL</field>
+            <field name="login">39sotilloz@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_40" model="res.users">
+            <field name="name">TAKAYAMA MUÑOZ KEMMA</field>
+            <field name="login">40takayama@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_41" model="res.users">
+            <field name="name">TORREJON CARDOZA REINA MERCEDES</field>
+            <field name="login">41torrejon@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_42" model="res.users">
+            <field name="name">VILLACORTA LOPEZ KATHERINE</field>
+            <field name="login">42villacor@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_43" model="res.users">
+            <field name="name">ZORRILLA ANDRADE ELA MARIA DE LOS ANGELES</field>
+            <field name="login">43zorrilla@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_44" model="res.users">
+            <field name="name">HUAMAN EURIBE EDUARDO JAVIER</field>
+            <field name="login">44huamaneu@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_45" model="res.users">
+            <field name="name">SAENZ PATRON CESAR MIGUEL</field>
+            <field name="login">45saenzpat@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_46" model="res.users">
+            <field name="name">CASTAÑEDA HERRERA DIANA MELINA</field>
+            <field name="login">46castañed@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_47" model="res.users">
+            <field name="name">CASTAÑEDA BELLO ALEXANDRO ESTEFANO</field>
+            <field name="login">47castañed@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_48" model="res.users">
+            <field name="name">LUNA FERIA ANDRES</field>
+            <field name="login">48lunaferi@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_49" model="res.users">
+            <field name="name">BAZALAR NUÑEZ OSCAR RENATO</field>
+            <field name="login">49bazalarn@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_50" model="res.users">
+            <field name="name">LA ROSA MELQUIADES PEDRO MARTIN</field>
+            <field name="login">50larosame@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_51" model="res.users">
+            <field name="name">VASQUEZ ALCALA ALFREDO HERNAN</field>
+            <field name="login">51vasqueza@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_52" model="res.users">
+            <field name="name">REYES FERRO LORENA CRISTHINE</field>
+            <field name="login">52reyesfer@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_53" model="res.users">
+            <field name="name">RUIZ LAU MARIA CLAUDIA JIMENA</field>
+            <field name="login">53ruizlaum@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_54" model="res.users">
+            <field name="name">MELGAR LEÓN DIEGO ALONSO</field>
+            <field name="login">54melgarle@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_55" model="res.users">
+            <field name="name">FERNANDEZ MENDIETA ARMANDO CARLOS</field>
+            <field name="login">55fernande@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_56" model="res.users">
+            <field name="name">SAVERI TINTORER PIETRO ADRIANO</field>
+            <field name="login">56saveriti@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_57" model="res.users">
+            <field name="name">ROMERO MUÑOZ SHARON YANELY</field>
+            <field name="login">57romeromu@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_58" model="res.users">
+            <field name="name">ANYOSA CORNELIO MICHELL ALFONSO</field>
+            <field name="login">58anyosaco@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_59" model="res.users">
+            <field name="name">MATICORENA TORRES DODA MARILÍ YANIVA</field>
+            <field name="login">59maticore@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_60" model="res.users">
+            <field name="name">ONCHI SUGUIMITZU MILENE ARISA</field>
+            <field name="login">60onchisug@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+        
+        <record forcecreate="True" id="res_users_61" model="res.users">
+            <field name="name">ARQUIÑIGO CERRALTA JOAN MANUEL</field>
+            <field name="login">61arquiñig@gmail.com</field>
+            <field name="sel_groups_1_9_10">1</field>
+            <field name="sel_groups_17_18">17</field>
+            <field name="sel_groups_12_13">12</field>
+            <field name="in_group_7">1</field>
+            <field name="in_group_8">1</field>
+            <field name="in_group_11">1</field>
+        </record>
+    </data>
+</odoo>
