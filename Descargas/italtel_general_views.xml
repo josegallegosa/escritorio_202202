@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+		
+    	<record id="italtel_general_form_view" model="ir.ui.view">
+            <field name="name">italtel.general.form</field>
+            <field name="model">italtel.general</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <group>
+                            <field name="group"/>
+                            <field name="category"/>
+                            <field name="year"/>                   
+                            <field name="amount"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="italtel_general_tree_view" model="ir.ui.view">
+            <field name="name">italtel.general.tree</field>
+            <field name="model">italtel.general</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="group"/>
+                    <field name="category"/>
+                    <field name="year"/>                   
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="italtel_general_search_view" model="ir.ui.view">
+            <field name="name">italtel.general.search</field>
+            <field name="model">italtel.general</field>
+            <field name="arch" type="xml">
+                <search string="Filtro Grupo">
+                    <group expand="0" string="Group By...">
+                        <filter name="group" string="Grupos" domain="[]" context="{'group_by':'group'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="italtel_general_action" model="ir.actions.act_window">
+            <field name="name">Italtel General</field>
+            <field name="res_model">italtel.general</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'italtel_general_search_view':1,'search_default_group': 1}</field>
+        </record>
+        
+
+    </data>
+</odoo>

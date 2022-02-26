@@ -1,0 +1,4 @@
+00:04:22.290,00:04:25.290
+Yonaldy Jesús Marrero Veroes: docker run -v /home/usuario/docker-odoo13/conf:/etc/odoo -v /home/usuario/docker-odoo13/addons:/mnt/extra-addons -v /home/usuario/docker-odoo13/data:/var/lib/odoo -v /home/usuario/docker-odoo13/log:/var/log/odoo -p 127.0.0.1:8099:8069 -p 127.0.0.1:8091:8071  --name odoo13 --link db:db -t odoo:13.0
+
+

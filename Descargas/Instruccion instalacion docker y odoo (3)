@@ -1,0 +1,103 @@
+para instalar docker:
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04-es
+
+chmod 777 /home/josegallegos/Escritorio/Docker //para poder borrar la carpeta que está protegida
+sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+70b9f5319f56        postgres:10.6       "docker-entrypoint.s…"   10 minutes ago      Exited (1) 10 minutes ago                       db
+josegallegos@josegallegos-hp:~$ sudo docker rm 70b9f5319f56 -- se borra con el id del container
+sudo rm -r postgresql
+
+Instalar Docker
+
+Docker postgresql
+sudo docker run -d -v /home/ghost/Escritorio/Docker/postgresql/datadir:/var/lib/postgresql/data -v /home/ghost/Escritorio/Docker/postgresql/my-postgres.conf:/etc/postgresql/postgresql.conf -p 0.0.0.0:5432:5432 -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10.6 -c 'config_file=/etc/postgresql/postgresql.conf'
+
+jose:
+sudo docker run -d -v /home/josegallegos/Docker/postgresql/datadir:/var/lib/postgresql/data -v /home/josegallegos/Docker/postgresql/my-postgres.conf:/etc/postgresql/postgresql.conf -p 0.0.0.0:5432:5432 -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10.6 -c 'config_file=/etc/postgresql/postgresql.conf'
+
+Para odoo13:
+sudo docker run -v /home/josegallegos/Docker/odoo13/conf:/etc/odoo -v /home/josegallegos/Docker/odoo13/addons:/mnt/extra-addons -v /home/josegallegos/Docker/odoo13/data:/var/lib/odoo -v /home/josegallegos/Docker/odoo13/log:/var/log/odoo -p 127.0.0.1:8099:8099 -p 127.0.0.1:8071:8071 --name odoo13 --link db:db -t odoo:13.0
+
+docker odoo14
+sudo docker run -v /home/ghost/Escritorio/Docker/odoo14/conf:/etc/odoo -v /home/ghost/Escritorio/Docker/odoo14/addons:/mnt/extra-addons -v /home/ghost/Escritorio/Docker/odoo14/data:/var/lib/odoo -v /home/ghost/Escritorio/Docker/odoo14/log:/var/log/odoo -p 127.0.0.1:8069:8069 -p 127.0.0.1:8071:8071 --name odoo14 --link db:db -t odoo:14.0
+
+jose:
+
+sudo docker run -v /home/josegallegos/Docker/odoo14/conf:/etc/odoo -v /home/josegallegos/Docker/odoo14/addons:/mnt/extra-addons -v /home/josegallegos/Docker/odoo14/data:/var/lib/odoo -v /home/josegallegos/Docker/odoo14/log:/var/log/odoo -p 127.0.0.1:8069:8069 -p 127.0.0.1:8071:8071 --name odoo14 --link db:db -t odoo:14.0
+
+
+sudo docker run -i --rm postgres:10.6 cat /usr/share/postgresql/postgresql.conf.sample > my-postgres.conf // no poner esto 
+copiar los archivos de conf de odoo y prosgres
+
+
+
+Create the docker group
+sudo groupadd docker
+
+Add your user to the docker group.
+sudo usermod -aG docker ${USER}
+
+permisos para abrir en la web
+sudo docker exec -it -u root odoo14 /bin/bash
+chown -R odoo:odoo /var/lib/odoo/
+
+reiniciar la pc 
+
+Instalar PgAdmin4
+-curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+-sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+-sudo apt install pgadmin4
+-sudo /usr/pgadmin4/bin/setup-web.sh
+
+
+COnfigurar Path
+/usr/bin/odoo scaffold modulo1 /mnt/extra-addons
+----------------------------------------------------------------------------------------------
+You would need to loog out and log back in so that your group membership is re-evaluated or type the following command:
+su -s ${USER}
+
+Verify that you can run docker commands without sudo.
+docker run hello-world
+
+This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.
+
+If you initially ran Docker CLI commands using sudo before adding your user to the docker group, you may see the following error, which indicates that your ~/.docker/ directory was created with incorrect permissions due to the sudo commands.
+
+"""WARNING: Error loading config file: /home/user/.docker/config.json -
+stat /home/user/.docker/config.json: permission denied"""
+
+
+To fix this problem, either remove the ~/.docker/ directory (it is recreated automatically, but any custom settings are lost), or change its ownership and permissions using the following commands:
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
+
+Entrar al contenedor
+sudo docker exec -i -t 665b4a1e17b6 /bin/bash # o en su caso poner el nombre
+docker exec -it -u root odoo14 /bin/bash
+sudo docker exec -u root -it odoo14 /bin/bash
+
+
+Crear el esquema(primero entrar con root)
+sudo su root
+/usr/bin/odoo scaffold modulo1 /mnt/extra-addons
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
